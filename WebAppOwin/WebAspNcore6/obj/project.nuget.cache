@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5LyKwPuj/kQLGnWlcxMNv7myTowzd3BXJc8Co8/7DQwoQlpweB/9D1NgFzduifx3bYsnDTUWegzWt+QzYtVMOQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\patri\\source\\repos\\GitHub\\pcreyssels\\Repo2022\\WebAppOwin\\WebAspNcore6\\WebAspNcore6.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\patri\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
