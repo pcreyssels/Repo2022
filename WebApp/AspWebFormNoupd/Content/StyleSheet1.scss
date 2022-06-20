@@ -1,0 +1,48 @@
+﻿/* Define standard variables and values for website */
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+$custcol : chartreuse;
+$custcol2: antiquewhite;
+$custcol3: blue;
+
+$primary_3: #878f99;
+
+/* Use the variables */
+body {
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+}
+
+
+.btn-custom {
+    background-color: $custcol3;
+
+    font: {
+        family: Helvetica, sans-serif;
+        size: 18px;
+        weight: bold;
+    }
+
+    text: {
+        align: center;
+        transform: lowercase;
+        overflow: hidden;
+    }
+}
+
+.enlarge {
+    font-size: 14px;
+
+    transition: {
+        property: font-size;
+        duration: 4s;
+        delay: 2s;
+    }
+
+    &:hover {
+        font-size: 36px;
+    }
+}
+

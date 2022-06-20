@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "provider": "filesystem",
+      "library": "I:\\DEV\\source\\Dist\\bootstrap-3.4.1\\bootstrap-3.4.1\\dist\\fonts\\",
+      "destination": "lib/bootstrap/fonts",
+      "files": [
+        "glyphicons-halflings-regular.eot",
+        "glyphicons-halflings-regular.svg",
+        "glyphicons-halflings-regular.ttf",
+        "glyphicons-halflings-regular.woff",
+        "glyphicons-halflings-regular.woff2"
+      ]
+    },
+    {
+      "provider": "filesystem",
+      "library": "I:\\DEV\\source\\Dist\\bootstrap-3.4.1\\bootstrap-3.4.1\\dist\\css\\",
+      "destination": "lib/bootstrap/css/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "I:\\DEV\\source\\Dist\\bootstrap-3.4.1\\bootstrap-3.4.1\\dist\\js\\",
+      "destination": "lib/bootstrap/js/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "I:\\DEV\\source\\Dist\\bootstrap-5.0.2\\dist\\js\\",
+      "destination": "lib/bootstrap502/js/"
+    },
+    {
+      "provider": "filesystem",
+      "library": "I:\\DEV\\source\\Dist\\JQuery-1.12.4\\",
+      "destination": "lib/JQuery1124/"
+    },
+    {
+      "provider": "cdnjs",
+      "library": "bootstrap@5.1.3",
+      "destination": "lib/bootstrap513/"
+    }
+  ]
+}
