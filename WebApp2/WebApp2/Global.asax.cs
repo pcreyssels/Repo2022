@@ -16,6 +16,10 @@ namespace WebApp2
             // Code qui s’exécute au démarrage de l’application
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            MembershipUser newUser = Membership.CreateUser("toto", "totopwd_","hello@free.fr");
+            
+            int i = 0;
         }
     }
 }
