@@ -17,8 +17,9 @@ namespace WebApp2
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            MembershipUser newUser = Membership.CreateUser("toto", "totopwd_","hello@free.fr");
-            
+            // MembershipUser newUser = Membership.CreateUser("toto", "totopwd_","hello@free.fr");
+            MembershipCreateStatus status = MembershipCreateStatus.UserRejected;
+            MembershipUser m = Membership.CreateUser("toto", "totopwd_", "hello@free.fr", "q", "r", true, out status);
             int i = 0;
         }
     }

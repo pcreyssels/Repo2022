@@ -5,6 +5,8 @@
         OnAuthenticate= "login1_Authenticate"
         OnLoggedIn="login1_LoggedIn"
         OnLoggingIn="login1_LoggingIn"
+        DestinationPageUrl="~/Accueil.aspx"
+        
         >
 
     </asp:Login>

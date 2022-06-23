@@ -13,10 +13,12 @@ namespace WebApp2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            IIdentity userident = HttpContext.Current.User.Identity;
-            string username =userident.Name;
-            bool ia = userident.IsAuthenticated;
+            
             int i = 1;
+
+            string ui = HttpContext.Current.User.Identity.Name;
+            string auth_type = HttpContext.Current.User.Identity.AuthenticationType;
+            bool isa = HttpContext.Current.User.Identity.IsAuthenticated;
         }
 
         protected void valider_Click(object sender, EventArgs e)
