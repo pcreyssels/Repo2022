@@ -15,6 +15,15 @@ namespace WebApp2
     {
 
         /// <summary>
+        /// Contrôle labellogin.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labellogin;
+
+        /// <summary>
         /// Contrôle login1.
         /// </summary>
         /// <remarks>

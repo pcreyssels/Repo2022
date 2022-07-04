@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
@@ -21,6 +22,16 @@ namespace WebApp2
             MembershipCreateStatus status = MembershipCreateStatus.UserRejected;
             MembershipUser m = Membership.CreateUser("toto", "totopwd_", "hello@free.fr", "q", "r", true, out status);
             int i = 0;
+        }
+
+        public void Session_OnStart()
+        {
+            Debug.WriteLine($"session start, session ID : {Session.SessionID}");
+        }
+
+        public void Session_OnEnd()
+        {
+            Debug.WriteLine($"session end, session ID : {Session.SessionID}");
         }
     }
 }

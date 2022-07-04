@@ -6,6 +6,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Security.Principal;
+using System.Security.Claims;
 
 namespace WebApp2
 {
@@ -15,6 +16,8 @@ namespace WebApp2
         {
             
             int i = 1;
+
+            ClaimsPrincipal cp = ClaimsPrincipal.Current;
 
             string ui = HttpContext.Current.User.Identity.Name;
             string auth_type = HttpContext.Current.User.Identity.AuthenticationType;

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,9 +15,27 @@ namespace WebApp2
         protected void Page_Load(object sender, EventArgs e)
         {
             i = 1;
-            string ft = login1.FailureText;
+              string ft = login1.FailureText;
             string cut = login1.CreateUserText;
 
+            ClaimsPrincipal cp = ClaimsPrincipal.Current;
+
+            int n = cp.Claims.Count<Claim>();
+            foreach (Claim c in cp.Claims)
+            {
+                ClaimsIdentity ci = c.Subject;
+                string i = c.Issuer;
+                IDictionary<string,string> d=  c.Properties;
+                string claimvalue = c.Value;
+                string claimvaluetype = c.ValueType;
+                string claimtype = c.Type;
+
+                int fin = 1;
+            }
+
+            string info = $"session id : {Session.SessionID}";
+            labellogin.Text= info;
+            Debug.WriteLine(info);
             login1.CreateUserText = "lien vers l'inscription";
             login1.CreateUserUrl = "~/Inscription";
 
@@ -27,9 +47,13 @@ namespace WebApp2
             login1.PasswordRecoveryUrl = "~/Inscription";
         }
 
-        
+        protected void Page_LoadComplete(object sender, EventArgs e)
+        {
+            int i = 1;
+            Response.Redirect("About.aspx",false);
+        }
 
-        protected void login1_LoggingIn(object sender, LoginCancelEventArgs e)
+            protected void login1_LoggingIn(object sender, LoginCancelEventArgs e)
         {
             i = 3;
             string ui = HttpContext.Current.User.Identity.Name;

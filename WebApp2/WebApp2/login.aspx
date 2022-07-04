@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="WebApp2.login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+    <asp:label runat="server" id ="labellogin">sessionID</asp:label>
+
     <asp:Login ID="login1" runat="server"
         OnAuthenticate= "login1_Authenticate"
         OnLoggedIn="login1_LoggedIn"
