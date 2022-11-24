@@ -1,10 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebForm8.aspx.cs" Inherits="WebApplication1.WebForm8" %>
-<<<<<<< HEAD
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Label runat="server" Text="Webform 8"></asp:Label>
-=======
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:Label runat="server" Text="Webform 8"></asp:Label>
 
 
     <div class="container">
