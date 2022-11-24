@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-<<<<<<< HEAD
-=======
 using System.Web.UI.HtmlControls;
->>>>>>> dc4d0df8c5759b8227019529d6bd0b239c6968aa
 using System.Web.UI.WebControls;
 
 namespace WebApplication1
@@ -16,8 +13,7 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
 
-<<<<<<< HEAD
-=======
+
             int k = 0;
             HtmlGenericControl gct_0 = null;
             for (int i = 0; i < 3; i++)
@@ -115,7 +111,7 @@ namespace WebApplication1
         protected void dbg_Click(object sender, EventArgs e)
         {
             int y = 0;
->>>>>>> dc4d0df8c5759b8227019529d6bd0b239c6968aa
+
         }
     }
 }

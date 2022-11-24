@@ -135,11 +135,8 @@
     <Content Include="WebForm6.aspx" />
     <Content Include="WebForm7.aspx" />
     <Content Include="WebForm8.aspx" />
-<<<<<<< HEAD
     <Content Include="WebForm80.aspx" />
     <Content Include="WebForm81.aspx" />
-=======
->>>>>>> dc4d0df8c5759b8227019529d6bd0b239c6968aa
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -321,7 +318,6 @@
     <Compile Include="WebForm8.aspx.designer.cs">
       <DependentUpon>WebForm8.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="WebForm80.aspx.cs">
       <DependentUpon>WebForm80.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -336,8 +332,6 @@
     <Compile Include="WebForm81.aspx.designer.cs">
       <DependentUpon>WebForm81.aspx</DependentUpon>
     </Compile>
-=======
->>>>>>> dc4d0df8c5759b8227019529d6bd0b239c6968aa
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

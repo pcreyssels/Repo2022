@@ -13,8 +13,6 @@ namespace WebApplication1
 
     public partial class WebForm8
     {
-<<<<<<< HEAD
-=======
 
         /// <summary>
         /// Contrôle bhtml.
@@ -60,6 +58,6 @@ namespace WebApplication1
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolderW;
->>>>>>> dc4d0df8c5759b8227019529d6bd0b239c6968aa
+
     }
 }
