@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap enableLocalization="true" xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="$resources:SiteMapLocalizations,HomePageTitle" 
+			   description="$resources:SiteMapLocalizations,HomePageDescription,Default description" url="~/WebForm8">
+    <siteMapNode title="Web_form80" description="WF80" url="~/WebForm80" />
+    <siteMapNode title="Web_form81" description="WF81" url="~/WebForm81" />
+  </siteMapNode>
+</siteMap>
