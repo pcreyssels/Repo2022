@@ -31,11 +31,11 @@ namespace WebApplication1
             //    Thread.CurrentThread.CurrentUICulture = new CultureInfo(cookie.Value);
             //}
 
-            string cultureCode = "en-US";
-            //string cultureCode = "fr-FR";
-            var cultureInfo = CultureInfo.CreateSpecificCulture(cultureCode);
-            Thread.CurrentThread.CurrentCulture = cultureInfo;
-            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            //string cultureCode = "en-US";
+            ////string cultureCode = "fr-FR";
+            //var cultureInfo = CultureInfo.CreateSpecificCulture(cultureCode);
+            //Thread.CurrentThread.CurrentCulture = cultureInfo;
+            //Thread.CurrentThread.CurrentUICulture = cultureInfo;
         }
     }
 

@@ -17,6 +17,8 @@ namespace WebApplication1
             //CultureInfo ci = new CultureInfo("en-US", false);
             Thread.CurrentThread.CurrentCulture = ci;
             Thread.CurrentThread.CurrentUICulture = ci;
+
+            //Page.Title = "Hello";
         }
     }
 }
