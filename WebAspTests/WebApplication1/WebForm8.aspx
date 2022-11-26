@@ -4,30 +4,46 @@
     <asp:Label runat="server" Text="Webform 8"></asp:Label>
 
     <style>
-        
         h1 {
             color: maroon;
             margin-left: 40px;
         }
-      /*  .row > .col-sm-3 {
+
+        .row > .col-sm-3 {
             border: thin solid green
-        }*/
+        }
+
+        .centerow {
+            display: flex;
+            align-items: center;
+        }
+
+        .centegrid {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 10px;
+        }
+
+        .centegrid > div {
+            border: thin solid blue
+        }
 
     </style>
 
-    <h1>BONJOUR</h1>
+
 
 
     <input type="button" value="Add to favorites">
-
+    <h1>BONJOUR1</h1>
     <hr />
     <div class="container">
-        
-        <div class="row" style="border:thin solid green">
+        <div class="row centerow">
+
             <div class="col-sm-3">
                 COL0
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3" style="font-size: 1.2em">
                 COL1
             </div>
             <div class="col-sm-3">
@@ -37,15 +53,46 @@
                 <button runat="server" id="bhtml" onserverclick="bhtml_ServerClick">CLICK ME</button>
                 <button runat="server" id="Button2" onserverclick="bhtml_ServerClick">CLICK ME2</button>
             </div>
+
         </div>
-        <hr />
-        <asp:PlaceHolder runat="server" ID="PlaceHolderN"></asp:PlaceHolder>
+
 
     </div>
 
-     <div class="container">
-        
-        <div class="row" style="border:thin solid green">
+    <h1>BONJOUR 2</h1>
+    <hr />
+
+    <div class="centegrid">
+
+        <div>
+            COL0
+        </div>
+        <div style="font-size: 1.5em">
+            COL1
+        </div>
+        <div>
+            COL2
+        </div>
+        <div>
+            <button runat="server" id="Button4" onserverclick="bhtml_ServerClick">CLICK ME</button>
+            <button runat="server" id="Button5" onserverclick="bhtml_ServerClick">CLICK ME2</button>
+        </div>
+        <div>
+            COL3
+        </div>
+
+    </div>
+    <hr />
+    <asp:PlaceHolder runat="server" ID="PlaceHolder2"></asp:PlaceHolder>
+
+
+
+    <hr />
+    <asp:PlaceHolder runat="server" ID="PlaceHolderN"></asp:PlaceHolder>
+    <hr />
+    <div class="container">
+
+        <div class="row" style="border: thin solid green">
             <div class="col-sm-3">
                 COL0
             </div>
