@@ -70,10 +70,17 @@ namespace WebApplication1
                 </div>
              */
 
-            for (int i = 0; i < 3; i++)
+            
+            for (int i = 0; i < 4; i++)
             {
                 HtmlGenericControl gct_top = new HtmlGenericControl("div");
                 gct_top.Attributes.Add("class", "row");
+                string color_code = "background-color:";
+                if (i % 2 == 0)
+                    color_code += "antiquewhite";
+                else
+                    color_code += "aquamarine";
+                gct_top.Attributes.Add("style", color_code);
                 for (int ii=0; ii<3; ii++) 
                 {
                     HtmlGenericControl gct_row = new HtmlGenericControl("div");
