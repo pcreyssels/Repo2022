@@ -36,27 +36,38 @@ textarea {
     border-color: #fff
 }
 
-table{
+table {
     /*border :dashed*/
 }
 
-table.spacebefaft > tbody > tr > td {
-    padding: 0 1em 0
-}
+    table.spacebefaft > tbody > tr > td {
+        padding: 0 1em 0
+    }
 
-table.spacebefaft > tbody > tr > th {
-    padding: 0 1em 0
-}
+    table.spacebefaft > tbody > tr > th {
+        padding: 0 1em 0
+    }
 
-.well{
+.well {
     padding: 0.5em
 }
 
 .col {
     /*padding :7px;*/
-    margin :7px
+    margin: 7px
 }
 
 .label {
     font-size: 100%;
- }
+}
+
+.centegrid0 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.centegrid0 > div {
+    border: thin solid blue
+}
