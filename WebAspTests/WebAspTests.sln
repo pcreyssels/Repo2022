@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{81B92259-0E50-494E-B491-4A8ABE41481A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Datas", "Datas", "{05831A16-084B-47D2-A3CB-D08F3C32D78D}"
+	ProjectSection(SolutionItems) = preProject
+		Fdata\PAYS.xls = Fdata\PAYS.xls
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
