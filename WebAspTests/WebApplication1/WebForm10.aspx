@@ -2,7 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+     <h1 runat="server"  meta:resourcekey="LabelVotreDossier" >_votre dossier : </h1>
     
+
+    <h1 runat="server"  meta:resourcekey="LabelVotreDossier" >ligne 2 : </h1>
+
+
     <div>
         <div>
             Pour plus d’informations sur les activités du Centre ENIC-NARIC France, <a href="https://www.france-education-international.fr/expertises/enic-naric">cliquer ici </a>
