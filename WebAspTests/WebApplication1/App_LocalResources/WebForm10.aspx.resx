@@ -120,6 +120,9 @@
   <data name="LabelVotreDossier" xml:space="preserve">
     <value>Label Dossier</value>
   </data>
+  <data name="labelwebform10.Text" xml:space="preserve">
+    <value>message français</value>
+  </data>
   <data name="messageinfo.Text" xml:space="preserve">
     <value>&lt;div&gt;
         &lt;div&gt;
@@ -132,5 +135,20 @@
             Un seul diplôme par dossier peut faire l'objet d'une demande d'attestation.
         &lt;/div&gt;
     &lt;/div&gt;</value>
+  </data>
+  <data name="tooltip.data-content" xml:space="preserve">
+    <value>tooltip français  &lt;b&gt; en gras &lt;/b&gt;</value>
+  </data>
+  <data name="tooltip2.data-content" xml:space="preserve">
+    <value>&lt;span style='color: red'&gt;bonjour en rouge &lt;/span&gt;</value>
+  </data>
+  <data name="tooltip3.data-content" xml:space="preserve">
+    <value>texte &lt;b&gt; marque &lt;/b&gt;</value>
+  </data>
+  <data name="tooltip4.data-content" xml:space="preserve">
+    <value>&lt;h3&gt; h3 header &lt;/h3&gt;</value>
+  </data>
+  <data name="tooltip5.data-content" xml:space="preserve">
+    <value>&lt;div class="perso1"&gt;hello aquamarine &lt;/div&gt;</value>
   </data>
 </root>

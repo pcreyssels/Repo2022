@@ -65,7 +65,7 @@
             </div>
 
             <div>SITEMAP :</div>
-             <div>
+            <div>
                 <asp:SiteMapPath runat="server" />
             </div>
 
@@ -89,7 +89,7 @@
             </div>--%>
 
             <br />
-            <div> ******* breadcrumb bootstrap ******* </div>
+            <div>******* breadcrumb bootstrap ******* </div>
             <ol class="breadcrumb">
                 <li><a href="WebForm8">We fo 8 </a></li>
                 <li><a href="WebForm80">We fo 80</a></li>
@@ -117,7 +117,13 @@
             $("#flipFlop").modal("show");
         }
 
+
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
     </script>
+
+
 
 </body>
 </html>

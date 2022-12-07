@@ -13,7 +13,7 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CultureInfo ci = new CultureInfo("fr", false);
+            CultureInfo ci = new CultureInfo("en", false);
             //CultureInfo ci = new CultureInfo("en-US", false);
             Thread.CurrentThread.CurrentCulture = ci;
             Thread.CurrentThread.CurrentUICulture = ci;
