@@ -11,7 +11,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Thread.CurrentThread.CurrentUICulture
+            
             int i = 2;
             int j = 3;
 

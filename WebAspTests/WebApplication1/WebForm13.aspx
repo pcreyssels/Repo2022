@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebForm13.aspx.cs" Inherits="WebApplication1.WebForm13" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
-      <%--  pas d'update panel dans cette page à acause de la gridview --%>
+    <%--  pas d'update panel dans cette page à acause de la gridview --%>
     <h3>
         <asp:Label ID="LabelEncartDocument" runat="server" meta:resourcekey="LabelEncartDocument" Text="_FICHE DOCUMENTS A FOURNIR"></asp:Label>
     </h3>
@@ -72,13 +73,13 @@
 
                 <asp:TemplateField>
                     <ItemTemplate>
-                        
-                        <asp:FileUpload runat="server"/>
+
+                        <%--<asp:FileUpload  runat="server" />--%>
                         <%--<asp:LinkButton ID="btn1" runat="server" CommandName="Command2" />--%>
                     </ItemTemplate>
                 </asp:TemplateField>
 
-               <%-- <asp:ButtonField ButtonType="Image"
+                <%-- <asp:ButtonField ButtonType="Image"
                     CommandName="Select"
                     HeaderText="_Choix"
                     Text="_télécharger"
@@ -97,52 +98,40 @@
             </div>
         </div>
 
+        <hr />
+        <div>TEST :</div>
+        <asp:FileUpload ID="FileUpload2" Style="display: none" runat="server" onchange="upload()" />
+        <input type="button" value="Carica Documento" onclick="showBrowseDialog()" />
+
+        <asp:Button runat="server" ID="hideButton" Text="" Style="display: none;" OnClick="hideButton_Click" />
+
+
+        <div>FIN TEST :</div>
 
         <asp:FileUpload ID="FileUpload1" runat="server"></asp:FileUpload>
 
-        <%-- panel téléchargement --%>
-        <%--<asp:Panel runat="server" ID="panel1" Visible="false">
-            <h4>
-                <asp:Label runat="server" ID="labelUploadinfo"></asp:Label>
-            </h4>
-            
-            <span class="label label-info">Document à télécharger (max 2 Mo)</span>
-
-            <br />
-
-            <div class="panel panel-default">
-                <div class="panel-body">
-
-                    <asp:FileUpload ID="FileUpload1"
-                        runat="server"></asp:FileUpload>
-
-                    <br />
-
-                    <asp:Button ID="UploadButton"
-                        Text="Téléverser"
-                        OnClick="UploadButton_Click"
-                        CausesValidation="true"
-                        runat="server"></asp:Button>
-
-                    <asp:Label ID="UploadStatusLabel"
-                        runat="server">
-                    </asp:Label>
-
-                </div>
-            </div>
 
 
-        </asp:Panel>--%>
+        
     </div>
 
 
 </asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphScript" runat="server">
-    <%-- SCRIPT pour les popover --%>
-    <script>
-        $(function () {
-            $('[data-toggle="popover"]').popover()
-        })
+<%-- SCRIPT pour les popover --%>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolderScript" runat="server">
+
+    <script type="text/javascript" language="javascript">
+        function showBrowseDialog() {
+            var fileuploadctrl = document.getElementById('<%= FileUpload2.ClientID %>');
+            fileuploadctrl.click();
+        }
+
+      
+        function upload() {
+            var btn = document.getElementById('<%= hideButton.ClientID %>');
+            btn.click();
+        }
+
     </script>
 </asp:Content>
 

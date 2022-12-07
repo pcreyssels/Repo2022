@@ -111,6 +111,8 @@
 
     </form>
 
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderScript" runat="server">
+    </asp:ContentPlaceHolder>
 
     <script type="text/javascript">
         function ModalOn() {
