@@ -32,9 +32,51 @@
 
 
     <h3>BONJOUR 2 </h3>
-    
+
     <div class="centegrid0">
         <asp:PlaceHolder runat="server" ID="PlaceHolder0"></asp:PlaceHolder>
     </div>
+
+
+     <hr />
+
+
+    <div class="centegrid0">
+        <span> A </span> 
+        <span> B </span> 
+        <span> C </span>
+        <span> D </span>
+        <span> E </span>
+        <input type="text" />
+        <input type="file" />
+    </div>
+
+    <hr />
+
+
+    <div class="centegrid1">
+        <span> A </span> 
+        <span> B </span> 
+        <span> C </span>
+        <span> D </span>
+        <span> E </span>
+        <input type="text" />
+        <input type="file" />
+        <span class="box1" >F</span>
+    </div>
+
+    <hr />
+
+
+    Select File to Upload: 
+    <input id="File1"
+        type="file"
+        runat="server" />
+
+    <input type="button" 
+              id="Button1" 
+              value="Upload" 
+              onserverclick="Button1_ServerClick"
+              runat="server" />
 
 </asp:Content>

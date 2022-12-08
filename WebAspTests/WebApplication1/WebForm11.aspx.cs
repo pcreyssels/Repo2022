@@ -85,5 +85,10 @@ namespace WebApplication1
             int y = 0;
 
         }
+
+        protected void Button1_ServerClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
