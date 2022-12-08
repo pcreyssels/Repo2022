@@ -63,6 +63,7 @@
         <input type="text" />
         <input type="file" />
         <span class="box1" >F</span>
+        <span style="grid-column: 3 / 4; grid-row: 4 / 5 "> G </span>
     </div>
 
     <hr />
