@@ -62,7 +62,10 @@ namespace WebApplication1
                         gct_cell.Controls.Add(hb);
                     }
                     else
+                    {
                         gct_cell.InnerText = v;
+                    }
+                        
 
                     PlaceHolder0.Controls.Add(gct_cell);
                 }
@@ -89,6 +92,25 @@ namespace WebApplication1
         protected void Button1_ServerClick(object sender, EventArgs e)
         {
 
+        }
+
+        protected void inputb1_ServerClick(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void hidden_Click(object sender, EventArgs e)
+        {
+            object p = hiddenfield.Value;
+            int i = 2;
+        }
+
+        protected void b1_Click(object sender, EventArgs e)
+        {
+
+            object o = e.GetType();
+            object p = hiddenfield.Value;
+            int i = 2;
         }
     }
 }
