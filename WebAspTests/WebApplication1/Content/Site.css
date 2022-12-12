@@ -75,4 +75,14 @@ table {
 .perso1 {
     color:royalblue;
     background-color:antiquewhite
+
+
+}
+
+.buttonlikelink {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0px;
 }

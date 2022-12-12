@@ -91,6 +91,12 @@
 
         <hr />
 
+        <input type="button" value="BONJOUR"/>
+
+        <input class="buttonlikelink" type="button" value="BONJOUR2"/>
+
+        <hr />
+
         <%-- bouton VALIDER--%>
         <div class="row">
             <div class="col-sm-12" style="text-align: end">
