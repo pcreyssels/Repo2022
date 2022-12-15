@@ -10,6 +10,11 @@ namespace WebApplication1
 {
     public partial class WebForm15 : System.Web.UI.Page
     {
+        // https://stackoverflow.com/questions/301473/rebinding-events-in-jquery-after-ajax-update-updatepanel
+        // https://www.w3schools.com/bootstrap/bootstrap_ref_js_popover.asp
+        // https://stackoverflow.com/questions/3630341/sys-application-add-load-vs-document-ready-vs-pageload
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             // Define the name and type of the client scripts on the page.
