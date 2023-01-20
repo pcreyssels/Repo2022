@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -17,6 +18,8 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Debug.WriteLine("**********       PAGE LOAD    **********");
+
             // Define the name and type of the client scripts on the page.
             String csname1 = "PopupScript";
             Type cstype = this.GetType();
