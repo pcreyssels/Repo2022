@@ -48,7 +48,12 @@
 
     <asp:Button runat="server" ID="bouton1" OnClick="bouton1_Click" Text="bouton hors update"/>
 
+    <hr />
+    <a href="/WebForm12">Website</a>
 </asp:Content>
+
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderScript" runat="server">
 
     <script>

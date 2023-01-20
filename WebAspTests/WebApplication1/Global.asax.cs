@@ -48,6 +48,27 @@ namespace WebApplication1
          * EndRequest
         
          */
+        private void loginfo()
+        {
+            string ru = HttpContext.Current.Request.RawUrl;
+            Uri curl = HttpContext.Current.Request.Url;
+
+            Uri curl2 = HttpContext.Current.Request.UrlReferrer;
+            Debug.WriteLine(" rawurl " + ru);
+            Debug.WriteLine(" url org str " + curl.OriginalString);
+            
+            if (curl2!=null)
+                Debug.WriteLine(" urlreferrer org str " + curl2.OriginalString);
+            else
+                Debug.WriteLine(" urlreferrer org str = null ");
+
+
+
+            if (HttpContext.Current.Session != null)
+                Debug.WriteLine($" session ID {HttpContext.Current.Session.SessionID}");
+            else
+                Debug.WriteLine($" session ID null");
+        }
 
         void Application_Start(object sender, EventArgs e)
         {
@@ -77,35 +98,20 @@ namespace WebApplication1
             Debug.WriteLine("-------------- Application_BeginRequest --------------");
             var sv = Request.ServerVariables;
 
-            string ru = HttpContext.Current.Request.RawUrl;
-            Uri curl = HttpContext.Current.Request.Url;
-
-            Uri curl2 = HttpContext.Current.Request.UrlReferrer;
-            Debug.WriteLine(" rawurl "+  ru);
-            Debug.WriteLine(" urlorg str "+curl.OriginalString);
-            if (HttpContext.Current.Session!=null)
-                Debug.WriteLine($" session ID {HttpContext.Current.Session.SessionID}");
-            else
-                Debug.WriteLine($" session ID null");
+            loginfo();
 
         }
 
         protected void Application_AcquireRequestState(object sender, EventArgs e)
         {
             Debug.WriteLine("-------------- Application_AcquireRequestState --------------");
-            if (HttpContext.Current.Session != null)
-                Debug.WriteLine($" session ID {HttpContext.Current.Session.SessionID}");
-            else
-                Debug.WriteLine($" session ID null");
+            loginfo();
         }
 
         protected void Application_PostAcquireRequestState(object sender, EventArgs e)
         {
             Debug.WriteLine("-------------- Application_PostAcquireRequestState --------------");
-            if (HttpContext.Current.Session != null)
-                Debug.WriteLine($" session ID {HttpContext.Current.Session.SessionID}");
-            else
-                Debug.WriteLine($" session ID null");
+            loginfo();
         }
 
         protected void Application_EndRequest(object sender, EventArgs e)
