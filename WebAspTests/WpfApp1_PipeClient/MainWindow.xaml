@@ -8,6 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="Button" HorizontalAlignment="Left" Margin="113,105,0,0" VerticalAlignment="Top" Height="38" Width="100" Click="Button_Click" />
+        <Button Content="CONNECT" HorizontalAlignment="Left" Margin="113,217,0,0" VerticalAlignment="Top" Height="38" Width="100" Click="Button_Click_1" />
+
         <TextBox Name="Textbox1" HorizontalAlignment="Left" Margin="262,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="392" Height="280"/>
         <Label Content="PIPE CLIENT" HorizontalAlignment="Left" Margin="299,60,0,0" VerticalAlignment="Top" Height="40" Width="145"/>
 

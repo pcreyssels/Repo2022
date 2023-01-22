@@ -26,6 +26,7 @@ namespace WpfApp1_PipeServer
     {
         public DispatcherTimer dispatcherTimer;
         Task t;
+        Task t1;
         NamedPipeServerStream pipeServer;
         StreamWriter sw;
         public void SetTimer()
@@ -52,7 +53,7 @@ namespace WpfApp1_PipeServer
         {
             InitializeComponent();
             Textbox1.AppendText("initialisation..Server." + Environment.NewLine);
-            SetTimer();
+            //SetTimer();
 
         // https://learn.microsoft.com/en-us/dotnet/api/system.io.pipes.namedpipeserverstream?view=net-7.0
 
@@ -73,9 +74,25 @@ namespace WpfApp1_PipeServer
             {
                 Textbox1.AppendText("client connected " + Environment.NewLine);
             }
+            pipeServer.WaitForConnection();
+            Textbox1.AppendText("client connected " + Environment.NewLine);
 
-            t = pipeServer.WaitForConnectionAsync();
-            Task t1 = t.ContinueWith(t => { Dispatcher.Invoke(myDelegate); } );
+            //t = pipeServer.WaitForConnectionAsync();
+            //t1 = t.ContinueWith(t => { Dispatcher.Invoke(myDelegate); } );
+
+            //t1.Wait();
+            bool icn = pipeServer.IsConnected;
+            //Task.Delay(2000);
+            //using (StreamWriter sw = new StreamWriter(pipeServer))
+            //{
+            //    bool af = sw.AutoFlush;
+                //sw.AutoFlush = true;
+                //Console.Write("Enter text: ");
+                //sw.WriteLine("bonjour vous"+ Environment.NewLine);
+
+                //sw.WriteLine("bonjour nous" );
+            //}
+            icn = pipeServer.IsConnected;
 
             //Textbox1.AppendText("Client connected.");
             //try
@@ -94,14 +111,25 @@ namespace WpfApp1_PipeServer
             //{
             //    Console.WriteLine("ERROR: {0}", e.Message);
             //}
+            icn = pipeServer.IsConnected;
 
         }
 
         private void B1_Click(object sender, RoutedEventArgs e)
         {
-            Textbox1.AppendText("envoie sur pipe " + Environment.NewLine);
-                     
-            sw.WriteLine("data envoe sur pipe");
+            string texte = "envoie sur pipe ";
+            
+            bool icn = pipeServer.IsConnected;
+            //using (StreamWriter sw = new StreamWriter(pipeServer))
+            //{
+            //    bool af = sw.AutoFlush;
+                //sw.AutoFlush = true;
+                //Console.Write("Enter text: ");
+                sw.WriteLine(texte + Environment.NewLine);
+
+                //sw.WriteLine("bonjour nous");
+            //}
+            Textbox1.AppendText(texte + Environment.NewLine);
         }
     }
 }

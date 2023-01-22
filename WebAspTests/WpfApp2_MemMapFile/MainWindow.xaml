@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfApp2_MemMapFile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2_MemMapFile"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="TextBox1" HorizontalAlignment="Left" Margin="210,80,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="431" Height="218"/>
+        <Button Name="B1_readMMF" Click="B1_readMMF_Click"  Content="Read in MMF" HorizontalAlignment="Left" Margin="68,124,0,0" VerticalAlignment="Top"/>
+        <Button Name="B2" Content="Button" HorizontalAlignment="Left" Margin="68,189,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
