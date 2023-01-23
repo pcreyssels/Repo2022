@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="LabelEncartDocument.title" xml:space="preserve">
+    <value>DOCUMENTS SHEET TO BE PROVIDED</value>
+  </data>
+  <data name="LabelVotreDossier.InnerText" xml:space="preserve">
+    <value>votre dossier</value>
+  </data>
+  <data name="literal.Text" xml:space="preserve">
+    <value>texte H4</value>
+  </data>
+  <data name="literal_paiementcb.InnerHtml" xml:space="preserve">
+    <value>Paiement &lt;i&gt;via&lt;/i&gt; CB</value>
+  </data>
   <data name="TexteBrut.Text" xml:space="preserve">
     <value>Joindre toutes les pièces demandées, valider avec le bouton en fin de formulaire.
 

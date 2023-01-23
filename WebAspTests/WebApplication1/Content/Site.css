@@ -101,3 +101,7 @@ table {
     grid-row-start: 3;
     grid-row-end: 4;
 }
+
+.panel_infovalidation {
+    background-color: azure;
+}

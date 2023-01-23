@@ -21,7 +21,13 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            bool ipb = IsPostBack;
+            bool icb = IsCallback;
+
             btnFileUpload.Attributes.Add("onclick", "document.getElementById('" + FileUpload1.ClientID + "').click();");
+
+            
         }
 
         protected void Unnamed_Click(object sender, EventArgs e)
@@ -30,6 +36,31 @@ namespace WebApplication1
             {
                 FileUpload1.SaveAs(@"C:\tmp2\image.jpg");
             }
+        }
+
+        protected void Unnamed_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void linkb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void buttonOK_Click(object sender, EventArgs e)
+        {
+            panel.Visible = true;
+        }
+
+        protected void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
