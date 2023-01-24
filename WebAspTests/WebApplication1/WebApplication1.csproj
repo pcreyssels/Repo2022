@@ -448,6 +448,7 @@
     <Content Include="App_LocalResources\WebForm10.aspx.en.resx" />
     <Content Include="App_LocalResources\WebForm12.aspx.en.resx" />
     <Content Include="App_LocalResources\WebForm12.aspx.resx" />
+    <Content Include="App_LocalResources\WebForm15.aspx.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

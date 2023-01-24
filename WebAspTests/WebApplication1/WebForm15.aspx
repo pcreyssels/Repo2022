@@ -50,6 +50,15 @@
 
     <hr />
     <a href="/WebForm12">Website</a>
+
+    <hr />
+    <div runat="server" id="d1"  meta:resourcekey="_data">BONJOUR </div>
+
+     <div runat="server" id="d2" >BONJOUR </div>
+
+     <div runat="server" id="id3" meta:resourcekey="_valeur1">_BONJOUR </div>
+
+    <asp:Literal runat="server" ID="L1" Text="_literal" Mode="PassThrough" meta:resourcekey="_valeur_literal">_BONJOUR </asp:Literal>
 </asp:Content>
 
 

@@ -51,6 +51,8 @@ namespace WebApplication1
                 cstext1.Append("function pageLoad(sender, args) {if (args.get_isPartialLoad()) {$(function () {$('[data-toggle=\"popover\"]').popover()})}}");
 
                 cs.RegisterStartupScript(cstype, csname1, cstext1.ToString(),true);
+
+                d2.InnerHtml = "toto";
             }
         }
 
