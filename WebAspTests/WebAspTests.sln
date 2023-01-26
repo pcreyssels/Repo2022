@@ -20,9 +20,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1_PipeServer", "WpfAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1_PipeClient", "WpfApp1_PipeClient\WpfApp1_PipeClient.csproj", "{CE09A661-C879-4A1B-9B04-AA5DFD66FB99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp_MemMapFile", "WpfApp_MemMapFile\WpfApp_MemMapFile.csproj", "{EEE20F4A-76A3-44A9-AE94-EAA94D7B903F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp_MemMapFile", "WpfApp_MemMapFile\WpfApp_MemMapFile.csproj", "{EEE20F4A-76A3-44A9-AE94-EAA94D7B903F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2_MemMapFile", "WpfApp2_MemMapFile\WpfApp2_MemMapFile.csproj", "{617ADFE2-B3E4-4BE7-859A-DA5D016EB5FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp2_MemMapFile", "WpfApp2_MemMapFile\WpfApp2_MemMapFile.csproj", "{617ADFE2-B3E4-4BE7-859A-DA5D016EB5FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2_NET6", "ConsoleApp2_NET6\ConsoleApp2_NET6.csproj", "{A8DB1D64-78F9-421B-80FF-697270747BE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp_Expressions", "ConsoleApp_Expressions\ConsoleApp_Expressions.csproj", "{6CF5657E-DC60-4940-B60E-3269EAFDAE86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +66,14 @@ Global
 		{617ADFE2-B3E4-4BE7-859A-DA5D016EB5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{617ADFE2-B3E4-4BE7-859A-DA5D016EB5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{617ADFE2-B3E4-4BE7-859A-DA5D016EB5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DB1D64-78F9-421B-80FF-697270747BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DB1D64-78F9-421B-80FF-697270747BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DB1D64-78F9-421B-80FF-697270747BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DB1D64-78F9-421B-80FF-697270747BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF5657E-DC60-4940-B60E-3269EAFDAE86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF5657E-DC60-4940-B60E-3269EAFDAE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF5657E-DC60-4940-B60E-3269EAFDAE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF5657E-DC60-4940-B60E-3269EAFDAE86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

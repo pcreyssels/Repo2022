@@ -12,7 +12,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             int a = 3;
-
+            List<int> li1 = new List<int>();
             try
             {
                 if (a > 0)
