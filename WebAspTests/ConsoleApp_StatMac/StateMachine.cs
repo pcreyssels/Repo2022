@@ -29,9 +29,12 @@ namespace ConsoleApp_StatMac
 
         private Dictionary<SMState, string> SMStateDescription;
 
+        private Dictionary<SMState, List<SMState>> SMStatesTransitions;
+
         public SMState currentState
         {
             get => currentState;
+
             set
             {
                 if (true)
