@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,6 +13,23 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            ActivationContext ac = AppDomain.CurrentDomain.ActivationContext;
+            if (ac !=null)
+            {
+                ApplicationIdentity ai = ac.Identity;
+                Console.WriteLine("Full name = " + ai.FullName);
+                Console.WriteLine("Code base = " + ai.CodeBase);
+            }
+
+            string s = "System.Int32";
+            object o = Activator.CreateInstance(Type.GetType(s));
+            o = (Int32)125;
+            Assembly ass =  Assembly.GetAssembly(Type.GetType(s));
+            string an = ass.GetName().FullName;
+            //ObjectHandle handle = Activator.CreateInstance(an, "Int32");
+            //object t = handle.Unwrap();
+
+
             int a = 3;
             List<int> li1 = new List<int>();
             try
