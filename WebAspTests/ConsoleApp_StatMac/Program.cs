@@ -1,29 +1,112 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+
+
 using ConsoleApp_StatMac;
+using System.Dynamic;
+using System.Net.Http.Headers;
 
 Console.WriteLine("Hello, World!");
 
-StateMachine sma = new StateMachine(null);
+
+// *********** Tests
+int a = 6;
+
+Addition ad = (int a, int b) => (a + b);
+
+int r1 = ad.Invoke(5, 6);
+
+int s = ad(3,4);
+
+dynamic po = new paramsObj();
+
+dynamic myobject = new ExpandoObject();
+
+IDictionary<string, object> myUnderlyingObject = myobject;
+
+myUnderlyingObject.Add("IsDynamic", true); // Adding dynamically named property
+Int32 i = new Int32();
+String st = new String('c', 4);
+
+myobject.test = "bonjour";
+((IDictionary<String, Object>)myobject).Add("prop2", Activator.CreateInstance(typeof(int)));
+((IDictionary<String, Object>)myobject).Add("prop3", Activator.CreateInstance(typeof(String),new object[] { 'd',4}));
+int Y = myobject.prop2;
+
+string h = myobject.prop3;
+
+Predic pred1 = (ExpandoObject parametres) => (((dynamic)parametres).prop3 =="dded");
+
+bool predresult = pred1(myobject);
+
+Predicate<ExpandoObject> preo = (ExpandoObject parametres) => ((dynamic)parametres).prop3 == "dded";
+// *********** fin Tests
+
+StateMachine sma = new StateMachine();
 // définition des labels états
+sma.setSMStateDescription(StateMachine.SMState.state_1, "etat 0");
 sma.setSMStateDescription(StateMachine.SMState.state_1, "etat 1");
 sma.setSMStateDescription(StateMachine.SMState.state_2, "etat 2");
-sma.setSMStateDescription(StateMachine.SMState.state_2, "etat 3");
+sma.setSMStateDescription(StateMachine.SMState.state_3, "etat 3");
+sma.setSMStateDescription(StateMachine.SMState.state_4, "etat 4");
+sma.setSMStateDescription(StateMachine.SMState.state_5, "etat 5");
+sma.setSMStateDescription(StateMachine.SMState.state_6, "etat 6");
+sma.setSMStateDescription(StateMachine.SMState.state_7, "etat 7");
+sma.setSMStateDescription(StateMachine.SMState.state_8, "etat 8");
 
+// définition des tansitions
+/*
+ * 0 -> 1
+ * 0 -> 2
+ * 0 -> 3
+ * 1 -> 2
+ * 2 -> 3
+ * 3 -> 4
+ * 4 -> 5
+ * 5 -> 6
+ * 6 -> 0
+ * 7 -> 0
+ * 8 -> 0
+ */
+int r = 0;
+r= sma.StateMachineSetStatePair(StateMachine.SMState.state_0, StateMachine.SMState.state_1);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_0, StateMachine.SMState.state_2);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_0, StateMachine.SMState.state_3);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_1, StateMachine.SMState.state_2);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_2, StateMachine.SMState.state_3);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_3, StateMachine.SMState.state_4);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_4, StateMachine.SMState.state_5);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_5, StateMachine.SMState.state_6);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_6, StateMachine.SMState.state_0);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_7, StateMachine.SMState.state_0);
+r = sma.StateMachineSetStatePair(StateMachine.SMState.state_8, StateMachine.SMState.state_0);
+
+string external_variable = "toto bonjour";
+
+// définition des transitions
+// transition 0 -> 1
+ExpandoObject eo= new ExpandoObject();
+Predicate<ExpandoObject> predicate = (ExpandoObject _eo) => {
+    bool retv = false;
+    if (external_variable == "bonjour")
+        retv = true;
+    
+    return retv;
+};
+sma.StateMachine_setStateLine(StateMachine.SMState.state_0, StateMachine.SMState.state_1, eo, predicate);
+   
+
+
+sma.StateMachineReset();
 sma.currentState = StateMachine.SMState.state_0;
-// définition des variables externes
-sma.ExtVarDef.Add("param1_int",typeof(int));
-sma.ExtVarDef.Add("param2_string", typeof(string));
-sma.ExtVarDef.Add("param3_int", typeof(int));
-sma.ExtVarDef.Add("param4_string", typeof(int));
-sma.ExtVarDef.Add("param5_BOOL", typeof(bool));
 
-// définition des valeurs des variables externes
-sma.ExtVarVal.Add("param1_int", 5);
-sma.ExtVarVal.Add("param2_string", "bonjour");
-sma.ExtVarVal.Add("param3_int", 14);
-sma.ExtVarVal.Add("param4_string", "chaine 5");
-sma.ExtVarVal.Add("param5_BOOL", true);
+sma.StateMachineWork();
+StateMachine.SMState cs = sma.currentState;
+
+external_variable = "bonjour";
+
+sma.StateMachineWork();
+cs = sma.currentState;
 
 
 
@@ -46,19 +129,24 @@ int z = 3;
 
 z= 4;
 
-public enum SMState0 : ushort
+//public enum SMState0 : ushort
+//{
+//    state_0 = 0,
+//    state_1 = 1,
+//    state_2 = 2,
+//    state_3 = 3,
+//    state_4 = 4,
+//    state_5 = 5,
+//    state_6 = 6,
+//    state_7 = 7,
+//    state_8 = 8
+//}
+delegate int Addition(int x, int y);
+
+delegate bool Predic (ExpandoObject variables);
+
+public class paramsObj
 {
-    state_0 = 0,
-    state_1 = 1,
-    state_2 = 2,
-    state_3 = 3,
-    state_4 = 4,
-    state_5 = 5,
-    state_6 = 6,
-    state_7 = 7,
-    state_8 = 8
+    public int x;
 }
-
-
-
 
