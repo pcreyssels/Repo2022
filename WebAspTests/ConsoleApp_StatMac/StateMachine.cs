@@ -27,26 +27,26 @@ namespace ConsoleApp_StatMac
             state_8 = 8
         }
 
-        private SMState _currentState;
-        public SMState currentState
+        private SMState _SMcurrentState;
+        public SMState SMcurrentState
         {
-            get => currentState;
+            get => _SMcurrentState;
             set
             {
-                _currentState = value;
+                _SMcurrentState = value;
             }
         }
 
         public void StateMachineReset()
         {
-            _currentState = SMState.state_0;
+            _SMcurrentState = SMState.state_0;
         }
         // description des états
         private Dictionary<SMState, string> SMStateDescription;
 
-        public void setSMStateDescription(SMState state, string desciption)
+        public void setSMStateDescription(SMState state, string description)
         {
-            SMStateDescription[state] = desciption;
+            SMStateDescription[state] = description;
         }
 
         public string getSMStateDescription(SMState state)
@@ -76,20 +76,20 @@ namespace ConsoleApp_StatMac
                 Predicate<ExpandoObject> pre = (ExpandoObject _eo) => false;
                 Tuple<ExpandoObject, Predicate<ExpandoObject>> transitiondef =
                     new Tuple<ExpandoObject, Predicate<ExpandoObject>>(eo, pre);
-                Tuple<SMState, SMState> states = new Tuple<SMState, SMState>(SMState_values[i], SMState.state_0);
+                Tuple<SMState, SMState> states = new Tuple<SMState, SMState>(SMState_values[i], SMState_values[i]);
                 StateMachineDescription.Add(states, transitiondef);
             }
         }
 
-        public int StateMachineSetStatePair(SMState currentSate, SMState nextState)
+        public int StateMachineSetStatePair(SMState _currentState, SMState _nextState)
         {
             int retval = 0;
             Predicate<ExpandoObject> predicate = (ExpandoObject _eo) => false;
             ExpandoObject eo= new ExpandoObject();
-            Tuple<SMState, SMState> states = new Tuple<SMState, SMState>(currentState, nextState);
+            Tuple<SMState, SMState> states = new Tuple<SMState, SMState>(_currentState, _nextState);
             if (!StateMachineDescription.ContainsKey(states))
             {
-                StateMachineDescription.Add(new Tuple<SMState, SMState>(currentState, nextState), new Tuple<ExpandoObject, Predicate<ExpandoObject>>(eo, predicate));
+                StateMachineDescription.Add(new Tuple<SMState, SMState>(_currentState, _nextState), new Tuple<ExpandoObject, Predicate<ExpandoObject>>(eo, predicate));
             }
             else
                 retval = -1; //couple clé déjà enregistrée
@@ -98,9 +98,9 @@ namespace ConsoleApp_StatMac
             return retval;
         }
 
-        public void StateMachine_setStateLine(SMState currentState, SMState nextSate, ExpandoObject variables, Predicate<ExpandoObject> transitionFunc)
+        public void StateMachine_setStateLine(SMState currentState, SMState nextState, ExpandoObject variables, Predicate<ExpandoObject> transitionFunc)
         {
-            Tuple<SMState, SMState> states = new Tuple<SMState, SMState>(currentState, nextSate);
+            Tuple<SMState, SMState> states = new Tuple<SMState, SMState>(currentState, nextState);
             Tuple<ExpandoObject, Predicate<ExpandoObject>> transitiondef = new Tuple<ExpandoObject, Predicate<ExpandoObject>>(variables, transitionFunc);
             if (!StateMachineDescription.ContainsKey(states))
             {
@@ -120,14 +120,17 @@ namespace ConsoleApp_StatMac
             int morethan1transitionmatch = 0;
             foreach (Tuple<SMState, SMState> k in StateMachineDescription.Keys)
             {
-                if (k.Item1 == _currentState)
+                Console.WriteLine(k.Item1.ToString() + "   -   " + k.Item2.ToString());
+                if (k.Item1 == _SMcurrentState)
                 {
-                    nextState = k.Item2;
+                    
                     Predicate<ExpandoObject> predicate = StateMachineDescription[k].Item2;
                     bool transition = predicate(StateMachineDescription[k].Item1);
                     if (transition)
                     {
+                        nextState = k.Item2;
                         morethan1transitionmatch += 1;
+                        Console.WriteLine(" match !");
                     }
                 }
             }
@@ -137,14 +140,14 @@ namespace ConsoleApp_StatMac
             }
             else if (morethan1transitionmatch == 1)
             {
-                currentState = nextState;
+                _SMcurrentState = nextState;
             }
             else if (morethan1transitionmatch > 1)
             {
                 // plus d'une transition possible erreur conception statemchine on avance pas
-                return _currentState;
+                return _SMcurrentState;
             }
-            return _currentState;
+            return _SMcurrentState;
         }
 
         public SMState[] getPreviousStates(SMState currentState)

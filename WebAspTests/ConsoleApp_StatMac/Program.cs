@@ -86,27 +86,27 @@ string external_variable = "toto bonjour";
 // définition des transitions
 // transition 0 -> 1
 ExpandoObject eo= new ExpandoObject();
-Predicate<ExpandoObject> predicate = (ExpandoObject _eo) => {
+Predicate<ExpandoObject> predicate11 = (ExpandoObject _eo) => {
     bool retv = false;
     if (external_variable == "bonjour")
         retv = true;
     
     return retv;
 };
-sma.StateMachine_setStateLine(StateMachine.SMState.state_0, StateMachine.SMState.state_1, eo, predicate);
+sma.StateMachine_setStateLine(StateMachine.SMState.state_0, StateMachine.SMState.state_1, eo, predicate11);
    
 
 
 sma.StateMachineReset();
-sma.currentState = StateMachine.SMState.state_0;
+sma.SMcurrentState = StateMachine.SMState.state_0;
 
 sma.StateMachineWork();
-StateMachine.SMState cs = sma.currentState;
+StateMachine.SMState cs = sma.SMcurrentState;
 
 external_variable = "bonjour";
 
 sma.StateMachineWork();
-cs = sma.currentState;
+cs = sma.SMcurrentState;
 
 
 
