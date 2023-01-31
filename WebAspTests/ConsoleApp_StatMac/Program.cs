@@ -6,6 +6,8 @@ using ConsoleApp_StatMac;
 using System.Dynamic;
 using System.Net.Http.Headers;
 
+using _smState = ConsoleApp_StatMac.StateMachine.SMState;
+
 Console.WriteLine("Hello, World!");
 
 
@@ -83,6 +85,8 @@ r = sma.StateMachineSetStatePair(StateMachine.SMState.state_8, StateMachine.SMSt
 
 string external_variable = "toto bonjour";
 
+_smState[] _sma = sma.getPreviousStates(StateMachine.SMState.state_0);
+
 // définition des transitions
 // transition 0 -> 1
 ExpandoObject eo= new ExpandoObject();
@@ -94,7 +98,8 @@ Predicate<ExpandoObject> predicate11 = (ExpandoObject _eo) => {
     return retv;
 };
 sma.StateMachine_setStateLine(StateMachine.SMState.state_0, StateMachine.SMState.state_1, eo, predicate11);
-   
+
+
 
 
 sma.StateMachineReset();

@@ -37,6 +37,12 @@ namespace ConsoleApp_StatMac
             }
         }
 
+        private int _foundTransitionsStates;
+        public int foundTransitionsStates
+        {
+            get => _foundTransitionsStates;
+        }
+
         public void StateMachineReset()
         {
             _SMcurrentState = SMState.state_0;
@@ -120,7 +126,7 @@ namespace ConsoleApp_StatMac
             int morethan1transitionmatch = 0;
             foreach (Tuple<SMState, SMState> k in StateMachineDescription.Keys)
             {
-                Console.WriteLine(k.Item1.ToString() + "   -   " + k.Item2.ToString());
+                // debug Console.WriteLine(k.Item1.ToString() + "   -   " + k.Item2.ToString());
                 if (k.Item1 == _SMcurrentState)
                 {
                     
@@ -130,13 +136,13 @@ namespace ConsoleApp_StatMac
                     {
                         nextState = k.Item2;
                         morethan1transitionmatch += 1;
-                        Console.WriteLine(" match !");
+                        // debug  Console.WriteLine(" match !");
                     }
                 }
             }
             if (morethan1transitionmatch == 0)
             {
-                // return _currentState;
+                // return _SMcurrentState;
             }
             else if (morethan1transitionmatch == 1)
             {
@@ -147,6 +153,7 @@ namespace ConsoleApp_StatMac
                 // plus d'une transition possible erreur conception statemchine on avance pas
                 return _SMcurrentState;
             }
+            _foundTransitionsStates = morethan1transitionmatch;
             return _SMcurrentState;
         }
 
