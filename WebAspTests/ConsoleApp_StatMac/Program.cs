@@ -5,10 +5,39 @@
 using ConsoleApp_StatMac;
 using System.Dynamic;
 using System.Net.Http.Headers;
+using System.Reflection;
+using System.Reflection.Emit;
 
 using _smState = ConsoleApp_StatMac.StateMachine.SMState;
 
 Console.WriteLine("Hello, World!");
+var i1 = new int[0].FirstOrDefault();
+
+AppDomain currentDomain = AppDomain.CurrentDomain;
+
+// Create a dynamic assembly in the current application domain,
+// and allow it to be executed and saved to disk.
+AssemblyName aName = new AssemblyName("TempAssembly");
+AssemblyBuilder ab = AssemblyBuilder.DefineDynamicAssembly(aName, AssemblyBuilderAccess.Run);
+
+ModuleBuilder mb = ab.DefineDynamicModule(aName.Name);
+
+// Define a public enumeration with the name "Elevation" and an
+// underlying type of Integer.
+EnumBuilder eb = mb.DefineEnum("SMacState", TypeAttributes.Public, typeof(int));
+
+// Define two members, "High" and "Low".
+eb.DefineLiteral("Low", 0);
+eb.DefineLiteral("High", 1);
+
+Type Smatype = eb.CreateType();
+
+Array ar = Enum.GetValues(Smatype);
+
+object ep = Enum.Parse(Smatype, "Low");
+Type ot = ep.GetType();
+ var i2 = new int[3];
+
 
 
 // *********** Tests
