@@ -59,6 +59,12 @@
      <div runat="server" id="id3" meta:resourcekey="_valeur1">_BONJOUR </div>
 
     <asp:Literal runat="server" ID="L1" Text="_literal" Mode="PassThrough" meta:resourcekey="_valeur_literal">_BONJOUR </asp:Literal>
+
+    <hr />
+    <asp:TextBox ID="textbox1" runat="server" Text="init"></asp:TextBox>
+    <asp:Button runat="server" CausesValidation="true" ID="Button3" OnClick="Button3_Click" Text="textbox CV true"/>
+    <asp:Button runat="server" CausesValidation="false" ID="Button4" OnClick="Button4_Click" Text="textbox CV false"/>
+
 </asp:Content>
 
 

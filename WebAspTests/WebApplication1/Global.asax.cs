@@ -9,6 +9,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using WebApplication1.App_GlobalResources;
 
 namespace WebApplication1
 {
@@ -48,8 +49,18 @@ namespace WebApplication1
          * EndRequest
         
          */
-        private void loginfo()
+        private void loginfo(object sender)
         {
+
+            HttpApplication app = (HttpApplication)sender;
+            HttpContext context = app.Context;
+            RequestNotification rn = context.CurrentNotification;
+            string ipn = "false";
+            if (context.IsPostNotification)
+                ipn= "true";
+            Debug.WriteLine(" ------- > RequestNotification : " + rn.ToString()+ "   --- > IsPostNotification : "+ipn);
+
+
             string ru = HttpContext.Current.Request.RawUrl;
             Uri curl = HttpContext.Current.Request.Url;
 
@@ -68,6 +79,7 @@ namespace WebApplication1
                 Debug.WriteLine($" session ID {HttpContext.Current.Session.SessionID}");
             else
                 Debug.WriteLine($" session ID null");
+
         }
 
         void Application_Start(object sender, EventArgs e)
@@ -81,7 +93,7 @@ namespace WebApplication1
 
         //https://www.codeproject.com/Questions/267379/Give-some-Examples-That-we-can-do-in-each-Applicat
         protected void Application_BeginRequest(object sender, EventArgs e)
-        {
+         {
             // https://stackoverflow.com/questions/11805897/masterpage-initializeculture-no-suitable-method-found-to-override-error
             //HttpCookie cookie = Request.Cookies["langCookie"];
             //if (cookie != null && !string.IsNullOrEmpty(cookie.Value))
@@ -98,26 +110,139 @@ namespace WebApplication1
             Debug.WriteLine("-------------- Application_BeginRequest --------------");
             var sv = Request.ServerVariables;
 
-            loginfo();
+            loginfo(sender);
 
         }
+        protected void Application_AuthenticateRequest(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_AuthenticateRequest --------------");
+            loginfo(sender);
+        }
 
+        protected void Application_PostAuthenticateRequest(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_PostAuthenticateRequest --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_AuthorizeRequest(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_AuthorizeRequest --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_PostAuthorizeRequest(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_PostAuthorizeRequest --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_ResolveRequestCache(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_ResolveRequestCache --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_PostResolveRequestCache(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_PostResolveRequestCache --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_PostMapRequestHandler(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_PostMapRequestHandler --------------");
+            loginfo(sender);
+        }
+
+       
         protected void Application_AcquireRequestState(object sender, EventArgs e)
         {
             Debug.WriteLine("-------------- Application_AcquireRequestState --------------");
-            loginfo();
+            loginfo(sender);
         }
 
         protected void Application_PostAcquireRequestState(object sender, EventArgs e)
         {
             Debug.WriteLine("-------------- Application_PostAcquireRequestState --------------");
-            loginfo();
+            loginfo(sender);
+        }
+        protected void Application_PreRequestHandlerExecute(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_PreRequestHandlerExecute --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_PostRequestHandlerExecute(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_PostRequestHandlerExecute --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_ReleaseRequestState(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_ReleaseRequestState --------------");
+            loginfo(sender);
+            
+        }
+
+        protected void Application_PostReleaseRequestState(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_PostReleaseRequestState --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_UpdateRequestCache(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_UpdateRequestCache --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_PostUpdateRequestCache(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_PostUpdateRequestCache --------------");
+            loginfo(sender);
+        }
+
+        protected void Application_LogRequest(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_LogRequest --------------");
+            
+
+            loginfo(sender);
+        }
+
+        protected void Application_PostLogRequest(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_PostLogRequest --------------");
+            loginfo(sender);
         }
 
         protected void Application_EndRequest(object sender, EventArgs e)
         {
             Debug.WriteLine("-------------- Application_EndRequest --------------");
+            loginfo(sender);
         }
+        /*
+        ** PostMapRequestHandler
+        * AcquireRequestState
+        * PostAcquireRequestState
+        * PreRequestHandlerExecute
+        * The event handler is executed.
+        * PostRequestHandlerExecute
+        * ReleaseRequestState
+        * PostReleaseRequestState
+        * After the PostReleaseRequestState event is raised, any existing response filters will filter the output.
+        * UpdateRequestCache
+        * PostUpdateRequestCache
+        * LogRequest.
+           This event is supported in IIS 7.0 Integrated mode and at least the .NET Framework 3.0
+        * PostLogRequest
+          This event is supported IIS 7.0 Integrated mode and at least the .NET Framework 3.0
+        * EndRequest
+        */
+
+       
 
         public void Session_OnStart()
         {

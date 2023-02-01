@@ -65,5 +65,15 @@ namespace WebApplication1
         {
             int i = 1;
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Button3_Click    **********");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Button4_Click    **********");
+        }
     }
 }
