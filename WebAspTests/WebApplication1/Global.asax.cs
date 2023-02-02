@@ -18,6 +18,7 @@ namespace WebApplication1
         internal static string bonjour_v = "BONJOUR SITE";
 
         /*
+         * https://learn.microsoft.com/en-us/dotnet/api/system.web.httpapplication?view=netframework-4.8.1
          * The application events are raised in the following order:
          * BeginRequest
          * AuthenticateRequest
@@ -26,20 +27,22 @@ namespace WebApplication1
          * PostAuthorizeRequest
          * ResolveRequestCache
          * PostResolveRequestCache
-         * After the PostResolveRequestCache event and before the PostMapRequestHandler event, 
+         > After the PostResolveRequestCache event and before the PostMapRequestHandler event, 
         an event handler (which is a page that corresponds to the request URL) is created. 
         When a server is running IIS 7.0 in Integrated mode and at least the .NET Framework version 3.0, 
-        the MapRequestHandler event is raised. When a server is running IIS 7.0 in 
+        the 
+         * MapRequestHandler 
+         > event is raised. When a server is running IIS 7.0 in 
         Classic mode or an earlier version of IIS, this event cannot be handled.
          * PostMapRequestHandler
          * AcquireRequestState
          * PostAcquireRequestState
          * PreRequestHandlerExecute
-         * The event handler is executed.
+         * >>>>  The event handler is executed.
          * PostRequestHandlerExecute
          * ReleaseRequestState
          * PostReleaseRequestState
-         * After the PostReleaseRequestState event is raised, any existing response filters will filter the output.
+         * >>>> After the PostReleaseRequestState event is raised, any existing response filters will filter the output.
          * UpdateRequestCache
          * PostUpdateRequestCache
          * LogRequest.
@@ -59,7 +62,20 @@ namespace WebApplication1
             if (context.IsPostNotification)
                 ipn= "true";
             Debug.WriteLine(" ------- > RequestNotification : " + rn.ToString()+ "   --- > IsPostNotification : "+ipn);
+            
+            HttpRequest _current_request = HttpContext.Current.Request;
+            Debug.WriteLine($" anonymous ID :  {_current_request.AnonymousID}");
+            Debug.WriteLine($" request type :  {_current_request.RequestType}");
+            string is_aut = "false";
+            if (_current_request.IsAuthenticated)
+                is_aut= "true";
+            Debug.WriteLine($" is authenticated  :  {is_aut}");
 
+            Debug.WriteLine($" User-Agent  :  {_current_request.Browser.Browser}");
+
+
+            Debug.WriteLine($" HttpRequest.Path      :  {_current_request.Path}");
+            Debug.WriteLine($" HttpRequest.PathInfo  :  {_current_request.PathInfo}");
 
             string ru = HttpContext.Current.Request.RawUrl;
             Uri curl = HttpContext.Current.Request.Url;
@@ -73,12 +89,31 @@ namespace WebApplication1
             else
                 Debug.WriteLine(" urlreferrer org str = null ");
 
+            HttpSessionState _sessionState = HttpContext.Current.Session;
 
-
-            if (HttpContext.Current.Session != null)
-                Debug.WriteLine($" session ID {HttpContext.Current.Session.SessionID}");
+            if (_sessionState != null)
+            {
+                string b = _sessionState.IsNewSession ? "true" : "false";
+                Debug.WriteLine($" session ID     {_sessionState.SessionID}");
+                Debug.WriteLine($" session mode   {_sessionState.Mode.ToString()}");
+                Debug.WriteLine($" is new session {b}");
+                int kc = _sessionState.Keys.Count;
+                Debug.WriteLine($" sessions variables : {kc.ToString()}");
+                if (kc>0)
+                {
+                    foreach (string k in _sessionState.Keys)
+                    {
+                        object elt = _sessionState[k];
+                        Debug.WriteLine($" -    variable : clé:{k}, valeur : {elt.ToString()}");
+                    }
+                }
+                
+            }
             else
+            {
                 Debug.WriteLine($" session ID null");
+            }
+                
 
         }
 
@@ -149,6 +184,12 @@ namespace WebApplication1
             loginfo(sender);
         }
 
+        protected void Application_MapRequestHandler(object sender, EventArgs e)
+        {
+            Debug.WriteLine("-------------- Application_MapRequestHandler --------------");
+            loginfo(sender);
+        }
+
         protected void Application_PostMapRequestHandler(object sender, EventArgs e)
         {
             Debug.WriteLine("-------------- Application_PostMapRequestHandler --------------");
@@ -169,7 +210,16 @@ namespace WebApplication1
         }
         protected void Application_PreRequestHandlerExecute(object sender, EventArgs e)
         {
+            // Occurs just before ASP.NET starts executing an event handler (for example, a page or an XML Web service).
             Debug.WriteLine("-------------- Application_PreRequestHandlerExecute --------------");
+            if (HttpContext.Current.Session != null)
+            {
+                Debug.WriteLine(" ***** HTTPCONTEXT.CURRENT.SESSION  NOT NULL *****");
+            }
+            else
+            {
+                Debug.WriteLine(" ***** HTTPCONTEXT.CURRENT.SESSION  NULL *****");
+            }
             loginfo(sender);
         }
 
@@ -223,24 +273,7 @@ namespace WebApplication1
             Debug.WriteLine("-------------- Application_EndRequest --------------");
             loginfo(sender);
         }
-        /*
-        ** PostMapRequestHandler
-        * AcquireRequestState
-        * PostAcquireRequestState
-        * PreRequestHandlerExecute
-        * The event handler is executed.
-        * PostRequestHandlerExecute
-        * ReleaseRequestState
-        * PostReleaseRequestState
-        * After the PostReleaseRequestState event is raised, any existing response filters will filter the output.
-        * UpdateRequestCache
-        * PostUpdateRequestCache
-        * LogRequest.
-           This event is supported in IIS 7.0 Integrated mode and at least the .NET Framework 3.0
-        * PostLogRequest
-          This event is supported IIS 7.0 Integrated mode and at least the .NET Framework 3.0
-        * EndRequest
-        */
+       
 
        
 
@@ -249,7 +282,7 @@ namespace WebApplication1
             Application.Lock();
             Application["UsersOnline"] = (int)Application["UsersOnline"] + 1;
             Application.UnLock();
-            Debug.WriteLine("-------------- SESSION START --------------");
+            Debug.WriteLine("--------------  ******************* SESSION START ******************* --------------");
             Debug.WriteLine($"session ID {HttpContext.Current.Session.SessionID}");
             var cles = HttpContext.Current.Application.Keys;
             string[] keys = HttpContext.Current.Application.AllKeys;
