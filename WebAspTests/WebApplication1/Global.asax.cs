@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Web;
 using System.Web.Optimization;
@@ -182,18 +183,30 @@ namespace WebApplication1
         {
             Debug.WriteLine("-------------- Application_PostResolveRequestCache --------------");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
+            int z = 0;
         }
 
         protected void Application_MapRequestHandler(object sender, EventArgs e)
         {
             Debug.WriteLine("-------------- Application_MapRequestHandler --------------");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
+            int z = 0;
         }
 
         protected void Application_PostMapRequestHandler(object sender, EventArgs e)
         {
             Debug.WriteLine("-------------- Application_PostMapRequestHandler --------------");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
+            int z = 0;
         }
 
        
@@ -201,6 +214,27 @@ namespace WebApplication1
         {
             Debug.WriteLine("-------------- Application_AcquireRequestState --------------");
             loginfo(sender);
+            IHttpHandler ihh =  HttpContext.Current.Handler;
+            
+            IEnumerable<PropertyInfo> pinfo = HttpContext.Current.Handler.GetType().GetRuntimeProperties();
+
+            IEnumerable<MethodInfo> minfos = HttpContext.Current.Handler.GetType().GetTypeInfo().DeclaredMethods;
+            IEnumerable<MethodInfo> minfos2 = HttpContext.Current.Handler.GetType().GetTypeInfo().GetRuntimeMethods();
+
+            string _name = HttpContext.Current.Handler.GetType().Name;
+            string _fname = HttpContext.Current.Handler.GetType().FullName;
+            TypeInfo ti = HttpContext.Current.Handler.GetType().GetTypeInfo();
+
+            foreach (PropertyInfo pinfo2 in pinfo)
+            {
+                string na = pinfo2.Name;
+            }
+
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
+
+            
+            int z = 0;
         }
 
         protected void Application_PostAcquireRequestState(object sender, EventArgs e)
@@ -212,15 +246,31 @@ namespace WebApplication1
         {
             // Occurs just before ASP.NET starts executing an event handler (for example, a page or an XML Web service).
             Debug.WriteLine("-------------- Application_PreRequestHandlerExecute --------------");
-            if (HttpContext.Current.Session != null)
+                        
+            loginfo(sender);
+
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
+
+            HttpSessionState _sessionState = HttpContext.Current.Session;
+            if (_sessionState != null)
             {
-                Debug.WriteLine(" ***** HTTPCONTEXT.CURRENT.SESSION  NOT NULL *****");
+                if (_sessionState.SessionID != null)
+                {
+                    string p = HttpContext.Current.Request.Path;
+                    List<ValueTuple<string, DateTime>> li = ((List<ValueTuple<string, DateTime>>)Session["tracker"]);
+                    if (li.Count >= 10)
+                        li.RemoveAt(0);
+                    li.Add(ValueTuple.Create<string, DateTime>(p, DateTime.Now));
+                    
+                }
+                
             }
             else
             {
-                Debug.WriteLine(" ***** HTTPCONTEXT.CURRENT.SESSION  NULL *****");
+                
             }
-            loginfo(sender);
         }
 
         protected void Application_PostRequestHandlerExecute(object sender, EventArgs e)
@@ -233,7 +283,6 @@ namespace WebApplication1
         {
             Debug.WriteLine("-------------- Application_ReleaseRequestState --------------");
             loginfo(sender);
-            
         }
 
         protected void Application_PostReleaseRequestState(object sender, EventArgs e)
@@ -257,8 +306,6 @@ namespace WebApplication1
         protected void Application_LogRequest(object sender, EventArgs e)
         {
             Debug.WriteLine("-------------- Application_LogRequest --------------");
-            
-
             loginfo(sender);
         }
 
@@ -274,9 +321,6 @@ namespace WebApplication1
             loginfo(sender);
         }
        
-
-       
-
         public void Session_OnStart()
         {
             Application.Lock();
@@ -286,7 +330,17 @@ namespace WebApplication1
             Debug.WriteLine($"session ID {HttpContext.Current.Session.SessionID}");
             var cles = HttpContext.Current.Application.Keys;
             string[] keys = HttpContext.Current.Application.AllKeys;
+
+            HttpSessionState _sessionState = HttpContext.Current.Session; 
+            if (_sessionState != null)
+            {
+                bool b = _sessionState.IsNewSession;
+                string sid = _sessionState.SessionID;
+                Session["tracker"] = new List<ValueTuple<string, DateTime>>();
+            }
             
+            
+                
             int i = 2;
         }
 
@@ -295,7 +349,6 @@ namespace WebApplication1
             Application.Lock();
             Application["UsersOnline"] = (int)Application["UsersOnline"] - 1;
             Application.UnLock();
-
         }
     }
 
