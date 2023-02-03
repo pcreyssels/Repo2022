@@ -78,8 +78,13 @@ namespace WebApplication1
                 d2.InnerHtml = "toto";
             }
 
+            bool infosession = Session.IsNewSession;
+            Uri uri_ref = Request.UrlReferrer;
+
             Session["var1"] = "session variable 1";
             Session["var2"] = 15;
+
+            
         }
 
         protected void bouton1_Click(object sender, EventArgs e)
@@ -134,6 +139,11 @@ namespace WebApplication1
         protected void Page_Unload(object sender, EventArgs e)
         {
             Debug.WriteLine("**********       Page_Unload    **********");
+        }
+
+        protected void paidButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
