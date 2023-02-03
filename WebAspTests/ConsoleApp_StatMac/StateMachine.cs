@@ -316,10 +316,7 @@ namespace ConsoleApp_StatMac
             return list_prevstates.ToArray();
         }
 
-        public void doWork()
-        {
-            int n = Enum.GetNames(typeof(SMState)).Length;
-        }
+        
 
     } 
 }

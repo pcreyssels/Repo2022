@@ -22,6 +22,14 @@ AssemblyBuilder ab = AssemblyBuilder.DefineDynamicAssembly(aName, AssemblyBuilde
 
 ModuleBuilder mb = ab.DefineDynamicModule(aName.Name);
 
+
+var SMState_values = Enum.GetValues(typeof(_SMState));
+
+foreach (_SMState ss in SMState_values)
+{
+    string sss = ss.ToString();
+}
+
 // Define a public enumeration with the name "Elevation" and an
 // underlying type of Integer.
 EnumBuilder eb = mb.DefineEnum("SMacState", TypeAttributes.Public, typeof(int));
@@ -247,18 +255,18 @@ int z = 3;
 
 z= 4;
 
-//public enum SMState0 : ushort
-//{
-//    state_0 = 0,
-//    state_1 = 1,
-//    state_2 = 2,
-//    state_3 = 3,
-//    state_4 = 4,
-//    state_5 = 5,
-//    state_6 = 6,
-//    state_7 = 7,
-//    state_8 = 8
-//}
+public enum _SMState : ushort
+{
+    state_0 = 0,
+    state_1 = 1,
+    state_2 = 2,
+    state_3 = 3,
+    state_4 = 4,
+    state_5 = 5,
+    state_6 = 6,
+    state_7 = 7,
+    state_8 = 8
+}
 delegate int Addition(int x, int y);
 
 delegate bool Predic (ExpandoObject variables);
