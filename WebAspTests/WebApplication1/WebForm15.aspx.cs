@@ -18,7 +18,7 @@ namespace WebApplication1
         private void Page_PreInit(object sender, EventArgs e)
         {
             Debug.WriteLine("**********       Page_PreInit    **********");
-            
+
         }
 
         private void Page_Init(object sender, EventArgs e)
@@ -41,7 +41,20 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Debug.WriteLine("**********       PAGE LOAD    **********");
+            Debug.WriteLine("**********     PAGE LOAD  WEBFORM15  **********");
+
+            if (!IsPostBack) 
+            { 
+                if (false)//(Session["LoginId"] == null) 
+                    Response.Redirect("frmLogin.aspx"); 
+                else 
+                { 
+                    //Response.ClearHeaders(); 
+                    Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+                    //Response.AddHeader("Pragma", "no-cache");
+                }
+            }
+
 
             // Define the name and type of the client scripts on the page.
             String csname1 = "PopupScript";
@@ -73,13 +86,18 @@ namespace WebApplication1
 
                 cstext1.Append("function pageLoad(sender, args) {if (args.get_isPartialLoad()) {$(function () {$('[data-toggle=\"popover\"]').popover()})}}");
 
-                cs.RegisterStartupScript(cstype, csname1, cstext1.ToString(),true);
+                cs.RegisterStartupScript(cstype, csname1, cstext1.ToString(), true);
 
                 d2.InnerHtml = "toto";
             }
 
+            bool infosession = Session.IsNewSession;
+            Uri uri_ref = Request.UrlReferrer;
+
             Session["var1"] = "session variable 1";
             Session["var2"] = 15;
+
+
         }
 
         protected void bouton1_Click(object sender, EventArgs e)
@@ -134,6 +152,11 @@ namespace WebApplication1
         protected void Page_Unload(object sender, EventArgs e)
         {
             Debug.WriteLine("**********       Page_Unload    **********");
+        }
+
+        protected void paidButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

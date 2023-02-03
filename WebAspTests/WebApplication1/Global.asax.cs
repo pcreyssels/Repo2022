@@ -55,7 +55,7 @@ namespace WebApplication1
          */
         private void loginfo(object sender)
         {
-
+            return;
             HttpApplication app = (HttpApplication)sender;
             HttpContext context = app.Context;
             RequestNotification rn = context.CurrentNotification;
@@ -124,7 +124,7 @@ namespace WebApplication1
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Application["UsersOnline"] = 0;
-            Debug.WriteLine("-------------- DEPART APPLI --------------");
+            Debug.WriteLine($"---***** DEPART APPLI ****---");
         }
 
         //https://www.codeproject.com/Questions/267379/Give-some-Examples-That-we-can-do-in-each-Applicat
@@ -143,7 +143,7 @@ namespace WebApplication1
             //Thread.CurrentThread.CurrentCulture = cultureInfo;
             //Thread.CurrentThread.CurrentUICulture = cultureInfo;
 
-            Debug.WriteLine("-------------- Application_BeginRequest --------------");
+            Debug.WriteLine($"****---------- Application_BeginRequest --------> PATH {Request.Path}");
             var sv = Request.ServerVariables;
 
             loginfo(sender);
@@ -151,37 +151,37 @@ namespace WebApplication1
         }
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_AuthenticateRequest --------------");
+            Debug.WriteLine($"****---------- Application_AuthenticateRequest --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_PostAuthenticateRequest(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_PostAuthenticateRequest --------------");
+            Debug.WriteLine($"****---------- Application_PostAuthenticateRequest --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_AuthorizeRequest(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_AuthorizeRequest --------------");
+            Debug.WriteLine($"****---------- Application_AuthorizeRequest --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_PostAuthorizeRequest(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_PostAuthorizeRequest --------------");
+            Debug.WriteLine($"****---------- Application_PostAuthorizeRequest --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_ResolveRequestCache(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_ResolveRequestCache --------------");
+            Debug.WriteLine($"****---------- Application_ResolveRequestCache --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_PostResolveRequestCache(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_PostResolveRequestCache --------------");
+            Debug.WriteLine($"****---------- Application_PostResolveRequestCache --------> PATH {Request.Path}");
             loginfo(sender);
             IHttpHandler ihh = HttpContext.Current.Handler;
             IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
@@ -191,7 +191,7 @@ namespace WebApplication1
 
         protected void Application_MapRequestHandler(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_MapRequestHandler --------------");
+            Debug.WriteLine($"****---------- Application_MapRequestHandler --------> PATH {Request.Path}");
             loginfo(sender);
             IHttpHandler ihh = HttpContext.Current.Handler;
             IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
@@ -201,7 +201,7 @@ namespace WebApplication1
 
         protected void Application_PostMapRequestHandler(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_PostMapRequestHandler --------------");
+            Debug.WriteLine($"****---------- Application_PostMapRequestHandler --------> PATH {Request.Path}");
             loginfo(sender);
             IHttpHandler ihh = HttpContext.Current.Handler;
             IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
@@ -212,7 +212,7 @@ namespace WebApplication1
        
         protected void Application_AcquireRequestState(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_AcquireRequestState --------------");
+            Debug.WriteLine($"****---------- Application_AcquireRequestState --------> PATH {Request.Path}");
             loginfo(sender);
             IHttpHandler ihh =  HttpContext.Current.Handler;
             
@@ -239,13 +239,13 @@ namespace WebApplication1
 
         protected void Application_PostAcquireRequestState(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_PostAcquireRequestState --------------");
+            Debug.WriteLine($"****---------- Application_PostAcquireRequestState --------> PATH {Request.Path}");
             loginfo(sender);
         }
         protected void Application_PreRequestHandlerExecute(object sender, EventArgs e)
         {
             // Occurs just before ASP.NET starts executing an event handler (for example, a page or an XML Web service).
-            Debug.WriteLine("-------------- Application_PreRequestHandlerExecute --------------");
+            Debug.WriteLine($"****---------- Application_PreRequestHandlerExecute --------> PATH {Request.Path}");
                         
             loginfo(sender);
 
@@ -275,49 +275,49 @@ namespace WebApplication1
 
         protected void Application_PostRequestHandlerExecute(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_PostRequestHandlerExecute --------------");
+            Debug.WriteLine($"****---------- Application_PostRequestHandlerExecute --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_ReleaseRequestState(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_ReleaseRequestState --------------");
+            Debug.WriteLine($"****---------- Application_ReleaseRequestState --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_PostReleaseRequestState(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_PostReleaseRequestState --------------");
+            Debug.WriteLine($"****---------- Application_PostReleaseRequestState --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_UpdateRequestCache(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_UpdateRequestCache --------------");
+            Debug.WriteLine($"****---------- Application_UpdateRequestCache --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_PostUpdateRequestCache(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_PostUpdateRequestCache --------------");
+            Debug.WriteLine($"****---------- Application_PostUpdateRequestCache --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_LogRequest(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_LogRequest --------------");
+            Debug.WriteLine($"****---------- Application_LogRequest --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_PostLogRequest(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_PostLogRequest --------------");
+            Debug.WriteLine($"****---------- Application_PostLogRequest --------> PATH {Request.Path}");
             loginfo(sender);
         }
 
         protected void Application_EndRequest(object sender, EventArgs e)
         {
-            Debug.WriteLine("-------------- Application_EndRequest --------------");
+            Debug.WriteLine($"****---------- Application_EndRequest --------> PATH {Request.Path}");
             loginfo(sender);
         }
        
@@ -326,7 +326,7 @@ namespace WebApplication1
             Application.Lock();
             Application["UsersOnline"] = (int)Application["UsersOnline"] + 1;
             Application.UnLock();
-            Debug.WriteLine("--------------  ******************* SESSION START ******************* --------------");
+            Debug.WriteLine($"****----------  ******************* SESSION START ******************* --------> PATH {Request.Path}");
             Debug.WriteLine($"session ID {HttpContext.Current.Session.SessionID}");
             var cles = HttpContext.Current.Application.Keys;
             string[] keys = HttpContext.Current.Application.AllKeys;

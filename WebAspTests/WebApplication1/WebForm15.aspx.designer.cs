@@ -15,6 +15,15 @@ namespace WebApplication1
     {
 
         /// <summary>
+        /// Contrôle paidButton.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton paidButton;
+
+        /// <summary>
         /// Contrôle UpdatePanel1.
         /// </summary>
         /// <remarks>
