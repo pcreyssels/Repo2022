@@ -15,6 +15,29 @@ namespace WebApplication1
         // https://www.w3schools.com/bootstrap/bootstrap_ref_js_popover.asp
         // https://stackoverflow.com/questions/3630341/sys-application-add-load-vs-document-ready-vs-pageload
 
+        private void Page_PreInit(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Page_PreInit    **********");
+            
+        }
+
+        private void Page_Init(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Page_Init    **********");
+
+        }
+        protected void Page_InitComplete(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Page_InitComplete    **********");
+        }
+
+        protected void Page_PreLoad(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Page_PreLoad    **********");
+        }
+
+
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -54,6 +77,9 @@ namespace WebApplication1
 
                 d2.InnerHtml = "toto";
             }
+
+            Session["var1"] = "session variable 1";
+            Session["var2"] = 15;
         }
 
         protected void bouton1_Click(object sender, EventArgs e)
@@ -64,6 +90,50 @@ namespace WebApplication1
         protected void Button2_Click(object sender, EventArgs e)
         {
             int i = 1;
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Button3_Click    **********");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Button4_Click    **********");
+        }
+
+
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Page_PreRender    **********");
+        }
+
+        protected void Page_PreRenderComplete(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       PreRenderComplete    **********");
+        }
+
+        protected void Page_SaveStateComplete(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Page_SaveStateComplete    **********");
+        }
+
+        protected void Page_Render(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Page_Render    **********");
+            /*
+             * This is not an event; instead, at this stage of processing, the Page object calls this method on each control. 
+             * All ASP.NET Web server controls have a Render method that writes out the control's markup to send to the browser.
+             * If you create a custom control, you typically override this method to output the control's markup. 
+             * However, if your custom control incorporates only standard ASP.NET Web server controls and no custom markup, 
+             * you do not need to override the Render method. For more information, see Developing Custom ASP.NET Server Controls.
+             * A user control (an .ascx file) automatically incorporates rendering, so you do not need to explicitly render the control in code.
+             */
+        }
+
+        protected void Page_Unload(object sender, EventArgs e)
+        {
+            Debug.WriteLine("**********       Page_Unload    **********");
         }
     }
 }
