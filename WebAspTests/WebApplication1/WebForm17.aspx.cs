@@ -13,6 +13,9 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             Debug.WriteLine("**********     PAGE LOAD  WEBFORM17  **********");
+            Uri u = Request.UrlReferrer;
+            string s = u.AbsolutePath;
+            int i = 0;
         }
     }
 }
