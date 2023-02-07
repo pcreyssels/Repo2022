@@ -153,30 +153,45 @@ namespace WebApplication1
         {
             Debug.WriteLine($"****---------- Application_AuthenticateRequest --------> PATH {Request.Path}");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
         }
 
         protected void Application_PostAuthenticateRequest(object sender, EventArgs e)
         {
             Debug.WriteLine($"****---------- Application_PostAuthenticateRequest --------> PATH {Request.Path}");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
         }
 
         protected void Application_AuthorizeRequest(object sender, EventArgs e)
         {
             Debug.WriteLine($"****---------- Application_AuthorizeRequest --------> PATH {Request.Path}");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
         }
 
         protected void Application_PostAuthorizeRequest(object sender, EventArgs e)
         {
             Debug.WriteLine($"****---------- Application_PostAuthorizeRequest --------> PATH {Request.Path}");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
         }
 
         protected void Application_ResolveRequestCache(object sender, EventArgs e)
         {
             Debug.WriteLine($"****---------- Application_ResolveRequestCache --------> PATH {Request.Path}");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
         }
 
         protected void Application_PostResolveRequestCache(object sender, EventArgs e)
@@ -196,6 +211,13 @@ namespace WebApplication1
             IHttpHandler ihh = HttpContext.Current.Handler;
             IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
             IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
+            var hmc = HttpContext.Current.ApplicationInstance.Modules;
+
+            string[] keys =  HttpContext.Current.ApplicationInstance.Application.AllKeys;
+            var idi = HttpContext.Current.Items;
+
+            HttpContext.Current.
+
             int z = 0;
         }
 
@@ -206,6 +228,9 @@ namespace WebApplication1
             IHttpHandler ihh = HttpContext.Current.Handler;
             IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
             IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
+            var hmc = HttpContext.Current.ApplicationInstance.Modules;
+
+            
             int z = 0;
         }
 
@@ -309,12 +334,18 @@ namespace WebApplication1
         {
             Debug.WriteLine($"****---------- Application_LogRequest --------> PATH {Request.Path}");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
         }
 
         protected void Application_PostLogRequest(object sender, EventArgs e)
         {
             Debug.WriteLine($"****---------- Application_PostLogRequest --------> PATH {Request.Path}");
             loginfo(sender);
+            IHttpHandler ihh = HttpContext.Current.Handler;
+            IHttpHandler ihh2 = HttpContext.Current.CurrentHandler;
+            IHttpHandler ihh3 = HttpContext.Current.PreviousHandler;
         }
 
         protected void Application_EndRequest(object sender, EventArgs e)

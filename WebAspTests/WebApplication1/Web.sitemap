@@ -4,5 +4,8 @@
 			   description="$resources:SiteMapLocalizations,HomePageDescription,Default description" url="~/WebForm8">
     <siteMapNode title="Web_form80" description="WF80" url="~/WebForm80" />
     <siteMapNode title="Web_form81" description="WF81" url="~/WebForm81" />
+	  <siteMapNode title="Web_form15" description="WF15 tooltip" url="~/WebForm15">
+		  <siteMapNode title="Web_form17" description="WF17 tooltip" url="~/WebForm17"/>
+	  </siteMapNode>
   </siteMapNode>
 </siteMap>

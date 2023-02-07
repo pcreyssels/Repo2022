@@ -15,6 +15,24 @@ namespace WebApplication1
     {
 
         /// <summary>
+        /// Contrôle SiteTreeView.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TreeView SiteTreeView;
+
+        /// <summary>
+        /// Contrôle SiteMapSource.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapSource;
+
+        /// <summary>
         /// Contrôle MainContent.
         /// </summary>
         /// <remarks>
