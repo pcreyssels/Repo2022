@@ -14,7 +14,7 @@ namespace WebApplication1
         {
             Debug.WriteLine("**********     PAGE LOAD  WEBFORM17  **********");
             Uri u = Request.UrlReferrer;
-            string s = u.AbsolutePath;
+            //string s = u.AbsolutePath;
             int i = 0;
         }
     }

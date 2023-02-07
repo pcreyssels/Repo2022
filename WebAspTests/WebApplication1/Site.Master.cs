@@ -18,6 +18,7 @@ namespace WebApplication1
             Thread.CurrentThread.CurrentCulture = ci;
             Thread.CurrentThread.CurrentUICulture = ci;
 
+            //SiteMapPath1.Enabled = false;
             //Page.Title = "Hello";
         }
     }

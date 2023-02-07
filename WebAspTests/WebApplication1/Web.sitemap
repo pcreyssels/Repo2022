@@ -6,6 +6,7 @@
     <siteMapNode title="Web_form81" description="WF81" url="~/WebForm81" />
 	  <siteMapNode title="Web_form15" description="WF15 tooltip" url="~/WebForm15">
 		  <siteMapNode title="Web_form17" description="WF17 tooltip" url="~/WebForm17"/>
+		  <siteMapNode title="Web_form18" description="WF18 tooltip" url="~/WebForm18"/>
 	  </siteMapNode>
   </siteMapNode>
 </siteMap>
