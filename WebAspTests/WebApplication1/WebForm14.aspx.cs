@@ -21,7 +21,7 @@ namespace WebApplication1
                 {
                     //Response.ClearHeaders(); 
                     //Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
-                    Response.AddHeader("Cache-Control", "max-age=30");
+                    // Response.AddHeader("Cache-Control", "max-age=30");
                     //Response.AddHeader("Pragma", "no-cache");
                 }
             }

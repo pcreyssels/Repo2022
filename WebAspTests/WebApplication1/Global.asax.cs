@@ -265,7 +265,6 @@ namespace WebApplication1
                     li.Add(ValueTuple.Create<string, DateTime>(p, DateTime.Now));
                     
                 }
-                
             }
             else
             {
@@ -277,6 +276,9 @@ namespace WebApplication1
         {
             Debug.WriteLine($"****---------- Application_PostRequestHandlerExecute --------> PATH {Request.Path}");
             loginfo(sender);
+            //Response.ClearHeaders(); 
+            Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+            //Response.AddHeader("Pragma", "no-cache");
         }
 
         protected void Application_ReleaseRequestState(object sender, EventArgs e)

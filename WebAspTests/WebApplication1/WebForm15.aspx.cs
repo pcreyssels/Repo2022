@@ -50,7 +50,7 @@ namespace WebApplication1
                 else 
                 { 
                     //Response.ClearHeaders(); 
-                    Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+                    //Response.AddHeader("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
                     //Response.AddHeader("Pragma", "no-cache");
                 }
             }
