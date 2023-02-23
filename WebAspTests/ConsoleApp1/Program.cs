@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Remoting;
@@ -20,6 +21,8 @@ namespace ConsoleApp1
                 Console.WriteLine("Full name = " + ai.FullName);
                 Console.WriteLine("Code base = " + ai.CodeBase);
             }
+            
+            DateTime dta = SqlDateTime.MinValue.Value;
 
             string s = "System.Int32";
             object o = Activator.CreateInstance(Type.GetType(s));
