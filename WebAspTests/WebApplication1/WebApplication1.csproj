@@ -138,7 +138,9 @@
     <Content Include="WebForm16.aspx" />
     <Content Include="WebForm17.aspx" />
     <Content Include="WebForm18.aspx" />
+    <Content Include="WebForm19.aspx" />
     <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm20.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
@@ -343,12 +345,26 @@
     <Compile Include="WebForm18.aspx.designer.cs">
       <DependentUpon>WebForm18.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm19.aspx.cs">
+      <DependentUpon>WebForm19.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm19.aspx.designer.cs">
+      <DependentUpon>WebForm19.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForm2.aspx.designer.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm20.aspx.cs">
+      <DependentUpon>WebForm20.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm20.aspx.designer.cs">
+      <DependentUpon>WebForm20.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm3.aspx.cs">
       <DependentUpon>WebForm3.aspx</DependentUpon>
@@ -455,8 +471,11 @@
     <Content Include="App_LocalResources\WebForm10.aspx.resx" />
     <Content Include="App_LocalResources\WebForm10.aspx.en.resx" />
     <Content Include="App_LocalResources\WebForm12.aspx.en.resx" />
-    <Content Include="App_LocalResources\WebForm12.aspx.resx" />
+    <Content Include="App_LocalResources\WebForm12.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_LocalResources\WebForm15.aspx.resx" />
+    <Content Include="App_LocalResources\WebForm20.aspx.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

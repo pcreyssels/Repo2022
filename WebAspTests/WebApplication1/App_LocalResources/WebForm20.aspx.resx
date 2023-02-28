@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>BONJOUR LABEL</value>
+  </data>
+  <data name="radio0.Text" xml:space="preserve">
+    <value>&amp;nbsp &amp;nbsp RADIO 1</value>
+  </data>
+  <data name="texte_attestation" xml:space="preserve">
+    <value>Si vous avez reçu une attestation de comparabilité, vous pouvez la présenter aux employeurs, établissements de formation et/ou organismes en charge des concours.
+Ce document permet d'établir une comparabilité entre votre diplôme étranger et le cadre français des certifications.
+L'attestation envoyée par courriel est le document original. Elle n'a pas de date limite de validité.
+Nous n’envoyons pas de document par courrier.
+Enregistrez et sauvegardez ce document PDF sur le bureau de votre ordinateur et sur une clé USB, vous pourrez l’imprimer si nécessaire.</value>
+  </data>
+  <data name="texte_comp_attestation" xml:space="preserve">
+    <value>Une attestation de reconnaissance d'études/de formation à l'étranger peut être délivrée dans le cas où vous n’avez pas achevé votre cursus (dernière année non validée, mémoire non soutenu, stage de fin d’études non effectué).
+Elle précise le nombre d’années d’études secondaires ou supérieures que vous avez validées.
+Les critères d’évaluation sont identiques à ceux utilisés pour une attestation de comparabilité, ils concernent notamment la reconnaissance du cursus et de l’établissement par les autorités du pays d’origine.
+Les prérequis pour accéder à la formation et les débouchés académiques doivent également être clairement identifiés.</value>
+  </data>
+  <data name="texte_comp_niveau" xml:space="preserve">
+    <value>L’attestation de comparabilité reprendra les éléments de votre diplôme (intitulé, spécialité, établissement, date et pays d’obtention, durée officielle, débouchés) et précisera le résultat de l’expertise c’est-à-dire le positionnement du diplôme selon le cadre français des certifications et/ou le cadre européen des certifications.
+Merci de consulter l'encadré de la deuxième page.</value>
+  </data>
+  <data name="texte_contestation" xml:space="preserve">
+    <value>Concernant votre demande de modifications sur votre attestation, nous précisons que les attestations sont rédigées en fonction des documents transmis (intitulé du diplôme, nom de l’établissement et éventuellement la spécialité dans la langue d’origine).
+Il n’y a pas de correspondance exacte entre les cursus suivis à l’étranger et les diplômes français.
+Si vous contestez le résultat de l’expertise, nous vous invitons à consulter la liste des critères d’évaluation du centre ENIC-NARIC France :
+"https://www.france-education-international.fr/article/les-procedures-devaluation-des-diplomes-au-centre-enic-naric-france"Vous pouvez également nous contacter par message : "contact ENIC-NARIC"</value>
+  </data>
+  <data name="texte_erreur_saisie" xml:space="preserve">
+    <value>&lt;p&gt;Merci de nous indiquer par message (contact ENIC-NARIC) :&lt;/p&gt;
+
+
+&lt;ul&gt;
+
+&lt;li&gt;Votre numéro de dossier&lt;/li&gt;
+&lt;li&gt;Les éléments de votre état civil et les coordonnées que vous souhaitez modifier. &lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;a href="mailto:ENIC-NARICFrance@france-education-international.fr"&gt;contact ENIC-NARIC&lt;/a&gt;</value>
+  </data>
+  <data name="texte_etat_dossier_2" xml:space="preserve">
+    <value>Nous avons reçu les pièces de votre dossier.
+Dès que nous aurons effectué un premier examen de votre dossier, vous recevrez par courriel :
+
+- Soit une facture dont vous devrez vous acquitter pour la poursuite de l’étude de votre dossier. (Si vous êtes réfugié(e), demandeur d’asile ou bénéficiaire de la protection subsidiaire, la procédure est entièrement gratuite).
+- Soit une demande de pièces complémentaires, vous devrez alors cliquer sur le lien figurant dans le courriel pour ajouter les pièces demandées.</value>
+  </data>
+  <data name="texte_etat_dossier_3" xml:space="preserve">
+    <value>Vous avez reçu un courriel vous indiquant que votre dossier est recevable.
+Vous devez télécharger votre facture pour connaitre la référence de celle-ci. C'est ce numéro que vous devez indiquer lors de votre paiement.
+Différents modes de paiement sont à votre disposition :
+&lt;ul&gt;
+&lt;li&gt;Par carte bancaire (moyen de paiement à privilégier afin que votre dossier passe plus rapidement à l’étape d’instruction) : 
+&lt;a href="https://phoenix.france-education-international.fr/paiement/OrderPayment.aspx"&gt;cliquer ici&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Par chèque, à l'ordre de : "L'agent comptable de France Éducation international", en rappelant impérativement au dos du chèque vos références de règlement (mentionnées sur la facture et différentes du numéro de dossier, par exemple : FPX2016Pxxxxxx)&lt;/li&gt;
+&lt;li&gt;Par virement bancaire à l'ordre de : "L'agent comptable de France Éducation international", en rappelant impérativement vos références de règlement (mentionnées sur la facture et différentes du numéro de dossier, par exemple : FPX2016Pxxxxxx)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+Tous les paiements par chèque ou virement bancaire sont à adresser à l'agent comptable de France Éducation international (comptable public), garant des montants déposés au niveau de l'établissement :
+
+Agent comptable de France Éducation international
+1, avenue Léon Journault 92318 Sèvres cedex
+France
+
+TRESORERIE GENERALE DES YVELINES
+RIB N° : FR76 1007 1780 0000 0010 0397 691
+BIC N° : TRPUFRP
+
+Les paiements par mandat cash ne sont pas acceptés.
+
+Au-delà de la date d'échéance indiquée sur la facture, votre dossier sera supprimé.
+
+Si vous avez effectué votre paiement et que celui-ci n’a pas été enregistré, vous pouvez nous envoyer un justificatif de paiement (relevé de comptes) à l’adresse suivante : ENIC-NARICFrance@france-education-international.fr en précisant les informations suivantes : 
+
+- numéro de dossier ;
+- nom de la personne qui a fait le paiement ;
+- mode de paiement utilisé : CB, virement ou chèque (si c’est par chèque le numéro du chèque ainsi que le nom de la banque et le nom du titulaire du chèque).
+- la date de paiement ;
+Une fois ces informations reçues, nous transmettrons votre demande au service en charge des paiements.
+
+</value>
+  </data>
+  <data name="texte_etat_dossier_4" xml:space="preserve">
+    <value>Votre dossier est incomplet, il vous a été retourné pour ajout des pièces demandées.
+Vous devez avoir reçu un courriel de demande de pièces complémentaires avec un lien.
+Il faudra alors compléter votre dossier en cliquant sur le lien envoyé.
+N’hésitez pas à joindre une note explicative.
+Le lien a une durée de validité de 30 jours, passé ce délai, vous devez redéposer une demande via le lien suivant :
+"https://phoenix.france-education-international.fr/inscriptions/"
+
+&lt;b&gt; Nous ne recevons aucun document par courriel ni par courrier postal.&lt;/b&gt;</value>
+  </data>
+  <data name="texte_etat_dossier_5" xml:space="preserve">
+    <value>Votre dossier est rejeté et ne pourra être traité par nos services.
+Vous devez avoir reçu le motif du rejet de votre demande dans le dernier courriel envoyé.
+Suite à ce rejet, nous vous informons que votre dossier est clos.</value>
+  </data>
+  <data name="texte_etat_dossier_6_nonrefugie" xml:space="preserve">
+    <value>Nous avons reçu votre paiement le DATE_DE_PAIEMENT, votre dossier est en cours d’instruction depuis cette date.
+Dès que votre dossier sera traité, vous en serez informé(e) par courriel.
+Si vous recevez une attestation, enregistrez-la sur le bureau de votre ordinateur et sur une clé USB.
+Le centre ENIC-NARIC France s’engage à traiter les dossiers dans des délais raisonnables.
+Les délais varient en fonction de la demande. La demande actuelle étant particulièrement forte, le délai moyen de traitement d’un dossier en instruction est d’environ 3 mois.
+Les délais peuvent être plus longs dans certains cas (nombre particulièrement important de demandes pour un pays donné ou complexité du dossier par exemple)
+En cas d’urgence de traitement du dossier :
+Si vous avez une urgence, merci de nous fournir "contact ENIC-NARIC", un justificatif à votre nom spécifiant la demande de l’attestation :
+Convocation à un examen, dossier déposé auprès d’un établissement de formation ou d’une administration en attente de l’attestation de comparabilité, entretien d’embauche, etc.
+Votre demande et le justificatif seront alors transmis à l’expert sans engagement de notre part.</value>
+  </data>
+  <data name="texte_etat_dossier_6_refugie" xml:space="preserve">
+    <value>Votre dossier est en cours d’instruction depuis le DATE_DEBUT_INSTRUCTION.
+Dès que votre dossier sera traité, vous en serez informé(e) par courriel. Le centre ENIC-NARIC France s’engage à traiter les dossiers dans des délais raisonnables.
+Les délais varient en fonction de la demande. La demande actuelle étant particulièrement forte, le délai moyen de traitement d’un dossier en instruction est d’environ 3 mois.
+Les délais peuvent être plus longs dans certains cas (nombre particulièrement important de demandes pour un pays donné ou complexité du dossier par exemple).
+Si vous recevez une attestation, enregistrez-la sur le bureau de votre ordinateur et sur une clé USB.
+En cas d’urgence de traitement du dossier :
+Si vous avez une urgence, merci de nous fournir "contact ENIC-NARIC", un justificatif à votre nom spécifiant la demande de l’attestation :
+Convocation à un examen, dossier déposé auprès d’un établissement de formation ou d’une administration en attente de l’attestation de comparabilité, entretien d’embauche, etc.
+Votre demande et le justificatif seront alors transmis à l’expert sans engagement de notre part.</value>
+  </data>
+  <data name="texte_etat_dossier_7" xml:space="preserve">
+    <value>Votre dossier est clos. Vous avez reçu un courriel avec le résultat de l’instruction.</value>
+  </data>
+  <data name="texte_mention" xml:space="preserve">
+    <value>La mention « Cette attestation ne constitue pas une autorisation d’exercer une profession réglementée » est une mention légale.
+Elle s’applique aux professions pour lesquelles, la reprise d’études ou une autorisation de l’autorité compétente est nécessaire dans le but d’exercer à son compte ou de créer sa propre entreprise.</value>
+  </data>
+  <data name="texte_perte" xml:space="preserve">
+    <value>Si vous avez perdu le document précisant le résultat de l’expertise, veuillez contacter le centre ENIC-NARIC France : contact ENIC-NARIC
+Il est possible de vous renvoyer le résultat de l’expertise par courriel. Dans ce cas, il est très important de préciser votre numéro de dossier ainsi que votre nom et prénom.</value>
+  </data>
+  <data name="_encart_info_1.InnerText" xml:space="preserve">
+    <value>TITRE PANNEAU INFO INNERTEXT</value>
+  </data>
+  <data name="_encart_info_2.InnerHtml" xml:space="preserve">
+    <value>TITRE PANNEAU INFO INNERHTML</value>
+  </data>
+  <data name="_intitule.InnerHtml" xml:space="preserve">
+    <value>Votre numéro de dossier</value>
+  </data>
+  <data name="_intitule_choix.InnerHtml" xml:space="preserve">
+    <value>Votre demande concerne :</value>
+  </data>
+  <data name="_intitule_choix2.InnerHtml" xml:space="preserve">
+    <value>Et plus particulièrement :</value>
+  </data>
+  <data name="_rb_attestation.Text" xml:space="preserve">
+    <value>&amp;nbsp Attestation de comparabilité</value>
+  </data>
+  <data name="_rb_comp_attest.Text" xml:space="preserve">
+    <value>&amp;nbsp Comprendre l’attestation de reconnaissance de période d’études</value>
+  </data>
+  <data name="_rb_comp_niveau.Text" xml:space="preserve">
+    <value>&amp;nbsp Comprendre le niveau de l’attestation de comparabilité</value>
+  </data>
+  <data name="_rb_contestation.Text" xml:space="preserve">
+    <value>&amp;nbsp Contestation</value>
+  </data>
+  <data name="_rb_erreur.Text" xml:space="preserve">
+    <value>&amp;nbsp Une erreur de saisie lors du dépôt de dossier (état-civil, coordonnées)</value>
+  </data>
+  <data name="_rb_mention.Text" xml:space="preserve">
+    <value>&amp;nbsp Mention figurant sur l'attestation</value>
+  </data>
+  <data name="_rb_perte.Text" xml:space="preserve">
+    <value>&amp;nbsp Perte du document</value>
+  </data>
+  <data name="_rb_resultat.Text" xml:space="preserve">
+    <value>&amp;nbsp le résultat de l'expertise</value>
+  </data>
+  <data name="_rb_statut.Text" xml:space="preserve">
+    <value>&amp;nbsp le statut de votre demande</value>
+  </data>
+</root>
