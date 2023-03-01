@@ -25,7 +25,7 @@ namespace WebApplication1
             switch (rb.ID)
             {
                 case "rb_erreur":
-                    labelinfo.Text = GetLocalResourceObject("text1").ToString();
+                    labelinfo.Text = GetLocalResourceObject("texte_erreur_saisie").ToString();
                     panel_erreur.Visible = true;
                     panel_statut.Visible = false;
                     panel_resultat.Visible = false;

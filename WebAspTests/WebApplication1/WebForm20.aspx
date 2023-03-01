@@ -91,7 +91,7 @@
                 <%-- PANEL ERREUR SAISIE --%>
                 <asp:Panel ID="panel_erreur" Visible="false" runat="server">
                     <div class="well">
-                        <asp:Label ID="labelinfo" runat="server" Text="_text "></asp:Label>
+                        <asp:Label ID="labelinfo" runat="server" Text=""></asp:Label>
                     </div>
                 </asp:Panel>
 

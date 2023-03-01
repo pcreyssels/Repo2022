@@ -14,20 +14,57 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
+
+            // SUCCESS:12 _ STATETEXT:Inscription phase 1 _ REFUGIESTATUS:0 _ INSTRUCTIONDATE:1901-02-02
+            string ri = "SUCCESS:12 _ STATETEXT:Inscription phase 1 _ REFUGIESTATUS:0 _ INSTRUCTIONDATE:1901-02-02";
+            int account_state = 0;
+            string state_text = "";
+            string sep = " _ ";
+            DateTime instruction_date = DateTime.MinValue;
+            bool refugie_status=false;
+            string[] paramlist = ri.Split(new string[] { sep }, StringSplitOptions.None);
+            for (int i = 0; i < paramlist.Length; i++)
+            {
+                if (paramlist[i].StartsWith("SUCCESS:"))
+                {
+                    account_state = Int32.Parse(paramlist[i].Substring(8));
+                }
+                else if (paramlist[i].StartsWith("STATETEXT:"))
+                {
+                    state_text = paramlist[i].Substring(10);
+                }
+                else if (paramlist[i].StartsWith("REFUGIESTATUS:"))
+                {
+                    string bs = paramlist[i].Substring(14);
+                    if (bs == "0")
+                        refugie_status = false;
+                    else if (bs == "1")
+                        refugie_status  |= true;
+
+                }
+                else if (paramlist[i].StartsWith("INSTRUCTIONDATE:"))
+                {
+                    string bs = paramlist[i].Substring(16);
+                    instruction_date = DateTime.ParseExact(bs, "yyyy-MM-dd", null);
+
+                }
+            }
+
             ActivationContext ac = AppDomain.CurrentDomain.ActivationContext;
-            if (ac !=null)
+            if (ac != null)
             {
                 ApplicationIdentity ai = ac.Identity;
                 Console.WriteLine("Full name = " + ai.FullName);
                 Console.WriteLine("Code base = " + ai.CodeBase);
             }
-            
+
             DateTime dta = SqlDateTime.MinValue.Value;
 
             string s = "System.Int32";
             object o = Activator.CreateInstance(Type.GetType(s));
             o = (Int32)125;
-            Assembly ass =  Assembly.GetAssembly(Type.GetType(s));
+            Assembly ass = Assembly.GetAssembly(Type.GetType(s));
             string an = ass.GetName().FullName;
             //ObjectHandle handle = Activator.CreateInstance(an, "Int32");
             //object t = handle.Unwrap();
@@ -42,45 +79,45 @@ namespace ConsoleApp1
 
 
             }
-            catch (Exception e )
+            catch (Exception e)
             {
 
                 throw;
             }
 
-            string document_name = "chaine.toto.tata";
-            char[] sep = new char[] { '.' };
-            string[] tc = document_name.Split(sep);
-            
-
-            int li = document_name.LastIndexOf('.');
-            string _ext = document_name.Substring(li);
-
-            document_name = "chaine";
-            tc = document_name.Split(sep);
-            li = document_name.LastIndexOf('.');
-            if (li>=0) _ext = document_name.Substring(li);
-
-            document_name = ".achaine";
-            tc = document_name.Split(sep);
-            li = document_name.LastIndexOf('.');
-            if (li >= 0)  _ext = document_name.Substring(li);
-
-            document_name = "chaine.";
-            tc = document_name.Split(sep);
-            li = document_name.LastIndexOf('.');
-            if (li >= 0)  _ext = document_name.Substring(li);
-
-            document_name = "chaine.tutu";
-            tc = document_name.Split(sep);
-            li = document_name.LastIndexOf('.');
-            if (li >= 0)  _ext = document_name.Substring(li);
+            //string document_name = "chaine.toto.tata";
+            //sep = new char[] { '.' };
+            //string[] tc = document_name.Split(sep);
 
 
-            int i = 2;
-            int j = 3;
+            //int li = document_name.LastIndexOf('.');
+            //string _ext = document_name.Substring(li);
 
-            li = document_name.LastIndexOf('.');
+            //document_name = "chaine";
+            //tc = document_name.Split(sep);
+            //li = document_name.LastIndexOf('.');
+            //if (li >= 0) _ext = document_name.Substring(li);
+
+            //document_name = ".achaine";
+            //tc = document_name.Split(sep);
+            //li = document_name.LastIndexOf('.');
+            //if (li >= 0) _ext = document_name.Substring(li);
+
+            //document_name = "chaine.";
+            //tc = document_name.Split(sep);
+            //li = document_name.LastIndexOf('.');
+            //if (li >= 0) _ext = document_name.Substring(li);
+
+            //document_name = "chaine.tutu";
+            //tc = document_name.Split(sep);
+            //li = document_name.LastIndexOf('.');
+            //if (li >= 0) _ext = document_name.Substring(li);
+
+
+            //int i = 2;
+            //int j = 3;
+
+            //li = document_name.LastIndexOf('.');
         }
     }
 }
