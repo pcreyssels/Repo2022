@@ -120,6 +120,21 @@
   <data name="Label1.Text" xml:space="preserve">
     <value>BONJOUR LABEL</value>
   </data>
+  <data name="modal_button_cancel.Text" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="modal_button_ok.Text" xml:space="preserve">
+    <value>OK valider</value>
+  </data>
+  <data name="modal_header_abandon_procedure.Text" xml:space="preserve">
+    <value>abandon de la saisie</value>
+  </data>
+  <data name="modal_info_abandon.Text" xml:space="preserve">
+    <value>en abandonnant la procédure...</value>
+  </data>
+  <data name="modal_literal_abandon_procedure.Text" xml:space="preserve">
+    <value>Abandon de la procedure</value>
+  </data>
   <data name="radio0.Text" xml:space="preserve">
     <value>&amp;nbsp &amp;nbsp RADIO 1</value>
   </data>

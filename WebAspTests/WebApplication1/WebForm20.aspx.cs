@@ -88,5 +88,25 @@ namespace WebApplication1
             }
 
         }
+
+        protected void button_modal_ok_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void button_modal_cancel_ServerClick(object sender, EventArgs e)
+        {
+            // on ne fait rien
+        }
+
+        protected void modalField_ValueChanged(object sender, EventArgs e)
+        {
+            label_1.Text = "valeur changee";
+        }
+
+        protected void button_test_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
