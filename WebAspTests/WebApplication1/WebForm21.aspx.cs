@@ -11,7 +11,16 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Uri _currentUri = HttpContext.Current.Request.Url;
+            string t = HttpContext.Current.Request.ApplicationPath;
+            string u = HttpContext.Current.Request.PhysicalApplicationPath;
+            string v = HttpContext.Current.Request.AppRelativeCurrentExecutionFilePath;
+            HttpRequest _hr = HttpContext.Current.Request;
 
+            string baseUrl = Request.Url.Scheme + "://" + Request.Url.Authority + Request.ApplicationPath.TrimEnd('/') + "/";
+
+            string s = _currentUri.ToString();
+            string z = "";
         }
 
         protected void Unnamed_ServerClick(object sender, EventArgs e)
