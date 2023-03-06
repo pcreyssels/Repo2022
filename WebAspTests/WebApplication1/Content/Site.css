@@ -105,3 +105,30 @@ table {
 .panel_infovalidation {
     background-color: azure;
 }
+
+/* bouton du site */
+.btn-sitpho {
+    background-color: lightblue;
+    border-color: lightskyblue;
+}
+
+.btn-sitpho:hover {
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+}
+
+/* .btn-info:active:hover,*/
+/*.btn-info.focus*/
+/*.btn-info:hover*/
+
+/* permet le mode row-wrap en remplissant en mode ligne (mode principal) (et en égalisant la hauteur du mode secondaire (vertical) en  uniformisant la hauteur des licolonnes d'un même ligne*/
+.aligned-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* permet de centrer les elements verticalement*/
+.display-flex-center {
+    display: flex;
+    align-items: center;
+}
