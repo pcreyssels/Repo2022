@@ -52,6 +52,11 @@ namespace WebApplication1
             b2.Visible = true;
             b1.Visible = false;
         }
+
+        protected void basp_Click(object sender, EventArgs e)
+        {
+            aze.InnerText = "bonjour";
+        }
     }
     
 }

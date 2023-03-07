@@ -78,6 +78,24 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.Button Button6;
 
         /// <summary>
+        /// Contrôle basp.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button basp;
+
+        /// <summary>
+        /// Contrôle aze.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl aze;
+
+        /// <summary>
         /// Contrôle Panel_infovalidation_message.
         /// </summary>
         /// <remarks>

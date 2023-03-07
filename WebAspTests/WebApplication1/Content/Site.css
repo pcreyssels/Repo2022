@@ -110,6 +110,8 @@ table {
 .btn-sitpho {
     background-color: lightblue;
     border-color: lightskyblue;
+    width : max-content;
+    min-width:100px;
 }
 
 .btn-sitpho:hover {

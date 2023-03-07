@@ -88,8 +88,21 @@
     </div>
 
     <hr />
-    <asp:Button runat="server" Style="background-color: aquamarine" Text="Bouton ASP" />
+
+    <h2>GRILLE 2.5  </h2>
+    <%-- 3 elements  1&fr  10fr & fr  --%>
+    <div style="display: grid; gap: 0.5em; align-items: stretch; grid-template-columns: 8fr 3fr 3fr; grid-template-rows: 1fr">
+        <button class="btn btn-sitpho" runat="server">BOUTON HTML 4 texte vraiment long à afficher -----------</button>
+        <asp:Button runat="server" CssClass="btn btn-sitpho" Text="B5"></asp:Button>
+        <%--<div style="background-color:lightpink; align-self:center">RAW HTML</div>--%>
+        <%--<div style="background-color:lightpink; text-align:center">RAW HTML</div>--%>
+        <div style="background-color: lightpink; display:inline-grid; justify-content:center; align-items:center" > RAW HTML insp</div>
+    </div>
+
     <hr />
+    <asp:Button ID="basp" runat="server" Style="background-color: aquamarine" Text="Bouton ASP"  OnClick="basp_Click"/>
+    <hr />
+    <div id="aze" runat="server" style="color:red">DIV RUNAT SERVER </div>
     <h2>GRILLE 3 </h2>
     <div style="display: grid; grid-template-columns: 8fr 4fr 1fr 1fr; grid-template-rows: 1fr">
         <asp:Button runat="server" Style="grid-column: 4 / 5; grid-row: 1 / 2" Text="BOUTON HTML 7"></asp:Button>
