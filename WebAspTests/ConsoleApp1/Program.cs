@@ -7,6 +7,7 @@ using System.Runtime.Remoting;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApp1
 {
@@ -14,6 +15,42 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
+            SqlDateTime sqlDateTime = new SqlDateTime();
+            sqlDateTime = SqlDateTime.MinValue;
+            DateTime dt=sqlDateTime.Value;
+            DateTime? dt2=SqlDateTime.Null.Value;
+
+            // https://stackoverflow.com/questions/42355995/regex-to-match-date-formats-dd-mm-yyyy-and-dd-mm-yyyy
+            // ^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$
+
+            bool b = false;
+            bool c = false;
+            Regex rx = new Regex(@"^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$",
+         RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+            Regex rx2 = new Regex(@"^([0]?[1-9]|[1|2][0-9]|[3][0|1])[/]([0]?[1-9]|[1][0-2])[/]([0-9]{4}|[0-9]{2})$",
+         RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+            string s = "15/02/1978";
+            b = rx.IsMatch(s);
+            c= rx2.IsMatch(s);
+            s = "15/02/1978";
+            b = rx.IsMatch(s);
+            c = rx2.IsMatch(s);
+            s = "15-02-1978";
+            b = rx.IsMatch(s);
+            c = rx2.IsMatch(s);
+
+
+            b = rx.IsMatch("15-02-1978");
+            b = rx.IsMatch("15.02.1978");
+            b = rx.IsMatch("15/15/1978");
+            b = rx.IsMatch("15/15/1978");
+            b = rx.IsMatch("15/15/1978");
+            b = rx.IsMatch("15/15/1978");
+            b = rx.IsMatch("15/15/1978");
+            b = rx.IsMatch("15/15/1978");
 
 
             // SUCCESS:12 _ STATETEXT:Inscription phase 1 _ REFUGIESTATUS:0 _ INSTRUCTIONDATE:1901-02-02
@@ -61,7 +98,7 @@ namespace ConsoleApp1
 
             DateTime dta = SqlDateTime.MinValue.Value;
 
-            string s = "System.Int32";
+            s = "System.Int32";
             object o = Activator.CreateInstance(Type.GetType(s));
             o = (Int32)125;
             Assembly ass = Assembly.GetAssembly(Type.GetType(s));
