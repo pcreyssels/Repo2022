@@ -134,3 +134,12 @@ table {
     display: flex;
     align-items: center;
 }
+
+.text-align-right {
+    text-align: right;
+    font-weight: bold;
+}
+
+.formulaire-control {
+    max-width: 400px;
+}

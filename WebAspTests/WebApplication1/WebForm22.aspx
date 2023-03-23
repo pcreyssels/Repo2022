@@ -4,6 +4,56 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 
+    <h3>PRESENTATION</h3>
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <%-- POURSUITE ETUDES + formation envisagée --%>
+            <div class="row aligned-row display-flex-center">
+                <div class="col-sm-3 text-align-right">
+                    <asp:Label ID="Label2" runat="server" Text="label checkbox" meta:resourcekey="LabelPoursuiteEtudes" />
+                </div>
+                <%-- checkbox AutoPostBack="true" permet de déclencher le customvalidator--%>
+                <div class="col-sm-6">
+                    <asp:CheckBox ID="checkbox_poursuiteetudes" runat="server"
+                        AutoPostBack="true"
+                        CausesValidation="true"
+                        OnCheckedChanged="checkbox_poursuiteetudes_CheckedChanged"
+                        Text=""
+                        ValidationGroup="PE"
+                        TextAlign="Right" />
+                </div>
+            </div>
+            <%-- 2è  ligne avec texte à saisir --%>
+            <div class="row aligned-row display-flex-center">
+                <div class="col-sm-3 text-align-right" >
+                    <span class="label label-info">Formation(s) envisagée(s) : </span>
+                </div>
+                <%-- texte à saisir sur deuxième ligne --%>
+                <div class="col-sm-6">
+                    <asp:TextBox ID="TextBox_formationenvisagee" runat="server"
+                        ValidationGroup="PE"
+                          CssClass="form-control formulaire-control"
+                        MaxLength="50"
+                        />
+                </div>
+                <div class="col-sm-3">
+                    <asp:CustomValidator runat="server" ID="CustomValidator2"
+                        OnServerValidate="cusv_TextBox_formationenvisagee_ServerValidate"
+                        ControlToValidate="TextBox_formationenvisagee"
+                        ValidateEmptyText="true"
+                        meta:resourcekey="reqvGenerique"
+                        CssClass="formulaire-erreur"
+                        ErrorMessage="_error"
+                        ValidationGroup="PE">
+                    </asp:CustomValidator>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
     <asp:TextBox ID="TextBoxTelPort" runat="server" MaxLength="50" CssClass="form-control formulaire-control" meta:resourcekey="phone" ToolTip="_" />
     <%-- validateur --%>
     <%-- https://www.regextester.com/1978 --%>
@@ -17,11 +67,11 @@
     <hr />
 
     <asp:CheckBox ID="checkbox2" runat="server"
-                AutoPostBack="true"
-                Text="texte checkbox 2"
-                CausesValidation="false"
-                TextAlign="Right" />
-            <br />
+        AutoPostBack="true"
+        Text="texte checkbox 2"
+        CausesValidation="false"
+        TextAlign="Right" />
+    <br />
     <hr />
 
     <%--<asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>--%>
@@ -104,5 +154,5 @@
         })
     </script>
 
-     
+
 </asp:Content>
