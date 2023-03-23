@@ -12,17 +12,17 @@
         Text="ANYBUTTON"
         OnClick="ButtonAny_Click"
         runat="server" />
-     <asp:Button ID="ButtonAny2"
+    <asp:Button ID="ButtonAny2"
         ClientIDMode="Static"
         Text="ANYBUTTON2"
         OnClick="ButtonAny2_Click"
         runat="server" />
-     <asp:Button ID="ButtonAny3"
+    <asp:Button ID="ButtonAny3"
         ClientIDMode="Static"
         Text="ANYBUTTON3"
         OnClick="ButtonAny3_Click"
         runat="server" />
-     <asp:Button ID="ButtonAny4"
+   <asp:Button ID="ButtonAny4"
         ClientIDMode="Static"
         Text="ANYBUTTON4"
         OnClick="ButtonAny4_Click"
@@ -34,10 +34,10 @@
         runat="server" />
 
     <button onclick="gotoanchor();return false;">ANCHOR return false</button>
-     <br />
+    <br />
 
-    <input type="button" onclick="gotoanchor()" value="input_type_button"/>
-     <br />
+    <input type="button" onclick="gotoanchor()" value="input_type_button" />
+    <br />
 
     <asp:Button ID="Button4"
         CausesValidation="false"
@@ -111,7 +111,7 @@
     <asp:Label ID="labelend" ClientIDMode="Static" runat="server" Text="label" />
     <br />
     <asp:TextBox runat="server" ID="TB1"></asp:TextBox>
-     <asp:TextBox  runat="server" ID="TB2"></asp:TextBox>
+    <asp:Button  Text="TB2"  runat="server" ID="TB2"/>
     <br />
 
 </asp:Content>
