@@ -144,6 +144,7 @@
     <Content Include="WebForm21.aspx" />
     <Content Include="WebForm22.aspx" />
     <Content Include="WebForm23.aspx" />
+    <Content Include="WebForm24.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
@@ -390,6 +391,13 @@
     <Compile Include="WebForm23.aspx.designer.cs">
       <DependentUpon>WebForm23.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm24.aspx.cs">
+      <DependentUpon>WebForm24.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm24.aspx.designer.cs">
+      <DependentUpon>WebForm24.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm3.aspx.cs">
       <DependentUpon>WebForm3.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -500,6 +508,7 @@
     </Content>
     <Content Include="App_LocalResources\WebForm15.aspx.resx" />
     <Content Include="App_LocalResources\WebForm20.aspx.resx" />
+    <Content Include="App_LocalResources\WebForm24.aspx.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

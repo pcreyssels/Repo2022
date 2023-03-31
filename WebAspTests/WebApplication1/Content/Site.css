@@ -18,7 +18,14 @@ textarea {
     max-width: 280px;
 }
 
+.formulaire-zone-label {
+    font-weight: bold;
+}
 
+.text-align-right-bold {
+    text-align: right;
+    font-weight: bold;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {

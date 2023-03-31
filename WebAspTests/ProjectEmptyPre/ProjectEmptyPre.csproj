@@ -43,6 +43,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(SolutionDir)D1\bonjour.txt $(SolutionDir)D2\bonjour.txt</PostBuildEvent>
+    <PostBuildEvent>REM copy $(SolutionDir)D1\bonjour.txt $(SolutionDir)D2\bonjour.txt</PostBuildEvent>
   </PropertyGroup>
 </Project>
