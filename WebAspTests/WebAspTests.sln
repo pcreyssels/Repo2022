@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{367DFFE0-06EA-48C1-B6D5-2DD8748B0C8A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C87FC24A-2C51-4701-B0BD-A0F46D410BE3} = {C87FC24A-2C51-4701-B0BD-A0F46D410BE3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{81B92259-0E50-494E-B491-4A8ABE41481A}"
 EndProject
@@ -29,6 +32,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp_Expressions", "ConsoleApp_Expressions\ConsoleApp_Expressions.csproj", "{6CF5657E-DC60-4940-B60E-3269EAFDAE86}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp_StatMac", "ConsoleApp_StatMac\ConsoleApp_StatMac.csproj", "{4D9631BD-F949-4396-9042-8130170B3038}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEmptyPre", "ProjectEmptyPre\ProjectEmptyPre.csproj", "{C87FC24A-2C51-4701-B0BD-A0F46D410BE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +85,10 @@ Global
 		{4D9631BD-F949-4396-9042-8130170B3038}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D9631BD-F949-4396-9042-8130170B3038}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D9631BD-F949-4396-9042-8130170B3038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C87FC24A-2C51-4701-B0BD-A0F46D410BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C87FC24A-2C51-4701-B0BD-A0F46D410BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C87FC24A-2C51-4701-B0BD-A0F46D410BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C87FC24A-2C51-4701-B0BD-A0F46D410BE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
