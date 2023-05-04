@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:WpfAppNF48_2"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <!--https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/how-to-create-apply-style?view=netdesktop-7.0&viewFallbackFrom=netframeworkdesktop-4.8-->
+            <Style x:Key="CommonStyle" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="FontWeight" Value="Normal" />
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
