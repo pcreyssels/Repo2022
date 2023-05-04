@@ -38,7 +38,7 @@
                         style="margin: 10px;"
                         data-html="true"
                         data-placement="bottom">
-                        <span class="glyphicon glyphicon-info-sign">
+                        <span class="glyphicon glyphicon-info-sign"/>
                             <%--info--%>
                     </button>
                 </div>
