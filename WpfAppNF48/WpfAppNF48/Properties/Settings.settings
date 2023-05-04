@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WpfAppNF48.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Param1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Parametre 1 chaine</Value>
+    </Setting>
+    <Setting Name="Param2" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">234</Value>
+    </Setting>
+    <Setting Name="Param3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Parametre 3 chaine</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

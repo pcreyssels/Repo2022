@@ -61,5 +61,15 @@ namespace WebApplication1
         {
 
         }
+
+        protected void cusv_TextBox_formationenvisagee_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+
+        }
+
+        protected void checkbox_poursuiteetudes_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
