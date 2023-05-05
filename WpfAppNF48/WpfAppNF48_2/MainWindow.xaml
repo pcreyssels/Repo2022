@@ -16,36 +16,37 @@
             <Setter Property="Foreground" Value="Blue" />
             <Setter Property="FontWeight" Value="Normal" />
         </Style>
+       
     </Window.Resources>
     <Grid>
         <Grid>
             <DockPanel LastChildFill="True">
                 <Menu DockPanel.Dock="Top" FontSize="15">
                     <MenuItem Name="Dossiers" Header="_Dossiers" >
-                        <MenuItem Name="Support" Header="_Support" Click="Support_Click"/>
-                        <MenuItem Name="Recevabilite" Header="_Recevabilité" Click="Recevabilite_Click"/>
-                        <MenuItem Name="Instruction" Header="_Instruction" Click="Instruction_Click"/>
+                        <MenuItem Name="Support" Header="_Support" />
+                        <MenuItem Name="Recevabilite" Header="_Recevabilité" />
+                        <MenuItem Name="Instruction" Header="_Instruction"/>
                     </MenuItem>
                     <MenuItem Name="Facturation" Header="_Facturation" Visibility="Visible">
-                        <MenuItem Name="FacturesEmises" Header="_Factures émises" Click="FacturesEmises_Click"/>
+                        <MenuItem Name="FacturesEmises" Header="_Factures émises" />
                     </MenuItem>
                     <MenuItem Name="Referentiels" Header="_Référentiels">
-                        <MenuItem Name="RefPays" Header="_Pays" Click="RefPays_Click"/>
-                        <MenuItem Name="RefEtablissements" Header="_Etablissements" Click="RefEtablissements_Click"/>
-                        <MenuItem Name="RefDiplomes" Header="_Diplômes" Click="RefDiplomes_Click"/>
-                        <MenuItem Name="RefRaisons" Header="_Raisons" Click="RefRaisons_Click"/>
+                        <MenuItem Name="RefPays" Header="_Pays" />
+                        <MenuItem Name="RefEtablissements" Header="_Etablissements" />
+                        <MenuItem Name="RefDiplomes" Header="_Diplômes" />
+                        <MenuItem Name="RefRaisons" Header="_Raisons" />
                     </MenuItem>
                     <MenuItem Name="Communication" Header="_Communication">
-                        <MenuItem Name="Statistiques" Header="_Statistiques" Click="Statistiques_Click"/>
-                        <MenuItem Name="Notifications" Header="_Renvoi notifications" Click="Notifications_Click"/>
+                        <MenuItem Name="Statistiques" Header="_Statistiques" />
+                        <MenuItem Name="Notifications" Header="_Renvoi notifications" />
                     </MenuItem>
                     <MenuItem Name="Administration" Header="_Administration">
-                        <MenuItem Name="GestionZonePays" Header="_Gestion des zones et pays" Click="GestionZonePays_Click"/>
-                        <MenuItem Name="GestionDossiers" Header="_Gestion des dossiers" Click="GestionDossiers_Click"/>
-                        <MenuItem Name="GestionInstitutions" Header="_Gestion des institutions" Click="GestionInstitutions_Click"/>
-                        <MenuItem Name="GestionUtilisateurs" Header="_Gestion des utilisateurs" Click="GestionUtilisateurs_Click"/>
+                        <MenuItem Name="GestionZonePays" Header="_Gestion des zones et pays" />
+                        <MenuItem Name="GestionDossiers" Header="_Gestion des dossiers" />
+                        <MenuItem Name="GestionInstitutions" Header="_Gestion des institutions"/>
+                        <MenuItem Name="GestionUtilisateurs" Header="_Gestion des utilisateurs"/>
                     </MenuItem>
-                    <MenuItem Name="Quitter" Header="_Quitter" Click="Quitter_Click"/>
+                    <MenuItem Name="Quitter" Header="_Quitter" />
                 </Menu>
 
 
@@ -87,7 +88,6 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />

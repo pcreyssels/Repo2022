@@ -5,6 +5,10 @@
              xmlns:local="clr-namespace:WpfAppNF48"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <sys:String x:Key="ComboBoxTitle">Items:</sys:String>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
