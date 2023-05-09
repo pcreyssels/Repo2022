@@ -1,14 +1,14 @@
-﻿using SimpleMVVM.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WpfApp1.Model;
 
-namespace SimpleMVVM.ViewModel
+namespace WpfApp1.ViewModel
 {
-    internal class UserViewModel
+    class UserViewModel
     {
         private IList<User> _UsersList;
 

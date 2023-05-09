@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace SimpleMVVM.View
+namespace WpfApp1.View
 {
     /// <summary>
     /// Logique d'interaction pour Window1.xaml

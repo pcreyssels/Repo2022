@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleMVVM.Model
+namespace WpfApp1.Model
 {
-    internal class User : INotifyPropertyChanged
+
+    public class User : INotifyPropertyChanged
     {
         private int userId;
         private string firstName;
@@ -101,4 +102,5 @@ namespace SimpleMVVM.Model
         #endregion
 
     }
+
 }

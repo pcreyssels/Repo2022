@@ -7,11 +7,11 @@ using System.Windows;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("SimpleMVVM")]
+[assembly: AssemblyTitle("WpfAppSimple2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CIEP")]
-[assembly: AssemblyProduct("SimpleMVVM")]
+[assembly: AssemblyProduct("WpfAppSimple2")]
 [assembly: AssemblyCopyright("Copyright © CIEP 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

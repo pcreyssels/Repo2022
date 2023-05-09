@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SimpleMVVM
+namespace WpfSimple2
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
@@ -23,7 +23,6 @@ namespace SimpleMVVM
         public MainWindow()
         {
             InitializeComponent();
-            int i = 3;
         }
     }
 }
