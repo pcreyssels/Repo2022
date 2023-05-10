@@ -20,5 +20,16 @@
                 Width="203"
                 Command="{Binding ButtonCommand}" 
                 CommandParameter="Hai" />
+
+        <StackPanel>
+            <Menu>
+                <MenuItem Command="ApplicationCommands.Paste" />
+            </Menu>
+            <TextBox x:Name="TextBox1" Width="202" />
+        </StackPanel>
+
     </Grid>
+
+   
+
 </Window>

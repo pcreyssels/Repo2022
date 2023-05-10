@@ -19,5 +19,13 @@
 
         <Button x:Name="Button3" 
         Height="100" Content="{Binding}" Margin="437,162,266,172"/>
+
+        <StackPanel>
+            <Menu>
+                <MenuItem Command="ApplicationCommands.Paste" />
+            </Menu>
+            <TextBox x:Name="TextBox1" Width="202" />
+        </StackPanel>
+
     </Grid>
 </Window>

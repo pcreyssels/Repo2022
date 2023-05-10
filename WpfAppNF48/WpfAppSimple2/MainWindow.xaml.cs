@@ -23,6 +23,9 @@ namespace WpfSimple2
         public MainWindow()
         {
             InitializeComponent();
+            int cbc = TextBox1.CommandBindings.Count;
+
+            int i = 0;
         }
     }
 }
