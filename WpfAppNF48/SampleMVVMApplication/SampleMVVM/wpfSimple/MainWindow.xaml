@@ -1,16 +1,12 @@
 ﻿<Window x:Class="WpfSimple.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfSimple" 
-        xmlns:local1="clr-namespace:WpfSimple.ViewModel"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:local="clr-namespace:WpfSimple"
+        Title="MainWindow" Height="150" Width="370">
     <Window.DataContext>
-        <local1:MainWindowViewModel/>
+        <local:MainWindowViewModel/>
     </Window.DataContext>
-    <Grid>
+        <Grid>
         <Button Content="Click" 
                 Height="23" 
                 HorizontalAlignment="Left" 
@@ -20,16 +16,5 @@
                 Width="203"
                 Command="{Binding ButtonCommand}" 
                 CommandParameter="Hai" />
-
-        <StackPanel>
-            <Menu>
-                <MenuItem Command="ApplicationCommands.Paste" />
-            </Menu>
-            <TextBox x:Name="TextBox1" Width="202" />
-        </StackPanel>
-
     </Grid>
-
-   
-
 </Window>

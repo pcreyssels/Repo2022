@@ -22,14 +22,14 @@ namespace WpfAppNF48.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Windows1Ressource {
+    internal class Windows1_xaml {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Windows1Ressource() {
+        internal Windows1_xaml() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace WpfAppNF48.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WpfAppNF48.Properties.Windows1Ressource", typeof(Windows1Ressource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WpfAppNF48.Properties.Windows1.xaml", typeof(Windows1_xaml).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace WpfAppNF48.Properties {
         /// <summary>
         ///   Recherche une chaîne localisée semblable à ressource dans autre que resources.resx.
         /// </summary>
-        internal static string ChaineRessourceW1 {
+        internal static string RessourceW1 {
             get {
-                return ResourceManager.GetString("ChaineRessourceW1", resourceCulture);
+                return ResourceManager.GetString("RessourceW1", resourceCulture);
             }
         }
     }

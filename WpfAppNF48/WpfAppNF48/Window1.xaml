@@ -4,11 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfAppNF48"
+        xmlns:CC="clr-namespace:WpfAppNF48.Properties"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="128,105,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="128,169,0,0" VerticalAlignment="Top"/>
+        Title="Window1" Height="450" Width="800" Name="W1">
+    <StackPanel>
+        <Button Content="Button" />
+        <CheckBox Content="CheckBox"/>
+        <Label x:Name="label" Content="{x:Static CC:Resources.InfoResxFile}"/>
+        <Label x:Name="label1" Content="BONJOUR"/>
+    </StackPanel>
 
-    </Grid>
 </Window>

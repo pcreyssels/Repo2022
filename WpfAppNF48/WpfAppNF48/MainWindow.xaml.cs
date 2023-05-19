@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Resources;
@@ -27,7 +28,13 @@ namespace WpfAppNF48
     {
         public MainWindow()
         {
+            string lg = "en-US";
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(lg);
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(lg);
             InitializeComponent();
+
+            
+
             // resources de la page en cours définies dans Xaml
             //object o = this.FindResource("cle1");
             //bool b = Resources.Contains("cle1");
@@ -49,7 +56,7 @@ namespace WpfAppNF48
 
             // compatible avec langue définie dans le thread (fichier .resx)
             string t = Properties.Resources.Texte1;
-            
+
             // resources dans Properties/Settings.settings
             var v1 = Properties.Settings.Default.Properties["Param1"].DefaultValue;
             var v2 = Properties.Settings.Default.Properties["Param1"].PropertyType;
@@ -57,7 +64,7 @@ namespace WpfAppNF48
             // accès direct
             int u = Properties.Settings.Default.Param2;
 
-       
+
 
             int j = 0;
         }
@@ -80,10 +87,8 @@ namespace WpfAppNF48
             window1.Show();
         }
 
-        private void Button_switchfr_Click(object sender, RoutedEventArgs e)
+        private void dosomething(object sender, RoutedEventArgs e)
         {
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fr");
-            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("fr");
             Resources["textResourceWindows"] = "ressource 1 sur windows changé";
             string localizedMessage = (string)Application.Current.FindResource("Texte1_fr");
             object o = Application.Current.FindResource("Texte1_fr");
@@ -97,17 +102,58 @@ namespace WpfAppNF48
 
             string locXamlFile = "MainWindow.fr-FR" + ".xaml";
             string directory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            string inFile= System.IO.Path.Combine(directory, "Resources", locXamlFile);
+            string inFile = System.IO.Path.Combine(directory, "Resources", locXamlFile);
             var languageDictionary = new ResourceDictionary();
             languageDictionary.Source = new Uri(inFile);
             Resources.MergedDictionaries[0] = languageDictionary;
             int u = 0;
         }
 
+        private void Button_switchfr_Click(object sender, RoutedEventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fr");
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("fr");
+            
+        }
+
         private void Button_switchen_Click(object sender, RoutedEventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en");
+        }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            int nw = Application.Current.Windows.Count;
+
+            foreach (Window w in Application.Current.Windows)
+            {
+                string n = w.Name;
+                int i = 0;
+                if (w.Name=="W1")
+                {
+                    w.Close();
+                    string lg = "fr";
+                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(lg);
+                    Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(lg);
+                    Window1 w1 = new Window1();
+                   
+                    w1.Show();
+                }
+            }
+        }
+
+        private void button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Close();
+            string lg = "fr";
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(lg);
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(lg);
+            MainWindow mainWindow = new MainWindow();
+            App.Current.MainWindow = mainWindow;
+            mainWindow.Show();
+            
         }
     }
 }

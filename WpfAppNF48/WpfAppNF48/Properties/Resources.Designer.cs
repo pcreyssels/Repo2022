@@ -71,6 +71,15 @@ namespace WpfAppNF48.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à ressource ??.
+        /// </summary>
+        public static string InfoResxFile {
+            get {
+                return ResourceManager.GetString("InfoResxFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à login.
         /// </summary>
         public static string Log_In {
