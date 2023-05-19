@@ -55,7 +55,7 @@
         <Button x:Name="button_10" Content="C0" HorizontalAlignment="Left" Margin="149,89,0,0" VerticalAlignment="Top" Height="28" Width="86" Click="button_1_Click"/>
 
 
-        <!--<Button x:Name="button_2" Content="{StaticResource ResourceKey=cle1}" HorizontalAlignment="Left" Margin="456,56,0,0" VerticalAlignment="Top" Height="28" Width="202" Click="button_2_Click"/>-->
+        <Button x:Name="button_2" HorizontalAlignment="Left" Margin="456,56,0,0" VerticalAlignment="Top" Height="28" Width="202" Click="button_2_Click" Content="OUVRIR NLLE FEN"/>
 
         <!--<Button x:Name="button_3" Content="{DynamicResource ResourceKey=cle2}" HorizontalAlignment="Left" Margin="149,132,0,0" VerticalAlignment="Top" Height="28" Width="202"/>-->
 
@@ -65,8 +65,8 @@
 
         <!-- label_3 resource dans app.xaml section Application.Resources -->
         <Label x:Name="label_3" Content="{StaticResource Texte1_fr}" HorizontalAlignment="Left" Margin="173,256,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Button_switchfr" Content="SWITCH FR" HorizontalAlignment="Left" Margin="149,304,0,0" VerticalAlignment="Top" Width="101" Click="Button_switchfr_Click"/>
-        <Button x:Name="Button_switchen" Content="SWITCH EN" HorizontalAlignment="Left" Margin="149,358,0,0" VerticalAlignment="Top" Width="101" Click="Button_switchen_Click"/>
+        <Button x:Name="Button_switchfr" Content="SWITCH FR Thread.Current(UI)Culture" HorizontalAlignment="Left" Margin="149,304,0,0" VerticalAlignment="Top"  Click="Button_switchfr_Click"/>
+        <Button x:Name="Button_switchen" Content="SWITCH EN Thread.Current(UI)Culture" HorizontalAlignment="Left" Margin="149,358,0,0" VerticalAlignment="Top" Click="Button_switchen_Click"/>
 
         <!--<Label x:Name="Label1" Content="{DynamicResource ResourceKey=textResourceWindows}" HorizontalAlignment="Left" Margin="306,301,0,0" VerticalAlignment="Top" Width="216"/>-->
         <Label x:Name="Label2" Content="{DynamicResource ResourceKey=Texte1_fr}" HorizontalAlignment="Left" Margin="306,332,0,0" VerticalAlignment="Top" Width="216"/>
