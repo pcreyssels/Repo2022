@@ -20,6 +20,7 @@ namespace WpfSimple
     /// </summary>
     public partial class MainWindow : Window
     {
+        // https://www.codeproject.com/Articles/126249/MVVM-Pattern-in-WPF-A-Simple-Tutorial-for-Absolute
         public MainWindow()
         {
             InitializeComponent();

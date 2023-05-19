@@ -4,20 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSimple2"
+        xmlns:clrn="clr-namespace:System;assembly=mscorlib"
         xmlns:localvm="clr-namespace:WpfSimple2.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <clrn:String x:Key="cle2">ressource cle 2</clrn:String>
+    </Window.Resources>
     <Window.DataContext>
+        <!--https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/how-to-specify-the-binding-source?view=netframeworkdesktop-4.8-->
         <localvm:MainWindowViewModel/>
     </Window.DataContext>
     <Grid>
         <Button x:Name="Button1" Width="100" 
         Height="100" Content="{Binding ButtonContent}" Margin="183,162,517,172"/>
-        
+
         <Button x:Name="Button2" Width="100" 
-            Height="100" Content="{Binding Content2}" Margin="313,162,387,172"/>
+            Height="100" Content="{Binding Path=Content2}" Margin="313,162,387,172"/>
 
         <Button x:Name="Button3" 
-        Height="100" Content="{Binding}" Margin="437,162,266,172"/>
+        Height="100" Content="{Binding Source={StaticResource cle2}}" Margin="437,162,266,172"/>
+        <Button x:Name="Button4" 
+            Height="100" Content="{Binding Path=Content3}" Margin="555,162,148,172"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="183,303,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

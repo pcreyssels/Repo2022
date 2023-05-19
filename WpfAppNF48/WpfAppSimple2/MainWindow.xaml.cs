@@ -22,7 +22,13 @@ namespace WpfSimple2
     {
         public MainWindow()
         {
+            //https://www.c-sharpcorner.com/UploadFile/raj1979/simple-mvvm-pattern-in-wpf/
             InitializeComponent();
+            CommandBindingCollection cbc = TextBox1.CommandBindings;
+
+            int i = cbc.Count;
+            int j = 0;
+
         }
     }
 }

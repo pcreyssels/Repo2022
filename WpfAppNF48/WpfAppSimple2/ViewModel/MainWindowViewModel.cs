@@ -31,5 +31,7 @@ namespace WpfSimple2.ViewModel
                 return "Content2";
             }
         }
+
+        public string Content3 { get; set; }
     }
 }
