@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Resources;
@@ -27,7 +28,13 @@ namespace WpfAppNF48
     {
         public MainWindow()
         {
+            string lg = "en-US";
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(lg);
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(lg);
             InitializeComponent();
+
+            
+
             // resources de la page en cours définies dans Xaml
             //object o = this.FindResource("cle1");
             //bool b = Resources.Contains("cle1");
@@ -106,12 +113,47 @@ namespace WpfAppNF48
         {
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fr");
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("fr");
+            
         }
 
         private void Button_switchen_Click(object sender, RoutedEventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en");
+        }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            int nw = Application.Current.Windows.Count;
+
+            foreach (Window w in Application.Current.Windows)
+            {
+                string n = w.Name;
+                int i = 0;
+                if (w.Name=="W1")
+                {
+                    w.Close();
+                    string lg = "fr";
+                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(lg);
+                    Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(lg);
+                    Window1 w1 = new Window1();
+                   
+                    w1.Show();
+                }
+            }
+        }
+
+        private void button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Close();
+            string lg = "fr";
+            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(lg);
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(lg);
+            MainWindow mainWindow = new MainWindow();
+            App.Current.MainWindow = mainWindow;
+            mainWindow.Show();
+            
         }
     }
 }

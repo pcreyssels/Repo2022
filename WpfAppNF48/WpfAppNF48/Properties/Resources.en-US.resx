@@ -117,7 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ChaineRessourceW1" xml:space="preserve">
-    <value>ressource dans autre que resources.resx</value>
+  <data name="InfoResxFile" xml:space="preserve">
+    <value>english resource en-US.resx</value>
+  </data>
+  <data name="Log_In" xml:space="preserve">
+    <value>login en</value>
+  </data>
+  <data name="Texte1" xml:space="preserve">
+    <value>Texte_1 en</value>
+  </data>
+  <data name="Texte2" xml:space="preserve">
+    <value>Texte_2 en</value>
   </data>
 </root>
