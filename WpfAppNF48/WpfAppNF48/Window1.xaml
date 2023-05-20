@@ -7,11 +7,17 @@
         xmlns:CC="clr-namespace:WpfAppNF48.Properties"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800" Name="W1">
+    
+    <Window.Resources>
+       
+    </Window.Resources>
     <StackPanel>
         <Button Content="Button" />
         <CheckBox Content="CheckBox"/>
-        <Label x:Name="label" Content="{x:Static CC:Resources.InfoResxFile}"/>
         <Label x:Name="label1" Content="BONJOUR"/>
+        <!--<Label x:Name="label2" Content="TOTO"/> ResourceKey=RessourceWin1 -->
+        <Label x:Name="label3" Content="{DynamicResource ResourceKey=RessourceWin1}"/>
+        <Label x:Name="label4" Content="{DynamicResource RessourceWin1}"/>
     </StackPanel>
 
 </Window>

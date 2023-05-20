@@ -41,36 +41,54 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Margin" Value="0,3,10,0"/>
         </Style>-->
-        <ResourceDictionary >
+        <!--<ResourceDictionary >
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/MainWindow.en-US.xaml"/>
+                <ResourceDictionary Source="Resources/Window1.en-US.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        </ResourceDictionary>-->
     </Window.Resources>
 
     <Grid RenderTransformOrigin="0.478,0.502">
         <!-- resource dans properties\resources.resx compatible avec les fichiers types en langues Resource.lang.region.resx -->
-        <Button x:Name="button_1" Content="{x:Static CC:Resources.InfoResxFile}" HorizontalAlignment="Left" Margin="149,56,0,0" VerticalAlignment="Top" Height="28" Width="86" Click="button_1_Click"/>
+        <Button x:Name="button_1" Content="{x:Static CC:Resources.InfoResxFile}" HorizontalAlignment="Left" Margin="149,56,0,0" VerticalAlignment="Top" Height="28" Width="175"/>
 
-        <Button x:Name="button_10" Content="C0" HorizontalAlignment="Left" Margin="149,89,0,0" VerticalAlignment="Top" Height="28" Width="86" Click="button_1_Click"/>
+        <Button x:Name="button_10" Content="changemergeddico" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top"
+                Margin="149,89,0,0"  Height="28" Width="175" 
+                Click="button_10_Click"/>
 
 
-        <Button x:Name="button_2" HorizontalAlignment="Left" Margin="456,56,0,0" VerticalAlignment="Top" Height="28" Width="202" Click="button_2_Click" Content="OUVRIR NLLE FEN"/>
-        <Button x:Name="button_20" HorizontalAlignment="Left" VerticalAlignment="Top" Content="switch child lang" Margin="456,97,142,305" Click="button_Click_1"/>
-        
+        <Button x:Name="button_2" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Margin="456,56,0,0" Height="28" Width="202" 
+                Click="button_2_Click" Content="OUVRIR NLLE FEN"/>
+
+        <Button x:Name="button_20" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" Content="switch child lang" 
+                Height="28" Width="100" Margin="456,97,142,305" 
+                Click="button_Click_1"/>
+
+        <Button x:Name="button" Content="ONOFF" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="564,97,0,0" Height="28" Width="100"
+                Click="button_Click_2"/>
+
+
         <!--<Button x:Name="button_3" Content="{DynamicResource ResourceKey=cle2}" HorizontalAlignment="Left" Margin="149,132,0,0" VerticalAlignment="Top" Height="28" Width="202"/>-->
-        <Label x:Name="label_1" Content="Label1" HorizontalAlignment="Left" Margin="127,147,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_2" Content="Label2" HorizontalAlignment="Left" Margin="127,181,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_1" Content="link -&gt; resx" HorizontalAlignment="Left" Margin="31,56,0,0" VerticalAlignment="Top" Width="86"/>
 
         <!-- label_3 resource dans app.xaml section Application.Resources -->
-        <Label x:Name="label_3" Content="{StaticResource Texte1_fr}" HorizontalAlignment="Left" Margin="127,212,0,0" VerticalAlignment="Top"/>
 
         <!--<Label x:Name="Label1" Content="{DynamicResource ResourceKey=textResourceWindows}" HorizontalAlignment="Left" Margin="306,301,0,0" VerticalAlignment="Top" Width="216"/>-->
-        <Label x:Name="Label2" Content="{DynamicResource ResourceKey=Texte1_fr}" HorizontalAlignment="Left" Margin="456,176,0,0" VerticalAlignment="Top" Width="216"/>
 
-        <Label Content="{DynamicResource ResourceKey=FirstNameLabel}" HorizontalAlignment="Left" Margin="456,212,0,0" VerticalAlignment="Top"/>
-        <Label Content="{DynamicResource ResourceKey=LastNameLabel}" HorizontalAlignment="Left" Margin="626,212,0,0" VerticalAlignment="Top"/>
-        <Label Content="Label5" HorizontalAlignment="Left" Margin="672,176,0,0" VerticalAlignment="Top"/>
+        <Label Content="{DynamicResource ResourceKey=FirstNameLabel}" HorizontalAlignment="Left" Margin="149,160,0,0" VerticalAlignment="Top"/>
+        <Label Content="{DynamicResource ResourceKey=LastNameLabel}" HorizontalAlignment="Left" Margin="149,191,0,0" VerticalAlignment="Top"/>
+        <Label Content="{DynamicResource ResourceKey=RessourceWin1}" HorizontalAlignment="Left" Margin="456,160,0,0" VerticalAlignment="Top"/>
 
         <!--le switch des langues ne se fait pas dynamiquement il faut relancer le thread de la fenêtre principale-->
         <GroupBox x:Name="groupBox" Header="GroupBox" Margin="70,256,121,32">
@@ -93,8 +111,7 @@
             </Grid>
 
         </GroupBox>
-        <Button x:Name="button" Content="ONOFF" Margin="564,97,128,317" Click="button_Click_2"/>
-
+        
         <!--<Label x:Name="Label3" Content="{x:Static CC:Windows1Ressource.ChaineRessourceW1}" HorizontalAlignment="Left" Margin="306,368,0,0" VerticalAlignment="Top" Width="216"/>-->
 
 

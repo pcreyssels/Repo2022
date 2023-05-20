@@ -39,12 +39,12 @@ namespace WpfAppNF48
             //object o = this.FindResource("cle1");
             //bool b = Resources.Contains("cle1");
             //object c = Resources["cle1"];
-            label_1.Content = "toto";
+            // label_1.Content = "toto";
 
             //label_2.Content = Resources["cle2"];
             object or = Resources["Texte1_fr"];
 
-            string localizedMessage = (string)Application.Current.FindResource("Texte1_fr");
+            //string localizedMessage = (string)Application.Current.FindResource("Texte1_fr");
 
 
             // ressource dans le dictionary (dictionnaire de ressources)
@@ -87,25 +87,32 @@ namespace WpfAppNF48
             window1.Show();
         }
 
-        private void dosomething(object sender, RoutedEventArgs e)
+        private void dosomething()
         {
-            Resources["textResourceWindows"] = "ressource 1 sur windows changé";
-            string localizedMessage = (string)Application.Current.FindResource("Texte1_fr");
-            object o = Application.Current.FindResource("Texte1_fr");
-            o = "ce texte est en francais changé";
-            string j = "ce texte est en francais changé";
+            //Resources["textResourceWindows"] = "ressource 1 sur windows changé";
+            //string localizedMessage = (string)Application.Current.FindResource("Texte1_fr");
+            //object o = Application.Current.FindResource("Texte1_fr");
+            //o = "ce texte est en francais changé";
+            //string j = "ce texte est en francais changé";
 
             int i = this.Resources.MergedDictionaries.Count();
-
-            var rd = Resources.MergedDictionaries[0];
-
+            int j = App.Current.Resources.MergedDictionaries.Count();
+            var rd = App.Current.Resources.MergedDictionaries[0];
+            var rd2 = App.Current.Resources.MergedDictionaries[1];
 
             string locXamlFile = "MainWindow.fr-FR" + ".xaml";
             string directory = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             string inFile = System.IO.Path.Combine(directory, "Resources", locXamlFile);
             var languageDictionary = new ResourceDictionary();
             languageDictionary.Source = new Uri(inFile);
-            Resources.MergedDictionaries[0] = languageDictionary;
+            App.Current.Resources.MergedDictionaries[0] = languageDictionary;
+
+            locXamlFile = "Window1.fr-FR" + ".xaml";
+            inFile = System.IO.Path.Combine(directory, "Resources", locXamlFile);
+            var languageDictionary2 = new ResourceDictionary();
+            languageDictionary2.Source = new Uri(inFile);
+            App.Current.Resources.MergedDictionaries[1] = languageDictionary2;
+            //Resources.MergedDictionaries.Add(languageDictionary2);
             int u = 0;
         }
 
@@ -154,6 +161,11 @@ namespace WpfAppNF48
             App.Current.MainWindow = mainWindow;
             mainWindow.Show();
             
+        }
+
+        private void button_10_Click(object sender, RoutedEventArgs e)
+        {
+            dosomething();
         }
     }
 }
