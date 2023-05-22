@@ -18,6 +18,7 @@
         <!--<Label x:Name="label2" Content="TOTO"/> ResourceKey=RessourceWin1 -->
         <Label x:Name="label3" Content="{DynamicResource ResourceKey=RessourceWin1}"/>
         <Label x:Name="label4" Content="{DynamicResource RessourceWin1}"/>
+        <Label x:Name="label5" Content="{DynamicResource FirstNameLabel}"/>
     </StackPanel>
 
 </Window>

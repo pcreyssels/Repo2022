@@ -6,13 +6,18 @@
         xmlns:local="clr-namespace:WpfCommands"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="119,70,0,0" VerticalAlignment="Top" Height="27" Width="78"
+        <Button Content="Button Command" HorizontalAlignment="Left" Margin="119,70,0,0" VerticalAlignment="Top" Height="27" Width="162"
              Command="{Binding ButtonCommand}"  CommandParameter="heloi" />
-        <Label x:Name="Label_1" Content="{Binding Propint}" HorizontalAlignment="Left" Margin="119,175,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Label_2" Content="Label" HorizontalAlignment="Left" Margin="119,239,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Label_3" Content="Label" HorizontalAlignment="Left" Margin="119,306,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="551,267,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Label_1" Content="variable propint -&gt; viewmodel" HorizontalAlignment="Left" Margin="78,237,0,0" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="Label_10" Content="{Binding Propint}" HorizontalAlignment="Left" Margin="277,236,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="Label_2" Content="variable propdouble -&gt; viewmodel" HorizontalAlignment="Left" Margin="57,297,0,0" VerticalAlignment="Top" Height="28" Width="209"/>
+        <Label x:Name="Label_20" Content="{Binding Propdouble}" HorizontalAlignment="Left" Margin="277,297,0,0" VerticalAlignment="Top" Height="28" Width="78" />
+
+        <Label x:Name="Label_3" Content="Label" HorizontalAlignment="Left" Margin="277,164,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
 
     </Grid>
 </Window>

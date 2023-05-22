@@ -13,9 +13,11 @@ namespace WpfCommands
     internal class MainWindowViewModel : INotifyPropertyChanged
     {
 
-        private int _Propint;
+        private int _Propint=3;
         private string _Propstring;
-        private double _Propdouble;
+        private double _Propdouble=5;
+
+        private User User1 { get; set; }
 
         public int Propint
         {
@@ -70,14 +72,40 @@ namespace WpfCommands
         {
             Predicate<object> _predicate = o => (o ==null ||(string) o == "heloi");
             ButtonCommand = new RelayCommand(_predicate, new Action<object>(DoSomething));
+
+
+            // inscription aux événements du modèle
+            User1.PropertyChanged += Model_PropertyChanged;
         }
+
+
+        private void Model_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "Name")
+            {
+                DoSomething2();
+            }
+        }
+
         public void DoSomething(object obj)
         {
             // do Something
             int j = 12;
             j = j + 1;
             Propint = 32;
+
+            // modification du modèle par le viewmodel
+            User1.Name = "toto";
         }
+
+        public void DoSomething2()
+        {
+            // do Something
+            int j = 12;
+            j = j + 1;
+            
+        }
+
 
         #region INotifyChangeProperty  
 

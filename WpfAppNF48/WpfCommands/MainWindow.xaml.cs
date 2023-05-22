@@ -18,18 +18,21 @@ namespace WpfCommands
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+public partial class MainWindow : Window
+{
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-            MainWindowViewModel mwvm = new MainWindowViewModel();
-            mwvm.Propdouble = 15;
-            mwvm.Propint = 15;
+        InitializeComponent();
+            //MainWindowViewModel mwvm = new MainWindowViewModel();
+            //mwvm.Propdouble = 222;
+            //mwvm.Propint = 15;
 
-            this.DataContext = mwvm;
-        }
-            
-            
+            //this.DataContext = mwvm;
+
+            MainWindowViewModel mvvm = (MainWindowViewModel)DataContext;
+            mvvm.Propdouble = 34;
     }
+            
+            
+}
 }
