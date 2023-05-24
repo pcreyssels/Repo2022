@@ -16,10 +16,15 @@ namespace CustomRoutedCommand
     {
         public static RoutedCommand ColorCmd = new RoutedCommand();
 
+        public static RoutedCommand Command2 = new RoutedCommand();
+
         public MainWindow()
         {
             InitializeComponent();
             Debug.WriteLine("initialize mainwindows");
+            string s = ColorCmd.Name;
+            
+            string t = "";
         }
 
         // ExecutedRoutedEventHandler for the custom color command.
@@ -27,10 +32,12 @@ namespace CustomRoutedCommand
         {
             object so = e.Source;
             object oso = e.OriginalSource;
-            object se = e.Source;
+            object se = sender;
+            
             Debug.WriteLine($" executed source {so.GetType().Name} -> name : {((FrameworkElement)so).Name}");
             Debug.WriteLine($"  sender {se.GetType().Name} -> name : {((FrameworkElement)se).Name}");
             Debug.WriteLine($"  original {oso.GetType().Name} -> name : {((FrameworkElement)oso).Name}");
+            Debug.WriteLine($"  parameter {e.Parameter}"); 
             var target = e.Source as Panel;
             if (target != null)
             {
@@ -38,11 +45,13 @@ namespace CustomRoutedCommand
             }
         }
 
+        
+
         // CanExecuteRoutedEventHandler for the custom color command.
         private void ColorCmdCanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             object so = e.Source;
-            object se = e.Source;
+            object se = sender;
             object oso = e.OriginalSource;
             Debug.WriteLine($" canexec {so.GetType().Name} -> name : {((FrameworkElement)so).Name}");
             Debug.WriteLine($"  sender {se.GetType().Name} -> name : {((FrameworkElement)se).Name}");
@@ -52,10 +61,78 @@ namespace CustomRoutedCommand
             {
                 e.CanExecute = true;
             }
+            else if (e.Source is Button)
+            {
+                e.CanExecute = true;
+            }
             else
             {
                 e.CanExecute = false;
             }
+        }
+
+        private void ColorCmdExecuted2(object sender, ExecutedRoutedEventArgs e)
+        {
+            object so = e.Source;
+            object oso = e.OriginalSource;
+            object se = sender;
+            Debug.WriteLine($" executed2 source {so.GetType().Name} -> name : {((FrameworkElement)so).Name}");
+            Debug.WriteLine($"  sender {se.GetType().Name} -> name : {((FrameworkElement)se).Name}");
+            Debug.WriteLine($"  original {oso.GetType().Name} -> name : {((FrameworkElement)oso).Name}");
+            var target = e.Source as Panel;
+            if (target != null)
+            {
+                target.Background = target.Background == Brushes.AliceBlue ? Brushes.LemonChiffon : Brushes.AliceBlue;
+            }
+        }
+        private void ColorCmdCanExecute2(object sender, CanExecuteRoutedEventArgs e)
+        {
+            object so = e.Source;
+            object se = sender;
+            object oso = e.OriginalSource;
+            Debug.WriteLine($" canexec2 {so.GetType().Name} -> name : {((FrameworkElement)so).Name}");
+            Debug.WriteLine($"  sender {se.GetType().Name} -> name : {((FrameworkElement)se).Name}");
+            Debug.WriteLine($"  original {oso.GetType().Name} -> name : {((FrameworkElement)oso).Name}");
+
+            if (e.Source is Panel)
+            {
+                e.CanExecute = true;
+            }
+            else if (e.Source is Button)
+            {
+                e.CanExecute = true;
+            }
+            else
+            {
+                e.CanExecute = false;
+            }
+        }
+        private void ColorCmdExecuted20(object sender, ExecutedRoutedEventArgs e)
+        {
+        }
+
+        private void ColorCmdCanExecute20(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void ColorCmdExecuted3(object sender, ExecutedRoutedEventArgs e)
+        {
+        }
+
+        private void ColorCmdCanExecute3(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute=true;
+        }
+
+
+        private void Command2Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+        }
+
+        private void Command2CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
         }
     }
 }

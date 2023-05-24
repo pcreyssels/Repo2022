@@ -8,22 +8,39 @@
         Title="MainWindow" Name="RootWindow" Height="500" Width="600"
         Focusable="True">
     <!-- </SnippetCustomCommandMapping-->
-    <Window.CommandBindings>
-        <CommandBinding Command="{x:Static local:MainWindow.ColorCmd}"
+    
+    <Grid>
+        <Grid.CommandBindings>
+            <CommandBinding Command="{x:Static local:MainWindow.ColorCmd}"
                     Executed="ColorCmdExecuted"
                     CanExecute="ColorCmdCanExecute"/>
-    </Window.CommandBindings>
-    <DockPanel>
-        <Menu DockPanel.Dock="Top"
+        </Grid.CommandBindings>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Command="{x:Static local:MainWindow.ColorCmd}" 
+                CommandParameter="param0"
+                x:Name="button0" Grid.Column="0" Focusable="True" Content="Button0" Margin="20,67,20,375">
+        </Button>
+        <Button Command="{x:Static local:MainWindow.ColorCmd}" 
+                CommandParameter="param1" 
+                x:Name="button0_Copy" Grid.Column="0" Focusable="True" Content="Button0" Margin="20,154,20,288"/>
+
+
+        <DockPanel Grid.Column="1">
+            <Menu DockPanel.Dock="Top"
           Height="25">
-            <MenuItem Header="Commands">
-                <MenuItem Name="menuitem1" Header="Color Command"
+                <MenuItem Header="Commands">
+                    <MenuItem Name="menuitem1" Header="Color Command"
                   Command="{x:Static local:MainWindow.ColorCmd}" />
-            </MenuItem>
-        </Menu>
-        <Border BorderBrush="Black" BorderThickness="1" Margin="10"
+                </MenuItem>
+            </Menu>
+            <Border BorderBrush="Black" BorderThickness="1" Margin="10"
             Height="165" Width="250" DockPanel.Dock="Top">
-            <TextBlock TextWrapping="Wrap" Margin="3" Name="TextBlock1" Focusable="True">
+                <TextBlock TextWrapping="Wrap" Margin="3" Name="TextBlock1" Focusable="True">
                 The Color Command chages the background color of a StackPanel.
                 <LineBreak/>
                 <LineBreak/>
@@ -34,8 +51,8 @@
                 Since the command attached to the Button has the CommandTarget
                 set to the first StackPanel, the StackPanel does not need focus.
                 <LineBreak/>
-            </TextBlock>
-        </Border>
+                </TextBlock>
+            </Border>
             <Border BorderBrush="Black" BorderThickness="1" Margin="10"
               Height="200" Width="200">
                 <StackPanel Name="FirstStackPanel"
@@ -61,6 +78,30 @@
                     <Label>Second StackPanel</Label>
                 </StackPanel>
             </Border>
-       
-    </DockPanel>
+
+        </DockPanel>
+        <StackPanel Grid.Column="2">
+            <Button x:Name="button2" Command="{x:Static local:MainWindow.ColorCmd}" Focusable="True" Content="Button2" MaxHeight="20"  MaxWidth="100">
+            </Button>
+            <Button x:Name="button20" Command="{x:Static local:MainWindow.Command2}" Focusable="True" Content="Command2" MaxHeight="20"  MaxWidth="100">
+            </Button>
+            <Button x:Name="button3" Command="{x:Static local:MainWindow.ColorCmd}" Focusable="True" Content="ButtonFire" MaxHeight="20"  MaxWidth="100">
+                <Button.CommandBindings>
+                    <CommandBinding Command="{x:Static local:MainWindow.ColorCmd}"
+                            Executed="ColorCmdExecuted3"
+                            CanExecute="ColorCmdCanExecute3"/>
+                </Button.CommandBindings>
+            </Button>
+            <StackPanel.CommandBindings>
+                <CommandBinding Command="{x:Static local:MainWindow.ColorCmd}"
+                            Executed="ColorCmdExecuted20"
+                            CanExecute="ColorCmdCanExecute20"/>
+                <CommandBinding Command="{x:Static local:MainWindow.Command2}"
+                            Executed="Command2Executed"
+                            CanExecute="Command2CanExecute"/>
+            </StackPanel.CommandBindings>
+        </StackPanel>
+        
+
+    </Grid>
 </Window>
