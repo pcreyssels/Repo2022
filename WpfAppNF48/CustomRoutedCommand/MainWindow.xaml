@@ -164,6 +164,18 @@
             </ListView.View>
         </ListView>
 
+        <!--listview avec datatemplate-->
+        <!--<ListView.ItemTemplate>
+            <DataTemplate>
+                <StackPanel>
+                    <TextBlock Text="{Binding Path= FileName, Mode=TwoWay}"></TextBlock>
+                    <TextBlock Text="{Binding Path= DataType, Mode=TwoWay}"></TextBlock>
+                </StackPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>-->
+
+
+
 
 
     </Grid>
