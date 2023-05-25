@@ -9,11 +9,15 @@ using System.Windows.Media;
 
 namespace CustomRoutedCommand
 {
+
+    
     /// <summary>
     ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindowVM vm;
+
         public static RoutedCommand ColorCmd = new RoutedCommand();
 
         public static RoutedCommand Command2 = new RoutedCommand();
@@ -25,6 +29,9 @@ namespace CustomRoutedCommand
             string s = ColorCmd.Name;
             
             string t = "";
+            vm = new MainWindowVM();
+            DataContext = vm;
+
         }
 
         // ExecutedRoutedEventHandler for the custom color command.
@@ -133,6 +140,18 @@ namespace CustomRoutedCommand
         private void Command2CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = true;
+        }
+
+        private void button01_Click(object sender, RoutedEventArgs e)
+        {
+            vm.Propstring="toto";
+        }
+
+        private void button02_Click(object sender, RoutedEventArgs e)
+        {
+            vm.Propbool = false;
+            //vm.Propstring2 = "Hidden"; 
+            vm.Propstring2 = "Collapsed";
         }
     }
 }

@@ -20,16 +20,28 @@
             <ColumnDefinition Width="4*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
+        
+        <StackPanel Grid.Column="0">
+        
         <Button Command="{x:Static local:MainWindow.ColorCmd}" 
                 CommandParameter="param0"
-                x:Name="button0" Grid.Column="0" Focusable="True" Content="Button0" Margin="20,67,20,375">
+                x:Name="button0" Focusable="True" Content="Button0" >
         </Button>
         <Button Command="{x:Static local:MainWindow.ColorCmd}" 
                 CommandParameter="param1" 
-                x:Name="button0_Copy" Grid.Column="0" Focusable="True" Content="Button0" Margin="20,154,20,288"/>
+                x:Name="button0_Copy" Focusable="True" Content="Button0" />
+
+            <Button MinHeight="20" x:Name="button00" Focusable="True" Visibility="{Binding Propstring2}" Content="{Binding Propstring}" />
 
 
+        <Button x:Name="button01" Focusable="True" Content="Commut"
+                Click="button01_Click"
+                />
+        <Button x:Name="button02_Copy"  Focusable="True" Content="Mask"
+            Click="button02_Click"
+                />
+        </StackPanel>
+    
         <DockPanel Grid.Column="1">
             <Menu DockPanel.Dock="Top"
           Height="25">
@@ -88,8 +100,8 @@
             <Button x:Name="button3" Command="{x:Static local:MainWindow.ColorCmd}" Focusable="True" Content="ButtonFire" MaxHeight="20"  MaxWidth="100">
                 <Button.CommandBindings>
                     <CommandBinding Command="{x:Static local:MainWindow.ColorCmd}"
-                            Executed="ColorCmdExecuted3"
-                            CanExecute="ColorCmdCanExecute3"/>
+                    Executed="ColorCmdExecuted3"
+                    CanExecute="ColorCmdCanExecute3"/>
                 </Button.CommandBindings>
             </Button>
             <StackPanel.CommandBindings>
@@ -101,7 +113,8 @@
                             CanExecute="Command2CanExecute"/>
             </StackPanel.CommandBindings>
         </StackPanel>
-        
+       
+
 
     </Grid>
 </Window>
