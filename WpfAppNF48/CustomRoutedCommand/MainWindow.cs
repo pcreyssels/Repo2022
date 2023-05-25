@@ -1,6 +1,8 @@
 ﻿// // Copyright (c) Microsoft. All rights reserved.
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System.Collections.ObjectModel;
+using System;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,6 +24,9 @@ namespace CustomRoutedCommand
 
         public static RoutedCommand Command2 = new RoutedCommand();
 
+        public ObservableCollection<String> OStringItems2;
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +36,11 @@ namespace CustomRoutedCommand
             string t = "";
             vm = new MainWindowVM();
             DataContext = vm;
+
+            OStringItems2 = new ObservableCollection<String>();
+            OStringItems2.Add("un");
+            OStringItems2.Add("deux");
+            OStringItems2.Add("trois");
 
         }
 

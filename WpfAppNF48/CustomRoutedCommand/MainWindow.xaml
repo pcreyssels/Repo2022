@@ -3,14 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CustomRoutedCommand"
+        xmlns:local="clr-namespace:CustomRoutedCommand" 
+       
         mc:Ignorable="d"
         MouseUp="Window_MouseUp"
         Title="MainWindow" Name="RootWindow" Height="500" Width="600"
         Focusable="True">
     <!-- </SnippetCustomCommandMapping-->
-    
-    <Grid>
+    <!--d:DataContext="{d:DesignInstance Type=local:MainWindowVM}"-->
+    <Window.DataContext>
+        <local:MainWindowVM></local:MainWindowVM>
+    </Window.DataContext>
+    <Window.Resources>
+        <!-- One style for each *type* of control on the window -->
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid ShowGridLines="True">
         <Grid.CommandBindings>
             <CommandBinding Command="{x:Static local:MainWindow.ColorCmd}"
                     Executed="ColorCmdExecuted"
@@ -21,28 +40,34 @@
             <ColumnDefinition Width="4*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
         <StackPanel Grid.Column="0">
-        
-        <Button Command="{x:Static local:MainWindow.ColorCmd}" 
+
+            <Button Command="{x:Static local:MainWindow.ColorCmd}" 
                 CommandParameter="param0"
                 x:Name="button0" Focusable="True" Content="Button0" >
-        </Button>
-        <Button Command="{x:Static local:MainWindow.ColorCmd}" 
+            </Button>
+            <Button Command="{x:Static local:MainWindow.ColorCmd}" 
                 CommandParameter="param1" 
                 x:Name="button0_Copy" Focusable="True" Content="Button0" />
 
             <Button MinHeight="20" x:Name="button00" Focusable="True" Visibility="{Binding Propstring2}" Content="{Binding Propstring}" />
 
 
-        <Button x:Name="button01" Focusable="True" Content="Commut"
+            <Button x:Name="button01" Focusable="True" Content="Commut"
                 Click="button01_Click"
                 />
-        <Button x:Name="button02_Copy"  Focusable="True" Content="Mask"
+            <Button Margin="5" x:Name="button02_Copy"  Focusable="True" Content="Mask"
             Click="button02_Click"
                 />
+            <TextBox  TextWrapping="Wrap" Text="{Binding Propstring3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <Label Content="{Binding Propstring3, Mode=OneWay}"/>
+
         </StackPanel>
-    
+
         <DockPanel Grid.Column="1">
             <Menu DockPanel.Dock="Top"
           Height="25">
@@ -52,7 +77,7 @@
                 </MenuItem>
             </Menu>
             <Border BorderBrush="Black" BorderThickness="1" Margin="10"
-            Height="165" Width="250" DockPanel.Dock="Top">
+            Height="100" Width="100" DockPanel.Dock="Top">
                 <TextBlock TextWrapping="Wrap" Margin="3" Name="TextBlock1" Focusable="True">
                 The Color Command chages the background color of a StackPanel.
                 <LineBreak/>
@@ -67,8 +92,8 @@
                 </TextBlock>
             </Border>
             <Border BorderBrush="Black" BorderThickness="1" Margin="10"
-              Height="200" Width="200">
-                    <StackPanel Name="FirstStackPanel"
+              Height="100" Width="100">
+                <StackPanel Name="FirstStackPanel"
                     Background="AliceBlue"
                     Focusable="True">
                     <!--<StackPanel.CommandBindings>            
@@ -77,20 +102,21 @@
                             CanExecute="ColorCmdCanExecute"/>
                     </StackPanel.CommandBindings>-->
 
-                        <Label>First StackPanel</Label>
+                    <Label>First StackPanel</Label>
 
-                        <Button Command="{x:Static local:MainWindow.ColorCmd}"
+                    <Button Command="{x:Static local:MainWindow.ColorCmd}"
                   CommandParameter="ButtonOne"
                   CommandTarget="{Binding ElementName=FirstStackPanel}" 
                   Content="CommandTarget = FristStackPanel" />
-                    </StackPanel>
-                </Border>
-                <Border BorderBrush="Black" BorderThickness="1" Margin="10"
-              Height="200" Width="200">
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="1" Margin="10"
+              Height="100" Width="100">
                 <StackPanel Name="stackpanel2" Background="AliceBlue" Focusable="True">
                     <Label>Second StackPanel</Label>
                 </StackPanel>
             </Border>
+            <Label Content="Label" Width="0"/>
 
         </DockPanel>
         <StackPanel Grid.Column="2">
@@ -114,7 +140,30 @@
                             CanExecute="Command2CanExecute"/>
             </StackPanel.CommandBindings>
         </StackPanel>
-       
+        <!--<ListBox Grid.Column="1" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}"/>-->
+        <!--<ListBox Name="listbox1" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding ObservableItems}"  >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid ShowGridLines="True">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding Title}" />
+                        <TextBlock Grid.Column="1"  Text="{Binding Completion}" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>-->
+        <ListView Name="lvUsers" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding ObservableItems}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title" Width="Auto" DisplayMemberBinding="{Binding Title}" />
+                    <GridViewColumn Header="Completion" Width="Auto" DisplayMemberBinding="{Binding Completion}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
 
 
     </Grid>
