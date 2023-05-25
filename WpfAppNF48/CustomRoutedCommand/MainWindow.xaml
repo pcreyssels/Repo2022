@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomRoutedCommand"
         mc:Ignorable="d"
+        MouseUp="Window_MouseUp"
         Title="MainWindow" Name="RootWindow" Height="500" Width="600"
         Focusable="True">
     <!-- </SnippetCustomCommandMapping-->
@@ -67,7 +68,7 @@
             </Border>
             <Border BorderBrush="Black" BorderThickness="1" Margin="10"
               Height="200" Width="200">
-                <StackPanel Name="FirstStackPanel"
+                    <StackPanel Name="FirstStackPanel"
                     Background="AliceBlue"
                     Focusable="True">
                     <!--<StackPanel.CommandBindings>            
@@ -76,15 +77,15 @@
                             CanExecute="ColorCmdCanExecute"/>
                     </StackPanel.CommandBindings>-->
 
-                    <Label>First StackPanel</Label>
+                        <Label>First StackPanel</Label>
 
-                    <Button Command="{x:Static local:MainWindow.ColorCmd}"
+                        <Button Command="{x:Static local:MainWindow.ColorCmd}"
                   CommandParameter="ButtonOne"
                   CommandTarget="{Binding ElementName=FirstStackPanel}" 
                   Content="CommandTarget = FristStackPanel" />
-                </StackPanel>
-            </Border>
-            <Border BorderBrush="Black" BorderThickness="1" Margin="10"
+                    </StackPanel>
+                </Border>
+                <Border BorderBrush="Black" BorderThickness="1" Margin="10"
               Height="200" Width="200">
                 <StackPanel Name="stackpanel2" Background="AliceBlue" Focusable="True">
                     <Label>Second StackPanel</Label>

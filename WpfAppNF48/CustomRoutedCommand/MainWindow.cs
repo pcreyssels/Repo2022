@@ -153,5 +153,10 @@ namespace CustomRoutedCommand
             //vm.Propstring2 = "Hidden"; 
             vm.Propstring2 = "Collapsed";
         }
+
+        private void Window_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
