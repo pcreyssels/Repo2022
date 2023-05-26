@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Globalization;
 using System.Text;
 using System.Windows;
+using System.Windows.Data;
 
 namespace CustomRoutedCommand
 {
@@ -183,5 +185,55 @@ namespace CustomRoutedCommand
     {
         public string Title { get; set; }
         public int Completion { get; set; }
+    }
+
+    public class ItemsSwitchConverter2 : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+
+            string _return = "Visible";
+
+            if (value == null)
+                return "Visible";
+
+            if (parameter == null)
+                parameter = "1";
+
+            string source_value = (string)value;
+
+            //m_Dossiers:v sm_Support:v
+
+            string _parameter = (string)parameter;
+
+            string s = "";
+            //if (_parameter == "m_Dossiers")
+            //{
+            s = source_value.Substring(source_value.IndexOf(_parameter) + _parameter.Length + 1, 1);
+            //}
+
+            switch (s)
+            {
+                case "v":
+                    _return = "Visible";
+                    break;
+                case "h":
+                    _return = "Hidden";
+                    break;
+                case "c":
+                    _return = "Collapsed";
+                    break;
+                default:
+                    _return = "Visible";
+                    break;
+            }
+
+            return _return;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotSupportedException();
+        }
     }
 }

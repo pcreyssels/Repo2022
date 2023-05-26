@@ -3,17 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CustomRoutedCommand" 
-       
+        xmlns:local="clr-namespace:CustomRoutedCommand" d:DataContext="{d:DesignInstance Type=local:MainWindowVM}"
         mc:Ignorable="d"
         MouseUp="Window_MouseUp"
         Title="MainWindow" Name="RootWindow" Height="500" Width="600"
         Focusable="True">
-    <!-- </SnippetCustomCommandMapping-->
-    <!--d:DataContext="{d:DesignInstance Type=local:MainWindowVM}"-->
-    <!--<Window.DataContext>
-        <local:MainWindowVM></local:MainWindowVM>
-    </Window.DataContext>-->
+    <Window.DataContext>
+        <local:MainWindowVM x:Name="vm"></local:MainWindowVM>
+    </Window.DataContext>
     <Window.Resources>
         <!-- One style for each *type* of control on the window -->
         <Style TargetType="TextBox">
@@ -29,6 +26,7 @@
             <Setter Property="Margin" Value="5"/>
         </Style>
         <local:ItemsSwitchConverter x:Key="ItemsSwitchConverter" />
+        <local:ItemsSwitchConverter2 x:Key="ItemsSwitchConverter2" />
     </Window.Resources>
     <Grid ShowGridLines="True">
         <Grid.CommandBindings>
@@ -81,7 +79,7 @@
             <Label Margin="0" Name="label5"  Content="{Binding ItemsSwitch, Converter={StaticResource ItemsSwitchConverter},ConverterParameter=sm_Support}"/>-->
 
             <Label Margin="0" Name="label4" Content="label_4" 
-                   Visibility="{Binding ItemsSwitch, Converter={StaticResource ItemsSwitchConverter},ConverterParameter=m_Dossiers}"/>
+                   Visibility="{Binding ItemsSwitch, Converter={StaticResource ItemsSwitchConverter2},ConverterParameter=m_Dossiers}"/>
             <Label Margin="0" Name="label5" Content="label_5" 
                    Visibility="{Binding ItemsSwitch, Converter={StaticResource ItemsSwitchConverter},ConverterParameter=sm_Support}"/>
 

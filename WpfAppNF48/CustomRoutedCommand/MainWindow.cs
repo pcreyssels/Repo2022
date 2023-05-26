@@ -20,7 +20,7 @@ namespace CustomRoutedCommand
     /// </summary>
     public partial class MainWindow : Window
     {
-        private MainWindowVM vm;
+        //private MainWindowVM vm;
 
         public static RoutedCommand ColorCmd = new RoutedCommand();
 
@@ -36,8 +36,8 @@ namespace CustomRoutedCommand
             string s = ColorCmd.Name;
             
             string t = "";
-            vm = new MainWindowVM();
-            DataContext = vm;
+            //vm = new MainWindowVM();
+            //DataContext = vm;
 
             OStringItems2 = new ObservableCollection<String>();
             OStringItems2.Add("un");
