@@ -8,6 +8,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Globalization;
+using System.Windows.Data;
 
 namespace CustomRoutedCommand
 {
@@ -164,9 +166,72 @@ namespace CustomRoutedCommand
             vm.Propstring2 = "Collapsed";
         }
 
+        private void button_sw_Click(object sender, RoutedEventArgs e)
+        {
+            //if (vm.VisibilitySwitchs[0] == "Collapsed")
+            //    vm.VisibilitySwitchs[0] = "Visible";
+            //else if (vm.VisibilitySwitchs[0] == "Visible")
+            //    vm.VisibilitySwitchs[0] = "Collapsed";
+
+            vm.VisibilitySwitchs2["label4"] = "valeur t";
+            vm.VisibilitySwitchs3["label4"] = "valeur t";
+
+            vm.ItemsSwitch = "m_Dossiers:c sm_Support:h";
+        }
+
         private void Window_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            
+        }
+    }
 
+    public class ItemsSwitchConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+
+            string _return = "Visible";
+
+            if (value == null)
+                return "Visible";
+
+            if (parameter == null)
+                parameter = "1";
+
+            string source_value =(string)value;
+
+            //m_Dossiers:v sm_Support:v
+
+            string _parameter = (string)parameter;
+
+            string s = "";
+            //if (_parameter == "m_Dossiers")
+            //{
+                s = source_value.Substring(source_value.IndexOf(_parameter) + _parameter.Length + 1, 1);
+            //}
+
+            switch (s)
+            {
+                case "v":
+                    _return = "Visible";
+                    break;
+                case "h":
+                    _return = "Hidden";
+                    break;
+                case "c":
+                    _return = "Collapsed";
+                    break;
+                default:
+                    _return = "Visible";
+                    break;
+            }
+
+            return _return;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotSupportedException();
         }
     }
 }

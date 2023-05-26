@@ -7,12 +7,39 @@ using System.Windows;
 
 namespace CustomRoutedCommand
 {
+
+    public enum MenuItems : ushort
+    {
+        None = 0,
+        m_Dossiers = 1,
+        sm_ = 100,
+        OutlierReading = 200
+    }
+
     public class MainWindowVM : INotifyPropertyChanged
     {
+        public ObservableCollection<KeyValuePair<string,string>> MenuSwitchs { get; private set; } = new ObservableCollection<KeyValuePair<string, string>>();
+        public ObservableCollection<string> VisibilitySwitchs { get; private set; } = new ObservableCollection<string>();
+
+        public Dictionary<string, string> VisibilitySwitchs2 { get; private set; } = new Dictionary<string, string>();
+
+        private Dictionary<string, string> visibilitySwitchs3  = new Dictionary<string, string>();
+        public Dictionary<string, string> VisibilitySwitchs3 
+        {
+            get { return visibilitySwitchs3; }
+            set
+            {
+                visibilitySwitchs3 = value;
+                if (PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs("VisibilitySwitchs3"));
+            }
+        }
+
+        
 
         private string _Propstring;
         private string _Propstring2 = "Visible";
         private string _Propstring3 = "bonjour";
+        private string _ItemsSwitch = "m_Dossiers:v sm_Support:v";
         private bool _Propbool = false;
 
         public string Propstring
@@ -25,6 +52,19 @@ namespace CustomRoutedCommand
             {
                 _Propstring = value;
                 OnPropertyChanged("Propstring");
+            }
+        }
+
+        public string ItemsSwitch
+        {
+            get
+            {
+                return _ItemsSwitch;
+            }
+            set
+            {
+                _ItemsSwitch = value;
+                OnPropertyChanged("ItemsSwitch");
             }
         }
 
@@ -67,6 +107,8 @@ namespace CustomRoutedCommand
             }
         }
 
+        
+
         public ObservableCollection<TodoItem> ObservableItems { get; set; }
         public List<TodoItem> Items { get; set; }
         public ObservableCollection<String> OStringItems { get; set; }
@@ -87,6 +129,37 @@ namespace CustomRoutedCommand
             OStringItems.Add("un");
             OStringItems.Add("deux");
             OStringItems.Add("trois");
+
+            VisibilitySwitchs.Add("Visible");
+            VisibilitySwitchs.Add("Visible");
+            VisibilitySwitchs.Add("Visible");
+
+            VisibilitySwitchs2.Add("label1","Visible");
+            VisibilitySwitchs2.Add("label2", "Visible");
+            VisibilitySwitchs2.Add("label3", "Visible");
+            VisibilitySwitchs2.Add("label4", "Visible");
+            VisibilitySwitchs2.Add("label5", "Visible");
+            VisibilitySwitchs2.Add("label6", "Visible");
+
+            visibilitySwitchs3.Add("label1", "Visible");
+            visibilitySwitchs3.Add("label2", "Visible");
+            visibilitySwitchs3.Add("label3", "Visible");
+            visibilitySwitchs3.Add("label4", "Valeur x");
+            visibilitySwitchs3.Add("label5", "Visible");
+            visibilitySwitchs3.Add("label6", "Visible");
+
+
+            MenuSwitchs.Add(new KeyValuePair<string, string>
+            (
+                "label1",
+                "Visible"
+            ));
+
+            MenuSwitchs.Add(new KeyValuePair<string, string>
+            (
+                "label2",
+                "Visible"
+            ));
 
 
         }

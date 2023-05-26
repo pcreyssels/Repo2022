@@ -11,9 +11,9 @@
         Focusable="True">
     <!-- </SnippetCustomCommandMapping-->
     <!--d:DataContext="{d:DesignInstance Type=local:MainWindowVM}"-->
-    <Window.DataContext>
+    <!--<Window.DataContext>
         <local:MainWindowVM></local:MainWindowVM>
-    </Window.DataContext>
+    </Window.DataContext>-->
     <Window.Resources>
         <!-- One style for each *type* of control on the window -->
         <Style TargetType="TextBox">
@@ -28,6 +28,7 @@
         <Style TargetType="Label">
             <Setter Property="Margin" Value="5"/>
         </Style>
+        <local:ItemsSwitchConverter x:Key="ItemsSwitchConverter" />
     </Window.Resources>
     <Grid ShowGridLines="True">
         <Grid.CommandBindings>
@@ -66,6 +67,25 @@
             <TextBox  TextWrapping="Wrap" Text="{Binding Propstring3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
             <Label Content="{Binding Propstring3, Mode=OneWay}"/>
 
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Button Name="button_sw" Focusable="True" Content="switch"
+                Click="button_sw_Click"/>
+            <Label Margin="0" Name="label1" Visibility="{Binding VisibilitySwitchs[0]}" Content="{Binding OStringItems[0]}"/>
+            <Label Margin="0" Name="label2" Visibility="{Binding VisibilitySwitchs[1]}" Content="label_2"/>
+            <Label Margin="0" Name="label3" Visibility="{Binding VisibilitySwitchs[1]}" Content="label_3"/>
+            
+            <!--<Label Margin="0" Name="label4"  Content="{Binding ItemsSwitch, Converter={StaticResource ItemsSwitchConverter},ConverterParameter=m_Dossiers}"/>
+            <Label Margin="0" Name="label5"  Content="{Binding ItemsSwitch, Converter={StaticResource ItemsSwitchConverter},ConverterParameter=sm_Support}"/>-->
+
+            <Label Margin="0" Name="label4" Content="label_4" 
+                   Visibility="{Binding ItemsSwitch, Converter={StaticResource ItemsSwitchConverter},ConverterParameter=m_Dossiers}"/>
+            <Label Margin="0" Name="label5" Content="label_5" 
+                   Visibility="{Binding ItemsSwitch, Converter={StaticResource ItemsSwitchConverter},ConverterParameter=sm_Support}"/>
+
+            <Label Margin="0" Name="label6"  Content="label_6"/>
         </StackPanel>
 
         <DockPanel Grid.Column="1">
