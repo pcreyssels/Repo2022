@@ -15,6 +15,9 @@ namespace WpfAppNF48
     /// </summary>
     public partial class App : Application
     {
+
+        public static string _staticstring = "bonjour";
+
         App()
         {
             string lg = "fr";

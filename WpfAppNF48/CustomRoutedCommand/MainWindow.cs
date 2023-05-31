@@ -64,7 +64,6 @@ namespace CustomRoutedCommand
             }
         }
 
-        
 
         // CanExecuteRoutedEventHandler for the custom color command.
         private void ColorCmdCanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -182,6 +181,19 @@ namespace CustomRoutedCommand
         private void Window_MouseUp(object sender, MouseButtonEventArgs e)
         {
             
+        }
+
+        private void button_cl_Click(object sender, RoutedEventArgs e)
+        {
+            BandeauInfo _bi = new BandeauInfo();
+            _bi.AppVer = "VER";
+            vm.Bi = _bi;
+            // vm.Bi.AppVer = "VER";
+            //BandeauInfo2 _bi= new BandeauInfo2();
+            //_bi.AppVer = "VER";
+            //vm.Bi2 = _bi;
+            vm.Bi2.AppVer = "VER";
+            vm.Propstring = "modified";
         }
     }
 

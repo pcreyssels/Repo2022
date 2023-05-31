@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CustomRoutedCommand" d:DataContext="{d:DesignInstance Type=local:MainWindowVM}"
+        xmlns:local="clr-namespace:CustomRoutedCommand" 
         mc:Ignorable="d"
         MouseUp="Window_MouseUp"
         Title="MainWindow" Name="RootWindow" Height="500" Width="600"
@@ -84,6 +84,16 @@
                    Visibility="{Binding ItemsSwitch, Converter={StaticResource ItemsSwitchConverter},ConverterParameter=sm_Support}"/>
 
             <Label Margin="0" Name="label6"  Content="label_6"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="1">
+
+            <Label Margin="0" Name="label10"  Content="{Binding Path=Propstring}"/>
+            <Label Margin="0" Name="label11" DataContext="{Binding Bi}"  Content="{Binding Path=AppVer}"/>
+            <!--<Label Margin="0" Name="label10"  Content="tutu"/>-->
+
+            <Button Name="button_cl" Focusable="True" Content="clic"
+                Click="button_cl_Click"/>
         </StackPanel>
 
         <DockPanel Grid.Column="1">

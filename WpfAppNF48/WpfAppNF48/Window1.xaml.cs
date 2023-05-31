@@ -20,6 +20,7 @@ namespace WpfAppNF48
     /// </summary>
     public partial class Window1 : Window
     {
+        public static string staticstringW1 = "bonjour2";
         public Window1()
         {
             

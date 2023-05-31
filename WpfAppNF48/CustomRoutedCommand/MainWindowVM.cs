@@ -36,13 +36,30 @@ namespace CustomRoutedCommand
             }
         }
 
-        
 
-        private string _Propstring;
+        private string _Propstring = "_propstring";
         private string _Propstring2 = "Visible";
         private string _Propstring3 = "bonjour";
         private string _ItemsSwitch = "m_Dossiers:v sm_Support:v";
         private bool _Propbool = false;
+
+        public BandeauInfo Bi{ get; set; }
+
+        private BandeauInfo2 bi2;
+        public BandeauInfo2 Bi2 
+        { 
+            get
+            {
+                return bi2;
+            }
+            set
+            {
+                bi2 = value;
+                OnPropertyChanged("Bi2");
+                //OnPropertyChanged("Bi2.AppVer");
+                //OnPropertyChanged("AppVer");
+            }
+        }
 
         public string Propstring
         {
@@ -163,7 +180,16 @@ namespace CustomRoutedCommand
                 "Visible"
             ));
 
+            Bi =new BandeauInfo();
+            Bi.AppVer = "2.6";
+            Bi.Roles = " SYS GES";
+            Bi.Login = "toto";
 
+
+            Bi2 = new BandeauInfo2();
+            Bi2.AppVer = "3.6";
+            Bi2.Roles = " TSYS GES";
+            Bi2.Login = "titi";
         }
 
 
@@ -185,6 +211,67 @@ namespace CustomRoutedCommand
     {
         public string Title { get; set; }
         public int Completion { get; set; }
+    }
+
+    public class BandeauInfo2
+    {
+
+        public string Login { get; set; }
+        public string Roles { get; set; }
+        public string AppVer { get; set; }
+    }
+
+        public class BandeauInfo :ViewModelBase
+    {
+
+        private string login;
+        private string roles;
+        private string appVer;
+
+        public BandeauInfo()
+        {
+            Login = "l";
+            Roles = "r";
+            AppVer = "a";
+        }
+        public string Login
+        {
+            get => login;
+
+            set
+            {
+                login = value;
+                OnPropertyChanged("Login");
+                //OnPropertyChanged("BandeauInfo");
+            }
+
+        }
+        public string Roles
+        {
+            get => roles;
+
+            set
+            {
+                roles = value;
+                OnPropertyChanged("Roles");
+                //OnPropertyChanged("BandeauInfo");
+            }
+
+        }
+        public string AppVer 
+        {
+            get => appVer;
+
+            set 
+            {
+                appVer = value;
+                OnPropertyChanged("AppVer");
+                //OnPropertyChanged("BandeauInfo.AppVer");
+                // OnPropertyChanged("BandeauInfo");
+            }
+            
+        }
+
     }
 
     public class ItemsSwitchConverter2 : IValueConverter
