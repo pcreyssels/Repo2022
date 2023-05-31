@@ -44,6 +44,9 @@ namespace CustomRoutedCommand
             OStringItems2.Add("deux");
             OStringItems2.Add("trois");
 
+            Window1 W1 = new Window1();
+            W1.Show();
+
         }
 
         // ExecutedRoutedEventHandler for the custom color command.
