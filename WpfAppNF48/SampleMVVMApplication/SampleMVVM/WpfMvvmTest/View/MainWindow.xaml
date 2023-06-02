@@ -27,5 +27,9 @@
                 VerticalAlignment="Top" Width="141"
                 Command="{Binding Path=UpdateCommand}"
                 />
+        <Button Content="Update2" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="310,73,0,0" Name="btnUpdate2" 
+                VerticalAlignment="Top" Width="141"
+                Click="btnUpdate2_Click"
+                />
     </Grid>
 </Window>

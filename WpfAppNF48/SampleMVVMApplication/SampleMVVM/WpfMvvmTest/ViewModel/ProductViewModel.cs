@@ -6,10 +6,11 @@ using System.Windows.Input;
 using System.ComponentModel;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows;
 
 namespace WpfMvvmTest
 {
-    class ProductViewModel 
+    public class ProductViewModel 
     {
         private IList<Product> m_Products;
         public ProductViewModel()
@@ -64,7 +65,11 @@ namespace WpfMvvmTest
             public void Execute(object parameter)
             {
                 int i = 0;
-                BindingExpression binding = txtID.GetBindingExpression(TextBox.TextProperty);
+                var mw = App.Current.MainWindow;
+                FrameworkElement fe = App.Current.MainWindow;
+                BindingExpression binding = ((FrameworkElement)(App.Current.MainWindow).FindName("txtID")).GetBindingExpression(TextBox.TextProperty);
+                //BindingExpression binding = WpfMvvmTest.MainWindow.FindName("txtID") .GetBindingExpression(TextBox.TextProperty);
+                //BindingExpression binding = (TextBlock)this.FindName("myTextBlock"); txtID.GetBindingExpression(TextBox.TextProperty);
                 binding.UpdateSource();
             }
 

@@ -28,5 +28,12 @@ namespace WpfMvvmTest
         {
             
         }
+
+        private void btnUpdate2_Click(object sender, RoutedEventArgs e)
+        {
+            BindingExpression binding = txtID.GetBindingExpression(TextBox.TextProperty);
+            BindingExpression binding2 = ((TextBox)this.FindName("txtID")).GetBindingExpression(TextBox.TextProperty);
+            binding2.UpdateSource();
+        }
     }
 }
