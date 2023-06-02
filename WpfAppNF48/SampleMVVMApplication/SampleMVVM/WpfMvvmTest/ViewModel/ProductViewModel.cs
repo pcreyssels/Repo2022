@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using System.ComponentModel;
+using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace WpfMvvmTest
 {
@@ -61,7 +63,9 @@ namespace WpfMvvmTest
 
             public void Execute(object parameter)
             {
-
+                int i = 0;
+                BindingExpression binding = txtID.GetBindingExpression(TextBox.TextProperty);
+                binding.UpdateSource();
             }
 
             #endregion

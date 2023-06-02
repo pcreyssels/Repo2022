@@ -17,7 +17,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="80,7,0,0" Name="txtID" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=ListViewEmployeeDetails,Path=SelectedItem.ID}" />
+        <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="80,7,0,0" Name="txtID" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=ListViewEmployeeDetails, UpdateSourceTrigger=Explicit, Path=SelectedItem.ID}" />
         <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="80,35,0,0" Name="txtName" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=ListViewEmployeeDetails,Path=SelectedItem.Name}" />
         <TextBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="80,61,0,0" Name="txtPrice" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=ListViewEmployeeDetails,Path=SelectedItem.Price}" />
         <Label Content="ID" Grid.Row="1" HorizontalAlignment="Left" Margin="12,12,0,274" Name="label1" />
@@ -25,7 +25,7 @@
         <Label Content="Name" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="12,35,0,0" Name="label3" VerticalAlignment="Top" />
         <Button Content="Update" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="310,40,0,0" Name="btnUpdate" 
                 VerticalAlignment="Top" Width="141"
-                Command="{Binding Path=UpdateCommad}"
+                Command="{Binding Path=UpdateCommand}"
                 />
     </Grid>
 </Window>
