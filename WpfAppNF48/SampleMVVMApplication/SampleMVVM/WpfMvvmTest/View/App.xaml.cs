@@ -12,11 +12,12 @@ namespace WpfMvvmTest
     /// </summary>
     public partial class App : Application
     {
+        public ProductViewModel VM;
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
             WpfMvvmTest.MainWindow window = new MainWindow();
-            ProductViewModel VM = new ProductViewModel();
+            VM = new ProductViewModel();
             window.DataContext = VM;
             window.Show();
         }
