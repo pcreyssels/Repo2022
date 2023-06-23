@@ -68,4 +68,4 @@ namespace WpfAppMVVM.Model
         #endregion
     }
 }
-}
+

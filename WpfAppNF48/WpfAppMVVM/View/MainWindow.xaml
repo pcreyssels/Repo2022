@@ -19,7 +19,7 @@
             <Setter Property="Margin" Value="5"/>
         </Style>
         <Style TargetType="Button">
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Margin" Value="2"/>
         </Style>
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="10"/>
@@ -43,6 +43,7 @@
             <Button Content="Click1" Command="{Binding Path=GenericCmd}"/>
             <Button Content="Cmd1" Command="{Binding Path=cmd1}"/>
             <Button Content="Cmd2" Command="{Binding Path=cmd2}"/>
+            <Button Content="Cmd3" Command="{Binding Path=cmd3}"/>
         </StackPanel>
         
         <Grid Grid.Row="0" Grid.Column="1">
@@ -63,6 +64,24 @@
             <TextBlock x:Name="PriceValue" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Prod.Price}"></TextBlock>
         </Grid>
 
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="FirstName"  Grid.Column="0" Grid.Row="0"/>
+            <Label Content="LastName" Grid.Column="0" Grid.Row="1" />
+            <Label Content="Age"  Grid.Column="0" Grid.Row="2"/>
+            <TextBlock x:Name="FnValue" Grid.Column="1" Grid.Row="0" Text="{Binding Path=Person_view.Firstnameview}"></TextBlock>
+            <TextBlock x:Name="LnValue" Grid.Column="1" Grid.Row="1" Text="{Binding Path=Person_view.Lastnameview}"></TextBlock>
+            <TextBlock x:Name="AgeValue" Grid.Column="1" Grid.Row="2" Text="{Binding Path=Person_view.Ageview}"></TextBlock>
+        </Grid>
 
     </Grid>
 </Window>

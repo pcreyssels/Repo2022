@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfAppMVVM.Model;
 
 namespace WpfAppMVVM
 {
@@ -13,6 +14,18 @@ namespace WpfAppMVVM
     /// </summary>
     public partial class App : Application
     {
-
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            PersonModel m_person = new PersonModel();
+            m_person.Firstname = "alan";
+            m_person.Lastname = "parson";
+            m_person.Age = 50;
+           
+        }
     }
+
+
+    
+
 }
