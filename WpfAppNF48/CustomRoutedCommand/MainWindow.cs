@@ -13,8 +13,10 @@ using System.Windows.Data;
 
 namespace CustomRoutedCommand
 {
-
-    
+    // https://www.dotnetforall.com/wpf-mvvm-practical-data-application-example/
+    // https://www.codeproject.com/Articles/124160/Using-WPF-MVVM-for-Database-Access
+    //https://stackoverflow.com/questions/10324009/mvvm-modified-model-how-to-correctly-update-viewmodel-and-view
+    // https://learn.microsoft.com/en-us/archive/msdn-magazine/2009/february/patterns-wpf-apps-with-the-model-view-viewmodel-design-pattern
     /// <summary>
     ///     Interaction logic for MainWindow.xaml
     /// </summary>

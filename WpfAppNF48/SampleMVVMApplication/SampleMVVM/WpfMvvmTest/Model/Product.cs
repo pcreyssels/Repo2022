@@ -8,6 +8,11 @@ namespace WpfMvvmTest
 {
     public class Product:INotifyPropertyChanged
     {
+
+        // https://www.dotnetforall.com/wpf-mvvm-practical-data-application-example/
+        // https://www.codeproject.com/Articles/124160/Using-WPF-MVVM-for-Database-Access
+        //https://stackoverflow.com/questions/10324009/mvvm-modified-model-how-to-correctly-update-viewmodel-and-view
+
         private int m_ID;
         private string m_Name;
         private double m_Price;
