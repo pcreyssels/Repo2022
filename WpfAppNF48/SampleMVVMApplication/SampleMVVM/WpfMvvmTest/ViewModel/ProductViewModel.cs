@@ -64,7 +64,7 @@ namespace WpfMvvmTest
             public void Execute(object parameter)
             {
                 int i = 0;
-                BindingExpression binding = txtID.GetBindingExpression(TextBox.TextProperty);
+                BindingExpression binding = MainWindow.txtID.GetBindingExpression(TextBox.TextProperty);
                 binding.UpdateSource();
             }
 
