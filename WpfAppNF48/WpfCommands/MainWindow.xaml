@@ -10,14 +10,29 @@
         <local:MainWindowViewModel/>
     </Window.DataContext>
     <Grid>
-        <Button Content="Button Command" HorizontalAlignment="Left" Margin="119,70,0,0" VerticalAlignment="Top" Height="27" Width="162"
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Button Content="Button Command" 
              Command="{Binding ButtonCommand}"  CommandParameter="heloi" />
-        <Label x:Name="Label_1" Content="variable propint -&gt; viewmodel" HorizontalAlignment="Left" Margin="78,237,0,0" VerticalAlignment="Top" Width="170"/>
-        <Label x:Name="Label_10" Content="{Binding Propint}" HorizontalAlignment="Left" Margin="277,236,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Label_2" Content="variable propdouble -&gt; viewmodel" HorizontalAlignment="Left" Margin="57,297,0,0" VerticalAlignment="Top" Height="28" Width="209"/>
-        <Label x:Name="Label_20" Content="{Binding Propdouble}" HorizontalAlignment="Left" Margin="277,297,0,0" VerticalAlignment="Top" Height="28" Width="78" />
+            <Button x:Name="Button_command2" Content="Command2"  
+            Click="Button_command2_Click" />
+            <Button x:Name="Button_command3" Content="Command3"  
+            Click="Button_command3_Click" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1">
+            <Label x:Name="Label_1" Content="variable propint -&gt; viewmodel" />
+            <Label x:Name="Label_10" Content="{Binding Propint}" />
+            <Label x:Name="Label_2" Content="variable propdouble -&gt; viewmodel" />
+            <Label x:Name="Label_20" Content="{Binding Propdouble}" />
 
-        <Label x:Name="Label_3" Content="Label" HorizontalAlignment="Left" Margin="277,164,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-
+            <Label x:Name="Label_3" Content="Label" />
+            <Label x:Name="Label_4" Content="{Binding User2.Name}" />
+            <Label x:Name="Label_5" Content="{Binding User2.Age}" />
+        </StackPanel>
+        
     </Grid>
 </Window>

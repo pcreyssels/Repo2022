@@ -79,6 +79,14 @@ internal class Person : INotifyPropertyChanged
             get => name;
             set => SetProperty(ref name, value);
         }
+
+        private int age;
+
+        public int Age
+        {
+            get => age;
+            set => SetProperty(ref age, value);
+        }
     }
 
 }
