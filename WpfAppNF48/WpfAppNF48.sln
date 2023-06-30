@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp2NF48", "WpfApp2NF48\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppMVVM", "WpfAppMVVM\WpfAppMVVM.csproj", "{48074413-9051-4317-AD83-5333947C1C71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsService1", "WindowsService1\WindowsService1.csproj", "{DE4E5BA1-0D85-4E48-8F6D-EB364FE165EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BindValidation", "BindValidation\BindValidation.csproj", "{9F532D60-38D6-45BB-9248-4942D62C8E26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +105,22 @@ Global
 		{48074413-9051-4317-AD83-5333947C1C71}.Release|Any CPU.Build.0 = Release|Any CPU
 		{48074413-9051-4317-AD83-5333947C1C71}.Release|x86.ActiveCfg = Release|Any CPU
 		{48074413-9051-4317-AD83-5333947C1C71}.Release|x86.Build.0 = Release|Any CPU
+		{DE4E5BA1-0D85-4E48-8F6D-EB364FE165EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE4E5BA1-0D85-4E48-8F6D-EB364FE165EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE4E5BA1-0D85-4E48-8F6D-EB364FE165EE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DE4E5BA1-0D85-4E48-8F6D-EB364FE165EE}.Debug|x86.Build.0 = Debug|Any CPU
+		{DE4E5BA1-0D85-4E48-8F6D-EB364FE165EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE4E5BA1-0D85-4E48-8F6D-EB364FE165EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE4E5BA1-0D85-4E48-8F6D-EB364FE165EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{DE4E5BA1-0D85-4E48-8F6D-EB364FE165EE}.Release|x86.Build.0 = Release|Any CPU
+		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Debug|x86.Build.0 = Debug|Any CPU
+		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Release|x86.ActiveCfg = Release|Any CPU
+		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

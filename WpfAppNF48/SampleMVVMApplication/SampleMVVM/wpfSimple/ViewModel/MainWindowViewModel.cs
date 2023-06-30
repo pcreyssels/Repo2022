@@ -9,6 +9,24 @@ namespace WpfSimple
 {
     class MainWindowViewModel
     {
+        // https://www.codeproject.com/Tips/1113391/Validation-in-WPF-Various-WPF-Validation-Ways
+        private string _studentName;
+
+        public string StudentName
+        {
+            get { return _studentName; }
+            set
+            {
+                //if (value.Length < 0 || value.Length > 5)
+                //{
+                //    int v = value.Length;
+                //    throw new ArgumentException("Name should be between range 6-50");
+                //}
+
+                _studentName = value;
+            }
+        }
+
         private ICommand m_ButtonCommand;
         public ICommand ButtonCommand
         {
