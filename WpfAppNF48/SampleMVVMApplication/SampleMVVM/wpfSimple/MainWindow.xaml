@@ -11,8 +11,9 @@
 
         <ControlTemplate x:Key="ValidationTemplate">
             <DockPanel>
-                <TextBlock Foreground="Red" FontSize="20">!</TextBlock>
+                <TextBlock Foreground="Green" FontSize="20">#</TextBlock>
                 <AdornedElementPlaceholder/>
+                <TextBlock Foreground="Red" FontSize="20">!</TextBlock>
             </DockPanel>
         </ControlTemplate>
 
