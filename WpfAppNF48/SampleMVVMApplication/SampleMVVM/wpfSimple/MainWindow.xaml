@@ -55,6 +55,7 @@
                     </Grid.ColumnDefinitions>
                     <Label x:Name="StatsLabel" Grid.Column="0" Content="nombre de dossiers"/>
                     <TextBlock x:Name="Stats" Grid.Column="1" Text="{Binding Path=TaskName}"/>
+                    
                 </Grid>
             </DataTemplate>
         </Grid.Resources>
@@ -67,8 +68,9 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <!--bouton-->
-        <Button Grid.Row="0" Grid.Column="1" Content="Click" 
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <!--bouton-->
+            <Button  Content="Click" 
                 Height="23" 
                 HorizontalAlignment="Left" 
                 Name="btnClick" 
@@ -77,9 +79,16 @@
                 Command="{Binding ButtonCommand}" 
                 CommandParameter="Hai" />
 
+            <Button x:Name="BUP" Content="modif datatable" Click="BUP_Click">
+                
+            </Button>
+        </StackPanel>
+        
+
         <!--stack panel avec groupes-->
         <StackPanel Grid.Row="0" Grid.Column="0">
             <GroupBox Template="{StaticResource twocellgroup}"></GroupBox>
+            <DatePicker SelectedDate="{Binding Date, UpdateSourceTrigger=LostFocus, Mode=OneWayToSource}"></DatePicker>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0" >
@@ -114,6 +123,10 @@
 
 
         </StackPanel>
+
+        <DataGrid Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Data}">
+            
+        </DataGrid>
 
 
     </Grid>

@@ -25,6 +25,21 @@ namespace WpfSimple
             InitializeComponent();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BUP_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindowViewModel vm = (MainWindowViewModel)this.DataContext;
+
+            int i= vm.Data.Rows.Count;
+            vm.Data.Rows[0]["Age"] = 35;
+
+
+        }
+
 
 
         //private string _studentName;
@@ -90,6 +105,10 @@ namespace WpfSimple
             return ValidationResult.ValidResult;
         }
     }
+
+
+
+
 
     public class MyDataSource
     {

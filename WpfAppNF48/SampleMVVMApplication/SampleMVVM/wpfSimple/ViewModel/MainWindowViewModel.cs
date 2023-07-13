@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using System.Windows;
+using System.Data;
 
 namespace WpfSimple
 {
@@ -27,6 +28,27 @@ namespace WpfSimple
             }
         }
 
+        private DataTable data;
+        public DataTable Data
+        {
+            get { return data; }
+            set
+            {
+                data = value;
+            }
+        }
+
+        private DateTime date;
+        public DateTime Date
+        {
+            get { return date; }
+            set
+            {
+                date = value;
+                int i = 20;
+            }
+        }
+
         private ICommand m_ButtonCommand;
         public ICommand ButtonCommand
         {
@@ -43,6 +65,19 @@ namespace WpfSimple
         public MainWindowViewModel()
         {
             ButtonCommand=new RelayCommand(new Action<object>(ShowMessage));
+            Data = new DataTable();
+            Data.Columns.Add("Nom",typeof(string));
+            Data.Columns.Add("Age", typeof(int));
+            DataRow dr = Data.NewRow();
+            dr["Nom"] = "DUPONT";
+            dr["Age"] = 23;
+            Data.Rows.Add(dr);
+            dr = Data.NewRow();
+            dr["Nom"] = "DURAND";
+            dr["Age"] = 40;
+            Data.Rows.Add(dr);
+
+            int i = 0;
         }
 
         public void ShowMessage(object obj)
