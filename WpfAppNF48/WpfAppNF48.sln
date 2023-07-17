@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsService1", "WindowsS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BindValidation", "BindValidation\BindValidation.csproj", "{9F532D60-38D6-45BB-9248-4942D62C8E26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputValidation", "InputValidation\InputValidation.csproj", "{99AF64D3-BD4A-476F-A111-F91A6BBAD562}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,14 @@ Global
 		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Release|x86.ActiveCfg = Release|Any CPU
 		{9F532D60-38D6-45BB-9248-4942D62C8E26}.Release|x86.Build.0 = Release|Any CPU
+		{99AF64D3-BD4A-476F-A111-F91A6BBAD562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AF64D3-BD4A-476F-A111-F91A6BBAD562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99AF64D3-BD4A-476F-A111-F91A6BBAD562}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{99AF64D3-BD4A-476F-A111-F91A6BBAD562}.Debug|x86.Build.0 = Debug|Any CPU
+		{99AF64D3-BD4A-476F-A111-F91A6BBAD562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99AF64D3-BD4A-476F-A111-F91A6BBAD562}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99AF64D3-BD4A-476F-A111-F91A6BBAD562}.Release|x86.ActiveCfg = Release|Any CPU
+		{99AF64D3-BD4A-476F-A111-F91A6BBAD562}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
