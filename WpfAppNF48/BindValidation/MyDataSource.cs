@@ -1,6 +1,8 @@
 // // Copyright (c) Microsoft. All rights reserved.
 // // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
+
 namespace BindValidation
 {
     public class MyDataSource
@@ -14,5 +16,7 @@ namespace BindValidation
         public int Age { get; set; }
         public int Age2 { get; set; }
         public int Age3 { get; set; }
+
+        public DateTime? Date { get; set; }
     }
 }

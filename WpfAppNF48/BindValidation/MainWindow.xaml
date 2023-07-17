@@ -12,8 +12,8 @@
 
         <ControlTemplate x:Key="ValidationTemplate">
             <DockPanel>
-                <TextBlock Foreground="Red" FontSize="20">!</TextBlock>
                 <AdornedElementPlaceholder/>
+                <TextBlock Foreground="Red" FontSize="20">!</TextBlock>
             </DockPanel>
         </ControlTemplate>
 
@@ -26,6 +26,17 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+
+        <Style x:Key="DatePickerInError" TargetType="{x:Type DatePicker}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+              Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                              Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
     </Window.Resources>
 
 
@@ -41,16 +52,21 @@
             <RowDefinition />
             <RowDefinition/>
             <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
         <TextBlock
             Grid.Row="0" Grid.ColumnSpan="2"
-            FontSize="20" Margin="8" 
-            Text="Enter a number between 21-130 or there will be a validation error:"/>   
+           Margin="8" 
+            Text="Enter a number between 21-130 or there will be a validation error:"/>
 
-        <Label Grid.Column="0" Grid.Row="1" FontSize="15" Margin="2"
+        <Label Grid.Column="0" Grid.Row="1"  Margin="2"
            Target="{Binding ElementName=textBox1}">TextBox with _custom ErrorTemplate and ToolTip:</Label>
-        <TextBox Name="textBox1" Width="50" FontSize="15"
+        <TextBox Name="textBox1" Width="50"
              Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
              Style="{StaticResource TextBoxInError}"
              Grid.Row="1" Grid.Column="1" Margin="2">
@@ -64,9 +80,9 @@
             </TextBox.Text>
         </TextBox>
 
-        <Label Grid.Row="2" Grid.Column="0" FontSize="15" Margin="2"
+        <Label Grid.Row="2" Grid.Column="0"  
        Target="{Binding ElementName=textBox2}">TextBox with _default ErrorTemplate:</Label>
-        <TextBox Name="textBox2" Width="50" FontSize="15"
+        <TextBox Name="textBox2" Width="50" 
              Grid.Row="2" Grid.Column="1" Margin="2">
             <TextBox.Text>
                 <Binding Path="Age2" Source="{StaticResource Ods}"
@@ -79,9 +95,9 @@
         </TextBox>
 
 
-        <TextBlock Grid.Row="3" Grid.ColumnSpan="3" FontSize="20" Margin="8" 
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="3" 
                Text="The following TextBox uses the ExceptionValidationRule and UpdateSourceExceptionFilter handler:"/>
-        <Label Grid.Row="4" Grid.Column="0" FontSize="15" Margin="2"
+        <Label Grid.Row="4" Grid.Column="0" Margin="2"
    Target="{Binding ElementName=textBox3}">TextBox with UpdateSourceExceptionFilter _handler:</Label>
         <TextBox Name="textBox3" Width="50" FontSize="15"
              Grid.Row="4" Grid.Column="1" Margin="2"
@@ -96,8 +112,43 @@
                 </Binding>
             </TextBox.Text>
         </TextBox>
-        <CheckBox Name="cb" FontSize="15" HorizontalAlignment="Left"
+        <CheckBox Name="cb" HorizontalAlignment="Left"
          Grid.Row="4" Grid.Column="2" Margin="5"
          Checked="UseCustomHandler" Unchecked="DisableCustomHandler">Enable Custom Handler (see ToolTip)</CheckBox>
+
+        <DatePicker Grid.Row="6" Grid.RowSpan="1" Grid.Column="0"
+                    Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                    Style="{StaticResource DatePickerInError}">
+            <DatePicker.SelectedDate>
+                <Binding Path="Date" Source="{StaticResource Ods}"
+                 UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:DateValidationRule Param="bonjour"/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </DatePicker.SelectedDate>
+        </DatePicker>
+
+
+        <DatePicker Grid.Row="7" Grid.RowSpan="1" Grid.Column="0"
+                    Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                    Style="{StaticResource DatePickerInError}"
+                    Validation.ValidationAdornerSite="{Binding ElementName=ErrorDisplay}">
+            
+            <DatePicker.SelectedDate>
+                <Binding Path="Date" Source="{StaticResource Ods}"
+                 UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:DateValidationRule Param="bonjouro"/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </DatePicker.SelectedDate>
+        </DatePicker>
+        <ItemsControl Grid.Row="8" Grid.RowSpan="1"  x:Name="ErrorDisplay"
+                Background="AntiqueWhite"
+                Foreground="Red"
+                ItemsSource="{Binding RelativeSource={RelativeSource Self},
+                                      Path=(Validation.ValidationAdornerSiteFor).(Validation.Errors)}"
+                DisplayMemberPath="ErrorContent" />
     </Grid>
 </Window>
