@@ -6,7 +6,91 @@
         xmlns:local="clr-namespace:InputValidation"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <local:DataClass x:Key="DataObject"/>
+
+        <ControlTemplate x:Key="ValidationTemplate">
+            <DockPanel>
+                <AdornedElementPlaceholder/>
+                <TextBlock Foreground="Red" FontSize="20">!</TextBlock>
+            </DockPanel>
+        </ControlTemplate>
+
+        <Style x:Key="TextBoxInError" TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+              Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                              Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DatePickerInError" TargetType="{x:Type DatePicker}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+              Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                              Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+    <!--¨PROCESS DETAILLE VALIDATION https://www.codeproject.com/Articles/863291/Validation-in-WPF-->
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!-- https://www.codeproject.com/Tips/1113391/Validation-in-WPF-Various-WPF-Validation-Ways -->
+        <!--VALIDATION RULE-->
+        <!--https://learn.microsoft.com/en-us/dotnet/desktop/wpf/data/how-to-implement-binding-validation?view=netframeworkdesktop-4.8-->
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!-- ************* date picker avec message err dynamique-->
+            <TextBox Grid.Row="0" Grid.Column="0"></TextBox>
+            <StackPanel Grid.Row="1" Grid.Column="0">
+                <Label> date picker avec message err dynamique</Label>
+                <DatePicker
+                    Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                    Style="{StaticResource DatePickerInError}"
+                    Validation.ValidationAdornerSite="{Binding ElementName=ErrorDisplay}">
+
+                    <DatePicker.SelectedDate>
+                        <Binding Path="Date" Source="{StaticResource DataObject}"
+                 UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <local:DateValidationRule Param="bonjouro"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </DatePicker.SelectedDate>
+                </DatePicker>
+                <ItemsControl   x:Name="ErrorDisplay"
+                Background="AntiqueWhite"
+                Foreground="Red"
+                ItemsSource="{Binding RelativeSource={RelativeSource Self},
+                                      Path=(Validation.ValidationAdornerSiteFor).(Validation.Errors)}"
+                DisplayMemberPath="ErrorContent" />
+            </StackPanel>
+            <!-- ************* date picker avec message err dynamique-->
+            
+        </Grid>
     </Grid>
+   
 </Window>
