@@ -37,9 +37,26 @@
             </Style.Triggers>
         </Style>
 
+        <Style x:Key="DatePickerErrorinTooltip" TargetType="{x:Type DatePicker}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+              Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                              Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <RoutedCommand x:Name="Command2" x:Key="Cmd2"></RoutedCommand>
     </Window.Resources>
+    
     <!--¨PROCESS DETAILLE VALIDATION https://www.codeproject.com/Articles/863291/Validation-in-WPF-->
     <Grid>
+
+        <Grid.CommandBindings>
+            <CommandBinding x:Name="binding" Command="{StaticResource Cmd2}" Executed="Command1Executed" CanExecute="Command1CanExecute"/>
+        </Grid.CommandBindings>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -63,18 +80,17 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <!-- ************* date picker avec message err dynamique-->
+            <!-- ************* date picker avec message err dynamique  Style="{StaticResource DatePickerInError}" -->
             <TextBox Grid.Row="0" Grid.Column="0"></TextBox>
             <StackPanel Grid.Row="1" Grid.Column="0">
                 <Label> date picker avec message err dynamique</Label>
-                <DatePicker
+                <DatePicker x:Name="datePicker"
                     Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
-                    Style="{StaticResource DatePickerInError}"
+                   
                     Validation.ValidationAdornerSite="{Binding ElementName=ErrorDisplay}">
 
                     <DatePicker.SelectedDate>
-                        <Binding Path="Date" Source="{StaticResource DataObject}"
-                 UpdateSourceTrigger="PropertyChanged">
+                        <Binding Path="Date" Source="{StaticResource DataObject}" UpdateSourceTrigger="PropertyChanged">
                             <Binding.ValidationRules>
                                 <local:DateValidationRule Param="bonjouro"/>
                             </Binding.ValidationRules>
@@ -89,8 +105,112 @@
                 DisplayMemberPath="ErrorContent" />
             </StackPanel>
             <!-- ************* date picker avec message err dynamique-->
+
+
+            <Button Grid.Row="2" Grid.Column="0" x:Name="CommandButton"
+                    Command="{StaticResource Cmd2}" >
+                Command 
+            </Button>
+            
             
         </Grid>
+
+        
+        <!--BLOC ROW 1 COL O-->
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!-- ************* date picker avec message err dynamique-->
+            <Label Grid.Row="0"  Grid.Column="0">date picker avec message err tooltip</Label>
+            <StackPanel Grid.Row="1" Grid.Column="0">
+                
+                <DatePicker x:Name="datePicker2"
+                    Validation.ErrorTemplate="{StaticResource ValidationTemplate}"
+                    Style="{StaticResource DatePickerErrorinTooltip}">
+                    <DatePicker.SelectedDate>
+                        <Binding Path="Date" Source="{StaticResource DataObject}" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <local:DateValidationRule Param="bonjour"/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </DatePicker.SelectedDate>
+                </DatePicker>
+                <Separator></Separator>
+                <TextBlock Text="{Binding ElementName=datePicker2, Path=(Validation.Errors)/ErrorContent}">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=(Validation.HasError), ElementName=datePicker2}" Value="False">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+
+            </StackPanel>
+
+            
+            <Label Background="LightYellow" Content="separateur" Grid.Row="2" Grid.Column="0"></Label>
+            <!--<TextBlock  Grid.Row="3" Grid.Column="0" Text="{Binding ElementName=datePicker2, Path=(Validation.Errors)/ErrorContent}"/>-->
+
+           
+        </Grid>
+
+
+        <!--BLOC ROW 0 COL 1-->
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!-- ************* date picker avec message err dynamique-->
+            <TextBox Grid.Row="0" Grid.Column="0">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Text, ElementName=tb1}" Value="VALUE2">
+                                <Setter Property="Background" Value="LightGreen" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+                
+                BONJOUR
+            </TextBox>
+            <TextBox  x:Name="tb1" Grid.Row="1" Grid.Column="0" Text="VALUE"/>
+
+            <TextBox  x:Name="tb2" Grid.Row="2" Grid.Column="0" Text="box disparait">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Text, ElementName=tb1}" Value="VALUE3">
+                                <Setter Property="Visibility" Value="Hidden" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+
+        </Grid>
+
+
     </Grid>
    
 </Window>
