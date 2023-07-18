@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
             <Button Content="Button Command" 
-             Command="{Binding ButtonCommand}"  CommandParameter="heloi" />
+             Command="{Binding ButtonCommand}"  />
             <Button x:Name="Button_command2" Content="Command2"  
             Click="Button_command2_Click" />
             <Button x:Name="Button_command3" Content="Command3"  

@@ -31,6 +31,7 @@ namespace InputValidation
         {
             InitializeComponent();
             
+            
             Command1 = new RoutedCommand();
         }
 
