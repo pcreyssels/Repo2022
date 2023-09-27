@@ -23,6 +23,41 @@ namespace WpfAppDataGrid
         public MainWindow()
         {
             InitializeComponent();
+            datagrid.AutoGeneratingColumn += ((MainWindowVM)this.DataContext).datagrid_AutoGeneratingColumn2;
+        }
+
+        private void Datagrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            string headername = e.Column.Header.ToString();
+
+            //Cancel the column you don't want to generate
+            if (headername == "MiddleName")
+            {
+                e.Cancel = true;
+            }
+
+            //update column details when generating
+            if (headername == "Nom")
+            {
+                e.Column.Header = "la Nom";
+            }
+        }
+
+        private void datagrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+        {
+            string headername = e.Column.Header.ToString();
+
+            //Cancel the column you don't want to generate
+            if (headername == "MiddleName")
+            {
+                e.Cancel = true;
+            }
+
+            //update column details when generating
+            if (headername == "Nom")
+            {
+                e.Column.Header = "le Nom";
+            }
         }
     }
 }
