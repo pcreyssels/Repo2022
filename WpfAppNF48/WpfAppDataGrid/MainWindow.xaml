@@ -6,21 +6,26 @@
         xmlns:local="clr-namespace:WpfAppDataGrid"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowVM/>
+    </Window.DataContext>
     <Grid>
-        <TabControl>
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5">
-                    <TextBlock HorizontalAlignment="Right" Margin="82,98,0,0" 
-                               TextWrapping="Wrap" Text="TextBlock" 
-                               VerticalAlignment="Top" Width="97"
-                               TextAlignment="Right"
-                               />
-                </Grid>
-            </TabItem>
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-        </TabControl>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="datagrid" Grid.Row="0" Grid.Column="0"
+                  ItemsSource="{Binding Table}" AutoGenerateColumns="True"
+                  >
+            
+        </DataGrid>
     </Grid>
 </Window>
