@@ -33,6 +33,9 @@ namespace WebApplication1
             // prêt pour la production, utilisez l'outil de génération à l'adresse https://modernizr.com pour sélectionner uniquement les tests dont vous avez besoin
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
+
+            bundles.Add(new ScriptBundle("~/bundles/MouseTrap").Include(
+                           "~/Scripts/MouseTrap/mousetrap.min.js"));
         }
     }
 }

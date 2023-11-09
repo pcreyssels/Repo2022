@@ -128,6 +128,7 @@
     <Content Include="HtmlPage1.html" />
     <Content Include="HtmlPage2.html" />
     <Content Include="Images\coche.png" />
+    <EmbeddedResource Include="Scripts\MouseTrap\mousetrap.min.js" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm10.aspx" />
     <Content Include="WebForm11.aspx" />
@@ -145,6 +146,7 @@
     <Content Include="WebForm22.aspx" />
     <Content Include="WebForm23.aspx" />
     <Content Include="WebForm24.aspx" />
+    <Content Include="WebForm25.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
@@ -397,6 +399,13 @@
     </Compile>
     <Compile Include="WebForm24.aspx.designer.cs">
       <DependentUpon>WebForm24.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm25.aspx.cs">
+      <DependentUpon>WebForm25.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm25.aspx.designer.cs">
+      <DependentUpon>WebForm25.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm3.aspx.cs">
       <DependentUpon>WebForm3.aspx</DependentUpon>

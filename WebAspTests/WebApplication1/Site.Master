@@ -16,6 +16,8 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <script src="/Scripts/MouseTrap/mousetrap.min.js" type="text/javascript"></script>
+
 </head>
 <body>
     <form runat="server">
