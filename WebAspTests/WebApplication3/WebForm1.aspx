@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="panel panel-default tintedroundedbackgroundpanel">
+    <div class="panel panel-primary tintedroundedbackgroundpanel">
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-1">
@@ -21,12 +21,29 @@
 
         </div>
     </div>
+    <hr style="height: 2px; border-width: 0; background-color: green" />
+
+    <div class="panel panel-primary tintedroundedbackgroundpanel">
+            <div class="row">
+                <div class="col-sm-1">
+                    <img
+                        src="/fonts/click-4322.png"
+                        srcset="/fonts/click-4322.svg"
+                        alt="click arrow" />
+
+                </div>
+                <div class="col-sm-11">
+                    <asp:Literal ID="Literal2" runat="server" Text="message depot" Mode="PassThrough"></asp:Literal>
+                </div>
+            </div>
+
+    </div>
 
     <hr style="height: 2px; border-width: 0; background-color: red" />
 
-    <div class="container-fluid">
-        <div class="row" style="display: flex; align-items:center">
-            <div class="col-sm-1" style="background-color: lightyellow; display: flex; justify-content: right">
+    <div class="container-fluid" style="border: 1px solid rgba(255, 0, 0, 0.5); border-radius: 10px;">
+        <div class="row" style="display: flex; align-items: center; padding: 10px;">
+            <div class="col-sm-1" style="background-color: lightyellow; display: flex; justify-content: right; ">
                 <img
                     src="/fonts/click-4322.png"
                     srcset="/fonts/click-4322.svg"
