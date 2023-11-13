@@ -6,6 +6,65 @@
     padding-right: 15px;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.25);
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/Images/FEIBackground.jpg');
+    background-size: cover;
+}
+
+.imagedefond {
+    background-image: url("/Images/FEIBackground.jpg");
+    background-color: grey
+}
+
+.watermark {
+    width: 800px;
+    height: 500px;
+    display: block;
+    position: relative;
+}
+
+.watermark::before, .watermark::after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.watermark::before {
+    background: rgba(255,255,255, 0.5);
+}
+
+.watermark::after {
+    background: url(https://www.google.com/images/srpr/logo11w.png) no-repeat;
+    background: url("/Images/FEIBackground.jpg") no-repeat;
+    opacity: 0.3;
+}
+
+
+/*body {
+    background-image: url('/Images/FEIBackground.jpg');
+    
+}*/
+
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
 select,
@@ -27,7 +86,6 @@ textarea {
     border-radius: 10px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-   
 }
 
 .tintedroundedbackgroundpanel {
@@ -46,4 +104,69 @@ textarea {
 .center {
     margin: 0 auto;
     width: 80%;
+}
+
+.fatbutton {
+    background-color: dodgerblue;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 1em;
+    aspect-ratio: 4 / 3;
+    white-space: pre-line;
+}
+
+.fatbutton:hover,
+.fatbutton:focus {
+    color:yellow;
+   /*background-color: #c2c7c7;
+   border-color: #7aa8b7;*/
+}
+
+.fatlinkbutton1 {
+    background-color: dodgerblue;
+    display: inline-block;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 1em;
+    aspect-ratio: 4 / 3;
+    white-space: pre-line;
+    text-align: center;
+}
+
+.fatlinkbutton {
+    background-color: dodgerblue;
+    display: flex;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 1em;
+    aspect-ratio: 4 / 3;
+    white-space: pre-line;
+    text-align: center;
+    justify-content:center;
+    align-items :center;
+    max-block-size:150px;
+}
+
+.ahrefcustom {
+    color: white;
+}
+.ahrefcustom:hover,
+.ahrefcustom:focus {
+    color: yellow;
+}
+
+.break-point::before {
+    content: "\a";
+    display: block;
+}
+
+.block100x100 {
+    height:500px;
+    width:500px;
 }

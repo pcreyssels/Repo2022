@@ -41,3 +41,7 @@ textarea {
 .panel-default {
     border-color: #ddd;
 }
+
+.fatbutton {
+    background-color: red;
+}
