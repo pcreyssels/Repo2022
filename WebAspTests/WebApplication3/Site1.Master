@@ -22,5 +22,7 @@
             </asp:ContentPlaceHolder>
         </div>
     </form>
+
+    <asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
 </body>
 </html>

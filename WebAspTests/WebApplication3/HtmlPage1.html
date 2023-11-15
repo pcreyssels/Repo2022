@@ -16,5 +16,37 @@
          src="/Images/iris.jpg"
          style="opacity:0.5"
          alt="Grapefruit slice atop a pile of other slices" />
+
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+
+        // simule un click de bouton pour renvoyer au serveur
+        function setmodalinfo() {
+            var buttonctrl = document.getElementById('<%=butscriptModal.ClientID %>');
+            buttonctrl.click();
+            //alert("val1");
+        }
+        function setmodalinfo2() {
+            //alert("val2");
+        }
+
+        function texttospeech() {
+            //alert("val2");
+        }
+
+        const message = new SpeechSynthesisUtterance();
+
+        // set the text to be spoken
+        message.text = "Hello World!";
+
+        // create an instance of the speech synthesis object
+        const speechSynthesis = window.speechSynthesis;
+
+        // start speaking
+        speechSynthesis.speak(message);
+
+    </script>
 </body>
 </html>

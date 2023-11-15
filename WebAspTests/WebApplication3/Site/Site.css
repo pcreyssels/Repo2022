@@ -39,25 +39,25 @@
     position: relative;
 }
 
-.watermark::before, .watermark::after {
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-}
+    .watermark::before, .watermark::after {
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
 
-.watermark::before {
-    background: rgba(255,255,255, 0.5);
-}
+    .watermark::before {
+        background: rgba(255,255,255, 0.5);
+    }
 
-.watermark::after {
-    background: url(https://www.google.com/images/srpr/logo11w.png) no-repeat;
-    background: url("/Images/FEIBackground.jpg") no-repeat;
-    opacity: 0.3;
-}
+    .watermark::after {
+        background: url(https://www.google.com/images/srpr/logo11w.png) no-repeat;
+        background: url("/Images/FEIBackground.jpg") no-repeat;
+        opacity: 0.3;
+    }
 
 
 /*body {
@@ -117,12 +117,12 @@ textarea {
     white-space: pre-line;
 }
 
-.fatbutton:hover,
-.fatbutton:focus {
-    color:yellow;
-   /*background-color: #c2c7c7;
+    .fatbutton:hover,
+    .fatbutton:focus {
+        color: yellow;
+        /*background-color: #c2c7c7;
    border-color: #7aa8b7;*/
-}
+    }
 
 .fatlinkbutton1 {
     background-color: dodgerblue;
@@ -138,7 +138,7 @@ textarea {
 }
 
 .fatlinkbutton {
-    background-color: dodgerblue;
+    background-color: rgba(0,87,163,255);
     display: flex;
     color: white;
     font-size: larger;
@@ -148,18 +148,19 @@ textarea {
     aspect-ratio: 4 / 3;
     white-space: pre-line;
     text-align: center;
-    justify-content:center;
-    align-items :center;
-    max-block-size:150px;
+    justify-content: center;
+    align-items: center;
+    max-block-size: 150px;
 }
 
 .ahrefcustom {
     color: white;
 }
-.ahrefcustom:hover,
-.ahrefcustom:focus {
-    color: yellow;
-}
+
+    .ahrefcustom:hover,
+    .ahrefcustom:focus {
+        color: yellow;
+    }
 
 .break-point::before {
     content: "\a";
@@ -167,6 +168,32 @@ textarea {
 }
 
 .block100x100 {
-    height:500px;
-    width:500px;
+    height: 500px;
+    width: 500px;
+}
+
+.block200x500 {
+    height: 500px;
+    width: 200px;
+}
+
+.bandeaulegal {
+    background-color: rgba(251,216,171,255);
+}
+
+.information-justify-center {
+    display: block;
+    padding: 10px;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: smaller;
+    text-align: center;
+}
+
+.information-justify-left {
+    display: block;
+    padding: 10px;
+    font-style: normal;
+    font-size: smaller;
+    text-align: left;
 }
