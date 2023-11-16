@@ -42,6 +42,10 @@
         CausesValidation="false"
         OnClientClick="texttospeech();return false;" />
 
+    <button runat="server" causesvalidation="false" type="button" id="button_refresh" onclick="texttospeech()" class="btn btn-default " runat="server">
+        <span class="glyphicon glyphicon glyphicon-volume-up"></span>
+    </button>
+
     <button runat="server" onclick="texttospeech()">SPEECH2</button>
 
     <hr style="border: 1px solid red;" />
@@ -66,7 +70,7 @@
 
             var hf1 = document.getElementById('<%=hf1.ClientID %>');
             var v = hf1.getAttribute("value");
-            alert(v.toString());
+            //alert(v.toString());
 
             const message = new SpeechSynthesisUtterance();
 
@@ -77,7 +81,7 @@
             const speechSynthesis = window.speechSynthesis;
 
             // start speaking
-            speechSynthesis.speak(message);
+            //speechSynthesis.speak(message);
 
         })
 
@@ -87,19 +91,16 @@
             var hf1 = document.getElementById('<%=hf1.ClientID %>');
             var v2 = hf1.getAttribute("value");
 
-            alert(v2);
-
-            const message2 = new SpeechSynthesisUtterance();
+            const message = new SpeechSynthesisUtterance();
 
             // set the text to be spoken
-            message2.text = v2;
+            message.text = v2;
 
             // create an instance of the speech synthesis object
             const speechSynthesis = window.speechSynthesis;
 
             // start speaking
-            speechSynthesis.speak(message2);
-            //alert("val1");
+            speechSynthesis.speak(message);
         }
 
     </script>

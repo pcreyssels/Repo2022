@@ -60,6 +60,15 @@ namespace WebApplication3
         protected global::System.Web.UI.WebControls.HiddenField hf1;
 
         /// <summary>
+        /// Contrôle button_refresh.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton button_refresh;
+
+        /// <summary>
         /// Contrôle lab1.
         /// </summary>
         /// <remarks>
