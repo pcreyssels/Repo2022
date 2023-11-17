@@ -197,3 +197,39 @@ textarea {
     font-size: smaller;
     text-align: left;
 }
+
+.CGV {
+    font-size: 14px;
+}
+
+.CGVText {
+    font-family: Calibri;
+    font-size: 1em;
+}
+
+.CGVBordered {
+    border: 2px solid;
+    padding: 5px;
+    border-color: red;
+    border-radius: 10px;
+}
+
+.CGVTitreN1 {
+    font-size: 2em;
+    font-weight: bolder;
+    color: royalblue;
+}
+
+.CGVTitreN2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: royalblue;
+}
+
+span.CGVIcon {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    padding: 0px;
+    margin: 0px;
+}

@@ -79,7 +79,9 @@
     <Content Include="fonts\click-4322.png" />
     <Content Include="fonts\click-4322.svg" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="HtmlPage2.html" />
     <Content Include="Images\Attention 1024x1024px.png" />
+    <Content Include="Images\Attention 240x240px.png" />
     <Content Include="Images\Attention 512x512px.png" />
     <Content Include="Images\Attention svg.svg" />
     <Content Include="Images\clic 1024x1024px.png" />
