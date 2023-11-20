@@ -90,21 +90,10 @@
                 Deuxième étape
             </div>
 
-
-
-
-
             <div class="CGVText">
                 Après réception d’un <b>paiement complémentaire de 50€</b>, votre dossier sera expertisé en vue de la délivrance d’une attestation de comparabilité de votre diplôme ou d’une attestation de reconnaissance de période d’études.
             </div>
 
-            <!--<span class="CGVText CGVBordered" style="width:auto">
-            <span class="CGVIcon">
-                <img style="height:100%;width:100%" src="/Images/Attention 512x512px.png"
-                     alt="caution" />
-            </span>
-            Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande</b>.
-        </span>-->
             <div class="CGVText CGVBordered" style="width:fit-content">
                 <img style="height: 4em; width: 4em" src="/Images/Attention 512x512px.png"
                      alt="caution" />
@@ -115,7 +104,7 @@
                 Cette attestation pourra vous être délivrée :
             </div>
 
-            <ul class="CGVText">
+            <ol class="CGVText">
                 <li>Si l’établissement où vous avez effectué vos études et votre diplôme sont reconnus <b>selon les modalités prévues dans le système éducatif </b> auquel ils appartiennent et que des informations permettent de le justifier;</li>
                 <li>
                     Si le centre ENIC-NARIC France n’a pas de doute sur l’authenticité de votre diplôme. S’il l’estime nécessaire, le centre ENIC-NARIC France se réserve le <b>droit de demander l’envoi par courrier recommandé avec accusé réception des documents originaux</b> (diplôme, attestation de réussite, relevés de notes).
@@ -128,9 +117,7 @@
                 <li>Dans le cas de la mention de cursus francophone dans le cadre d’une demande de naturalisation, si des informations permettant de le justifier sont accessibles ou fournies,</li>
                 <li>Si le diplôme a un <b>niveau académique minimum</b> correspondant à la fin du premier cycle de l’enseignement secondaire (niveau brevet des collèges) ou un niveau 3 du cadre national des certifications professionnelles ;</li>
                 <li>Si dans le cas de périodes d’études, les documents transmis attestent de la validation d’<b>au minimum une année d’études supérieures.</b></li>
-            </ul>
-
-
+            </ol>
 
             <div class="CGVText">
                 Dans l’éventualité où l’expertise pourra donner lieu à la délivrance d’une attestation de comparabilité celle-ci apportera sur la base de critères objectifs <a href="https://www.france-education-international.fr/document/grille-criteres-drd">(En cliquant ici, vous aurez une nouvelle page qui va s’ouvrir avec la Grille de critères d'éligibilité et d'appréciation)</a>, les précisions suivantes :
@@ -161,9 +148,52 @@
             </div>
 
         </article>
+    </div>
 
-        <div class="CGVText">
-            J’ai pris connaissance que seuls les diplômes officiellement reconnus par les autorités compétentes du pays de délivrance peuvent déboucher sur une attestation. J’ai donc pris connaissance que <b> l’expertise peut déboucher sur un refus</b> et ne peut donc faire l’objet d’un remboursement.
+    <h3> CASES COCHER </h3>
+
+
+    <div class="CGVText">
+        J’ai pris connaissance que seuls les diplômes officiellement reconnus par les autorités compétentes du pays de délivrance peuvent déboucher sur une attestation. J’ai donc pris connaissance que <b> l’expertise peut déboucher sur un refus</b> et ne peut donc faire l’objet d’un remboursement.
+    </div>
+
+    <div class="CGVText">
+        J’ai pris connaissance que les diplômes relevant d’une profession réglementée ne seront pas systématiquement traité, pour vérifier si mon diplôme relève d’une profession réglementée, je clique <a href="https://www.france-education-international.fr/document/reconnaissance-diplomes-liste-professions-reglementees">ici</a>
+    </div>
+
+    <div class="CGVText">
+        J’ai pris connaissance que pour les demandes de naturalisation, seuls les diplômes de <b>niveau 3 minimum du </b> <a href="https://europa.eu/europass/fr/outils-europass/le-cadre-europeen-des-certifications">cadre européen et français des certifications</a> dispensés uniquement en langue française et délivrés par un pays figurant sur <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000041741098">la liste de l’arrêté du 12 mars 2020</a>  peuvent bénéficier de la mention « cursus en français ».
+    </div>
+
+    <div class="CGVText">
+        Je déclare avoir pris connaissance des conditions ci-dessus de délivrance d’une attestation, y compris des informations pour lesquelles un lien est donné et les accepter.
+    </div>
+
+
+    <div class="CGV" style="display: grid; grid-template-columns: 1fr 10fr; align-items: center">
+        <div>
+            <asp:CheckBox ID="CheckBox1" AutoPostBack="false" OnCheckedChanged="CheckBox1_CheckedChanged" Text="" Checked="False" GroupName="CheckBoxGroup" runat="server" />
+        </div>
+        <div>
+            <asp:Literal runat="server" ID="LiteralAck1" meta:resourcekey="TexteAck1" />
+        </div>
+        <div>
+            <asp:CheckBox ID="CheckBox2" AutoPostBack="false" OnCheckedChanged="CheckBox2_CheckedChanged" Text="" Checked="False" GroupName="CheckBoxGroup" runat="server" />
+        </div>
+        <div>
+            <asp:Literal runat="server" ID="LiteralAck2" meta:resourcekey="TexteAck2" />
+        </div>
+        <div>
+            <asp:CheckBox ID="CheckBox3" AutoPostBack="false" OnCheckedChanged="CheckBox3_CheckedChanged" Text="" Checked="False" GroupName="CheckBoxGroup" runat="server" />
+        </div>
+        <div>
+            <asp:Literal Text="J'ai pris connaissance 3" runat="server" ID="LiteralAck3" meta:resourcekey="TexteAck3" />
+        </div>
+        <div>
+            <asp:CheckBox ID="CheckBox4" AutoPostBack="false" OnCheckedChanged="CheckBox4_CheckedChanged" Text="" Checked="False" GroupName="CheckBoxGroup" runat="server" />
+        </div>
+        <div>
+            <asp:Literal Text="J'ai pris connaissance 4" runat="server" ID="LiteralAck4" meta:resourcekey="TexteAck4" />
         </div>
     </div>
 </body>
