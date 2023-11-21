@@ -85,6 +85,8 @@
     <Content Include="Images\Attention 240x240px.png" />
     <Content Include="Images\Attention 512x512px.png" />
     <Content Include="Images\Attention svg.svg" />
+    <Content Include="Images\Attention.png" />
+    <Content Include="Images\Attention.svg" />
     <Content Include="Images\clic 1024x1024px.png" />
     <Content Include="Images\clic 512x512px.png" />
     <Content Include="Images\clic svg.svg" />
@@ -96,10 +98,13 @@
     <Content Include="Images\Drapeau français svg.svg" />
     <Content Include="Images\Exclamation 512x512px.png" />
     <Content Include="Images\Exclamation svg.svg" />
+    <Content Include="Images\Exclamation.svg" />
     <Content Include="Images\Exlamation 1024x1024 px.png" />
     <Content Include="Images\FEIBackground.jpg" />
     <Content Include="Images\fr.png" />
+    <Content Include="Images\frrond.png" />
     <Content Include="Images\gb.png" />
+    <Content Include="Images\gbrond.png" />
     <Content Include="Images\iris.jpg" />
     <Content Include="Images\photo acceuil 1024x1024px.png" />
     <Content Include="Images\photo acceuil 1664x1664px.png" />
@@ -366,6 +371,7 @@
     <Content Include="WebForm2.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
+    <Content Include="WebForm5.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -404,6 +410,13 @@
     <Compile Include="WebForm4.aspx.designer.cs">
       <DependentUpon>WebForm4.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm5.aspx.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="bootstrap-3.4.1\dist\css\bootstrap-theme.css.map" />
@@ -422,6 +435,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\WebForm5.aspx.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
