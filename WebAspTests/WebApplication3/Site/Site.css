@@ -234,6 +234,16 @@ span.CGVIcon {
     margin: 0px;
 }
 
+
+.Mail {
+    font-size: 14px;
+}
+
+.MailText {
+    font-family: Calibri;
+    font-size: 1em;
+}
+
 .box1 {
     background-color:lightcyan;
     grid-column: 1 / 2;

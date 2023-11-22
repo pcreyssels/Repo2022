@@ -24,6 +24,24 @@ namespace WebApplication3
         protected global::System.Web.UI.WebControls.Button ButtonValidviaModal;
 
         /// <summary>
+        /// Contrôle Button1.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+
+        /// <summary>
+        /// Contrôle Button2.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
+
+        /// <summary>
         /// Contrôle hiddenButton1forModal.
         /// </summary>
         /// <remarks>
@@ -193,5 +211,23 @@ namespace WebApplication3
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal cour_val;
+
+        /// <summary>
+        /// Contrôle hiddenButtonOkforModal2.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button hiddenButtonOkforModal2;
+
+        /// <summary>
+        /// Contrôle inforecapreussie.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal inforecapreussie;
     }
 }

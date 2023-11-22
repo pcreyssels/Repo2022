@@ -117,50 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="civilite_des.Text" xml:space="preserve">
-    <value>Civilité&amp;nbsp</value>
-  </data>
-  <data name="cour_des.Text" xml:space="preserve">
-    <value>Courriel</value>
-  </data>
-  <data name="ddn_des.Text" xml:space="preserve">
-    <value>Date de naissance&amp;nbsp</value>
-  </data>
-  <data name="inforecapreussie.Text" xml:space="preserve">
-    <value>&lt;b&gt;Opération réussie &lt;/b&gt;: vous allez recevoir un mail dans &lt;b&gt;quelques minutes.&lt;/b&gt;
-&lt;br/&gt;
- 
+  <data name="mail.Text" xml:space="preserve">
+    <value>&lt;div&gt;
+    &lt;div&gt;
+        Madame, Monsieur,
+        &lt;br /&gt; &lt;br /&gt;
+        Vous avez demandé un numéro de dossier afin de procéder à la saisie en ligne de votre demande d'attestation auprès du Centre ENIC-NARIC France.
+    &lt;/div&gt;
+    &lt;br /&gt; &lt;br /&gt;
+    &lt;div&gt;Voici votre N° de dossier : &lt;b&gt;0000000.&lt;/b&gt; &lt;/div&gt;
+    &lt;div&gt;&lt;b&gt;&lt;i&gt;Veuillez conserver ce numéro précieusement et nous le communiquer à chaque correspondance.&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;
 
-Merci de cliquer sur le lien reçu pour poursuivre votre inscription. N’oubliez de pas vérifier dans vos &lt;b&gt;&lt;i&gt;spams/courriers indésirables.&lt;/i&gt;&lt;/b&gt;</value>
-  </data>
-  <data name="ldn_des.Text" xml:space="preserve">
-    <value>Lieu de naissance&amp;nbsp</value>
-  </data>
-  <data name="Literal_ec.Text" xml:space="preserve">
-    <value>État-civil</value>
-  </data>
-  <data name="Literal_email.Text" xml:space="preserve">
-    <value>Adresse électronique</value>
-  </data>
-  <data name="modal_recap_button_cancel.Text" xml:space="preserve">
-    <value>Modifier</value>
-  </data>
-  <data name="modal_recap_button_ok.Text" xml:space="preserve">
-    <value>Valider</value>
-  </data>
-  <data name="modal_recap_header.Text" xml:space="preserve">
-    <value>Merci de &lt;b&gt;vérifier &lt;/b&gt;que les informations ci-dessous sont exactes. Vous ne pourrez plus les modifier.</value>
-  </data>
-  <data name="natio_des.Text" xml:space="preserve">
-    <value>Nationalité&amp;nbsp</value>
-  </data>
-  <data name="nom_des.Text" xml:space="preserve">
-    <value>Nom&amp;nbsp</value>
-  </data>
-  <data name="prenom_des.Text" xml:space="preserve">
-    <value>Prénom&amp;nbsp</value>
+    &lt;br /&gt;
+
+    &lt;div&gt;
+        Vous pouvez accéder à tout moment à votre dossier en cliquant sur ce lien : &lt;span style="color:dodgerblue;"&gt; &lt;i&gt; lien https &lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;br /&gt;
+
+    &lt;div&gt; Ce lien est &lt;b&gt;confidentiel&lt;/b&gt;, &lt;i&gt;veuillez le conserver soigneusement.&lt;/i&gt;  &lt;/div&gt;
+
+    &lt;div&gt;NB : Nous vous rappelons que vous disposez d’un mois pour compléter votre dossier. &lt;span style="color:red;"&gt; &lt;b&gt;&lt;i&gt;Ce lien s'achèvera le DD/MM/YYYY.&lt;/i&gt;&lt;/b&gt;&lt;/span&gt; 
+&lt;/div&gt;
+
+    &lt;br /&gt;
+    &lt;div style="color:dodgerblue; font-weight:bolder;" &gt;
+        Département reconnaissance des diplômes&lt;br/ &gt;
+        Centre ENIC-NARIC France&lt;br/ &gt;
+        France Éducation international&lt;br/ &gt;
+    &lt;/div&gt;
+
+    &lt;br /&gt;
+     
+     &lt;img width="300"
+          src="cid:vignette" 
+          alt="FEI" /&gt;
+ 
+&lt;/div&gt;</value>
   </data>
 </root>

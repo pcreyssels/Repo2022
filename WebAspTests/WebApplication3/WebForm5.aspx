@@ -12,9 +12,17 @@
     <asp:Literal runat="server" Text="_literal" meta:resourcekey="modal_recap_header"></asp:Literal>
     <hr style="height: 2px; border-width: 0; background-color: lightgreen" />
 
-    <asp:Button ID="ButtonValidviaModal" Text="MODAL" runat="server" OnClick="ButtonValidviaModal_Click" />
+    <asp:Button ID="ButtonValidviaModal" Text="MODAL " runat="server" OnClick="ButtonValidviaModal_Click" />
 
     <hr style="height: 2px; border-width: 0; background-color: lightpink" />
+    <asp:Button ID="Button1" Text="MODAL 2" runat="server" OnClientClick="modalshow();return false;" />
+
+    <hr style="height: 2px; border-width: 0; background-color: lightpink" />
+    <asp:Button ID="Button2" Text="MODAL 3" runat="server" OnClientClick="modal2show();return false;" />
+
+    <%--<asp:Button ID="Button2" Text="MODAL 2" runat="server" OnClientClick="modalshow();" />--%>
+
+    <hr style="height: 2px; border-width: 0; background-color: lightblue" />
 
     <%-- MODAL --%>
     <asp:Button ID="hiddenButton1forModal"
@@ -155,6 +163,55 @@
     </div>
 
 
+    <%-- MODAL INFO OK --%>
+    <asp:Button ID="hiddenButtonOkforModal2"
+    CausesValidation="false"
+    Style="display: none;"
+    runat="server" ClientIDMode="Static"
+    Text="_hidden_button"
+    OnClick="hiddenButtonOkforModal2_Click" />
+    <%-- modal --%>
+    <div class="modal fade" id="modal_infook" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-content-custom">
+                <div class="modal-header">
+                    <%-- bouton fermeture modal --%>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div style="display: grid; grid-template-columns: auto 1fr auto; align-items: center">
+
+                        <%-- 1 --%>
+                        <div>&nbsp &nbsp</div>
+                        <div>
+                            <asp:Literal ID="inforecapreussie" runat="server" meta:resourcekey="inforecapreussie" Text="_inforecap" />
+                        </div>
+                        <div>&nbsp &nbsp</div>
+
+                        <%-- 2 --%>
+                        <div>&nbsp &nbsp</div>
+                        <div>&nbsp &nbsp</div>
+                        <div>&nbsp &nbsp</div>
+
+                        <%-- 3 --%>
+                        <div>&nbsp &nbsp</div>
+                        <div style="margin: auto">
+                            <button type="button" class="btn btn-sitpho2" data-toggle="modal" data-dismiss="modal" onclick="okfrommodal2()">
+                                <asp:Literal runat="server" Text="OK" meta:resourcekey="button_ok" />
+                            </button>
+                        </div>
+                        <div>&nbsp &nbsp</div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphScript" runat="server">
     <script>
@@ -187,6 +244,18 @@
             buttonctrl.click();
         }
 
+        function modalshow() {
+            $('#modal_recap').modal('show');
+        }
+        
+        function okfrommodal2() {
+            var buttonctrl = document.getElementById('<%=hiddenButtonOkforModal2.ClientID %>');
+            buttonctrl.click();
+        }
+
+        function modal2show() {
+            $('#modal_infook').modal('show');
+        }
 
 
     </script>
