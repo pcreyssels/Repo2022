@@ -156,4 +156,7 @@
  
 &lt;/div&gt;</value>
   </data>
+  <data name="tooltipright.title" xml:space="preserve">
+    <value>contenu du tooltip</value>
+  </data>
 </root>

@@ -97,8 +97,32 @@ textarea {
     padding: 15px;
 }
 
-.panel-default {
-    border-color: #ddd;
+.panel-default2 {
+    border-color: cornflowerblue;
+    border-radius : 10px;
+    /*border-width : thick;*/
+}
+
+/*.tooltip-main {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-weight: 700;
+    background: #f3f3f3;
+    border: 1px solid #737373;
+    color: #737373;
+    margin: 4px 121px 0 5px;
+    float: right;
+    text-align: left !important;
+}*/
+
+.tooltip-primary ~ .tooltip > .tooltip-inner {
+    background-color: lightblue;
+    border: 1px solid #737373;
+}
+
+.tooltip-primary ~ .tooltip > .tooltip-arrow {
+    border-bottom-color: lightgreen;
 }
 
 .center {

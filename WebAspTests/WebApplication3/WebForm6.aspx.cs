@@ -33,7 +33,7 @@ namespace WebApplication3
             Attachment at = new Attachment(adap);
             at.ContentId = "vignette"; // dans le html référencer l'uimage dans l'attribut src de <img : src="cid:vignette"
             message.Attachments.Add(at);
-            client.Send(message);
+            // client.Send(message);
 
         }
     }
