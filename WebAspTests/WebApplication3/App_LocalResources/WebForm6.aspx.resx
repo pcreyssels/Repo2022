@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="iconinfodatelimite.title" xml:space="preserve">
+    <value>Vous avez jusqu'à cette date pour compléter votre dossier</value>
+  </data>
   <data name="mail.Text" xml:space="preserve">
     <value>&lt;div&gt;
     &lt;div&gt;
@@ -155,6 +158,26 @@
           alt="FEI" /&gt;
  
 &lt;/div&gt;</value>
+  </data>
+  <data name="spanitem.InnerText" xml:space="preserve">
+    <value>BONJOUR TROIS</value>
+  </data>
+  <data name="spanitem2.InnerText" xml:space="preserve">
+    <value>Réfugiés et assimilés (protection subsidiaire, protection temporaire) : vous devez être en possession d’une preuve de votre statut (OFPRA, CNDA, demande d’asile).</value>
+  </data>
+  <data name="spanitem3.InnerText" xml:space="preserve">
+    <value>Réfugiés et assimilés (protection subsidiaire, protection temporaire) : vous devez être en possession d’une preuve de votre statut (OFPRA, CNDA, demande d’asile).
+Réfugiés et assimilés (protection subsidiaire, protection temporaire) : vous devez être en possession d’une preuve de votre statut (OFPRA, CNDA, demande d’asile). &lt;br/&gt; Réfugiés et assimilés (protection subsidiaire, protection temporaire) : vous devez être en possession d’une preuve de votre statut (OFPRA, CNDA, demande d’asile).</value>
+  </data>
+  <data name="spanitem4.InnerHtml" xml:space="preserve">
+    <value>Merci de noter que vous devrez &lt;b&gt;utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande&lt;br /&gt;
+Merci de noter que vous devrez &lt;b&gt;utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande&lt;br /&gt;
+Merci de noter que vous devrez &lt;b&gt;utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande&lt;br /&gt;
+Merci de noter que vous devrez &lt;b&gt;utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande&lt;br /&gt;
+Merci de noter que vous devrez &lt;b&gt;utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande&lt;br /&gt;
+Merci de noter que vous devrez &lt;b&gt;utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande&lt;br /&gt;
+Merci de noter que vous devrez &lt;b&gt;utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande&lt;br /&gt;
+Merci de noter que vous devrez &lt;b&gt;utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande&lt;br /&gt;</value>
   </data>
   <data name="tooltipright.title" xml:space="preserve">
     <value>contenu du tooltip</value>

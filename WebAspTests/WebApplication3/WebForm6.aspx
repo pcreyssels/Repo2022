@@ -35,13 +35,161 @@
                     </div>
                     <div class="col-sm-4 control-label formulaire-zone-label">
                         <asp:Label ID="Label_datelim" runat="server" Text="_datelimite" />
+                        <span runat="server" style="display: inline-block; height: 2em;"
+                            data-toggle="tooltip"
+                            title="__vous avez"
+                            meta:resourcekey="iconinfodatelimite"
+                            data-placement="bottom"
+                            data-html="true">
+                            <img runat="server" id="Img1"
+                                style="height: 100%; width: 100%; object-fit: contain"
+                                src="~/Images/infoiconred.png"
+                                alt="attention" />
+                        </span>
+
+                        <button type="button"
+                            title="Tooltip on left"
+                            data-toggle="tooltip"
+                            meta:resourcekey="iconinfodatelimite"
+                            data-content="__vous avez"
+                            data-placement="bottom"
+                            data-html="true">
+                            POPO
+                        </button>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <hr style="height: 2px; border-width: 0; background-color: red" />
+
+    <hr style="height: 2px; border-width: 0; background-color: lightgreen" />
+    <div class="RedRoundedBorderedText">
+        texte cerclé en rouge
+    </div>
+
+    <br />
+    <hr style="height: 2px; border-width: 0; background-color: lightpink" />
+
+    <span runat="server" meta:resourcekey="spanitem" class="RedRoundedBorderedText">
+        <span runat="server" style="display: inline-block; height: 4em;">
+            <img runat="server" id="Img2"
+                style="height: 100%; width: 100%; object-fit: contain"
+                src="~/Images/Attention 512x512px.png"
+                alt="attention" />
+        </span>
+    </span>
+
+
+    <br />
+
+    <span class="RedRoundedBorderedText">
+        <span runat="server" style="display: inline-block; height: 4em;">
+            <img runat="server" id="Img3"
+                style="height: 100%; width: 100%; object-fit: contain"
+                src="~/Images/Attention 512x512px.png"
+                alt="attention" />
+        </span>
+        <span runat="server" meta:resourcekey="spanitem2"></span>
+    </span>
+
+    <br />
+
+    <span class="RedRoundedBorderedText">
+        <span runat="server" style="display: inline-block; height: 4em;">
+            <img runat="server" id="Img4"
+                style="height: 100%; width: 100%; object-fit: contain"
+                src="~/Images/Attention 512x512px.png"
+                alt="attention" />
+        </span>
+        <span runat="server" meta:resourcekey="spanitem3"></span>
+    </span>
+
+    <br />
+
+    <hr style="height: 2px; border-width: 0; background-color: maroon" />
+
+    <div class="CGVText CGVBordered" style="width: fit-content">
+        <img style="height: 4em; width: 4em" src="/Images/Attention 512x512px.png"
+            alt="caution" />
+        Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+            Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+                Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+                    Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+                        Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+    </div>
+
+    <hr style="height: 2px; border-width: 0; background-color: maroon" />
+
+    <hr style="height: 2px; border-width: 0; background-color: orangered" />
+
+    <div style="display: inline-grid; grid-template-columns: auto fit-content(); align-items: center; border: 2px solid; border-color: cadetblue">
+
+        <span runat="server" style="display: inline-block; height: 4em;">
+            <img runat="server" id="Img5"
+                style="height: 100%; width: 100%; object-fit: contain"
+                src="~/Images/Attention 512x512px.png"
+                alt="attention" />
+        </span>
+
+        <div style="grid-row: 1 / 2; grid-column: 2 / 3; width: fit-content; border: 2px solid">
+            Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+                Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+                    Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+                        Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+                            Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande<br />
+        </div>
+    </div>
+
+    <hr style="height: 2px; border-width: 0; background-color: orangered" />
+
+
+    <hr style="height: 2px; border-width: 0; background-color: greenyellow" />
+
+    <div style="display: inline-grid; grid-template-columns: auto fit-content(); align-items: center;"  class="RedRoundedBorderedText">
+
+        <span runat="server" style="display: inline-block; height: 4em;">
+            <img runat="server" id="Img6"
+                style="height: 100%; width: 100%; object-fit: contain"
+                src="~/Images/Attention 512x512px.png"
+                alt="attention" />
+        </span>
+
+        <div runat="server" meta:resourcekey="spanitem4"
+            style="grid-row: 1 / 2; grid-column: 2 / 3; width: fit-content">
+        </div>
+    </div>
+
+    <hr style="height: 2px; border-width: 0; background-color: greenyellow" />
+
+
+
+    <%--<span id="sp1" runat="server" meta:resourcekey="spanitem"></span>--%>
+
+    <br />
+
+    <span class="CGVText CGVBordered" style="width: fit-content">
+        <img style="height: 4em; width: 4em" src="/Images/Attention 512x512px.png"
+            alt="caution" />
+        Merci de noter que vous devrez 
+    </span>
+
+    <br />
+    <br />
+
+    ***
+
+    <span style="border-radius: 1em; border-color: red; border: 2px solid; padding: 5px;">texte 1  cerclé en rouge
+    </span>
+
+    ***
+
+    <span style="border-radius: 1.5em; border-color: pink; border: 2px solid; padding: 5px;">texte 2 cerclé en rouge
+    </span>
+
+
+    <hr style="height: 2px; border-width: 0; background-color: lightblue" />
 
     <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
 
@@ -63,7 +211,7 @@
 
     <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
 sagittis lacus vel augue laoreet rutrum faucibus.">
-        <span class="glyphicon glyphicon-info-sign">Popover on bottom</span> 
+        <span class="glyphicon glyphicon-info-sign">Popover on bottom</span>
     </button>
 
     <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
@@ -72,9 +220,10 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 
     <hr style="height: 2px; border-width: 0; background-color: green" />
 
-    <button class="btn btn-default tooltip-primary" runat="server" 
-        id="Button1" 
-        type="button" data-toggle="tooltip" data-placement="right" data-html="true" title="Tooltip <h1>gras</h1> à droite">Tooltip on right</button>
+    <button class="btn btn-default tooltip-primary" runat="server"
+        id="Button1"
+        type="button" data-toggle="tooltip" data-placement="right" data-html="true" title="Tooltip <h1>gras</h1> à droite">
+        Tooltip on right</button>
 
 
 </asp:Content>
@@ -97,6 +246,9 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
                 //alert("Hello! I am an alert box!!");
                 $(function () {
                     $('[data-toggle="popover"]').popover()
+                })
+                $(function () {
+                    $('[data-toggle="popover"]').tooltip()
                 })
             }
         }

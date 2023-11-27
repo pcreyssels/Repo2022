@@ -35,6 +35,8 @@ namespace WebApplication3
             message.Attachments.Add(at);
             // client.Send(message);
 
+            
+
         }
     }
 }

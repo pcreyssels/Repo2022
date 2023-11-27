@@ -116,6 +116,11 @@
     <Content Include="Images\frrond.png" />
     <Content Include="Images\gb.png" />
     <Content Include="Images\gbrond.png" />
+    <Content Include="Images\icone information svg transparent.svg" />
+    <Content Include="Images\icone information transparent.png" />
+    <Content Include="Images\icone information.png" />
+    <Content Include="Images\icone information.svg" />
+    <Content Include="Images\infoiconred.png" />
     <Content Include="Images\iris.jpg" />
     <Content Include="Images\photo acceuil 1024x1024px.png" />
     <Content Include="Images\photo acceuil 1664x1664px.png" />

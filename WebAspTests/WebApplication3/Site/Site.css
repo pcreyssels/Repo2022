@@ -231,11 +231,11 @@ textarea {
     font-size: 1em;
 }
 
-.CGVBordered {
+.CGVBordered, .RedRoundedBorderedText {
     border: 2px solid;
     padding: 5px;
     border-color: red;
-    border-radius: 10px;
+    border-radius: 1.5em;
 }
 
 .CGVTitreN1 {
