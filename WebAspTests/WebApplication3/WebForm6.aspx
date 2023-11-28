@@ -222,7 +222,12 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 
     <button class="btn btn-default tooltip-primary" runat="server"
         id="Button1"
-        type="button" data-toggle="tooltip" data-placement="right" data-html="true" title="Tooltip <h1>gras</h1> à droite">
+        type="button" data-toggle="tooltip" 
+        data-placement="right" 
+        data-html="true"
+        data-content="Contenu tooltip "
+        title="Tooltip <h1>gras</h1> à droite">
+        
         Tooltip on right</button>
 
 
