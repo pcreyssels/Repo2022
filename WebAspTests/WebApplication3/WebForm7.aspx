@@ -12,7 +12,31 @@
         <asp:Literal runat="server" Text="CLICK PANEL" />
     </button>
 
-    <h3>ASP CHECKBOX H3 </h3>
+
+    <h3>CSS container queries </h3>
+
+    <div class="post" style="border: 2px solid blue; width: 600px; height: 300px">
+        <div class="card" style="margin-top: 10cqh; border: 2px solid purple;">
+            <h2 style="border: 2px solid green">Card title</h2>
+            <p style="border: 2px solid red">Card content</p>
+        </div>
+    </div>
+
+
+    <h3>fin CSS container queries </h3>
+
+
+    <h3>CSS container queries 2 </h3>
+
+    <div  style="container-type: size; border: 2px solid blue; width: 600px; height: 300px">
+        <div class="card" style="margin-top: 20cqh; border: 2px solid purple;">
+            <h2 style="border: 2px solid green">Card title</h2>
+            <p style="border: 2px solid red">Card content</p>
+        </div>
+    </div>
+
+
+    <h3>fin CSS container queries 2 </h3>
 
 
     <asp:CheckBox runat="server" meta:resourcekey="libelle_checkbox" Text="__ Poursuite d’études " ID="checkbox_1" ClientIDMode="Static" />
@@ -50,11 +74,11 @@
             <asp:TextBox CssClass="form-control" runat="server" Text="Interlocuteur"></asp:TextBox>
         </div>--%>
 
-        <div style="grid-row: 3 / 4; grid-column: 2 / 3; border: 2px solid red">
+        <div style="grid-row: 3 / 4; grid-column: 2 / 3; border: 2px solid red;">
             <%--<asp:TextBox CssClass="form-control" runat="server" Text="Interlocuteur"></asp:TextBox>--%>
-            <input type="text" style="margin-top:0.5lh" />
+            <input type="text" style="margin-top: 0.5lh" />
         </div>
-        
+
 
     </div>
 

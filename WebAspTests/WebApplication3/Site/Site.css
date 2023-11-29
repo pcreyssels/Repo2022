@@ -341,3 +341,17 @@ span.CGVIcon {
     background-color:aqua;
     display:inline;
 }
+
+.post {
+    container-type: size;
+    container-name: sidebar;
+}
+
+@container (min-width: 700px) {
+    .card h2 {
+        font-size: 2em;
+        color :red;
+    }
+}
+
+

@@ -384,6 +384,12 @@
     <Content Include="JQuery-1.12.4\jquery-1.12.4.js" />
     <Content Include="JQuery-1.12.4\jquery-1.12.4.min.js" />
     <Content Include="Site\Site.css" />
+    <Content Include="StyleSheet1.css">
+      <DependentUpon>StyleSheet1.scss</DependentUpon>
+    </Content>
+    <Content Include="StyleSheet1.min.css">
+      <DependentUpon>StyleSheet1.css</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -461,8 +467,13 @@
     <Content Include="bootstrap-3.4.1\dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap-3.4.1\dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap-3.4.1\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
+    <Content Include="StyleSheet1.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
