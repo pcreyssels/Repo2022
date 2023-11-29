@@ -335,3 +335,9 @@ span.CGVIcon {
     background-color: white;
     text-align: left;
 }
+
+.vertical-align-middle {
+    vertical-align: middle;
+    background-color:aqua;
+    display:inline;
+}

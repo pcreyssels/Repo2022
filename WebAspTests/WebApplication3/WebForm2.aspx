@@ -70,6 +70,7 @@
 
             var hf1 = document.getElementById('<%=hf1.ClientID %>');
             var v = hf1.getAttribute("value");
+            
             //alert(v.toString());
 
             const message = new SpeechSynthesisUtterance();
