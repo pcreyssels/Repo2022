@@ -12,6 +12,8 @@ namespace WebApplication3
         protected void Page_Load(object sender, EventArgs e)
         {
             checkbox_1.Attributes.Add("onclick", "showhideinfo_1()");
+            checkbox_demnaturalisation.Attributes.Add("onclick", "showhideinfonatu()");
+            checkbox_activitesecurite.Attributes.Add("onclick", "showhideinfoactsec()");
         }
 
         protected void Unnamed_CheckedChanged(object sender, EventArgs e)
@@ -34,5 +36,37 @@ namespace WebApplication3
             bool v =  checkbox_1.Checked;
             int fin = 1;
         }
+
+        protected void Cusv_TextBox_formationenvisagee_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if (TextBox_formationenvisagee.Text == "" && checkbox_poursuiteetudes.Checked)
+            {
+                args.IsValid = false;
+            }
+            else
+                args.IsValid = true;
+        }
+
+        protected void Cusv_TextBox_professionenvisagee_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if (TextBox_professionenvisagee.Text == "" && checkbox_rechercheemploi.Checked)
+            {
+                args.IsValid = false;
+            }
+            else
+                args.IsValid = true;
+        }
+
+        protected void Cusv_TextBox_concoursenvisage_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            if (TextBox_concoursenvisage.Text == "" && checkbox_inscriptionconcours.Checked)
+            {
+                args.IsValid = false;
+            }
+            else
+                args.IsValid = true;
+        }
+
+        
     }
 }

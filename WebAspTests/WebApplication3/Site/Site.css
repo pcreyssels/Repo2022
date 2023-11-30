@@ -141,6 +141,8 @@ textarea {
     white-space: pre-line;
 }
 
+
+
     .fatbutton:hover,
     .fatbutton:focus {
         color: yellow;
@@ -185,6 +187,48 @@ textarea {
     .ahrefcustom:focus {
         color: yellow;
     }
+
+.formulaire-zone-label {
+    font-weight: bold;
+    font-family: Calibri;
+}
+
+.zone-label {
+    font-weight: bold;
+    font-family: Calibri;
+}
+
+.zone-label-small {
+    font-weight: normal;
+    font-size: x-small;
+}
+
+.zone-label-mentionbleue {
+    font-weight: normal;
+    color:dodgerblue;
+}
+
+.etoile-rouge {
+    font-weight: bold;
+    font-family: Calibri;
+    color: red;
+}
+
+.formulaire-erreur {
+    font-weight: bold;
+    display: inline-block;
+    color: #990000;
+    background-color: #F5DEB3;
+    border-color: #FFA500;
+    border-width: 1px;
+    border-style: Dotted;
+    margin-top: 2px;
+    padding: 4px;
+}
+
+.inlinetextbox{
+    display:inline
+}
 
 .break-point::before {
     content: "\a";
