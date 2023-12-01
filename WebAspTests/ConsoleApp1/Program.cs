@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
+using System.Globalization;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
@@ -19,9 +20,12 @@ namespace ConsoleApp1
             SqlDateTime sqlDateTime = new SqlDateTime();
             sqlDateTime = SqlDateTime.MinValue;
             DateTime dt=sqlDateTime.Value;
-            DateTime? dt2=SqlDateTime.Null.Value;
+            //DateTime? dt2=SqlDateTime.Null.Value;
 
-           
+            string dtf = DateTime.Now.ToString("O");
+
+
+            DateTime dtp = DateTime.ParseExact(dtf, "O", CultureInfo.InvariantCulture);
 
             // https://stackoverflow.com/questions/42355995/regex-to-match-date-formats-dd-mm-yyyy-and-dd-mm-yyyy
             // ^([0]?[1-9]|[1|2][0-9]|[3][0|1])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$
