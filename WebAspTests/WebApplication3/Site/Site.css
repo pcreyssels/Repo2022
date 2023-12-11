@@ -353,6 +353,7 @@ span.CGVIcon {
     width: max-content;
     border-radius: 30px;
     min-width: 100px;
+    padding :1em;
 }
 
     .btn-sitpho2:hover {

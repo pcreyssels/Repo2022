@@ -42,7 +42,30 @@
     <asp:CheckBox runat="server" CssClass="zone-label" Text=" poursuites études " ID="checkbox_1" />
     <h3fin>CHECKBOX</h3fin>
 
-    <%-- DEBUT GRILLE --%>
+    <div style="display: grid; grid-template-columns: 2fr 2fr 8fr; border: 3px solid green; gap: 1em; margin: 20px; padding: 30px">
+        <%-- 1er ligne --%>
+        <div>
+            <asp:Label runat="server" meta:resourcekey="label_refugie" Text="_refugie et assimile" />
+        </div>
+        <div>
+            <asp:RadioButton runat="server" GroupName="Group1" meta:resourcekey="radio_oui" Text="oui" />
+        </div>
+        <div>
+            &nbsp
+        </div>
+        <%-- 2er ligne --%>
+        <div>
+            &nbsp
+        </div>
+        <div>
+            <asp:RadioButton runat="server" GroupName="Group1" meta:resourcekey="radio_oui" Text="non" />
+        </div>
+        <div>
+            &nbsp
+        </div>
+    </div>
+
+    <%-- DEBUT GRILLE OBJET DE LA DEMANDE --%>
     <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(8,auto); border: 3px solid red; gap: 1em; margin: 20px; padding: 30px">
 
         <%-- 1er ligne ATTESTATION DEMANDEE--%>
@@ -124,7 +147,7 @@
                     <asp:CustomValidator runat="server" ID="cusv_TextBox_professionenvisagee"
                         OnServerValidate="Cusv_TextBox_professionenvisagee_ServerValidate"
                         ControlToValidate="TextBox_professionenvisagee"
-                        CssClass="formulaire-erreur"
+                       
                         ValidateEmptyText="true"
                         meta:resourcekey="reqvGenerique"
                         ErrorMessage="_error"
@@ -181,7 +204,6 @@
                     <div runat="server" meta:resourcekey="panelinfonatu" />
                 </div>
             </div>
-
         </div>
 
         <%-- 7eme ligne EXERCICE ACT PRIVEE SECURITE --%>
@@ -214,21 +236,32 @@
         </div>
 
 
-        <asp:Button runat="server" Text="VALID" ValidationGroup="All" CausesValidation="true" />
-        <%--<div style="display: flex; align-items: center">
-            <asp:TextBox CssClass="form-control" runat="server" Text="Interlocuteur"></asp:TextBox>
-        </div>--%>
 
-        <%--<div style="grid-row: 3 / 4; grid-column: 2 / 3; border: 2px solid red;">
-            <asp:TextBox CssClass="form-control" runat="server" Text="Interlocuteur"></asp:TextBox>
-            <input type="text" style="margin-top: 0.5lh" />
-        </div>--%>
+
+    </div>
+
+    <%-- BOUTONS --%>
+    <div style="display: grid; grid-template-columns: 4fr 4fr 4fr; border: 3px solid green; gap: 1em; margin: 20px; padding: 30px">
+        <%-- 1er ligne --%>
+        <div>
+            <asp:Button runat="server" CssClass="btn-sitpho2 " Text="_valid_fiche" ValidationGroup="All" CausesValidation="true" />
+        </div>
+        <div>
+            <asp:Button runat="server" CssClass="btn-sitpho2 btn-sitpho2-red" meta:resourcekey="panelinfoactsec"
+                Text="_abandon_proc" ValidationGroup="All" CausesValidation="true" />
+        </div>
+        <div>
+            &nbsp
+        </div>
     </div>
 
     <h3>FIN CHECKBOX H3 </h3>
 
-    <%--<button style="color:red;"></button>--%>
+     <asp:Button runat="server" Text="VALIDATION" CausesValidation="true" ValidationGroup="All"/> 
 
+     <asp:Button runat="server" Text="FAT BUTTON" CssClass="fatbutton" />    <%--<button style="color:red;"></button>--%>
+
+    <asp:Button runat="server" Text="SITPHO2" CssClass="btn-sitpho2" />
 
     <asp:HiddenField runat="server" ID="hiddencheckbox" Value="0" ClientIDMode="Static" />
     <input type="checkbox" id="checkbox1"

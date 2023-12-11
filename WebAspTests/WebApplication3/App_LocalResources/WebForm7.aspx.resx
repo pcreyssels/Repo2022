@@ -142,13 +142,13 @@
     <value>&amp;nbsp Exercice d’une activité privée de sécurité</value>
   </data>
   <data name="libelle_checkbox_inscon.Text" xml:space="preserve">
-    <value>Inscription à un concours</value>
+    <value>&amp;nbsp Inscription à un concours</value>
   </data>
   <data name="libelle_checkbox_pef.Text" xml:space="preserve">
     <value>&amp;nbsp Poursuite d’études en France</value>
   </data>
   <data name="libelle_checkbox_rem.Text" xml:space="preserve">
-    <value>Recherche d'emploi</value>
+    <value>&amp;nbsp Recherche d'emploi</value>
   </data>
   <data name="libelle_concours_envisage.Text" xml:space="preserve">
     <value>Concours envisagé :</value>
