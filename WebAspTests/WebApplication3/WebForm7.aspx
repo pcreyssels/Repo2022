@@ -257,7 +257,7 @@
 
     <h3>FIN CHECKBOX H3 </h3>
 
-     <asp:Button runat="server" Text="VALIDATION" CausesValidation="true" ValidationGroup="All"/> 
+     <asp:Button runat="server" Text="VALIDATION" CssClass="btn-sitphoX" CausesValidation="true" ValidationGroup="All"/> 
 
      <asp:Button runat="server" Text="FAT BUTTON" CssClass="fatbutton" />    <%--<button style="color:red;"></button>--%>
 

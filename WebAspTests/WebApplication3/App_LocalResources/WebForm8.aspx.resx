@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BoutondeLigne.HeaderText" xml:space="preserve">
+    <value>Télécharger</value>
+  </data>
+  <data name="BoutondeLigne.Text" xml:space="preserve">
+    <value>télécharger</value>
+  </data>
+  <data name="BoutonRetour.Text" xml:space="preserve">
+    <value>RETOUR</value>
+  </data>
+  <data name="BoutonSuivant.Text" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="BoutonValider.Text" xml:space="preserve">
+    <value>VALIDER</value>
+  </data>
+  <data name="EncartInfos.Text" xml:space="preserve">
+    <value>Joindre toutes les pièces demandées, valider avec le bouton en fin de formulaire.
+
+Mode d’emploi et règles d’usage :
+    -   Tous les documents doivent être au format pdf, jpg, png en cliquant sur « Télécharger ».
+    -	Vous pouvez enregistrer au maximum 2 documents en pièces complémentaires.
+    -	Les documents rédigés en allemand, anglais, arabe, espagnol, français, italien et portugais ne nécessitent pas de traduction.</value>
+  </data>
+  <data name="gridcolumn_Obligatoire.HeaderText" xml:space="preserve">
+    <value>Obligatoire</value>
+  </data>
+  <data name="gridcolumn_Pieceaj.HeaderText" xml:space="preserve">
+    <value>Pièce à joindre</value>
+  </data>
+  <data name="gridcolumn_Piecej.HeaderText" xml:space="preserve">
+    <value>Pièce jointe</value>
+  </data>
+  <data name="gridcolumn_Precisions.HeaderText" xml:space="preserve">
+    <value>Précisions</value>
+  </data>
+  <data name="grille_ligne1col1" xml:space="preserve">
+    <value>Pièce d'identité</value>
+  </data>
+  <data name="grille_ligne1col3" xml:space="preserve">
+    <value>Copie lisible d'une pièce d'identité (carte d'identité, passeport)</value>
+  </data>
+  <data name="grille_ligne1col4" xml:space="preserve">
+    <value>oui</value>
+  </data>
+  <data name="grille_ligne2col1" xml:space="preserve">
+    <value>Diplôme</value>
+  </data>
+  <data name="grille_ligne2col3" xml:space="preserve">
+    <value>Copie lisible du diplôme dans la langue d'origine</value>
+  </data>
+  <data name="grille_ligne2col4" xml:space="preserve">
+    <value>oui</value>
+  </data>
+  <data name="grille_ligne3col1" xml:space="preserve">
+    <value>Justificatif de &lt;b&gt;durée&lt;/b&gt; d'études</value>
+  </data>
+  <data name="grille_ligne3col3" xml:space="preserve">
+    <value>Copie lisible d'un justificatif de la durée officielle des études délivré par l'établissement</value>
+  </data>
+  <data name="grille_ligne3col4" xml:space="preserve">
+    <value>oui</value>
+  </data>
+  <data name="grille_ligne4col1" xml:space="preserve">
+    <value>Document complémentaire 1</value>
+  </data>
+  <data name="grille_ligne4col3" xml:space="preserve">
+    <value>Compléments (suppléments au diplôme, certificat de scolarité, règlement des études, règlement des examens, etc)</value>
+  </data>
+  <data name="grille_ligne4col4" xml:space="preserve">
+    <value>non</value>
+  </data>
+  <data name="grille_ligne5col1" xml:space="preserve">
+    <value>Document complémentaire 2</value>
+  </data>
+  <data name="grille_ligne5col3" xml:space="preserve">
+    <value>Compléments (suppléments au diplôme, certificat de scolarité, règlement des études, règlement des examens, etc)</value>
+  </data>
+  <data name="grille_ligne5col4" xml:space="preserve">
+    <value>non</value>
+  </data>
+  <data name="HtmlText.Text" xml:space="preserve">
+    <value>&lt;span style="color:blue"&gt; texte &lt;b&gt; en gras &lt;/b&gt; et en &lt;i&gt; italique&lt;/i&gt; &lt;/span&gt;</value>
+  </data>
+  <data name="IntituleDatelimite.Text" xml:space="preserve">
+    <value>Date limite</value>
+  </data>
+  <data name="IntituleDossier.Text" xml:space="preserve">
+    <value>Dossier</value>
+  </data>
+  <data name="IntituleEmail.Text" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="LabelEncartDocument.Text" xml:space="preserve">
+    <value>FICHE DOCUMENTS A FOURNIR</value>
+  </data>
+  <data name="LabelVotreDossier.Text" xml:space="preserve">
+    <value>votre dossier : </value>
+  </data>
+  <data name="message_bandeau_suppression_echoue" xml:space="preserve">
+    <value>Erreur ! Les données n'ont pu être supprimées</value>
+  </data>
+  <data name="message_bandeau_suppression_reussie" xml:space="preserve">
+    <value>Les données ont bien été supprimées</value>
+  </data>
+  <data name="modal_button_accueil.Text" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="modal_button_cancel.Text" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="modal_button_ok.Text" xml:space="preserve">
+    <value>OK supprimer</value>
+  </data>
+  <data name="modal_button_trigmodal.Text" xml:space="preserve">
+    <value>Abandonner la procédure</value>
+  </data>
+  <data name="modal_header_abandon_procedure.Text" xml:space="preserve">
+    <value>Abandon de la saisie</value>
+  </data>
+  <data name="modal_info_abandon.Text" xml:space="preserve">
+    <value>Avertissement : en abandonnant la procédure cela supprimera toutes les données déjà enregistrées</value>
+  </data>
+  <data name="modal_info_echecsuppressiondonnees" xml:space="preserve">
+    <value>Erreur : la suppression des donnéees a échoué</value>
+  </data>
+  <data name="modal_info_rienasupprimer" xml:space="preserve">
+    <value>il n'y a pas de données à supprimer</value>
+  </data>
+  <data name="modal_literal_abandon_procedure.Text" xml:space="preserve">
+    <value>Abandon de la procedure</value>
+  </data>
+  <data name="TextTelecharger" xml:space="preserve">
+    <value>télécharger</value>
+  </data>
+  <data name="_button_cancellall.Text" xml:space="preserve">
+    <value>Abandonner la procédure</value>
+  </data>
+</root>

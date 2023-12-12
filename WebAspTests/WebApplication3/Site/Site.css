@@ -99,7 +99,7 @@ textarea {
 
 .panel-default2 {
     border-color: cornflowerblue;
-    border-radius : 10px;
+    border-radius: 10px;
     /*border-width : thick;*/
 }
 
@@ -123,6 +123,14 @@ textarea {
 
 .tooltip-primary ~ .tooltip > .tooltip-arrow {
     border-bottom-color: lightgreen;
+}
+
+table#Table1 tr:nth-child(odd) {
+    background-color: lightpink;
+}
+
+table#Table1 tr:nth-child(even) {
+    background-color: lightblue;
 }
 
 .center {
@@ -179,6 +187,24 @@ textarea {
     max-block-size: 150px;
 }
 
+.btn-sitphoX {
+    background-color: lightblue;
+    border-color: lightskyblue;
+    width: max-content;
+    min-width: 100px;
+}
+
+    .btn-sitphoX:hover {
+        background-color: HighlightText;
+        border-color: lightskyblue;
+    }
+
+/* aere le texte à droite et gausche du bord des cellules des tables*/
+table.spacebefaft > tbody > tr > td,
+table.spacebefaft > tbody > tr > th {
+    padding: 0 1em 0
+}
+
 .ahrefcustom {
     color: white;
 }
@@ -205,7 +231,7 @@ textarea {
 
 .zone-label-mentionbleue {
     font-weight: normal;
-    color:dodgerblue;
+    color: dodgerblue;
 }
 
 .etoile-rouge {
@@ -226,8 +252,8 @@ textarea {
     padding: 4px;
 }
 
-.inlinetextbox{
-    display:inline
+.inlinetextbox {
+    display: inline
 }
 
 .break-point::before {
@@ -313,7 +339,7 @@ span.CGVIcon {
 }
 
 .box1 {
-    background-color:lightcyan;
+    background-color: lightcyan;
     grid-column: 1 / 2;
     grid-row: 1 / 4;
 }
@@ -347,13 +373,13 @@ span.CGVIcon {
 
 .btn-sitpho2 {
     background-color: rgba(22,155,98,255);
-    color : white;
+    color: white;
     font-weight: bolder;
     border-color: lightgreen;
     width: max-content;
     border-radius: 30px;
     min-width: 100px;
-    padding :1em;
+    padding: 1em;
 }
 
     .btn-sitpho2:hover {
@@ -383,8 +409,8 @@ span.CGVIcon {
 
 .vertical-align-middle {
     vertical-align: middle;
-    background-color:aqua;
-    display:inline;
+    background-color: aqua;
+    display: inline;
 }
 
 .post {
@@ -395,8 +421,6 @@ span.CGVIcon {
 @container (min-width: 700px) {
     .card h2 {
         font-size: 2em;
-        color :red;
+        color: red;
     }
 }
-
-
