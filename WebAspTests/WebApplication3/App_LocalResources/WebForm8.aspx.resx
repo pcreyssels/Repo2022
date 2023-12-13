@@ -251,6 +251,12 @@ Mode d’emploi et règles d’usage :
   <data name="TextTelecharger" xml:space="preserve">
     <value>télécharger</value>
   </data>
+  <data name="wm1.Text" xml:space="preserve">
+    <value>voici le  message  &lt;b&gt; numero &lt;/b&gt;s 1</value>
+  </data>
+  <data name="wm2.Text" xml:space="preserve">
+    <value>voici le &lt;b&gt; message  &lt;/b&gt; numero 2</value>
+  </data>
   <data name="_button_cancellall.Text" xml:space="preserve">
     <value>Abandonner la procédure</value>
   </data>

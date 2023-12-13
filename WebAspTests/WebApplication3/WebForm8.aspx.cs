@@ -119,6 +119,7 @@ namespace WebApplication3
             string[] rest = res.Split(new string[] { "_ICONE_" },StringSplitOptions.RemoveEmptyEntries);
 
 
+
             //HtmlElement hel1 = new HtmlElement()
             //TextBox box = new TextBox();
             //box.Attributes["runat"] = "server";
@@ -213,6 +214,8 @@ namespace WebApplication3
                     string res = "<span>\r\n    Copie lisible d'une pièce d'identité (carte d'identité, passeport, titre de séjour, récépissé ou <b>justificatif de réfugié ou assimilé).</b> <br/> \r\n  _ICONE_      Visa, permis de conduire ou carte vitale <b>ne sont pas acceptés. Merci de fournir un justificatif de changement de nom, si nécessaire</b>.\r\n</span>";
                     res.IndexOf("_ICON_");
                     string[] rest = res.Split(new string[] { "_ICONE_" }, StringSplitOptions.RemoveEmptyEntries);
+                    rest[0] = " bonjour ";
+                    rest[0] = " toto ";
                     // 1er bloc de texte avant icone
                     Literal li = new Literal();
                     li.Mode = LiteralMode.PassThrough;
@@ -225,6 +228,7 @@ namespace WebApplication3
                     img1.Attributes.Add("style", "height: 100%; width: 100%; object-fit: contain");
                     ph1.Controls.Add(new LiteralControl("<span style=\"display: inline-block; height: 3em;\">"));
                     ph1.Controls.Add(img1);
+                    ph1.Controls.Add(new LiteralControl("</span>"));
 
                     // 2eme bloc de texte après icone
                     li = new Literal();
@@ -242,6 +246,37 @@ namespace WebApplication3
                 //e.Row.Cells[1].Text = "<i>" + e.Row.Cells[1].Text + "</i>";
 
             }
+        }
+
+        protected void ButtonSet_Click(object sender, EventArgs e)
+        {
+            tb1.Text = "1";
+        }
+
+        protected void ButtonSetAll_Click(object sender, EventArgs e)
+        {
+            tb1.Text = "1";
+            tb2.Text = "1";
+            tb3.Text = "1";
+            tb4.Text = "1";
+        }
+
+        protected void ButtonResetAll_Click(object sender, EventArgs e)
+        {
+            tb1.Text = "0";
+            tb2.Text = "0";
+            tb3.Text = "0";
+            tb4.Text = "0";
+        }
+
+        protected void hiddenButtonOkforModalWarning_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void hib1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

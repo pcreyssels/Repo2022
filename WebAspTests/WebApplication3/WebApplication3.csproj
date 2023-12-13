@@ -95,6 +95,8 @@
     <Content Include="Images\Attention 1024x1024px.png" />
     <Content Include="Images\Attention 220x220px.png" />
     <Content Include="Images\Attention 240x240px.png" />
+    <Content Include="Images\Attention 240x240pxfondnoir.png" />
+    <Content Include="Images\Attention 450x450px.png" />
     <Content Include="Images\Attention 512x512px.png" />
     <Content Include="Images\Attention svg.svg" />
     <Content Include="Images\Attention.png" />
