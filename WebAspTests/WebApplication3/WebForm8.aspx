@@ -159,15 +159,9 @@
     <br />
     <hr style="height: 2px; border-width: 0; background-color: lightcoral" />
 
-    <span>** invisible ->  **</span>
-    <asp:TextBox Text="X" runat="server" ID="hb0" ClientIDMode="Static" CausesValidation="false" Style="display: none;" />
-    <asp:TextBox Text="X" runat="server" ID="tb1" ClientIDMode="Static" CausesValidation="false" Style="display: none;" />
-    <asp:TextBox Text="Y" runat="server" ID="tb2" ClientIDMode="Static" CausesValidation="false" />
-    <asp:TextBox runat="server" ID="tb3" ClientIDMode="Static" CausesValidation="false" Style="display: none;" />
-    <asp:TextBox runat="server" ID="tb4" ClientIDMode="Static" CausesValidation="false" Style="display: none;" />
+  
     <asp:Button runat="server" ID="hib1" OnClick="hib1_Click" Style="display: none;" />
-    <span>** <- invisible **</span>
-
+  
     <asp:Button ValidationGroup="valgroup1" runat="server" ID="B1"
         OnClientClick="modalshow();"
         OnClick="Button1_Click" Text="CLIQUER VALID" />
@@ -176,40 +170,16 @@
         OnClientClick="modalshow();return false;"
         Text="CLIQUER VALID 2" />
 
-    <asp:Button runat="server" ID="Button3"
-        OnClientClick="modalshow();return false;"
-        Text="CLIQUER VALID clientclick" />
+   <asp:Button runat="server" ID="Button4"
+        OnClick="Button4_Click"
+        Text="HF0 SWITCH" />
 
+    <%-- message embarqué dans hidden field --%>
     <asp:HiddenField runat="server" ClientIDMode="Static" ID="hf0" Value="Y" />
     <asp:HiddenField runat="server" ClientIDMode="Static" ID="hf1" Value="m1" meta:resourcekey="hf1" />
-    <asp:HiddenField runat="server" ClientIDMode="Static" ID="hf2" Value="m2" meta:resourcekey="hf2"/>
+    <asp:HiddenField runat="server" ClientIDMode="Static" ID="hf2" Value="m2" meta:resourcekey="hf2" />
 
-    <span>** invisible2 ->  **</span>s
-    <asp:CompareValidator ID="htb1cv" runat="server" ControlToValidate="tb1" ValidationGroup="valgroup1"
-        ValueToCompare="1" Operator="Equal" EnableClientScript="true" />
-
-    <asp:CompareValidator ID="htb2cv" runat="server" ControlToValidate="tb2" ValidationGroup="valgroup1"
-        ValueToCompare="1" Operator="Equal" EnableClientScript="true" />
-
-    <asp:CompareValidator ID="htb3cv" runat="server" ControlToValidate="tb3" ValidationGroup="valgroup1"
-        ValueToCompare="1" Operator="Equal" EnableClientScript="true" />
-
-    <asp:CompareValidator ID="htb4cv" runat="server" ControlToValidate="tb4" ValidationGroup="valgroup1"
-        ValueToCompare="1" Operator="Equal" EnableClientScript="true" Display="Static" />
-    <span>** <- invisible2 **</span>
-
-    <br />
-    <asp:ValidationSummary runat="server" ValidationGroup="valgroup1" ShowValidationErrors="true" HeaderText="Votre formulaire comporte des erreurs..." />
-    <br />
-    <asp:Button CausesValidation="false" runat="server" ID="ButtonSet" OnClick="ButtonSet_Click" Text="HIDDENFIELDSET" />
-    <br />
-    <asp:Button CausesValidation="false" runat="server" ID="ButtonSetAll" OnClick="ButtonSetAll_Click" Text="HIDDENFIELDSETALL" />
-    <br />
-    <asp:Button CausesValidation="false" runat="server" ID="ButtonResetAll" OnClick="ButtonResetAll_Click" Text="HIDDENFIELDRESETALL" />
-    <br />
-
-
-
+  
 
     <%-- MODAL INFO WARNINGS  --%>
     <asp:Button ID="hiddenButtonOkforModalWarning"
@@ -234,8 +204,8 @@
                         <%-- 1 --%>
                         <div>&nbsp &nbsp</div>
                         <div>
-                            <asp:Label runat="server" ID="warning_message" ClientIDMode="Static" Text="_warning_" meta:resourcekey="wm1"/>
-                            <asp:Label runat="server" ID="warning_message2" ClientIDMode="Static" Text="_warning2_" meta:resourcekey="wm2"/>
+                            <asp:Label runat="server" ID="warning_message" ClientIDMode="Static" Text="_warning_" meta:resourcekey="wm1" />
+                            <asp:Label runat="server" ID="warning_message2" ClientIDMode="Static" Text="_warning2_" meta:resourcekey="wm2" />
                         </div>
                         <div>&nbsp &nbsp</div>
 
@@ -269,51 +239,51 @@
     <script>
         $(function () {
             $('[data-toggle="popover"]').popover();
-            console.log('bonjour !!!!')
+            let i = 'toto'
+            console.log('bonjour !!!!' + i)
         })
 
 
         function modalshow() {
-            // récupère le hiddenfield message 1
-            var f1 = document.getElementById('<%=hf1.ClientID %>');
-            var v1 = f1.getAttribute('value');
-            // récupère le hiddenfield message 2
-            var f2 = document.getElementById('<%=hf2.ClientID %>');
-            var v2 = f2.getAttribute('value');
 
-            // récupère le hiddenfield de l'aiguilleur de message
+            // récupère le hiddenfield pour commutation de message
             var f0 = document.getElementById('<%=hf0.ClientID %>');
             var v0 = f0.getAttribute('value');
 
             // récupère du champ information du modal
             var wmr = document.getElementById('<%=warning_message.ClientID %>');
             var wmr2 = document.getElementById('<%=warning_message2.ClientID %>');;
-            var wmv = wmr.innerHTML;
 
-
-            console.log('ecriture sur console');
-            console.log(v1);
-            console.log(v2);
-
-            console.log(wmv);
+            // déclencheur procedure serveur via hidden button
             var progbutton = document.getElementById('<%=hib1.ClientID %>');
 
-          
-            if (v0 == 'X') {
-                //wmr.innerHTML = v1;
-                wmr.style.display = "none"
-                $('#modal_warning').modal('show');
-            }
-            else if (v0 == 'Y') {
-                //wmr.innerHTML = v2;
-                wmr2.style.display = "none"
-                $('#modal_warning').modal('show');
-            }
-            else {
-                progbutton.click();
+            if (v0.length == 2) {
+                console.log('v0 = ' + v0);
+                console.log('1E CHAR ' + v0.substr(0, 1));
+                console.log('2E CHAR ' + v0.substr(1, 1));
+                if (v0.substr(0, 1) == 'C') {
+                    console.log(' C ');
+                    if (v0.substr(1, 1) == 'X') {
+                        wmr.style.display = "none";
+                        wmr2.style.display = "initial";
+                        console.log('CX !!!!');
+                    }
+                    else if (v0.substr(1, 1) == 'Y') {
+                        wmr.style.display = "initial";
+                        wmr2.style.display = "none";
+                        console.log('CY !!!!');
+                    }
+                    $('#modal_warning').modal('show');
+                }
+                else {
+                    console.log(' other');
+                    progbutton.click();
+                }
             }
 
+        }
 
+        function okfrommodal() {
         }
 
 

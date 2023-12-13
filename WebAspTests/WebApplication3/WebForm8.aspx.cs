@@ -42,6 +42,12 @@ namespace WebApplication3
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!IsPostBack)
+            {
+                hf0.Value = "CX";
+            }
+
             documentTable = new DataTable();
             documentTable.Columns.AddRange(new DataColumn[7] {
                     new DataColumn("Pieceaj", typeof(string)),
@@ -118,7 +124,7 @@ namespace WebApplication3
             res.IndexOf("_ICON_");
             string[] rest = res.Split(new string[] { "_ICONE_" },StringSplitOptions.RemoveEmptyEntries);
 
-
+            
 
             //HtmlElement hel1 = new HtmlElement()
             //TextBox box = new TextBox();
@@ -248,26 +254,7 @@ namespace WebApplication3
             }
         }
 
-        protected void ButtonSet_Click(object sender, EventArgs e)
-        {
-            tb1.Text = "1";
-        }
-
-        protected void ButtonSetAll_Click(object sender, EventArgs e)
-        {
-            tb1.Text = "1";
-            tb2.Text = "1";
-            tb3.Text = "1";
-            tb4.Text = "1";
-        }
-
-        protected void ButtonResetAll_Click(object sender, EventArgs e)
-        {
-            tb1.Text = "0";
-            tb2.Text = "0";
-            tb3.Text = "0";
-            tb4.Text = "0";
-        }
+        
 
         protected void hiddenButtonOkforModalWarning_Click(object sender, EventArgs e)
         {
@@ -277,6 +264,22 @@ namespace WebApplication3
         protected void hib1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            if (hf0.Value == "CX") 
+            {
+                hf0.Value = "CY";
+            }
+            else if (hf0.Value == "CY")
+            {
+                hf0.Value = "Z0";
+            }
+            else
+            {
+                hf0.Value = "CX";
+            }
         }
     }
 

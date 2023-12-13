@@ -43,12 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LibLog4">
-      <HintPath>..\packages\CIEP.LibLog.1.0.0.6\lib\net472\LibLog4.dll</HintPath>
-    </Reference>
-    <Reference Include="LibMail4">
-      <HintPath>..\packages\CIEP.LibMail.1.0.0.4\lib\net472\LibMail4.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
