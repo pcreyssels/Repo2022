@@ -159,6 +159,24 @@ namespace WebApplication3
         protected global::System.Web.UI.WebControls.Button Button4;
 
         /// <summary>
+        /// Contrôle Button3.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button3;
+
+        /// <summary>
+        /// Contrôle Button5.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button5;
+
+        /// <summary>
         /// Contrôle hf0.
         /// </summary>
         /// <remarks>
@@ -184,6 +202,33 @@ namespace WebApplication3
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hf2;
+
+        /// <summary>
+        /// Contrôle Img3.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img3;
+
+        /// <summary>
+        /// Contrôle warning_message_1.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl warning_message_1;
+
+        /// <summary>
+        /// Contrôle warning_message_2.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl warning_message_2;
 
         /// <summary>
         /// Contrôle hiddenButtonOkforModalWarning.

@@ -20,9 +20,9 @@
         CssClass="spacebefaft"
         OnLoad="GridView1_Load"
         OnInit="GridView1_Init"
-        AlternatingRowStyle-BackColor="LightGreen">
+        AlternatingRowStyle-BackColor="221, 239, 255">
 
-        <Columns>
+        <columns>
             <asp:BoundField DataField="Pieceaj" meta:resourcekey="gridcolumn_Pieceaj" HeaderText="_Pièce à joindre" />
             <asp:BoundField DataField="Precisions" meta:resourcekey="gridcolumn_Precisions" HeaderText="_Précisions" />
             <asp:BoundField DataField="Obligatoire" meta:resourcekey="gridcolumn_Obligatoire" HeaderText="_Obligatoire" ItemStyle-HorizontalAlign="Center" />
@@ -30,14 +30,14 @@
 
             <%-- boutons upload --%>
             <asp:TemplateField>
-                <ItemTemplate>
-                </ItemTemplate>
+                <itemtemplate>
+                </itemtemplate>
             </asp:TemplateField>
 
             <%-- coche --%>
             <asp:ImageField />
 
-        </Columns>
+        </columns>
 
     </asp:GridView>
 
@@ -59,8 +59,15 @@
         Visa, permis de conduire ou carte vitale <b>ne sont pas acceptés. Merci de fournir un justificatif de changement de nom, si nécessaire</b>.
     </span>
 
+    <hr style="height: 2px; border-width: 0; background-color: lightgreen" />
+
+
+    <button type="button" onclick="modalshow2()">CLICK MODAL SHOW</button>
+
+    <label onclick="modalshow2()">Do you like cheese?</label>
 
     <hr style="height: 2px; border-width: 0; background-color: lightgreen" />
+
     <asp:Label ID="Label_datelim" runat="server" Text="_datelimite" />
     <span style="display: inline-block; height: 2em;">
         <img runat="server" id="Img1"
@@ -90,7 +97,8 @@
             <asp:TableCell>
                 Row 0, <b>Col 0</b>
                 <asp:FileUpload ID="FileUpload1"
-                    runat="server"></asp:FileUpload>
+                    runat="server">
+                </asp:FileUpload>
                 <asp:Button ID="UploadButton"
                     Text="Upload file"
                     OnClick="UploadButton_Click"
@@ -104,7 +112,8 @@
             <asp:TableCell>
                 Row 1, Col 0
                 <asp:FileUpload ID="FileUpload2"
-                    runat="server"></asp:FileUpload>
+                    runat="server">
+                </asp:FileUpload>
                 <asp:Button ID="Button2"
                     Text="Upload file"
                     OnClick="UploadButton_Click"
@@ -119,9 +128,12 @@
     <br />
 
     <asp:Label ID="UploadStatusLabel" Text="_text_"
-        runat="server">
-    </asp:Label>
+        runat="server"></asp:Label>
 
+    <div>
+        Dans le cadre d’une demande de naturalisation, merci de fournir un <b>document délivré par votre établissement de formation attestant que votre cursus a été suivi en français </b>. Seuls les diplômes de <b>niveau 3 minimum </b>dispensés uniquement en langue française et délivrés par un pays figurant sur Dans le cadre d’une demande d’exercice d’une activité de sécurité privée, merci de fournir un document délivré par votre établissement de formation attestant que votre cursus a été suivi en français. Seuls les diplômes de niveau 3 minimum dispensés uniquement en langue française et délivrés par un pays figurant sur la <a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000041741098/">liste de l’arrêté du 12 mars 2020</a> peuvent bénéficier de la mention « cursus en français ».
+« cursus en français ».
+    </div>
     <br />
     <div>
         <%-- <asp:Table CssClass="tab1" ID="Table2" ClientIDMode="Static" runat="server"
@@ -159,9 +171,9 @@
     <br />
     <hr style="height: 2px; border-width: 0; background-color: lightcoral" />
 
-  
+
     <asp:Button runat="server" ID="hib1" OnClick="hib1_Click" Style="display: none;" />
-  
+
     <asp:Button ValidationGroup="valgroup1" runat="server" ID="B1"
         OnClientClick="modalshow();"
         OnClick="Button1_Click" Text="CLIQUER VALID" />
@@ -170,16 +182,53 @@
         OnClientClick="modalshow();return false;"
         Text="CLIQUER VALID 2" />
 
-   <asp:Button runat="server" ID="Button4"
+    <asp:Button runat="server" ID="Button4"
         OnClick="Button4_Click"
         Text="HF0 SWITCH" />
 
+    <br />
+    <asp:Button runat="server" ID="Button3"
+        OnClientClick="modalshow2();return false;"
+        Text="MODAL WARNING 2" />
+    <asp:Button runat="server" ID="Button5"
+    OnClientClick="modalshow22();return false;"
+    Text="MODAL WARNING 22" />
+    <br />
     <%-- message embarqué dans hidden field --%>
     <asp:HiddenField runat="server" ClientIDMode="Static" ID="hf0" Value="Y" />
     <asp:HiddenField runat="server" ClientIDMode="Static" ID="hf1" Value="m1" meta:resourcekey="hf1" />
     <asp:HiddenField runat="server" ClientIDMode="Static" ID="hf2" Value="m2" meta:resourcekey="hf2" />
 
-  
+
+    <%-- MODAL WARNING 2 --%>
+    <div class="modal fade" id="modal_warning2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-content-custom">
+
+                <div class="modal-body">
+                    <div id="panelinfoactsec" style="display: inline-grid; grid-template-columns: auto auto; grid-template-rows: auto auto; align-items: center;">
+                        <div style="grid-row: 2 / 3; grid-column: 2 / 3; text-align: right">
+                            <%-- bouton fermeture --%>
+                            <button type="button" class="btn btn-sitpho2" data-dismiss="modal">
+                                <span>OK</span>
+                            </button>
+                        </div>
+                        <span runat="server" style="display: inline-block; height: 4em; grid-row: 1 / 2; grid-column: 1 / 2;">
+                            <img runat="server" id="Img3"
+                                style="height: 100%; width: 100%; object-fit: contain"
+                                src="~/Images/Attention 450x450px.png"
+                                alt="attention" />
+                        </span>
+                        <div style="grid-row: 1 / 2; grid-column: 2 / 3; max-width: 30vw">
+                            <div runat="server" id="warning_message_1" meta:resourcekey="warning_message" />
+                            <div runat="server" id="warning_message_2" meta:resourcekey="warning_message2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <%-- MODAL INFO WARNINGS  --%>
     <asp:Button ID="hiddenButtonOkforModalWarning"
@@ -243,6 +292,21 @@
             console.log('bonjour !!!!' + i)
         })
 
+        function modalshow2() {
+            var wmr = document.getElementById('<%=warning_message_1.ClientID%>');
+            wmr.style.display = "none";
+            var wmr2 = document.getElementById('<%=warning_message_2.ClientID%>');
+            wmr2.style.display = "initial";
+            $('#modal_warning2').modal('show');
+        }
+
+        function modalshow22() {
+            var wmr = document.getElementById('<%=warning_message_1.ClientID%>');
+            wmr.style.display = "initial";
+            var wmr2 = document.getElementById('<%=warning_message_2.ClientID%>');
+            wmr2.style.display = "none";
+            $('#modal_warning2').modal('show');
+        }
 
         function modalshow() {
 

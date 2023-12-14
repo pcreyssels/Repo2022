@@ -251,11 +251,19 @@ Mode d’emploi et règles d’usage :
   <data name="TextTelecharger" xml:space="preserve">
     <value>télécharger</value>
   </data>
+  <data name="warning_message.InnerHtml" xml:space="preserve">
+    <value>Veuillez ajouter le justificatif de la durée officielle de vos études (relevé de notes, supplément au diplôme etc)</value>
+  </data>
+  <data name="warning_message2.InnerHtml" xml:space="preserve">
+    <value>Veuillez ajouter le justificatif de votre statut de réfugié (OFRPA, CNDA, demande d’asile)</value>
+  </data>
   <data name="wm1.Text" xml:space="preserve">
-    <value>voici le  message  &lt;b&gt; numero &lt;/b&gt;s 1</value>
+    <value>Dans le cadre d’une demande de naturalisation, merci de fournir un &lt;b&gt;document délivré par votre établissement de formation attestant que votre cursus a été suivi en français &lt;/b&gt;. Seuls les diplômes de &lt;b&gt;niveau 3 minimum &lt;/b&gt;dispensés uniquement en langue française et délivrés par un pays figurant sur la liste de l’arrêté du 12 mars 2020 peuvent bénéficier de la mention 
+« cursus en français ».</value>
   </data>
   <data name="wm2.Text" xml:space="preserve">
-    <value>voici le &lt;b&gt; message  &lt;/b&gt; numero 2</value>
+    <value>Dans le cadre d’une demande de naturalisation, merci de fournir un &lt;b&gt;document délivré par votre établissement de formation attestant que votre cursus a été suivi en français &lt;/b&gt;. Seuls les diplômes de &lt;b&gt;niveau 3 minimum &lt;/b&gt;dispensés uniquement en langue française et délivrés par un pays figurant sur la liste de l’arrêté du 12 mars 2020 peuvent bénéficier de la mention 
+« cursus en français ».</value>
   </data>
   <data name="_button_cancellall.Text" xml:space="preserve">
     <value>Abandonner la procédure</value>

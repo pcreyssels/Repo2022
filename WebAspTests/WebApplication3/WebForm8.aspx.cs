@@ -226,8 +226,7 @@ namespace WebApplication3
                     Literal li = new Literal();
                     li.Mode = LiteralMode.PassThrough;
                     li.Text = rest[0];
-                    ph1.Controls.Add(li);
-                    
+
                     // insère icone
                     Image img1 = new Image();
                     img1.ImageUrl = "~/Images/Attention 450x450px.png";
@@ -242,12 +241,26 @@ namespace WebApplication3
                     li.Text = rest[1];
                     ph1.Controls.Add(li);
 
+                    // <label onclick="modalshow2()">Do you like cheese?</label>
+                    Label la  =new Label();
+                    la.Attributes.Add("onclick", "modalshow2()");
+                    la.Text = " * ";
+                    ph1.Controls.Add(la);
+
                     e.Row.Cells[0].Controls.Add(ph1);
+
+
+                    
+
+                }
+
+                if (e.Row.RowIndex == 1)
+                {
+                    object o = GridView1.Rows[0].Cells[0];
+                    e.Row.Cells[1].Text = "bonjour <b>gras</b>";
+                    
                 }
                     
-                if (e.Row.RowIndex == 1)
-                    e.Row.Cells[1].Text = "bonjour <b>gras</b>";
-                
                 // Display the company name in italics.
                 //e.Row.Cells[1].Text = "<i>" + e.Row.Cells[1].Text + "</i>";
 
