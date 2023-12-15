@@ -8,6 +8,9 @@
         <div class="panel-heading">
             <h3 class="panel-title">Panel title</h3>
         </div>
+        <div>
+            <asp:Label runat="server" id="LabelH3" >Panel title</asp:Label>
+        </div>
         <div class="panel-body">
             <h1 class="panel-title libellePanel">
                 <asp:Literal runat="server" Text="_votre dossier :" meta:resourcekey="LabelVotreDossier" />
@@ -39,7 +42,7 @@
                             data-toggle="tooltip"
                             title="__vous avez"
                             meta:resourcekey="iconinfodatelimite"
-                            data-placement="bottom"
+                            data-placement="right"
                             data-html="true">
                             <img runat="server" id="Img1"
                                 style="height: 100%; width: 100%; object-fit: contain"
@@ -52,7 +55,7 @@
                             data-toggle="tooltip"
                             meta:resourcekey="iconinfodatelimite"
                             data-content="__vous avez"
-                            data-placement="bottom"
+                            data-placement="right"
                             data-html="true">
                             POPO
                         </button>
@@ -147,7 +150,7 @@
 
     <hr style="height: 2px; border-width: 0; background-color: greenyellow" />
 
-    <div style="display: inline-grid; grid-template-columns: auto fit-content(); align-items: center;"  class="RedRoundedBorderedText">
+    <div style="display: inline-grid; grid-template-columns: auto fit-content(); align-items: center;" class="RedRoundedBorderedText">
 
         <span runat="server" style="display: inline-block; height: 4em;">
             <img runat="server" id="Img6"
@@ -222,12 +225,11 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
 
     <button class="btn btn-default tooltip-primary" runat="server"
         id="Button1"
-        type="button" data-toggle="tooltip" 
-        data-placement="right" 
+        type="button" data-toggle="tooltip"
+        data-placement="right"
         data-html="true"
         data-content="Contenu tooltip "
         title="Tooltip <h1>gras</h1> à droite">
-        
         Tooltip on right</button>
 
 

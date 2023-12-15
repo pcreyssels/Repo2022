@@ -116,13 +116,62 @@ textarea {
     text-align: left !important;
 }*/
 
-.tooltip-primary ~ .tooltip > .tooltip-inner {
+/*.tooltip-primary ~ .tooltip > .tooltip-inner {
     background-color: lightblue;
     border: 1px solid #737373;
 }
 
 .tooltip-primary ~ .tooltip > .tooltip-arrow {
     border-bottom-color: lightgreen;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: orange;
+    background-color: green;
+}
+
+.tooltip.top .tooltip-inner {
+    background-color: red;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: red;
+}
+
+.tooltip.right .tooltip-inner {
+    background-color: blue;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: blue;
+}
+
+.tooltip.bottom .tooltip-inner {
+    background-color: lightyellow;
+    color : blue
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: green;
+}
+
+.tooltip.left .tooltip-inner {
+    background-color: yellow;
+}
+
+.tooltip.left .tooltip-arrow {
+    border-left-color: yellow;
+}
+
+
+.tooltip.bottom .tooltip-inner {
+    background-color: lightyellow;
+    color: blue
+}*/
+
+.tooltip > .tooltip-inner {
+    background-color: lightyellow;
+    color: blue
 }
 
 table#Table1 tr:nth-child(odd) {
@@ -424,3 +473,5 @@ span.CGVIcon {
         color: red;
     }
 }
+
+

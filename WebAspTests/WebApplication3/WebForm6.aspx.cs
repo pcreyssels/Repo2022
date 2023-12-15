@@ -1,13 +1,24 @@
-﻿using System;
+﻿
+
+
+//#define DEBUGON
+//#undef DEBUGON
+
+using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
+using System.Reflection.Emit;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
+
 namespace WebApplication3
 {
+
     public partial class WebForm6 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -35,6 +46,21 @@ namespace WebApplication3
             message.Attachments.Add(at);
             // client.Send(message);
 
+            int a = 0;
+
+
+#if DEBUGON
+            if (false)
+#else
+            if (a==0)
+#endif
+            {
+                LabelH3.Text = "BONJOUR";
+            }
+            else
+            {
+                LabelH3.Text = "AUREVOIR";
+            }
             
 
         }
