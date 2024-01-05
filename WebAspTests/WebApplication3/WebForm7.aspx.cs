@@ -14,6 +14,7 @@ namespace WebApplication3
             checkbox_1.Attributes.Add("onclick", "showhideinfo_1()");
             checkbox_demnaturalisation.Attributes.Add("onclick", "showhideinfonatu()");
             checkbox_activitesecurite.Attributes.Add("onclick", "showhideinfoactsec()");
+            Session["alive"] = true;
         }
 
         protected void Unnamed_CheckedChanged(object sender, EventArgs e)

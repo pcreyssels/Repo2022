@@ -4,6 +4,24 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <br />
+    <hr style="height: 2px; border-width: 0; background-color: lightseagreen" />
+
+    <input style="text-transform: lowercase;" type="text" name="fieldname">
+
+    <br />
+    <hr style="height: 2px; border-width: 0; background-color: lightseagreen" />
+
+    <asp:TextBox ID="TextBoxalc" runat="server"  style="text-transform: lowercase;" />
+
+    <br />
+    <hr style="height: 2px; border-width: 0; background-color: lightseagreen" />
+
+    <asp:Button runat="server" Text="Abandon" ID="butt_abandon" OnClick="butt_abandon_Click" />
+
+     <br />
+ <hr style="height: 2px; border-width: 0; background-color: lightseagreen" />
+
     <asp:CheckBox ID="CheckBox1" ClientIDMode="Static" ValidationGroup="VG1" AutoPostBack="false"
         OnCheckedChanged="CheckBox1_CheckedChanged" Text="Checkbox 1" Checked="False" GroupName="CheckBoxGroup" runat="server" />
 

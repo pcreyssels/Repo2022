@@ -81,6 +81,7 @@
     <Content Include="fonts\click-4322-hflip.svg" />
     <Content Include="fonts\click-4322.png" />
     <Content Include="fonts\click-4322.svg" />
+    <Content Include="Global.asax" />
     <Content Include="HtmlPage1.html" />
     <Content Include="HtmlPage2.html" />
     <Content Include="HtmlPage3.html" />
@@ -400,6 +401,9 @@
     <Content Include="WebForm9.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
