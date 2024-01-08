@@ -52,7 +52,108 @@
     <asp:Label runat="server" ID="lab1" ClientIDMode="Static"></asp:Label>
     <hr style="border: 1px solid red;" />
 
+    <br />
+    <hr style="border: 1px solid green;" />
 
+    <asp:TextBox ID="TextBoxDate" runat="server" TextMode="Date" />
+
+
+    <%-- \b(19|[2-9][0-9])\d{2}-([0|1])\d-([0-3])\d\b  > année >1900 --%>
+    <%-- ^([0-9]{4}|[0-9]{2})[-]([0]?[1-9]|[1][0-2])[-]([0]?[1-9]|[1|2][0-9]|[3][0|1])$ matche YYYY-MM-DD --%>
+    <%-- ^((19[3-9][0-9])|(20[0-9]{2}))[-]([0]?[1-9]|[1][0-2])[-]([0]?[1-9]|[1|2][0-9]|[3][0|1])$ matche YYYY-MM-DD  avec YYYY dans [1930 -2100]--%>
+    <asp:RegularExpressionValidator ID="reqvDateRegex" runat="server"
+        ControlToValidate="TextBoxDate" Display="Dynamic" ErrorMessage="date invalide"
+        EnableClientScript="true"
+        ValidationExpression="^((19[3-9][0-9])|(20[0-9]{2}))[-]([0]?[1-9]|[1][0-2])[-]([0]?[1-9]|[1|2][0-9]|[3][0|1])$" />
+
+    <br />
+    <asp:Button ID="bval" runat="server" Text="VALID" OnClick="bval_Click" />
+
+    <br />
+    <hr style="border: 1px solid blue;" />
+
+    <asp:Label ID="Label2" runat="server" Text=" comparaison de dates " />
+    <br />
+    <asp:Label ID="ld1" runat="server" Text=" DATE1 " />
+    <asp:TextBox ID="TextBox_Date1" runat="server" TextMode="Date" />
+    <br />
+    <asp:Label ID="Label1" runat="server" Text=" DATE2 " />
+    <asp:TextBox ID="TextBox_Date2" runat="server" TextMode="Date" />
+
+    <%-- OPERATOR definit la condition pour que la comparaison entraine la validité (pas d'erreur affichée 'la valeur est différente de...)--%>
+    <br />
+    <asp:Label  runat="server" Text=" egalite :  " />
+    <asp:CompareValidator ID="CpmvDates" runat="server"
+        Operator="Equal"
+        Type="Date"
+        ControlToCompare="TextBox_Date2"
+        ControlToValidate="TextBox_Date1" Display="Dynamic"
+        ErrorMessage="date 1 doit etre égale à date 2"
+        EnableClientScript="true"
+        />
+
+    <br />
+    <%-- OPERATOR GreaterThan ControlToValidate doit être supérieur à ControlToCompare )--%>
+    <asp:Label  runat="server" Text=" superieur :  " />
+    <asp:CompareValidator ID="CompareValidator1" runat="server"
+        Operator="GreaterThan"
+        Type="Date"
+        ControlToCompare="TextBox_Date2"
+        ControlToValidate="TextBox_Date1" Display="Dynamic"
+        ErrorMessage="date 1 doit être supérieur à  date 2"
+        EnableClientScript="true"
+        />
+
+    <br />
+    <%-- OPERATOR GreaterThan ControlToValidate doit être inférieur à ControlToCompare )--%>
+    <asp:Label  runat="server" Text=" inferieur :  " />
+    <asp:CompareValidator ID="CompareValidator2" runat="server"
+        Operator="LessThan"
+        Type="Date"
+        ControlToCompare="TextBox_Date2"
+        ControlToValidate="TextBox_Date1" Display="Dynamic"
+        ErrorMessage="date 1 doit être inférieur à  date 2"
+        EnableClientScript="true"
+       />
+
+    <br />
+    <%-- OPERATOR GreaterThan ControlToValidate doit être différente à ControlToCompare )--%>
+    <asp:Label  runat="server" Text=" différent :  " />
+    <asp:CompareValidator ID="CompareValidator3" runat="server"
+        Operator="NotEqual"
+        Type="Date"
+        ControlToCompare="TextBox_Date2"
+        ControlToValidate="TextBox_Date1" Display="Dynamic"
+        ErrorMessage="date 1 doit etre différente à date 2"
+        EnableClientScript="true"
+       />
+
+    <br />
+    <%-- OPERATOR GreaterThan ControlToValidate doit être supérieure ou égale à ControlToCompare )--%>
+    <asp:Label  runat="server" Text=" sup ou = " />
+    <asp:CompareValidator ID="CompareValidator4" runat="server"
+        Operator="GreaterThanEqual"
+        Type="Date"
+        ControlToCompare="TextBox_Date2"
+        ControlToValidate="TextBox_Date1" Display="Dynamic"
+        ErrorMessage="date 1 doit etre supérieure ou égale à date 2"
+        EnableClientScript="true"
+        />
+
+    <br />
+    <%-- OPERATOR GreaterThan ControlToValidate doit être supérieure ou égale à ControlToCompare )--%>
+    <asp:Label  runat="server" Text=" inf ou = " />
+    <asp:CompareValidator ID="CompareValidator5" runat="server" Text=" doit etre inférieure ou égale "
+        Operator="LessThanEqual"
+        Display="Static"
+        Type="Date"
+        ControlToCompare="TextBox_Date2"
+        ControlToValidate="TextBox_Date1" 
+        ErrorMessage="date 1 doit etre inférieure ou égale à date 2"
+        EnableClientScript="true"
+        />
+        
+    <br />
 
 
 </asp:Content>
@@ -70,7 +171,7 @@
 
             var hf1 = document.getElementById('<%=hf1.ClientID %>');
             var v = hf1.getAttribute("value");
-            
+
             //alert(v.toString());
 
             const message = new SpeechSynthesisUtterance();

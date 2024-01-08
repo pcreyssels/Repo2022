@@ -14,5 +14,15 @@ namespace WebApplication3
             hf1.Value = "A B C";
             lab1.Text = "initial";
         }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void bval_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
