@@ -4,6 +4,23 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+    <br />
+    <div class="CGVText CGVBordered" style="width: fit-content">
+        <img runat="server" style="height: 4em; width: 4em" src="~/Images/Attention 450x450px.png"
+            alt="caution" />
+        Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande</b>.
+    </div>
+    <br />
+
+    <br />
+    <div class="CGVText CGVBordered" style="width: fit-content">
+        <img  style="height: 4em; width: 4em" src="./Images/Attention 450x450px.png"
+            alt="caution" />
+        Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande</b>.
+    </div>
+    <br />
+
     <asp:LinkButton ID="LinkButton1" runat="server" Text="CLICK">
         <img runat="server" id="IL" src="~Images/gb.png" width="50" height="50" />
     </asp:LinkButton>
@@ -82,77 +99,71 @@
 
     <%-- OPERATOR definit la condition pour que la comparaison entraine la validité (pas d'erreur affichée 'la valeur est différente de...)--%>
     <br />
-    <asp:Label  runat="server" Text=" egalite :  " />
+    <asp:Label runat="server" Text=" egalite :  " />
     <asp:CompareValidator ID="CpmvDates" runat="server"
         Operator="Equal"
         Type="Date"
         ControlToCompare="TextBox_Date2"
         ControlToValidate="TextBox_Date1" Display="Dynamic"
         ErrorMessage="date 1 doit etre égale à date 2"
-        EnableClientScript="true"
-        />
+        EnableClientScript="true" />
 
     <br />
     <%-- OPERATOR GreaterThan ControlToValidate doit être supérieur à ControlToCompare )--%>
-    <asp:Label  runat="server" Text=" superieur :  " />
+    <asp:Label runat="server" Text=" superieur :  " />
     <asp:CompareValidator ID="CompareValidator1" runat="server"
         Operator="GreaterThan"
         Type="Date"
         ControlToCompare="TextBox_Date2"
         ControlToValidate="TextBox_Date1" Display="Dynamic"
         ErrorMessage="date 1 doit être supérieur à  date 2"
-        EnableClientScript="true"
-        />
+        EnableClientScript="true" />
 
     <br />
     <%-- OPERATOR GreaterThan ControlToValidate doit être inférieur à ControlToCompare )--%>
-    <asp:Label  runat="server" Text=" inferieur :  " />
+    <asp:Label runat="server" Text=" inferieur :  " />
     <asp:CompareValidator ID="CompareValidator2" runat="server"
         Operator="LessThan"
         Type="Date"
         ControlToCompare="TextBox_Date2"
         ControlToValidate="TextBox_Date1" Display="Dynamic"
         ErrorMessage="date 1 doit être inférieur à  date 2"
-        EnableClientScript="true"
-       />
+        EnableClientScript="true" />
 
     <br />
     <%-- OPERATOR GreaterThan ControlToValidate doit être différente à ControlToCompare )--%>
-    <asp:Label  runat="server" Text=" différent :  " />
+    <asp:Label runat="server" Text=" différent :  " />
     <asp:CompareValidator ID="CompareValidator3" runat="server"
         Operator="NotEqual"
         Type="Date"
         ControlToCompare="TextBox_Date2"
         ControlToValidate="TextBox_Date1" Display="Dynamic"
         ErrorMessage="date 1 doit etre différente à date 2"
-        EnableClientScript="true"
-       />
+        EnableClientScript="true" />
 
     <br />
     <%-- OPERATOR GreaterThan ControlToValidate doit être supérieure ou égale à ControlToCompare )--%>
-    <asp:Label  runat="server" Text=" sup ou = " />
+    <asp:Label runat="server" Text=" sup ou = " />
     <asp:CompareValidator ID="CompareValidator4" runat="server"
         Operator="GreaterThanEqual"
         Type="Date"
         ControlToCompare="TextBox_Date2"
         ControlToValidate="TextBox_Date1" Display="Dynamic"
         ErrorMessage="date 1 doit etre supérieure ou égale à date 2"
-        EnableClientScript="true"
-        />
+        EnableClientScript="true" />
 
     <br />
     <%-- OPERATOR GreaterThan ControlToValidate doit être supérieure ou égale à ControlToCompare )--%>
-    <asp:Label  runat="server" Text=" inf ou = " />
+    <asp:Label runat="server" Text=" inf ou = " />
     <asp:CompareValidator ID="CompareValidator5" runat="server" Text=" doit etre inférieure ou égale "
         Operator="LessThanEqual"
         Display="Static"
         Type="Date"
         ControlToCompare="TextBox_Date2"
-        ControlToValidate="TextBox_Date1" 
+        ControlToValidate="TextBox_Date1"
         ErrorMessage="date 1 doit etre inférieure ou égale à date 2"
-        EnableClientScript="true"
-        />
-        
+        EnableClientScript="true" />
+
     <br />
 
 
