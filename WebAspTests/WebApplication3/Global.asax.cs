@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Timers;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
 namespace WebApplication3
 {
+    
     public class Global : System.Web.HttpApplication
     {
 
+        System.Timers.Timer timer ;
+
         protected void Application_Start(object sender, EventArgs e)
         {
-
+            timer = new System.Timers.Timer();
+            timer.Interval = 10000; // 10 seconds
+            timer.Elapsed += new ElapsedEventHandler(OnTimer);
+            timer.Start();
         }
 
         protected void Session_Start(object sender, EventArgs e)
@@ -54,6 +61,15 @@ namespace WebApplication3
         protected void Application_End(object sender, EventArgs e)
         {
 
+        }
+
+        public static void OnTimer(object sender, ElapsedEventArgs args)
+        {
+            Console.WriteLine($"événement timer ");
+
+            Debug.WriteLine($" ********** -- TIMER event at {DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")} --  **********");
+
+        
         }
     }
 }

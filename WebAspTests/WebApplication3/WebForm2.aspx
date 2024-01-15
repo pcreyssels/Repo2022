@@ -5,6 +5,30 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
+    <asp:TextBox runat="server" ID="tb1"  > </asp:TextBox>
+
+    <br />
+    <hr style="border: 1px solid green;" />
+    <asp:DropDownList ID="DropDownList1"
+        CssClass="form-control formulaire-control"
+        ValidationGroup="g1"
+        AutoPostBack="False"
+        runat="server">
+        <asp:ListItem Value="0" meta:resourcekey="AttestationList_Item_ACMA" Text="-- Select --" />
+        <asp:ListItem Value="AC" ID="AttestationList_Item_AC" meta:resourcekey="AttestationList_Item_AC" Text="_Attestation de comparabilité (diplôme validé)" />
+        <asp:ListItem Value="AR" meta:resourcekey="AttestationList_Item_ARPE" Text="_Attest reco période étu" />
+        <asp:ListItem Value="CM" meta:resourcekey="AttestationList_Item_ACMA" Text="_Attest CMA" />
+    </asp:DropDownList>
+
+    <asp:CompareValidator ControlToValidate="DropDownList1" ID="CompareValidator6"
+        ValidationGroup="g1" CssClass="errormesg" ErrorMessage="Please select a type"
+        runat="server" Display="Dynamic"
+        Operator="NotEqual" ValueToCompare="0" Type="String" />
+
+    <br />
+    <hr style="border: 1px solid green;" />
+    <asp:Button runat="server" ValidationGroup="g1" Text="VALID"/>
+
     <br />
     <div class="CGVText CGVBordered" style="width: fit-content">
         <img runat="server" style="height: 4em; width: 4em" src="~/Images/Attention 450x450px.png"
@@ -15,7 +39,7 @@
 
     <br />
     <div class="CGVText CGVBordered" style="width: fit-content">
-        <img  style="height: 4em; width: 4em" src="./Images/Attention 450x450px.png"
+        <img style="height: 4em; width: 4em" src="./Images/Attention 450x450px.png"
             alt="caution" />
         Merci de noter que vous devrez <b>utiliser obligatoirement le même mode paiement que celui utilisé lors du dépôt de votre demande</b>.
     </div>
@@ -166,6 +190,11 @@
 
     <br />
 
+    <br />
+    <hr style="border: 1px solid green;" />
+
+    <br />
+    <hr style="border: 1px solid green;" />
 
 </asp:Content>
 

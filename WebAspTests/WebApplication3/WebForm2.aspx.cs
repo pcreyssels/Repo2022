@@ -13,6 +13,8 @@ namespace WebApplication3
         {
             hf1.Value = "A B C";
             lab1.Text = "initial";
+            //AttestationList.SelectedIndex = -1;
+            tb1.Attributes.Add("placeholder", "your hint");
         }
 
         protected void Unnamed_Click(object sender, EventArgs e)
