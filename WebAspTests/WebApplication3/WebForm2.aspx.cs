@@ -15,6 +15,7 @@ namespace WebApplication3
             lab1.Text = "initial";
             //AttestationList.SelectedIndex = -1;
             tb1.Attributes.Add("placeholder", "your hint");
+            DropDownList1.Items[2].Enabled = false;
         }
 
         protected void Unnamed_Click(object sender, EventArgs e)
