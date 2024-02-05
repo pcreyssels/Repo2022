@@ -12,6 +12,15 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
+            bool a1 = true;
+
+            object ob = a1;
+
+            string v = ob.ToString();
+
+            bool br = true;
+            bool tp = bool.TryParse(v, out br);
+
             string s0 = "bonjour";
             string s1 = "Bonjour";
 
