@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -42,6 +43,11 @@ namespace WebApplication3
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+
+            int sc = Response.StatusCode;
+            int ssc = Response.SubStatusCode;
+            Response.StatusCode = 404;
 
             if (!IsPostBack)
             {
@@ -293,6 +299,11 @@ namespace WebApplication3
             {
                 hf0.Value = "CX";
             }
+        }
+
+        protected void Page_UnLoad(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Page UnLoad");
         }
     }
 

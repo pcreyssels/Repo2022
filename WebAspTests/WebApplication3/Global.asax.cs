@@ -39,11 +39,42 @@ namespace WebApplication3
 
         }
 
+        protected void Application_AcquireRequestState()
+        {
+            Debug.WriteLine("Request State");
+        }
+
+        protected void Application_PreRequestHandlerExecute()
+        {
+            Debug.WriteLine("Pre Handler Execute");
+        }
+
+        protected void Application_PostRequestHandlerExecute()
+        {
+            Debug.WriteLine("Post Handler Execute");
+        }
+
         protected void Application_EndRequest(object sender, EventArgs e)
         {
             string info = $"------- Application_EndRequest -------> path {HttpContext.Current.Request.Path}";
             // exception string sid = this.Session.SessionID;
             int fin = 0;
+        }
+
+
+        protected void Application_PreSendRequestHeaders()
+        {
+            Debug.WriteLine("Post Pre SendRequest Headers");
+        }
+
+        protected void Application_PreSendRequestContent()
+        {
+            Debug.WriteLine("Post Pre SendRequest Content");
+        }
+
+        protected void Application_Unload()
+        {
+            Debug.WriteLine("Unload");
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
