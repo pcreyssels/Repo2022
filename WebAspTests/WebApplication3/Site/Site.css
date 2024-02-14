@@ -103,6 +103,16 @@ textarea {
     /*border-width : thick;*/
 }
 
+
+/*li {
+    width: 100%;
+}*/
+.CGVText li {
+    /* word-wrap: break-word;*/
+    color: red;
+    /*overflow-wrap: break-word;*/
+}
+
 /*.tooltip-main {
     width: 15px;
     height: 15px;

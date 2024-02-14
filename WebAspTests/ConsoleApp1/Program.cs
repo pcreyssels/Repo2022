@@ -12,6 +12,48 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
+            string fg = "678:masktel,058:masktel";
+            string fc = "001015:masktel,001031:masktel";
+            string[] tfc = fc.Split(new Char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+            Dictionary<string, string> filtre_Centre = new Dictionary<string, string>();
+            Dictionary<string, string> filtre_Gestion = new Dictionary<string, string>();
+            // filtre centre ex: "001015:masktel,001031:masktel"
+            foreach (string of in tfc)
+            {
+                string[] dof = of.Split(new Char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+                if (dof.Length == 2)
+                {
+                    if (dof[0].Length ==6)
+                    {
+                        if (Int32.TryParse(dof[0], out int r))
+                        {
+                            filtre_Centre.Add(dof[0], dof[1]);
+                        }
+                    }
+                }
+            }
+
+            // filtre gestion ex: "678:masktel,058:masktel"
+            string[] tfg = fg.Split(new Char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (string of in tfg)
+            {
+                string[] dof = of.Split(new Char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
+                if (dof.Length == 2)
+                {
+                    if (dof[0].Length == 3)
+                    {
+                        if (Int32.TryParse(dof[0], out int r))
+                        {
+                            filtre_Gestion.Add(dof[0], dof[1]);
+                        }
+                    }
+                }
+            }
+
+
+
+
+
             bool a1 = true;
 
             object ob = a1;
@@ -28,7 +70,7 @@ namespace ConsoleApp1
 
             SqlDateTime sqlDateTime = new SqlDateTime();
             sqlDateTime = SqlDateTime.MinValue;
-            DateTime dt=sqlDateTime.Value;
+            DateTime dt = sqlDateTime.Value;
             //DateTime? dt2=SqlDateTime.Null.Value;
 
             string dtf = DateTime.Now.ToString("O");
@@ -49,7 +91,7 @@ namespace ConsoleApp1
 
             string s = "15/02/1978";
             b = rx.IsMatch(s);
-            c= rx2.IsMatch(s);
+            c = rx2.IsMatch(s);
             s = "15/02/1978";
             b = rx.IsMatch(s);
             c = rx2.IsMatch(s);
@@ -74,7 +116,7 @@ namespace ConsoleApp1
             string state_text = "";
             string sep = " _ ";
             DateTime instruction_date = DateTime.MinValue;
-            bool refugie_status=false;
+            bool refugie_status = false;
             string[] paramlist = ri.Split(new string[] { sep }, StringSplitOptions.None);
             for (int i = 0; i < paramlist.Length; i++)
             {
@@ -92,7 +134,7 @@ namespace ConsoleApp1
                     if (bs == "0")
                         refugie_status = false;
                     else if (bs == "1")
-                        refugie_status  |= true;
+                        refugie_status |= true;
 
                 }
                 else if (paramlist[i].StartsWith("INSTRUCTIONDATE:"))
