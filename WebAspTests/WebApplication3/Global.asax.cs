@@ -36,7 +36,8 @@ namespace WebApplication3
         }
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-
+            
+            object i = null;
         }
 
         protected void Application_AcquireRequestState()
