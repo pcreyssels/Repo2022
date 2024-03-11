@@ -42,6 +42,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication5", "WebAppli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationWebFormInit", "WebApplicationWebFormInit\WebApplicationWebFormInit.csproj", "{38E540C5-DCCA-4B30-AA43-8D10B5A9DEE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationEmptyHttpsAucunDossier", "WebApplicationEmptyHttpsAucunDossier\WebApplicationEmptyHttpsAucunDossier.csproj", "{1905D5BA-01AA-4EE3-9B5D-4EBAAB769623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationEmptyDossierWeb", "WebApplicationEmptyDossierWeb\WebApplicationEmptyDossierWeb.csproj", "{D62C1CC0-A8CA-499A-A0ED-20A5FCD5BDE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationWebForm", "WebApplicationWebForm\WebApplicationWebForm.csproj", "{507A1E96-6539-4536-A0D5-F27C3E89DE58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -116,6 +122,18 @@ Global
 		{38E540C5-DCCA-4B30-AA43-8D10B5A9DEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38E540C5-DCCA-4B30-AA43-8D10B5A9DEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38E540C5-DCCA-4B30-AA43-8D10B5A9DEE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1905D5BA-01AA-4EE3-9B5D-4EBAAB769623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1905D5BA-01AA-4EE3-9B5D-4EBAAB769623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1905D5BA-01AA-4EE3-9B5D-4EBAAB769623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1905D5BA-01AA-4EE3-9B5D-4EBAAB769623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D62C1CC0-A8CA-499A-A0ED-20A5FCD5BDE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D62C1CC0-A8CA-499A-A0ED-20A5FCD5BDE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D62C1CC0-A8CA-499A-A0ED-20A5FCD5BDE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D62C1CC0-A8CA-499A-A0ED-20A5FCD5BDE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507A1E96-6539-4536-A0D5-F27C3E89DE58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507A1E96-6539-4536-A0D5-F27C3E89DE58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507A1E96-6539-4536-A0D5-F27C3E89DE58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507A1E96-6539-4536-A0D5-F27C3E89DE58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
