@@ -19,3 +19,49 @@ textarea {
         padding: 0;
     }
 }
+
+/* texte conditions generales*/
+
+.CGV {
+    font-size: 14px;
+}
+
+.CGVText {
+    font-family: Calibri;
+    font-size: 1em;
+}
+
+.CGVBordered, .RedRoundedBorderedText {
+    border: 2px solid;
+    padding: 5px;
+    border-color: red;
+    border-radius: 1.5em;
+}
+
+.CGVTitreN1 {
+    font-size: 2em;
+    font-weight: bolder;
+    color: royalblue;
+}
+
+.CGVTitreN2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: royalblue;
+    background-color :lightgray;
+}
+
+.CGVTitreN3 {
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: royalblue;
+}
+
+span.CGVIcon {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    padding: 0px;
+    margin: 0px;
+}
+

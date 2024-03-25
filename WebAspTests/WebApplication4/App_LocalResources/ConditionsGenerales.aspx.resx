@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ConditionsGenerales.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pageTitle.Title" xml:space="preserve">
+    <value>conditions générales</value>
+  </data>
+  <data name="TexteAck1.Text" xml:space="preserve">
+    <value>&lt;div class="CGVText"&gt;
+J’ai pris connaissance que seuls les diplômes officiellement reconnus par les autorités compétentes du pays de délivrance peuvent déboucher sur une attestation. J’ai donc pris connaissance que &lt;b&gt; l’expertise peut déboucher sur un refus&lt;/b&gt; et ne peut donc faire l’objet d’un remboursement.
+&lt;/div&gt;</value>
+  </data>
+  <data name="TexteAck2.Text" xml:space="preserve">
+    <value>&lt;div class="CGVText"&gt;
+     J’ai pris connaissance que les diplômes relevant d’une profession réglementée ne seront pas systématiquement traité, pour vérifier si mon diplôme relève d’une profession réglementée, je clique &lt;a href="https://www.france-education-international.fr/document/reconnaissance-diplomes-liste-professions-reglementees" target="_blank"&gt;ici&lt;/a&gt;
+ &lt;/div&gt;</value>
+  </data>
+  <data name="TexteAck3.Text" xml:space="preserve">
+    <value>&lt;div class="CGVText"&gt;
+    J’ai pris connaissance que pour les demandes de naturalisation, seuls les diplômes de &lt;b&gt;niveau 3 minimum du &lt;/b&gt; &lt;a href="https://europa.eu/europass/fr/outils-europass/le-cadre-europeen-des-certifications" target="_blank"&gt;cadre européen et français des certifications&lt;/a&gt; dispensés uniquement en langue française et délivrés par un pays figurant sur &lt;a href="https://www.legifrance.gouv.fr/loda/id/JORFTEXT000041741098" target="_blank"&gt;la liste de l’arrêté du 12 mars 2020&lt;/a&gt;  peuvent bénéficier de la mention « cursus en français ».
+&lt;/div&gt;</value>
+  </data>
+  <data name="TexteAck4.Text" xml:space="preserve">
+    <value>&lt;div class="CGVText"&gt;
+    Je déclare avoir pris connaissance des conditions ci-dessus de délivrance d’une attestation, y compris des informations pour lesquelles un lien est donné et les accepter.
+&lt;/div&gt;</value>
+  </data>
+  <data name="texte_jaccepte.Text" xml:space="preserve">
+    <value>J'accepte</value>
+  </data>
+  <data name="texte_jenacceptepas.Text" xml:space="preserve">
+    <value>Je n'accepte pas</value>
+  </data>
+</root>

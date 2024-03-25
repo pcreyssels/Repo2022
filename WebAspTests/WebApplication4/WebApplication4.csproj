@@ -123,6 +123,8 @@
     <Content Include="bootstrap-3.4.1-dist\js\bootstrap.js" />
     <Content Include="bootstrap-3.4.1-dist\js\bootstrap.min.js" />
     <Content Include="bootstrap-3.4.1-dist\js\npm.js" />
+    <Content Include="ConditionsGenerales.aspx" />
+    <Content Include="ConditionsGenerales.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -149,6 +151,44 @@
     <Content Include="HtmlPage3.html" />
     <Content Include="HtmlPage4.html" />
     <Content Include="HtmlPage5.html" />
+    <Content Include="Images\accueil.svg" />
+    <Content Include="Images\accueil1024x1024px.png" />
+    <Content Include="Images\accueil1664x1664px.png" />
+    <Content Include="Images\accueil512x512px.jpg" />
+    <Content Include="Images\accueil512x512px.png" />
+    <Content Include="Images\Attention 1024x1024px.png" />
+    <Content Include="Images\Attention 450x450px.png" />
+    <Content Include="Images\Attention 512x512px.png" />
+    <Content Include="Images\Attention svg.svg" />
+    <Content Include="Images\Attention.png" />
+    <Content Include="Images\Attention.svg" />
+    <Content Include="Images\clic 1024x1024px.png" />
+    <Content Include="Images\clic 512x512px.png" />
+    <Content Include="Images\clic svg.svg" />
+    <Content Include="Images\Drapeau anglais 1024x1024px.png" />
+    <Content Include="Images\Drapeau anglais 512x512px svg.svg" />
+    <Content Include="Images\Drapeau anglais 512x512px.png" />
+    <Content Include="Images\Drapeau français 1024x1024px.png" />
+    <Content Include="Images\drapeau français 512x512px.png" />
+    <Content Include="Images\Drapeau français svg.svg" />
+    <Content Include="Images\Exclamation 1024x1024 px.png" />
+    <Content Include="Images\Exclamation 500x500 px.png" />
+    <Content Include="Images\Exclamation 512x512px.png" />
+    <Content Include="Images\Exclamation svg.svg" />
+    <Content Include="Images\Exclamation.svg" />
+    <Content Include="Images\FEIBackground.jpg" />
+    <Content Include="Images\fr.png" />
+    <Content Include="Images\fr.svg" />
+    <Content Include="Images\frrond.png" />
+    <Content Include="Images\gb.png" />
+    <Content Include="Images\gb.svg" />
+    <Content Include="Images\gbrond.png" />
+    <Content Include="Images\icone information svg transparent.svg" />
+    <Content Include="Images\icone information transparent.png" />
+    <Content Include="Images\icone information.png" />
+    <Content Include="Images\icone information.svg" />
+    <Content Include="Images\infoiconred.png" />
+    <Content Include="Images\vignette mail.PNG" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -244,6 +284,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ConditionsGenerales.aspx.cs">
+      <DependentUpon>ConditionsGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConditionsGenerales.aspx.designer.cs">
+      <DependentUpon>ConditionsGenerales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -333,6 +380,14 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ConditionsGenerales.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ConditionsGenerales.aspx.fr.resx">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
