@@ -23,7 +23,7 @@ textarea {
 /* texte conditions generales*/
 
 .CGV {
-    font-size: 14px;
+    /*font-size: 14px;*/
 }
 
 .CGVText {
@@ -39,9 +39,10 @@ textarea {
 }
 
 .CGVTitreN1 {
+    font-family : 'Times New Roman';
     font-size: 2em;
     font-weight: bolder;
-    color: royalblue;
+    color: steelblue;
 }
 
 .CGVTitreN2 {

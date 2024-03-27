@@ -128,4 +128,27 @@
 &lt;li&gt; les certifications en langues &lt;/li&gt;
 &lt;/ul&gt;</value>
   </data>
+  <data name="panel_nonrefugie_lig5.Text" xml:space="preserve">
+    <value>Vous vous apprêtez à valider le dépôt de votre dossier, veuillez procéder au paiement. Pour rappel un premier paiement de 20€&lt;br/&gt;&lt;br/&gt;
+
+&lt;ol&gt;
+ &lt;li&gt;Première étape
+  &lt;ul&gt;
+   &lt;li&gt;Paiement de 20 €, le centre ENIC-NARIC France étudiera la recevabilité de votre dossier. Si votre dossier est déclaré recevable, il pourra être expertisé dans le cadre d’une 2e étape
+   &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;
+ &lt;li&gt;Deuxième étape
+  &lt;ul&gt;
+   &lt;li&gt;Paiement complémentaire de 70€, votre dossier sera expertisé en vue de la délivrance d’une attestation de comparabilité de votre diplôme ou d’une attestation de reconnaissance de période d’études.
+   &lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+&lt;/ol&gt;
+Merci de noter qu’aucun remboursement ne sera possible une fois votre dossier déposé.</value>
+    <comment>Je m’engage à payer le tarif de &lt;b&gt;20€&lt;/b&gt; pour que ma demande de reconnaissance de diplôme soit étudiée.
+Si cette demande est acceptée et recevable, je m’engage à payer 70€ pour que mon dossier soit instruit. Vous ne payez rien avant d’avoir reçu la facture correspondant à votre demande qui vous sera transmise par notification (courrier électronique). 
+
+Merci de noter qu’aucun remboursement ne sera possible une fois votre dossier déposé.</comment>
+  </data>
 </root>

@@ -26,6 +26,32 @@
     </div>
 
 
+    <br />
+    <br />
+    <ol>
+        <li>Première étape
+            <ul>
+                <li>Paiement de 20 €, le centre ENIC-NARIC France étudiera la recevabilité de votre dossier. Si votre dossier est déclaré recevable, il pourra être expertisé dans le cadre d’une 2e étape</li>
+            </ul>
+        </li>
+        <li>Deuxième étape
+            <ul>
+                <li>Paiement complémentaire de 70€, votre dossier sera expertisé en vue de la délivrance d’une attestation de comparabilité de votre diplôme ou d’une attestation de reconnaissance de période d’études.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <br />
+    <br />
+
+
+    <div class="row">
+        <div class="col col-sm-6">
+            <span>
+                <asp:Literal runat="server" Text="_je mengage" meta:resourcekey="panel_nonrefugie_lig5" /></span>
+        </div>
+    </div>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScript" runat="server">
 
