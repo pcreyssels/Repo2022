@@ -13,5 +13,15 @@ namespace WebApplication4
         {
 
         }
+
+        protected void Button_prevent_Click(object sender, EventArgs e)
+        {
+            preventflag.Value = "1";
+        }
+
+        protected void Button_notprevent_Click(object sender, EventArgs e)
+        {
+            preventflag.Value = "";
+        }
     }
 }

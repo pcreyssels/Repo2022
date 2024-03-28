@@ -1,9 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebForm5.aspx.cs" Inherits="WebApplication4.WebForm5" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <asp:Button runat="server" Text="Bonjour" />
     <br />
+
+
+    <asp:HiddenField runat="server" ID="preventflag" ClientIDMode="Static" Value="toto" ViewStateMode="Enabled"/>
+
+    <%-- OnClientClick="bclick();return false;" --%>
+    <asp:Button runat="server" ID="Button_prevent" OnClick="Button_prevent_Click" OnClientClick="bclick()" Text="CLICK OK" />
+    <br />
+    <asp:Button runat="server" ID="Button_notprevent" OnClick="Button_notprevent_Click" OnClientClick="bclick2()" Text="CLICK NOK" />
+
 
     <asp:Label runat="server"> Label bonjour </asp:Label>
 
@@ -52,6 +63,42 @@
         </div>
     </div>
 
+    <br />
+    <br />
+
+
+    <div>
+        <asp:CheckBox ID="CheckBox_BenProSub" runat="server" GroupName="CbGroup1" Text="AQS1" />
+    </div>
+    <div>
+        <asp:CheckBox ID="CheckBox1" runat="server" GroupName="CbGroup1" Text="AQS2" />
+    </div>
+    <div>
+        <asp:CheckBox ID="CheckBox2" runat="server" GroupName="CbGroup1" Text="AQS3" />
+    </div>
+    <div>
+        <asp:CheckBox ID="CheckBox3" runat="server" GroupName="CbGroup1" Text="AQS4" />
+    </div>
+
+    <%--<ajaxToolkit:MutuallyExclusiveCheckBoxExtender ID="MutuallyExclusiveCheckBoxExtender1" runat="server" />--%>
+
+    <ajaxToolkit:MutuallyExclusiveCheckBoxExtender ID="mecbe1" runat="server"
+        TargetControlID="CheckBox1" Key="YesNo" />
+    <ajaxToolkit:MutuallyExclusiveCheckBoxExtender ID="mecbe2" runat="server"
+        TargetControlID="CheckBox2" Key="YesNo" />
+    <br />
+
+
+    <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+        <asp:ListItem>Item 1</asp:ListItem>
+        <asp:ListItem>Item 2</asp:ListItem>
+        <asp:ListItem>Item 3</asp:ListItem>
+        <asp:ListItem>Item 4</asp:ListItem>
+        <asp:ListItem>Item 5</asp:ListItem>
+        <asp:ListItem>Item 6</asp:ListItem>
+    </asp:RadioButtonList>
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScript" runat="server">
 
@@ -66,15 +113,46 @@
             event.returnValue = true;
         };
 
-        const nameInput = document.querySelector("#name");
+        // locke la navigation
+        $(function () {
+            window.addEventListener("beforeunload", beforeUnloadHandler);
+            const v = document.getElementById('preventflag').getAttribute('value');
+            console.log('preventflag = ' + v);
+        })
 
-        nameInput.addEventListener("input", (event) => {
-            if (event.target.value !== "") {
-                window.addEventListener("beforeunload", beforeUnloadHandler);
-            } else {
+        function bclick() {
+            console.log('bclick ');
+            document.getElementById('preventflag').setAttribute('value', 'ok');
+            var v1 = document.getElementById('preventflag').getAttribute('value');
+            console.log('preventflag = ' + v1);
+            if (v1 == 'ok') {
+                console.log('removingEventListener');
                 window.removeEventListener("beforeunload", beforeUnloadHandler);
             }
-        });
+        }
+
+        function bclick2() {
+            console.log('bclick2 ');
+            document.getElementById('preventflag').setAttribute('value', 'nok');
+            var v2 = document.getElementById('preventflag').getAttribute('value');
+            console.log('preventflag = ' + v2);
+            if (v2 == 'ok') {
+                console.log('removingEventListener');
+                window.removeEventListener("beforeunload", beforeUnloadHandler);
+            }
+        }
+
+        //var cb1s = document.getElementById('preventflag').innerText;
+
+        //const nameInput = document.querySelector("#name");
+
+        //nameInput.addEventListener("input", (event) => {
+        //    if (event.target.value !== "") {
+        //        window.addEventListener("beforeunload", beforeUnloadHandler);
+        //    } else {
+        //        window.removeEventListener("beforeunload", beforeUnloadHandler);
+        //    }
+        //});
 
 
     </script>
