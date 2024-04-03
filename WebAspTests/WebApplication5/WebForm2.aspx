@@ -10,6 +10,21 @@
 
     <asp:CheckBox runat="server" Text="CB4" ID="CheckBox4" ClientIDMode="Static" onclick="cbclick(4)" />
 
+     <hr style="height: 2px; border-width: 0; background-color: greenyellow" />
+
+    <div>TEXTBOX</div>
+   <asp:TextBox ID="TB1" runat="server" oninput="this.value = this.value.toUpperCase()"></asp:TextBox>
+
+     <hr style="height: 2px; border-width: 0; background-color: red" />
+
+    <input name="yourInput" oninput="this.value = this.value.toUpperCase()"/>
+
+    <asp:CompareValidator runat="server" EnableClientScript="true" ControlToValidate="TB1" 
+        Type="String" ErrorMessage="no match"
+        ValueToCompare ="FENETRE">
+
+    </asp:CompareValidator>
+
     <script>
         $(function () {
             $('[data-toggle="popover"]').popover();
