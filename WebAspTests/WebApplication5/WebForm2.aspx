@@ -71,24 +71,24 @@
             }
 
 
-            if (cb2s.checked && x == 2) {
-                console.log('cb2 checked');
-                document.getElementById('CheckBox1').checked = false;
-                document.getElementById('CheckBox3').checked = false;
-                document.getElementById('CheckBox4').checked = false;
-            }
-            if (cb3s.checked && x == 3) {
-                console.log('cb3 checked');
-                document.getElementById('CheckBox1').checked = false;
-                document.getElementById('CheckBox2').checked = false;
-                document.getElementById('CheckBox4').checked = false;
-            }
-            if (cb4s.checked && x == 4) {
-                console.log('cb4 checked');
-                document.getElementById('CheckBox1').checked = false;
-                document.getElementById('CheckBox2').checked = false;
-                document.getElementById('CheckBox3').checked = false;
-            }
+            //if (cb2s.checked && x == 2) {
+            //    console.log('cb2 checked');
+            //    document.getElementById('CheckBox1').checked = false;
+            //    document.getElementById('CheckBox3').checked = false;
+            //    document.getElementById('CheckBox4').checked = false;
+            //}
+            //if (cb3s.checked && x == 3) {
+            //    console.log('cb3 checked');
+            //    document.getElementById('CheckBox1').checked = false;
+            //    document.getElementById('CheckBox2').checked = false;
+            //    document.getElementById('CheckBox4').checked = false;
+            //}
+            //if (cb4s.checked && x == 4) {
+            //    console.log('cb4 checked');
+            //    document.getElementById('CheckBox1').checked = false;
+            //    document.getElementById('CheckBox2').checked = false;
+            //    document.getElementById('CheckBox3').checked = false;
+            //}
         }
     </script>
 
