@@ -10,20 +10,59 @@
 
     <asp:CheckBox runat="server" Text="CB4" ID="CheckBox4" ClientIDMode="Static" onclick="cbclick(4)" />
 
-     <hr style="height: 2px; border-width: 0; background-color: greenyellow" />
+    <hr style="height: 2px; border-width: 0; background-color: greenyellow" />
 
     <div>TEXTBOX</div>
-   <asp:TextBox ID="TB1" runat="server" oninput="this.value = this.value.toUpperCase()"></asp:TextBox>
+    <asp:TextBox ID="TB1" runat="server" oninput="this.value = this.value.toUpperCase()"></asp:TextBox>
 
-     <hr style="height: 2px; border-width: 0; background-color: red" />
+    <hr style="height: 2px; border-width: 0; background-color: red" />
 
-    <input name="yourInput" oninput="this.value = this.value.toUpperCase()"/>
+    <input name="yourInput" oninput="this.value = this.value.toUpperCase()" />
 
-    <asp:CompareValidator runat="server" EnableClientScript="true" ControlToValidate="TB1" 
+    <asp:CompareValidator runat="server" EnableClientScript="true" ControlToValidate="TB1"
         Type="String" ErrorMessage="no match"
-        ValueToCompare ="FENETRE">
+        ValueToCompare="FENETRE">
 
     </asp:CompareValidator>
+
+    <hr style="height: 2px; border-width: 0; background-color: greenyellow" />
+
+    <asp:CheckBox runat="server" Text="CB5" ID="CheckBox5" ValidationGroup="VG1" ClientIDMode="Static" />
+    <br />
+    <asp:CheckBox runat="server" Text="CB6" ID="CheckBox6" ValidationGroup="VG1" ClientIDMode="Static" />
+    <br />
+    <asp:CheckBox runat="server" Text="CB7" ID="CheckBox7" ValidationGroup="VG1" ClientIDMode="Static" />
+    <br />
+    <asp:CheckBox runat="server" Text="CB8" ID="CheckBox8" ValidationGroup="VG1" ClientIDMode="Static" />
+    <br />
+    <asp:TextBox runat="server" Text="TB2" ID="TB2" ValidationGroup="VG1" ClientIDMode="Static" />
+    <br />
+
+    cusval
+    <br />
+    <%--<asp:CustomValidator runat="server" ID="CustomValidator2"
+    OnServerValidate="CustomValidator1_ServerValidate"
+    ControlToValidate ="TB2"
+    ClientValidationFunction="javascript:CheckBoxValidation(param1,oaram2);return true;"
+    ValidationGroup="VG1"
+    Display="Static"
+    EnableClientScript="true"
+    ErrorMessage=" erreurs sur les checkbox " />--%>
+
+    <asp:CustomValidator runat="server" ID="CustomValidator1"
+        OnServerValidate="CustomValidator1_ServerValidate"
+        ClientValidationFunction="CheckBoxsValidation"
+        ValidationGroup="VG1"
+        Display="Dynamic"
+        EnableClientScript="true"
+        ErrorMessage=" au moins un choix doit être fait " />
+    cusval
+    <br />
+
+    <hr style="height: 2px; border-width: 0; background-color: lightseagreen" />
+
+    <asp:Button runat="server" ID="B2" OnClick="B2_Click" ValidationGroup="VG1" CausesValidation="true" Text="VALID" />
+
 
     <script>
         $(function () {
@@ -33,10 +72,24 @@
             document.getElementById('CheckBox1').checked = true;
         })
 
+        function CheckBoxsValidation(sender, args) {
+            console.log(' -> CheckBoxValidation called !!');
+            var myCheckBox5 = document.getElementById("CheckBox5");
+            var myCheckBox6 = document.getElementById("CheckBox6");
+            var myCheckBox7 = document.getElementById("CheckBox7");
+            var myCheckBox8 = document.getElementById("CheckBox8");
+
+            if (myCheckBox5.checked || myCheckBox6.checked || myCheckBox7.checked || myCheckBox8.checked)
+                args.IsValid = true;
+            else
+                args.IsValid = false;
+
+        }
+
         function cbclick(x) {
-            console.log('cbclick'+x);
+            console.log('cbclick' + x);
             var cb1s = document.getElementById('CheckBox1');
-            
+
             var cb2s = document.getElementById('CheckBox2');
             var cb3s = document.getElementById('CheckBox3');
             var cb4s = document.getElementById('CheckBox4');
