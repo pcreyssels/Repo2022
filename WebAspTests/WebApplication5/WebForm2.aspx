@@ -63,6 +63,40 @@
 
     <asp:Button runat="server" ID="B2" OnClick="B2_Click" ValidationGroup="VG1" CausesValidation="true" Text="VALID" />
 
+    <hr style="height: 2px; border-width: 0; background-color: red" />
+    <br />
+    <div>WIA ARIA section</div>
+
+    <asp:Label runat="server" AssociatedControlID="TBaria" ID="LBaria" Text="entrer votre nom"></asp:Label>
+    *
+    <asp:TextBox runat="server" ID="TBaria"></asp:TextBox>
+
+    <hr style="height: 2px; border-width: 0; background-color: blue" />
+    <br />
+    <label for="name">Enter your name:</label>
+    <input type="text" name="nom" id="name">
+
+    <hr style="height: 2px; border-width: 0; background-color: green" />
+    <br />
+    <label>input sans label for</label>
+    <input type="text" name="nom1" id="name1" aria-label="input sans label associé">
+
+    <hr style="height: 2px; border-width: 0; background-color: blue" />
+    <br />
+    <div>données alt img langue </div>
+    <div class="col-sm-1 smallrightleftpaddingcell" style="display: flex; justify-content: right;">
+        <a href="Descriptions/IconDescription.html">
+            <img runat="server" meta:resourcekey="img1" src="Images/click-4322-hflip.png"
+                srcset="Images/click-4322-hflip.svg"
+                alt="_click arrow" />
+        </a>
+    </div>
+    <br />
+    <div class="col-sm-1 smallrightleftpaddingcell" style="display: flex; justify-content: right;">
+        <img src="Images/click-4322-hflip.png"
+            srcset="Images/click-4322-hflip.svg"
+            alt="_click arrow" />
+    </div>
 
     <script>
         $(function () {
@@ -74,6 +108,7 @@
 
         function CheckBoxsValidation(sender, args) {
             console.log(' -> CheckBoxValidation called !!');
+            console.log(' -> sender is ' + sender.toString());
             var myCheckBox5 = document.getElementById("CheckBox5");
             var myCheckBox6 = document.getElementById("CheckBox6");
             var myCheckBox7 = document.getElementById("CheckBox7");
