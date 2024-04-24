@@ -69,7 +69,15 @@ namespace WpfAppDataGrid
             dr2 = table2.NewRow();
             dr2.ItemArray = new object[] { "Rome", "Italie", 3000 };
             table2.Rows.Add(dr2);
-
+            dr2 = table2.NewRow();
+            dr2.ItemArray = new object[] { "Berlin", "Allemagne", 5000 };
+            table2.Rows.Add(dr2);
+            dr2 = table2.NewRow();
+            dr2.ItemArray = new object[] { "Londres", "Angleterre", 2000 };
+            table2.Rows.Add(dr2);
+            dr2 = table2.NewRow();
+            dr2.ItemArray = new object[] { "Budapest", "Hongrie", 7000 };
+            table2.Rows.Add(dr2);
 
             DataGridCell dgc = new DataGridCell();
             
