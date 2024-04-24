@@ -9,7 +9,112 @@
     <Window.DataContext>
         <local:MainWindowVM/>
     </Window.DataContext>
-    <Grid>
+    <Window.Resources>
+        <!--<SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="Red" />-->
+        <SolidColorBrush x:Key="ReadOnlyTextBrush" Color="#555555" />
+        <Color x:Key="ButtonColor1">Blue</Color>
+        <Color x:Key="ButtonColor2">#AABBCC</Color>
+        <Color x:Key="ButtonColor3" A="0" R="124" G="111" B="44"/>
+
+        <!-- *********** DEBUT BLOC CODE MICROSOFT https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/datagrid-styles-and-templates?view=netframeworkdesktop-4.8 -->
+
+        <!--Control colors.-->
+        <Color x:Key="WindowColor">#FFE8EDF9</Color>
+        <Color x:Key="ContentAreaColorLight">#FFC5CBF9</Color>
+        <Color x:Key="ContentAreaColorDark">#FF7381F9</Color>
+
+        <Color x:Key="DisabledControlLightColor">#FFE8EDF9</Color>
+        <Color x:Key="DisabledControlDarkColor">#FFC5CBF9</Color>
+        <Color x:Key="DisabledForegroundColor">#FF888888</Color>
+
+        <Color x:Key="SelectedBackgroundColor">#FFC5CBF9</Color>
+        <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
+
+        <Color x:Key="ControlLightColor">White</Color>
+        <Color x:Key="ControlMediumColor">#FF7381F9</Color>
+        <Color x:Key="ControlDarkColor">#FF211AA9</Color>
+
+        <Color x:Key="ControlMouseOverColor">#FF3843C4</Color>
+        <Color x:Key="ControlPressedColor">#FF211AA9</Color>
+
+
+        <Color x:Key="GlyphColor">#FF444444</Color>
+        <Color x:Key="GlyphMouseOver">sc#1, 0.004391443, 0.002428215, 0.242281124</Color>
+
+        <!--Border colors-->
+        <Color x:Key="BorderLightColor">#FFCCCCCC</Color>
+        <Color x:Key="BorderMediumColor">#FF888888</Color>
+        <Color x:Key="BorderDarkColor">#FF444444</Color>
+
+        <Color x:Key="PressedBorderLightColor">#FF888888</Color>
+        <Color x:Key="PressedBorderDarkColor">#FF444444</Color>
+
+        <Color x:Key="DisabledBorderLightColor">#FFAAAAAA</Color>
+        <Color x:Key="DisabledBorderDarkColor">#FF888888</Color>
+
+        <Color x:Key="DefaultBorderBrushDarkColor">Black</Color>
+
+        <!--Control-specific resources.-->
+        <Color x:Key="HeaderTopColor">#FFC5CBF9</Color>
+        <Color x:Key="DatagridCurrentCellBorderColor">Black</Color>
+        <Color x:Key="SliderTrackDarkColor">#FFC5CBF9</Color>
+
+        <Color x:Key="NavButtonFrameColor">#FF3843C4</Color>
+
+        <LinearGradientBrush x:Key="MenuPopupBrush"
+                     EndPoint="0.5,1"
+                     StartPoint="0.5,0">
+            <GradientStop Color="{DynamicResource ControlLightColor}"
+                Offset="0" />
+            <GradientStop Color="{DynamicResource ControlMediumColor}"
+                Offset="0.5" />
+            <GradientStop Color="{DynamicResource ControlLightColor}"
+                Offset="1" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="ProgressBarIndicatorAnimatedFill"
+                     StartPoint="0,0"
+                     EndPoint="1,0">
+            <LinearGradientBrush.GradientStops>
+                <GradientStopCollection>
+                    <GradientStop Color="#000000FF"
+                    Offset="0" />
+                    <GradientStop Color="#600000FF"
+                    Offset="0.4" />
+                    <GradientStop Color="#600000FF"
+                    Offset="0.6" />
+                    <GradientStop Color="#000000FF"
+                    Offset="1" />
+                </GradientStopCollection>
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+
+        <!-- *********** FIN BLOC CODE MICROSOFT *********** -->
+
+
+        <Color x:Key="DatagridCurrentCellBackgroundColor">LightCyan</Color>
+        <!--<Style TargetType="{x:Type DataGridCell}">
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="Red"/>
+                    <Setter Property="Foreground" Value="Yellow"/>
+                    <Setter Property="BorderBrush" Value="Blue"/>
+
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SolidColorBrush.Col}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static Brushes.Crimson}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static Brushes.Yellow}}"/>
+
+                </Trigger>
+                <Trigger Property="IsSelected" Value="False">
+                    <Setter Property="Background" Value="gray"/>
+                    <Setter Property="Foreground" Value="Green"/>
+                    <Setter Property="BorderBrush" Value="Blue"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>-->
+    </Window.Resources>
+
+    <Grid x:Name="grid1">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -24,8 +129,205 @@
         </Grid.RowDefinitions>
         <DataGrid x:Name="datagrid" Grid.Row="0" Grid.Column="0"
                   ItemsSource="{Binding Table}" AutoGenerateColumns="True"
-                  >
-            
+                  ></DataGrid>
+
+
+        <DataGrid x:Name="datagrid2" Grid.Row="0" Grid.Column="2"
+                  ItemsSource="{Binding Table2}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="City" Binding="{Binding Ville}" FontFamily="Georgia" FontWeight="Bold"  />
+                <DataGridTextColumn Header="Country" Binding="{Binding Pays}" FontFamily="Arial" FontWeight="Bold" />
+            </DataGrid.Columns>
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightBlue"/>
+                        </Trigger>
+                        <!--<EventSetter Event="MouseRightButtonDown"
+                         Handler="Row_MouseRightButtonDown" />-->
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <!--<DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Setter Property="Foreground" Value="Yellow"/>
+                            <Setter Property="BorderBrush" Value="Blue"/>
+                        </Trigger>
+                        -->
+            <!--<Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightBlue"/>
+                        </Trigger>-->
+            <!--
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter Property="Background" Value="LightGray"/>
+                            -->
+            <!--<Setter Property="Foreground" Value="Yellow"/>
+                            <Setter Property="BorderBrush" Value="Blue"/>-->
+            <!--
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>-->
+            <!--<DataGridTextColumn>
+                <DataGridTextColumn.EditingElementStyle>
+                    <Style TargetType="TextBox">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="Background" Value="Yellow" />
+                    </Style>
+                </DataGridTextColumn.EditingElementStyle>
+            </DataGridTextColumn>-->
+
+            <!--<DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                <Border x:Name="CellBorder"
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        BorderThickness="{TemplateBinding BorderThickness}" 
+                                        Background="{TemplateBinding Background}"
+                                        SnapsToDevicePixels="True">
+                                    <ContentPresenter x:Name="Presenter"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsEditing" Value="True">
+                                        <Setter TargetName="CellBorder" Property="BorderBrush" Value="Red" />
+                                        --><!--<Setter TargetName="CellBorder" Property="Background" Value="green" />--><!--
+                                        <Setter TargetName="CellBorder" Property="BorderThickness" Value="3" />
+                                        <Setter Property="FontFamily" Value="Georgia"/>
+                                        --><!--<Setter Property="Background" Value="Maroon"/>-->
+                                        <!--<Setter TargetName="Cell" Property="FontStyle" Value="Italic" />--><!--
+                                        <Setter TargetName="Presenter" Property="ToolTip" Value="Green" />
+                                        <Setter  Property="Background"  Value="YellowGreen" />
+                                        <Setter TargetName="Presenter" Property="TextBlock.Background" Value="LightGoldenrodYellow" />
+                                        <Setter TargetName="Presenter" Property="TextBlock.FontSize" Value="20" />
+                                        <Setter TargetName="Presenter" Property="HorizontalAlignment" Value="Right"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                            <Setter Property="Background" Value="LightPink"/>
+                        </Trigger>
+                        <Trigger Property="IsEditing" Value="True">
+                            <Setter Property="Background" Value="Yellow"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>-->
+            <!--<DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="Orange"/>
+                            <Setter Property="Foreground" Value="Yellow"/>
+                            <Setter Property="BorderBrush" Value="Blue"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="False">
+                            <Setter Property="Background" Value="LightBlue"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+                <Style TargetType="{x:Type DataGrid}">
+                    <Style.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" Value="Orange"/>
+                            <Setter Property="Foreground" Value="Yellow"/>
+                            <Setter Property="BorderBrush" Value="Blue"/>
+
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="False">
+                            <Setter Property="Background" Value="LightBlue"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.Resources>-->
         </DataGrid>
+
+
+        <DataGrid x:Name="datagrid3" Grid.Row="2" Grid.Column="2"
+          ItemsSource="{Binding Table2}" AutoGenerateColumns="False">
+            <DataGrid.Resources>
+                <!--DEBUT BLOC CODE MICROSOFT https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/datagrid-styles-and-templates?view=netframeworkdesktop-4.8 -->
+                <!--Style and template for the DataGridCell.-->
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                <Border x:Name="border"
+                                        BorderBrush="Yellow"
+                                        BorderThickness="1"
+                                        Background="Transparent"
+                                        SnapsToDevicePixels="True">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="FocusStates">
+                                            <VisualState x:Name="Unfocused" />
+                                            <VisualState x:Name="Focused" />
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="CurrentStates">
+                                            <VisualState x:Name="Regular" />
+                                            <VisualState x:Name="Current">
+                                                <Storyboard>
+                                                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0"
+                                                        Value="{StaticResource DatagridCurrentCellBorderColor}" />
+                                                    </ColorAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="InteractionStates">
+                                            <VisualState x:Name="Display" >
+                                                <!--<Storyboard>
+                                                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                   Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0"
+                                                             Value="Yellow" />
+                                                    </ColorAnimationUsingKeyFrames>
+                                                </Storyboard>-->
+                                            </VisualState>
+                                            <VisualState x:Name="Editing">
+                                                <Storyboard>
+                                                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                                                  Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0"
+                                                        Value="{StaticResource DatagridCurrentCellBackgroundColor}" />
+                                                    </ColorAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.Resources>
+            <!--FIN BLOC CODE MICROSOFT -->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="City" Binding="{Binding Ville}" FontFamily="Georgia" FontWeight="Bold"  />
+                <DataGridTextColumn Header="Country" Binding="{Binding Pays}" FontFamily="Arial" FontWeight="Bold" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--<DataGrid x:Name="datagrid1" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="First Name" />
+                <DataGridTextColumn Header="Last Name"  />
+                <DataGridHyperlinkColumn Header="Email" />
+                <DataGridCheckBoxColumn Header="Member?"  />
+                <DataGridComboBoxColumn Header="Order Status"   />
+            </DataGrid.Columns>
+        </DataGrid>-->
+        <Button x:Name="Bouton1" Content="Button" HorizontalAlignment="Center" Margin="0,54,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
     </Grid>
 </Window>

@@ -24,6 +24,7 @@ namespace WpfAppDataGrid
         {
             InitializeComponent();
             datagrid.AutoGeneratingColumn += ((MainWindowVM)this.DataContext).datagrid_AutoGeneratingColumn2;
+            
         }
 
         private void Datagrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)

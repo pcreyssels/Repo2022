@@ -24,7 +24,21 @@ namespace WpfAppDataGrid
                 OnPropertyChanged("Table");
             }
         }
-        
+
+        private DataTable table2;
+        public DataTable Table2
+        {
+            get
+            {
+                return table2;
+            }
+            set
+            {
+                table2 = value;
+                OnPropertyChanged("Table2");
+            }
+        }
+
 
         //public MainWindowVM();
         public MainWindowVM() 
@@ -42,6 +56,23 @@ namespace WpfAppDataGrid
             dr.ItemArray = new object[] { "leLuron", "Thierry", 50 };
             table.Rows.Add(dr);
 
+
+            table2 = new DataTable();
+            table2.Columns.Add("Ville", typeof(string));
+            table2.Columns.Add("Pays", typeof(string));
+            table2.Columns.Add("Hab", typeof(int));
+
+
+            DataRow dr2 = table2.NewRow();
+            dr2.ItemArray = new object[] { "Paris", "France", 4500 };
+            table2.Rows.Add(dr2);
+            dr2 = table2.NewRow();
+            dr2.ItemArray = new object[] { "Rome", "Italie", 3000 };
+            table2.Rows.Add(dr2);
+
+
+            DataGridCell dgc = new DataGridCell();
+            
         }
 
         public void datagrid_AutoGeneratingColumn2(object sender, DataGridAutoGeneratingColumnEventArgs e)
