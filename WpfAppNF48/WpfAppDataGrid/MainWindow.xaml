@@ -42,8 +42,8 @@
 
         <Color x:Key="UnfocusedSelected">#FFFF8000</Color>
         <Color x:Key="UnfocusedSelected2">#FFFFCC99</Color>
-        
-        
+
+
         <Color x:Key="ControlPressedColor">#FF211AA9</Color>
 
 
@@ -66,6 +66,7 @@
         <!--Control-specific resources.-->
         <Color x:Key="HeaderTopColor">#FFC5CBF9</Color>
         <Color x:Key="DatagridCurrentCellBorderColor">Black</Color>
+
         <Color x:Key="SliderTrackDarkColor">#FFC5CBF9</Color>
 
         <Color x:Key="NavButtonFrameColor">#FF3843C4</Color>
@@ -102,13 +103,58 @@
 
 
         <Color x:Key="DatagridCurrentCellBackgroundColor">LightCyan</Color>
+
+        <Color x:Key="DatagridEditingCellBackgroundColor">Yellow</Color>
+
+        <Color x:Key="DatagridRegularCellBackgroundColor">green</Color>
+        
         <Color x:Key="DatagridMouseOverCellBackgroundColor">#FF99FFFF</Color>
+        <Color x:Key="DatagridNormalCellBackgroundColor">#FFFFA07A</Color>
 
         <Color x:Key="DatagridSelectedCellBackgroundColor">#FFFFCCFF</Color>
+        <Color x:Key="DatagridUnSelectedCellBackgroundColor">#7FFFCCFF</Color>
 
         <Color x:Key="DatagridValidCellBackgroundColor">#FFE0E0E0</Color>
         <Color x:Key="DatagridInvalidFocusedCellBackgroundColor">#FFC0C0C0</Color>
         <Color x:Key="DatagridInvalidUnfocusedCellBackgroundColor">#FFA0A0A0</Color>
+
+        <Color x:Key="DatagridFocusedCellBackgroundColor">#FFFFD700</Color>
+        <Color x:Key="DatagridUnfocusedCellBackgroundColor">#FFFFE4B5</Color>
+
+        <Color x:Key="DatagridFocusedCellBorderColor">orange</Color>
+
+
+        <!-- *********** STYLE EN EDITION https://stackoverflow.com/questions/14785038/how-do-you-change-wpf-datagrid-cell-background-while-editing-the-cell *********** -->
+        <!--<Style TargetType="{x:Type DataGridCell}">
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border x:Name="CellBorder"
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        Background="{TemplateBinding Background}"
+                        SnapsToDevicePixels="True">
+                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEditing" Value="True">
+                                <Setter TargetName="CellBorder" Property="BorderBrush" Value="Green" />
+                                <Setter TargetName="CellBorder" Property="Background" Value="yellow" />
+                                <Setter TargetName="CellBorder" Property="BorderThickness" Value="3" />
+                                <Setter Property="Foreground" Value="Black" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+
+
 
     </Window.Resources>
 
@@ -128,7 +174,32 @@
         <DataGrid x:Name="datagrid" Grid.Row="0" Grid.Column="0"
                   ItemsSource="{Binding Table}" AutoGenerateColumns="True"
                   >
-            <DataGrid.Resources>
+
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell" >
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="SeaGreen"/>
+                        </Trigger>
+                        <!--FONCTIONNE !!!! https://stackoverflow.com/questions/14785038/how-do-you-change-wpf-datagrid-cell-background-while-editing-the-cell ANSWER 2 ET NOTE 2-->
+                        <Trigger Property="IsEditing" Value="True">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="DataGridCell">
+                                        <TextBox Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Content.Text, Mode=TwoWay, UpdateSourceTrigger=Default}"
+                                                 FocusManager.FocusedElement="{Binding RelativeSource={RelativeSource Self}}"
+                                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" BorderThickness="0" 
+                                                 Background="LightBlue" Foreground="Beige"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+
+            <!--<DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridCell}">
                     <Setter Property="Template">
                         <Setter.Value>
@@ -140,12 +211,13 @@
                                     <Trigger Property="IsKeyboardFocused" Value="True">
                                         <Setter TargetName="Border" Property="Background" Value="lightpink"/>
                                     </Trigger>
+
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
                 </Style>
-            </DataGrid.Resources>
+            </DataGrid.Resources>-->
         </DataGrid>
 
 
@@ -158,9 +230,9 @@
         </DataGrid>
 
 
-        <DataGrid x:Name="datagrid3" Grid.Row="2" Grid.Column="2"
+        <DataGrid x:Name="datagrid3" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2"
           ItemsSource="{Binding Table2}" AutoGenerateColumns="False">
-            
+
             <DataGrid.Resources>
                 <!--DEBUT BLOC CODE MICROSOFT https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/datagrid-styles-and-templates?view=netframeworkdesktop-4.8 -->
                 <!--Style and template for the DataGridCell.-->
@@ -168,26 +240,56 @@
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsEditing" Value="True">
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                                    
                                 <Border x:Name="border"
                                         BorderBrush="Transparent"
                                         BorderThickness="1"
                                         Background="Transparent"
                                         SnapsToDevicePixels="True">
                                     <VisualStateManager.VisualStateGroups>
-                                        <!-- *************** FOCUSSTATES *************** -->
+                                        <!-- *************** FOCUSSTATES *************** Storyboard.TargetProperty="(Border.BorderBrush) -->
                                         <VisualStateGroup x:Name="FocusStates">
-                                            <VisualState x:Name="Unfocused" />
-                                            <VisualState x:Name="Focused" />
+                                            <VisualState x:Name="Unfocused">
+                                                <Storyboard>
+                                                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0"
+                                                    Value="{StaticResource DatagridUnfocusedCellBackgroundColor}" />
+                                                    </ColorAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
+                                            <VisualState x:Name="Focused" >
+                                                <Storyboard>
+                                                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0"
+                                                    Value="{StaticResource DatagridFocusedCellBackgroundColor}" />
+                                                    </ColorAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
                                         </VisualStateGroup>
-                                        <!-- *************** CURRENTSTATES *************** -->
+                                        <!-- *************** CURRENTSTATES *************** Storyboard.TargetProperty="(Border.BorderBrush) -->
                                         <VisualStateGroup x:Name="CurrentStates">
-                                            <VisualState x:Name="Regular" />
+                                            <VisualState x:Name="Regular" >
+                                                <!-- Regular The cell is not the current cell.-->
+                                                <Storyboard>
+                                                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                        Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0"
+                                                        Value="{StaticResource DatagridRegularCellBackgroundColor}" />
+                                                    </ColorAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
                                             <VisualState x:Name="Current">
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
-                                                Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+                                                Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
-                                                        Value="{StaticResource DatagridCurrentCellBorderColor}" />
+                                                        Value="{StaticResource DatagridCurrentCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
@@ -203,19 +305,29 @@
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
+                                            
                                             <VisualState x:Name="Editing">
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                                                   Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
-                                                        Value="{StaticResource DatagridCurrentCellBackgroundColor}" />
+                                                        Value="{StaticResource DatagridEditingCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
                                         </VisualStateGroup>
                                         <!-- *************** COMMONSTATES *************** -->
                                         <VisualStateGroup x:Name="CommonStates">
-                                            <VisualState x:Name="Normal" />
+                                            <!-- normal not mouse over ou mouse left -->
+                                            <VisualState x:Name="Normal">
+                                                <Storyboard>
+                                                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0"
+                                                    Value="{StaticResource DatagridNormalCellBackgroundColor}" />
+                                                    </ColorAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
                                             <VisualState x:Name="MouseOver" >
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
@@ -223,7 +335,7 @@
                                                         <EasingColorKeyFrame KeyTime="0"
                                                         Value="{StaticResource DatagridMouseOverCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>   
+                                                </Storyboard>
                                             </VisualState>
                                         </VisualStateGroup>
                                         <!-- *************** SELECTIONSTATES *************** -->
@@ -237,7 +349,15 @@
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
-                                            <VisualState x:Name="Unselected" ></VisualState>
+                                            <VisualState x:Name="Unselected" >
+                                                <Storyboard>
+                                                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
+                                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0"
+                                                    Value="{StaticResource DatagridUnSelectedCellBackgroundColor}" />
+                                                    </ColorAnimationUsingKeyFrames>
+                                                </Storyboard>
+                                            </VisualState>
                                         </VisualStateGroup>
                                         <!-- *************** VALIDATIONSTATES *************** -->
                                         <VisualStateGroup x:Name="ValidationStates">
@@ -250,7 +370,7 @@
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
-                                            
+
                                             <VisualState x:Name="InvalidUnfocused" >
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
@@ -260,7 +380,7 @@
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
-                                            
+
                                             <VisualState x:Name="Valid" >
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
@@ -270,7 +390,7 @@
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
-                                            
+
                                         </VisualStateGroup>
                                     </VisualStateManager.VisualStateGroups>
                                     <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" >
@@ -282,7 +402,7 @@
                     </Setter>
                 </Style>
                 <!--Style and template for the DataGridRow.-->
-                <Style TargetType="{x:Type DataGridRow}">
+                <!--<Style TargetType="{x:Type DataGridRow}">
                     <Setter Property="Background">
                         <Setter.Value>
                             <SolidColorBrush Color="{DynamicResource ControlLightColor}" />
@@ -315,7 +435,9 @@
                                         <VisualStateGroup x:Name="CommonStates">
                                             <VisualState x:Name="Normal" />
 
-                                            <!--Provide a different appearance for every other row.-->
+                                            -->
+                <!--Provide a different appearance for every other row.-->
+                <!--
                                             <VisualState x:Name="Normal_AlternatingRow">
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
@@ -334,11 +456,7 @@
                                                 </Storyboard>
                                             </VisualState>
 
-                                            <!--In this example, a row in Editing or selected mode has an
-              identical appearances. In other words, the states 
-              Normal_Selected, Unfocused_Selected, Normal_Editing, 
-              MouseOver_Editing, MouseOver_Unfocused_Editing,
-              and Unfocused_Editing are identical.-->
+                                          
                                             <VisualState x:Name="Normal_Selected">
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
@@ -458,10 +576,7 @@
                                                 </Storyboard>
                                             </VisualState>
 
-                                            <!--In this example, the appearance of a selected row 
-              that has the mouse over it is the same regardless of
-              whether the row is selected.  In other words, the states 
-              MouseOver_Editing and MouseOver_Unfocused_Editing are identical.-->
+                                           
                                             <VisualState x:Name="MouseOver_Selected">
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
@@ -529,7 +644,7 @@
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
-                </Style>
+                </Style>-->
 
             </DataGrid.Resources>
             <!--FIN BLOC CODE MICROSOFT -->
@@ -540,8 +655,29 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        
+
         <Button x:Name="Bouton1" Content="Button" HorizontalAlignment="Center" Margin="0,54,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox HorizontalAlignment="Center" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120">
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" Value="LightBlue"></Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBlock x:Name="TextBlock1" HorizontalAlignment="Left" Margin="68,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center">
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Style.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" Value="LightSalmon"></Setter>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
     </Grid>
 </Window>
