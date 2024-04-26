@@ -37,6 +37,12 @@
         <Color x:Key="ControlMouseOverColor">#FFFF3399</Color>
         <Color x:Key="ControlMouseOverColor2">#FFFFCCE5</Color>
 
+        <Color x:Key="DGRMouseOverUnfocusedSelected">#FFFF69B4</Color>
+        <Color x:Key="DGRMouseOverUnfocusedSelected2">#FFFF1493</Color>
+
+        <Color x:Key="DGRUnfocusedSelected">#FFFF4500</Color>
+        <Color x:Key="DGRUnfocusedSelected2">#FFFF8C00</Color>
+
         <Color x:Key="ControlMouseOverColor3">#FF00FF00</Color>
         <Color x:Key="ControlMouseOverColor4">#FF99FF99</Color>
 
@@ -107,13 +113,16 @@
         <Color x:Key="DatagridEditingCellBackgroundColor">Yellow</Color>
 
         <Color x:Key="DatagridRegularCellBackgroundColor">green</Color>
-        
+
         <Color x:Key="DatagridMouseOverCellBackgroundColor">#FF99FFFF</Color>
         <Color x:Key="DatagridNormalCellBackgroundColor">#FFFFA07A</Color>
 
         <Color x:Key="DatagridSelectedCellBackgroundColor">#FFFFCCFF</Color>
-        <Color x:Key="DatagridUnSelectedCellBackgroundColor">#7FFFCCFF</Color>
+        
+        <Color x:Key="DatagridUnSelectedCellBackgroundColor">#FFFF4500</Color>
 
+        
+        
         <Color x:Key="DatagridValidCellBackgroundColor">#FFE0E0E0</Color>
         <Color x:Key="DatagridInvalidFocusedCellBackgroundColor">#FFC0C0C0</Color>
         <Color x:Key="DatagridInvalidUnfocusedCellBackgroundColor">#FFA0A0A0</Color>
@@ -227,6 +236,29 @@
                 <DataGridTextColumn Header="City" Binding="{Binding Ville}" FontFamily="Georgia" FontWeight="Bold"  />
                 <DataGridTextColumn Header="Country" Binding="{Binding Pays}" FontFamily="Arial" FontWeight="Bold" />
             </DataGrid.Columns>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="MouseStates">
+                    <VisualState Name="MouseEnter">
+                        <Storyboard>
+                            <ColorAnimation To="Green" 
+                          Storyboard.TargetName="rectBrush" 
+                          Storyboard.TargetProperty="Color"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState Name="MouseLeave" />
+                    <VisualStateGroup.Transitions>
+                        <VisualTransition To="MouseLeave" GeneratedDuration="00:00:00"/>
+
+                        <VisualTransition To="MouseEnter" GeneratedDuration="00:00:00.5">
+                            <VisualTransition.GeneratedEasingFunction>
+                                <ExponentialEase EasingMode="EaseOut" Exponent="10"/>
+                            </VisualTransition.GeneratedEasingFunction>
+                        </VisualTransition>
+
+                    </VisualStateGroup.Transitions>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+
         </DataGrid>
 
 
@@ -251,117 +283,133 @@
                                         Background="Transparent"
                                         SnapsToDevicePixels="True">
                                     <VisualStateManager.VisualStateGroups>
-                                        <!-- *************** FOCUSSTATES *************** Storyboard.TargetProperty="(Border.BorderBrush) -->
+                                        
+                 <!--*************** FOCUSSTATES *************** Storyboard.TargetProperty="(Border.BorderBrush)--> 
+                
                                         <VisualStateGroup x:Name="FocusStates">
                                             <VisualState x:Name="Unfocused">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                     Value="{StaticResource DatagridUnfocusedCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                             <VisualState x:Name="Focused" >
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                     Value="{StaticResource DatagridFocusedCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                         </VisualStateGroup>
-                                        <!-- *************** CURRENTSTATES *************** Storyboard.TargetProperty="(Border.BorderBrush) -->
+                                        
+                 <!--*************** CURRENTSTATES *************** Storyboard.TargetProperty="(Border.BorderBrush)--> 
+                
                                         <VisualStateGroup x:Name="CurrentStates">
                                             <VisualState x:Name="Regular" >
-                                                <!-- Regular The cell is not the current cell.-->
-                                                <Storyboard>
+                                                
+                 <!--Regular The cell is not the current cell.-->
+                
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                         Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                         Value="{StaticResource DatagridRegularCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                             <VisualState x:Name="Current">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                 Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                         Value="{StaticResource DatagridCurrentCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                         </VisualStateGroup>
-                                        <!-- *************** INTERACTIONSTATES *************** -->
+                                        
+                 <!--*************** INTERACTIONSTATES ***************--> 
+                
                                         <VisualStateGroup x:Name="InteractionStates">
                                             <VisualState x:Name="Display" >
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                    Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                              Value="LightYellow" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                             
                                             <VisualState x:Name="Editing">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                                                   Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                         Value="{StaticResource DatagridEditingCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                         </VisualStateGroup>
-                                        <!-- *************** COMMONSTATES *************** -->
+                                        
+                 <!--*************** COMMONSTATES ***************--> 
+                
                                         <VisualStateGroup x:Name="CommonStates">
-                                            <!-- normal not mouse over ou mouse left -->
+                                            
+                 <!--normal not mouse over ou mouse left--> 
+                
                                             <VisualState x:Name="Normal">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                     Value="{StaticResource DatagridNormalCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                             <VisualState x:Name="MouseOver" >
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                         Value="{StaticResource DatagridMouseOverCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                         </VisualStateGroup>
-                                        <!-- *************** SELECTIONSTATES *************** -->
+                                        
+                 <!--*************** SELECTIONSTATES ***************--> 
+                
                                         <VisualStateGroup x:Name="SelectionStates">
                                             <VisualState x:Name="Selected" >
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                         Value="{StaticResource DatagridSelectedCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                             <VisualState x:Name="Unselected" >
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                     Value="{StaticResource DatagridUnSelectedCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
                                         </VisualStateGroup>
-                                        <!-- *************** VALIDATIONSTATES *************** -->
+                                        
+                 <!--*************** VALIDATIONSTATES ***************--> 
+                
                                         <VisualStateGroup x:Name="ValidationStates">
-                                            <VisualState x:Name="InvalidFocused">
+                                            <!--<VisualState x:Name="InvalidFocused">
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
@@ -369,32 +417,31 @@
                                                         Value="{StaticResource DatagridInvalidFocusedCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </VisualState>
+                                            </VisualState>-->
 
                                             <VisualState x:Name="InvalidUnfocused" >
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                         Value="{StaticResource DatagridInvalidUnfocusedCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
 
                                             <VisualState x:Name="Valid" >
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
                                                         Value="{StaticResource DatagridValidCellBackgroundColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
 
                                         </VisualStateGroup>
                                     </VisualStateManager.VisualStateGroups>
                                     <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" >
-                                        <!--<TextBlock x:Name="t_block"></TextBlock>-->
                                     </ContentPresenter>
                                 </Border>
                             </ControlTemplate>
@@ -402,7 +449,7 @@
                     </Setter>
                 </Style>
                 <!--Style and template for the DataGridRow.-->
-                <!--<Style TargetType="{x:Type DataGridRow}">
+                <Style TargetType="{x:Type DataGridRow}">
                     <Setter Property="Background">
                         <Setter.Value>
                             <SolidColorBrush Color="{DynamicResource ControlLightColor}" />
@@ -433,13 +480,26 @@
                                     </Border.Background>
                                     <VisualStateManager.VisualStateGroups>
                                         <VisualStateGroup x:Name="CommonStates">
+                                            <!--
+                                            *  Normal 
+                                            * MouseOver 
+                                            * MouseOver_Editing 
+                                            * MouseOver_Selected 
+                                            * MouseOver_Unfocused_Editing
+                                            * MouseOver_Unfocused_Selected
+                                            * Normal_AlternatingRow
+                                            * Normal_Editing
+                                            * Normal_Selected
+                                            * Unfocused_Editing
+                                            * Unfocused_Selected
+                                            -->
                                             <VisualState x:Name="Normal" />
 
-                                            -->
-                <!--Provide a different appearance for every other row.-->
-                <!--
+
+                                            <!--Provide a different appearance for every other row.-->
+                                            <!-- ********* Normal_AlternatingRow 	CommonStates *********-->
                                             <VisualState x:Name="Normal_AlternatingRow">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).
                       (GradientBrush.GradientStops)[0].(GradientStop.Color)">
@@ -453,10 +513,10 @@
                                                         <EasingColorKeyFrame KeyTime="0"
                                          Value="{StaticResource ContentAreaColorDark}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
 
-                                          
+                                            <!-- ********* Normal_Selected 	CommonStates *********-->
                                             <VisualState x:Name="Normal_Selected">
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
@@ -473,26 +533,22 @@
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
-
+                                            <!-- ********* Unfocused_Selected 	CommonStates *********-->
                                             <VisualState x:Name="Unfocused_Selected">
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
-                                                Storyboard.TargetProperty="(Panel.Background).
-                      (GradientBrush.GradientStops)[0].(GradientStop.Color)">
-                                                        <EasingColorKeyFrame KeyTime="0"
-                                         Value="{StaticResource UnfocusedSelected}" />
+                                                Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0" Value="{StaticResource DGRUnfocusedSelected}" />
                                                     </ColorAnimationUsingKeyFrames>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
-                                                Storyboard.TargetProperty="(Panel.Background).
-                      (GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                                        <EasingColorKeyFrame KeyTime="0"
-                                         Value="{StaticResource UnfocusedSelected2}" />
+                                                Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0" Value="{StaticResource DGRUnfocusedSelected2}" />
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
-
+                                            <!-- ********* Normal_Editing 	CommonStates *********-->
                                             <VisualState x:Name="Normal_Editing">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).
                       (GradientBrush.GradientStops)[0].(GradientStop.Color)">
@@ -505,11 +561,11 @@
                                                         <EasingColorKeyFrame KeyTime="0"
                                          Value="{StaticResource ControlDarkColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
-
+                                            <!-- ************** MouseOver_Editing 	CommonStates ************** -->
                                             <VisualState x:Name="MouseOver_Editing">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).
                       (GradientBrush.GradientStops)[0].(GradientStop.Color)">
@@ -522,11 +578,11 @@
                                                         <EasingColorKeyFrame KeyTime="0"
                                          Value="{StaticResource ControlDarkColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
-
+                                            <!-- ************** MouseOver_Unfocused_Editing 	CommonStates ************* -->
                                             <VisualState x:Name="MouseOver_Unfocused_Editing">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).
                       (GradientBrush.GradientStops)[0].(GradientStop.Color)">
@@ -539,11 +595,11 @@
                                                         <EasingColorKeyFrame KeyTime="0"
                                          Value="{StaticResource ControlDarkColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
-
+                                            <!-- ************** Unfocused_Editing 	CommonStates ************* -->
                                             <VisualState x:Name="Unfocused_Editing">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).
                       (GradientBrush.GradientStops)[0].(GradientStop.Color)">
@@ -556,11 +612,11 @@
                                                         <EasingColorKeyFrame KeyTime="0"
                                          Value="{StaticResource ControlDarkColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
-
+                                            <!-- ************** MouseOver 	CommonStates ************* -->
                                             <VisualState x:Name="MouseOver">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
                                                 Storyboard.TargetProperty="(Panel.Background).
                       (GradientBrush.GradientStops)[0].(GradientStop.Color)">
@@ -573,43 +629,42 @@
                                                         <EasingColorKeyFrame KeyTime="0"
                                          Value="{StaticResource ControlMouseOverColor2}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
 
-                                           
+                                            <!-- ************** MouseOver_Selected 	CommonStates ************* -->
                                             <VisualState x:Name="MouseOver_Selected">
                                                 <Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
-                                                Storyboard.TargetProperty="(Panel.Background).
-                      (GradientBrush.GradientStops)[0].(GradientStop.Color)">
+                                                    Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
-                                         Value="{StaticResource ControlMouseOverColor3}" />
+                                                    Value="{StaticResource ControlMediumColor}" />
                                                     </ColorAnimationUsingKeyFrames>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
-                                                Storyboard.TargetProperty="(Panel.Background).
-                      (GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                                                    Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
                                                         <EasingColorKeyFrame KeyTime="0"
-                                         Value="{StaticResource ControlMouseOverColor4}" />
+                                                    Value="{StaticResource ControlDarkColor}" />
                                                     </ColorAnimationUsingKeyFrames>
                                                 </Storyboard>
                                             </VisualState>
-
+                                            <!-- ************** MouseOver_Unfocused_Selected 	CommonStates ************* -->
                                             <VisualState x:Name="MouseOver_Unfocused_Selected">
-                                                <Storyboard>
+                                                <!--<Storyboard>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
-                                                Storyboard.TargetProperty="(Panel.Background).
-                      (GradientBrush.GradientStops)[0].(GradientStop.Color)">
-                                                        <EasingColorKeyFrame KeyTime="0"
-                                         Value="{StaticResource ControlMouseOverColor}" />
+                                                    Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlMouseOverColor}" />
                                                     </ColorAnimationUsingKeyFrames>
                                                     <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border"
-                                                Storyboard.TargetProperty="(Panel.Background).
-                      (GradientBrush.GradientStops)[1].(GradientStop.Color)">
-                                                        <EasingColorKeyFrame KeyTime="0"
-                                         Value="{StaticResource ControlMouseOverColor}" />
+                                                    Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                                                        <EasingColorKeyFrame KeyTime="0" Value="{StaticResource ControlMouseOverColor}" />
                                                     </ColorAnimationUsingKeyFrames>
-                                                </Storyboard>
+                                                </Storyboard>-->
                                             </VisualState>
+                                        </VisualStateGroup>
+                                        <VisualStateGroup x:Name="ValidationStates">
+                                            <VisualState x:Name="InvalidFocused" />
+                                            <VisualState x:Name="InvalidUnfocused" />
+                                            <VisualState x:Name="Valid" />
                                         </VisualStateGroup>
                                     </VisualStateManager.VisualStateGroups>
 
@@ -644,7 +699,7 @@
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
-                </Style>-->
+                </Style>
 
             </DataGrid.Resources>
             <!--FIN BLOC CODE MICROSOFT -->
