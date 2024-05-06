@@ -128,6 +128,8 @@
     <Content Include="bootstrap-3.4.1-dist\js\npm.js" />
     <Content Include="ConditionsGenerales.aspx" />
     <Content Include="ConditionsGenerales.html" />
+    <Content Include="ConditionsGeneralesDec23.html" />
+    <Content Include="ConditionsGeneralesMaj260424.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -154,6 +156,7 @@
     <Content Include="HtmlPage3.html" />
     <Content Include="HtmlPage4.html" />
     <Content Include="HtmlPage5.html" />
+    <Content Include="HtmlPage6.html" />
     <Content Include="Images\accueil.svg" />
     <Content Include="Images\accueil1024x1024px.png" />
     <Content Include="Images\accueil1664x1664px.png" />
@@ -228,6 +231,12 @@
     <Content Include="bootstrap-3.4.1-dist\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap-3.4.1-dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap-3.4.1-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
+    <Content Include="Scripts\inputmask\inputmask.es6.js" />
+    <Content Include="Scripts\inputmask\inputmask.js" />
+    <Content Include="Scripts\inputmask\inputmask.min.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.min.js" />
     <Content Include="StyleSheet1.css">
       <DependentUpon>StyleSheet1.less</DependentUpon>
     </Content>
@@ -236,6 +245,7 @@
     </Content>
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
+    <Content Include="WebForm6.aspx" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -367,6 +377,13 @@
     </Compile>
     <Compile Include="WebForm5.aspx.designer.cs">
       <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm6.aspx.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm6.aspx.designer.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

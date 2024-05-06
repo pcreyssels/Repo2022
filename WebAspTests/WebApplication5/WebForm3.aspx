@@ -86,8 +86,6 @@
                     arguments.IsValid = false;
                 }
             }
-
-           
         }
 
         function validate() {

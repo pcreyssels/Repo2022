@@ -7,6 +7,7 @@
     <asp:Button runat="server" Text="Bonjour" />
     <br />
 
+    <
 
     <asp:HiddenField runat="server" ID="preventflag" ClientIDMode="Static" Value="toto" ViewStateMode="Enabled"/>
 
