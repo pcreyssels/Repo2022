@@ -30,7 +30,7 @@ namespace WebApplication5
 
             int f = 0;
 
-
+            //TextBox1.Attributes.Add("required pattern", "\\d{4}-\\d{2}-\\d{2}");
         }
 
         protected void CusvDatesSessionDelivrance_ServerValidate(object source, ServerValidateEventArgs args)

@@ -33,8 +33,20 @@
     <asp:Button runat="server" Text="CLICK" />
 
 
-    <script>
+    <br />
+    <hr />
+    DATE DD/MMM
+     <asp:TextBox ID="TextBox1" ClientIDMode="Static" runat="server" CssClass="form-control formulaire-control" />
 
+    DATE2 DD/MMM
+
+    <br />
+    <hr />
+    <input type="text" id="text1"
+        />
+
+    <script>
+        var separator = "/";
         $(function () {
             var numbox = document.getElementById("NumberBox");
             //numbox.setAttribute("value", "12");
@@ -44,7 +56,92 @@
             //var form = $("#TextBoxX");
             //form.validate();
 
-        })
+            var input1 = document.getElementById("TextBox1");
+            input1.addEventListener("keyup", logKeyu);
+
+            var input1 = document.getElementById("TextBox1");
+            input1.addEventListener("keydown", logKeyd);
+
+
+            var input2 = document.getElementById("text1");
+            input2.addEventListener("keydown", logKey2);
+
+        });
+
+
+        function IsNumeric(e) {
+            console.log('event .key : ' + e.key);
+           
+            return true;
+        }
+
+        function logKey2(e) {
+            //console.log('event .code : ' + e.code);
+            //console.log('event .keyCode : ' + e.keyCode);
+            console.log('event .key : ' + e.key);
+           /* console.log('type of  .key ' + typeof (e.key))*/
+            if (Number(e.key) > 0 && Number(e.key) <= 10) {
+                console.log('ok')
+            }
+            else {
+                console.log('not ok')
+                e.preventDefault();
+            }
+                
+
+            //if (e.key == '2') {
+            //    console.log('2')
+            //    e.preventDefault();
+            //}
+            //var in1 = document.getElementById("TextBox1");
+            //if (in1.value.length == 2) {
+            //    in1.value += separator;
+            //}
+        }
+
+        function logKeyu(e) {
+            //console.log('event .code : ' + e.code);
+            //console.log('event .keyCode : ' + e.keyCode);
+            console.log('keyup : ' + e.key);
+
+            var in1 = document.getElementById("TextBox1");
+            if (in1.value.length == 2) {
+                in1.value += separator;
+            }
+
+            
+        }
+
+        function logKeyd(e) {
+            //console.log('event .code : ' + e.code);
+            //console.log('event .keyCode : ' + e.keyCode);
+            console.log('keydown : ' + e.key);
+
+            if (!(Number(e.key) > 0 && Number(e.key) <= 10)) {
+                console.log('not ok')
+                e.preventDefault();
+            }
+           
+
+
+        }
+
+        function IsNumeric(input, keyCode) {
+            if (keyCode == 16) {
+                isShift = true;
+            }
+            //Allow only Numeric Keys.
+            if (((keyCode >= 48 && keyCode <= 57) || keyCode == 8 || keyCode <= 37 || keyCode <= 39 || (keyCode >= 96 && keyCode <= 105)) && isShift == false) {
+                if ((input.value.length == 2 || input.value.length == 5) && keyCode != 8) {
+                    input.value += seperator;
+                }
+
+                return true;
+            }
+            else {
+                return false;
+            }
+        };
 
 
         const nbo = document.getElementById("TextBoxSession");
