@@ -42,10 +42,78 @@
 
     <br />
     <hr />
-    <input type="text" id="text1"
-        />
+    <input type="text" id="text1" />
+
+    <br />
+    <hr style="height: 2px; border-width: 0; background-color: green" />
+    <div>jQuery UI Datepicker</div>
+
+    <div>
+        <input type="text" id="date1" />
+    </div>
+    <div>
+        <input id="datepicker" type="text">
+    </div>
+
 
     <script>
+
+        //$("#datepicker").datepicker({
+        //    showButtonPanel: true,
+        //    beforeShow: function (input) {
+        //        setTimeout(function () {
+        //            var buttonPane = $(input)
+        //                .datepicker("widget")
+        //                .find(".ui-datepicker-buttonpane");
+
+        //            var btn = $('<button type="button" class="ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all">Clear</button>');
+        //            btn
+        //                .unbind("click")
+        //                .bind("click", function () {
+        //                    $.datepicker._clearDate(input);
+        //                });
+
+        //            btn.appendTo(buttonPane);
+
+        //        }, 1);
+        //    }
+        //});  
+
+        $("#datepicker").datepicker({
+            dateFormat: "mm/yy", showWeek: true
+            , altField: "#date1", altFormat: "mm/yy"
+            , appendText: "(mm/yy)"
+            , showButtonPanel: true
+
+        });
+        $("#datepicker").datepicker({
+            buttonText: "Choose"
+            , currentText: "Maintenant"
+            , closeText: "Close"
+            , navigationAsDateFormat: false
+            , changeMonth: true
+            , changeYear: true
+            , showOn: "both"
+
+        });
+        //$("#datepicker").datepicker({
+        //    beforeShow: function (input) {
+        //        setTimeout(function () {
+        //            var headerPane = $(input)
+        //                .datepicker("widget")
+        //                .find(".ui-datepicker-header");
+        //            $("<button>", {
+        //                text: "Close",
+        //                click: function () {
+
+        //                    $('#ui-datepicker-div').hide();
+
+        //                }
+        //            }).appendTo(headerPane);
+        //        }, 1);
+        //    }
+        //});
+
         var separator = "/";
         $(function () {
             var numbox = document.getElementById("NumberBox");
@@ -71,7 +139,7 @@
 
         function IsNumeric(e) {
             console.log('event .key : ' + e.key);
-           
+
             return true;
         }
 
@@ -79,7 +147,7 @@
             //console.log('event .code : ' + e.code);
             //console.log('event .keyCode : ' + e.keyCode);
             console.log('event .key : ' + e.key);
-           /* console.log('type of  .key ' + typeof (e.key))*/
+            /* console.log('type of  .key ' + typeof (e.key))*/
             if (Number(e.key) > 0 && Number(e.key) <= 10) {
                 console.log('ok')
             }
@@ -87,7 +155,7 @@
                 console.log('not ok')
                 e.preventDefault();
             }
-                
+
 
             //if (e.key == '2') {
             //    console.log('2')
@@ -105,11 +173,9 @@
             console.log('keyup : ' + e.key);
 
             var in1 = document.getElementById("TextBox1");
-            if (in1.value.length == 2) {
+            if (in1.value.length == 2 && !in1.value.includes('/')) {
                 in1.value += separator;
             }
-
-            
         }
 
         function logKeyd(e) {
@@ -117,13 +183,11 @@
             //console.log('event .keyCode : ' + e.keyCode);
             console.log('keydown : ' + e.key);
 
-            if (!(Number(e.key) > 0 && Number(e.key) <= 10)) {
+            if (!((Number(e.key) >= 0 && Number(e.key) <= 10) || e.key == 'ArrowLeft' || e.key == 'ArrowRight' || e.key == 'Backspace')) {
                 console.log('not ok')
                 e.preventDefault();
+                //e.stopPropagation();
             }
-           
-
-
         }
 
         function IsNumeric(input, keyCode) {
