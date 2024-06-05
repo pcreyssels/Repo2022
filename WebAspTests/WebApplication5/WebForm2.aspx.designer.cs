@@ -51,6 +51,33 @@ namespace WebApplication5
         protected global::System.Web.UI.WebControls.CheckBox CheckBox4;
 
         /// <summary>
+        /// Contrôle CustomValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator2;
+
+        /// <summary>
+        /// Contrôle TextBoxTelFixe.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxTelFixe;
+
+        /// <summary>
+        /// Contrôle TextBoxTelPort.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxTelPort;
+
+        /// <summary>
         /// Contrôle TB1.
         /// </summary>
         /// <remarks>

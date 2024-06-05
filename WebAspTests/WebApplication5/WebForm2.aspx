@@ -12,6 +12,28 @@
 
     <hr style="height: 2px; border-width: 0; background-color: greenyellow" />
 
+
+    <hr style="height: 2px; border-width: 0; background-color: red" />
+
+    <asp:CustomValidator runat="server" ID="CustomValidator2"
+    OnServerValidate="CustomValidator1_ServerValidate"
+    ClientValidationFunction="TelsValidation"
+    ValidationGroup="VG1"
+    Display="Dynamic"
+    EnableClientScript="true"
+    ErrorMessage=" au moins un tel doit être fait " />
+
+    <br />
+    TELFIXE
+    <asp:TextBox TextMode="Phone" ClientIDMode="Static" ID="TextBoxTelFixe" runat="server" />
+
+    <br />
+    TELPORT
+    <asp:TextBox TextMode="Phone" ClientIDMode="Static" ID="TextBoxTelPort" runat="server" />
+
+    <br />
+
+
     <div>TEXTBOX</div>
     <asp:TextBox ID="TB1" runat="server" oninput="this.value = this.value.toUpperCase()"></asp:TextBox>
 
@@ -115,6 +137,20 @@
             var myCheckBox8 = document.getElementById("CheckBox8");
 
             if (myCheckBox5.checked || myCheckBox6.checked || myCheckBox7.checked || myCheckBox8.checked)
+                args.IsValid = true;
+            else
+                args.IsValid = false;
+
+        }
+
+        function TelsValidation(sender, args) {
+            console.log(' -> TelsValidation called !!');
+            console.log(' --> sender is : !!' + sender.getAttribute('id'));
+            var TelFix = document.getElementById("TextBoxTelFixe");
+            var TelPort = document.getElementById("TextBoxTelPort");
+            console.log(' --> TelFix : ' + TelFix.value);
+            console.log(' --> TelPort : ' + TelPort.value);
+            if (TelFix.value != '' && TelPort.value != '')
                 args.IsValid = true;
             else
                 args.IsValid = false;
