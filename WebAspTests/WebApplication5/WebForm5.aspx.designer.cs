@@ -15,6 +15,15 @@ namespace WebApplication5
     {
 
         /// <summary>
+        /// Contrôle fu0.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fu0;
+
+        /// <summary>
         /// Contrôle fu1.
         /// </summary>
         /// <remarks>

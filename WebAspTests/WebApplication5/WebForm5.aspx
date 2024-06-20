@@ -1,12 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebForm5.aspx.cs" Inherits="WebApplication5.WebForm5" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    FU0
+    <asp:FileUpload runat="server" ID="fu0" ClientIDMode="Static" />
+    <br />
 
-    <asp:FileUpload runat="server" ID="fu1" ClientIDMode="Static"/>
+    FU1
+    <asp:FileUpload runat="server" ID="fu1" ClientIDMode="Static" />
     <br />
-    <asp:FileUpload runat="server" ID="fu2" ClientIDMode="Static"/>
+
+    FU2
+    <asp:FileUpload runat="server" ID="fu2" ClientIDMode="Static" />
     <br />
-    <asp:Button ID="UploadButton"
+    <asp:Button ID="UploadButton" ClientIDMode="Static"
         Text="Upload file"
         OnClick="UploadButton_Click"
         runat="server"></asp:Button>
@@ -20,8 +26,7 @@
 
 
     <p>
-        <input type="file" id="file"
-            />
+        <input type="file" id="file" />
     </p>
 
     <script>
@@ -55,24 +60,83 @@
         //    }
         //});
 
-        // $("#fu1").on("change", function () {
-        $("input[type='file']").on("change", function () {
-
-            //because this is single file upload I use only first index
-            var f = this.files[0];
+        //$('<%= fu1.ClientID %>').on("change", function () {
+        // $("input[type='file']").on("change", function () {
+        //$("input[type='file']").on("change", function () {
+        $('#fu1').on("change", function () {
 
             console.log('changing...');
+            //because this is single file upload I use only first index
+            //var f = this.files[0];
+            var f = document.getElementById('fu1').files[0];
+
 
             //here I CHECK if the FILE SIZE is bigger than 8 MB (numbers below are in bytes)
             if (f.size > 2000000 || f.fileSize > 2000000) {
                 //show an alert to the user
-                alert("Allowed file size exceeded. (Max. 8 MB)")
+                alert("Taille maximale dépassée. (Max. 8 MB) \n Allowed file size exceeded. (Max. 8 MB)")
 
                 //reset file upload control
                 this.value = null;
             }
         });
 
+        function upload1() {
+            var f = this.files[0];
+            if (f.size > 4194304 || f.fileSize > 4194304) {
+                this.value = null;
+            }
+            else {
+                var btn = document.getElementById('CIEPWEBBody_BodyContent_GridView1_HideButton1_0');
+                btn.click();
+            }
+        }
+
+        function upload0() {
+            console.log('upload 0: ');
+            let fi = document.getElementById('fu0');
+            let f = fi.files[0];
+            // Check if any file is selected.
+            //if (fi.files.length > 0) {
+
+            console.log('files0 size: ' + f.size)
+            console.log('files.lenght: ' + fi.files.size)
+            if (f.size > 10000000 || f.fileSize > 10000000) {
+                alert("Taille maximale dépassée. (Max. 4 MB) \n Allowed file size exceeded. (Max. 4 MB)")
+                fi.value = null;
+            }
+            else {
+                var btn = document.getElementById('UploadButton');
+                btn.click();
+            }
+        }
+
+        function upload1() {
+            let fi = document.getElementById('fu1');
+            let f = fi.files[0];
+            if (f.size > 4194304 || f.fileSize > 4194304) {
+                alert("Taille maximale dépassée. (Max. 4 MB) \n Allowed file size exceeded. (Max. 4 MB)");
+                fi.value = null;
+            }
+            else {
+                var btn = document.getElementById('FileUp1');
+                btn.click();
+            }
+        }
+        
+
+        function upload_PI() {
+            let fi = document.getElementById('FileUp_1');
+            let f = fi.files[0];
+            if (f.size > 4194304 || f.fileSize > 4194304)
+            {
+                alert("Taille maximale dépassée. (Max. 4 MB) \n Allowed file size exceeded. (Max. 4 MB)");
+                fi.value = null;
+            } else {
+                var btn = document.getElementById('HideButton_1');
+                btn.click();
+            }
+        }
 
     </script>
 

@@ -11,7 +11,16 @@ namespace WebApplication5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            fu0.Attributes.Add("onchange", "upload0" + "()");
         }
 
         protected void UploadButton_Click(object sender, EventArgs e)
@@ -20,44 +29,53 @@ namespace WebApplication5
             // save the uploaded file to.
             string savePath = @"c:\temp\uploads\";
 
-            // Before attempting to save the file, verify
-            // that the FileUpload control contains a file.
-            if (fu1.HasFile)
+            try
             {
-                // Get the size in bytes of the file to upload.
-                int fileSize = fu1.PostedFile.ContentLength;
-
-                // Allow only files less than 2,100,000 bytes (approximately 2 MB) to be uploaded.
-                if (fileSize < 2100000)
+                // Before attempting to save the file, verify
+                // that the FileUpload control contains a file.
+                if (fu1.HasFile)
                 {
+                    // Get the size in bytes of the file to upload.
+                    int fileSize = fu1.PostedFile.ContentLength;
 
-                    // Append the name of the uploaded file to the path.
-                    savePath += Server.HtmlEncode(fu1.FileName);
+                    // Allow only files less than 2,100,000 bytes (approximately 2 MB) to be uploaded.
+                    if (fileSize < 2100000)
+                    {
 
-                    // Call the SaveAs method to save the 
-                    // uploaded file to the specified path.
-                    // This example does not perform all
-                    // the necessary error checking.               
-                    // If a file with the same name
-                    // already exists in the specified path,  
-                    // the uploaded file overwrites it.
-                    fu1.SaveAs(savePath);
+                        // Append the name of the uploaded file to the path.
+                        savePath += Server.HtmlEncode(fu1.FileName);
 
-                    // Notify the user that the file was uploaded successfully.
-                    UploadStatusLabel.Text = "Your file was uploaded successfully.";
+                        // Call the SaveAs method to save the 
+                        // uploaded file to the specified path.
+                        // This example does not perform all
+                        // the necessary error checking.               
+                        // If a file with the same name
+                        // already exists in the specified path,  
+                        // the uploaded file overwrites it.
+                        fu1.SaveAs(savePath);
+
+                        // Notify the user that the file was uploaded successfully.
+                        UploadStatusLabel.Text = "Your file was uploaded successfully.";
+                    }
+                    else
+                    {
+                        // Notify the user why their file was not uploaded.
+                        UploadStatusLabel.Text = "Your file was not uploaded because " +
+                                                 "it exceeds the 2 MB size limit.";
+                    }
                 }
                 else
                 {
-                    // Notify the user why their file was not uploaded.
-                    UploadStatusLabel.Text = "Your file was not uploaded because " +
-                                             "it exceeds the 2 MB size limit.";
+                    // Notify the user that a file was not uploaded.
+                    UploadStatusLabel.Text = "You did not specify a file to upload.";
                 }
             }
-            else
+            catch (Exception ex)
             {
-                // Notify the user that a file was not uploaded.
-                UploadStatusLabel.Text = "You did not specify a file to upload.";
+                string s = ex.Message;
+                throw;
             }
+            
         }
     }
 }
