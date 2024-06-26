@@ -29,7 +29,27 @@
         <input type="file" id="file" />
     </p>
 
+    <br />
+
+    <input type="button" onclick="test()" value="coco"/>
     <script>
+
+
+        window.onload = (event) => {
+            console.log('page is fully loaded');
+        };
+
+        $( document ).ready(function() {
+             console.log( "ready!" );
+             setTimeout(function() {
+                console.log( "2 s !" );
+            },2000)
+
+             setTimeout(function() {
+                console.log( "4 s !" );
+            },4000)
+        });
+
         Filevalidation = () => {
             const fi = document.getElementById('file');
             // Check if any file is selected.
@@ -80,6 +100,19 @@
                 this.value = null;
             }
         });
+
+        function test(){
+            console.log( "a !" );
+            let a  ="bonjour"
+              setTimeout(function() {
+                 console.log( "2 s !" );
+                },2000);
+                console.log( a );
+                setTimeout(function() {
+                console.log( "4 s !" );
+                },4000)
+                console.log( "c !" );
+        }
 
         function upload1() {
             var f = this.files[0];
