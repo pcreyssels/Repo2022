@@ -1,0 +1,50 @@
+﻿
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js">
+
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+
+    </script>
+
+    <h1 style="color:green;">
+        GeeksforGeeks
+    </h1>
+
+    <h3>
+        jQuery UI | Tooltip content option
+    </h3>
+
+    
+</head>
+
+<body>
+    <!--<label for="name">Name:</label>-->
+    <span id="gfg1" title=""> TOTO</span>
+
+    <p>
+        <a id="gfg2" href="" title="GeeksforGeeks">
+            Click here!
+        </a>
+    </p>
+
+    <script>
+
+        $(function () {
+            $("#gfg1").tooltip({
+                content: "G eeksforG eeks!"
+            });
+            $("#gfg1").tooltip();
+            $("#gfg2").tooltip();
+        });
+    </script>
+</body>
+
+</html>

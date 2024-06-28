@@ -1,10 +1,78 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
 
+<head>
+    <title>Tooltip With an Image</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #custom {
+            color: blue;
+        }
+
+        .tooltip {
+            display: inline-block;
+            margin-right: 30px;
+            border-bottom: 1px dotted black;
+            position: relative;
+        }
+
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px;
+                position: absolute;
+                z-index: 1;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+                .tooltip .tooltiptext.left {
+                    bottom: 50%;
+                    right: 105%;
+                    margin-bottom: -15px;
+                }
+
+                .tooltip .tooltiptext.right {
+                    bottom: 50%;
+                    left: 105%;
+                    margin-bottom: -15px;
+                }
+
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+            }
+    </style>
+</head>
+
+<body>
+    <div id="custom" class="tooltip">
+         Hover over me (Left)>
+        <span class="tooltiptext left">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240327032356/gfgimg.png"
+                 alt="GeeksforGeeks Image"
+                 style="width: 100px; height: auto;">
+        </span>
+    </div>
+    <div class="tooltip">
+        Hover over me (Right)
+        <span class="tooltiptext right">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240327032356/gfgimg.png"
+                 alt="GeeksforGeeks Image"
+                 style="width: 100px; height: auto;">
+        </span>
+    </div>
 </body>
+
 </html>

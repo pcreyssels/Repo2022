@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    
+    
+    <!--<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js">
+
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+
+    </script>-->
+
+</head>
+<body>
+
+    <div id="content">
+    </div>
+
+    <br />
+    <span id="customtt2">tooltip JQuery</span>
+
+    <br />
+    <span id="tooltip-1" title="tooltip 1">tooltip JQuery</span>
+    <br />
+    <br />
+    <span id="tooltip-1" title="tooltip 2">tooltip JQuery 2</span>
+    <br />
+    <br />
+    <span id="tooltip3" title="">tooltip JQuery 3</span>
+    <br />
+
+    <span id="gfg1" title=""> TOTO</span>
+
+    <br />
+    <span id="tooltip4" title="">tooltip JQuery 4</span>
+    <br />
+
+    <script>
+        $(document).ready(function () {
+            //$("#content").html('<a id="magilla" href="#" title="" >Magilla Gorilla</a>');
+            //$("#content #magilla").tooltip({ content: '<img src="https://i.etsystatic.com/18461744/r/il/8cc961/1660161853/il_794xN.1660161853_sohi.jpg" />' });
+            //$("#customtt2").tooltip("option","content", "Awesome title!");
+            // $("#customtt2").tooltip({ content: 'Awesome title!' });
+            //$("#customtt2").tooltip({ content: '<img src="Images/gfgimg.png" alt="GeeksforGeeks Image" style="width: 100px; height: auto;" />' });
+            //$("#tooltip-1").tooltip();
+            //$("#tooltip-2").tooltip({ content: '<img src="https://i.etsystatic.com/18461744/r/il/8cc961/1660161853/il_794xN.1660161853_sohi.jpg" />' });
+
+            $("#tooltip3").tooltip({
+                content: " HTML <b>Hi!</b>"
+            });
+
+            $("#gfg1").tooltip({
+                content: "G eeksforG eeks!"
+            });
+
+            $("#tooltip4").tooltip({
+                content: ' <br/> bonjour <br/> <img src="Images/gfgimg.png" alt="GeeksforGeeks Image" style="width: 100px; height: auto;"> <br/> aurevoir <br/>'
+            });
+            
+            //$("#tooltip4").tooltip("option", "content", "Awesome title!");
+        });
+    </script>
+
+</body>
+
+
+</html>

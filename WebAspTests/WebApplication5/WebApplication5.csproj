@@ -181,6 +181,10 @@
     <Content Include="Global.asax" />
     <Content Include="HtmlPage1.html" />
     <Content Include="HtmlPage2.html" />
+    <Content Include="HtmlPage3.html" />
+    <Content Include="HtmlPage4.html" />
+    <Content Include="HtmlPage5.html" />
+    <Content Include="HtmlPage6.html" />
     <Content Include="Images\accueil.svg" />
     <Content Include="Images\accueil1024x1024px.png" />
     <Content Include="Images\accueil1664x1664px.png" />
@@ -213,6 +217,8 @@
     <Content Include="Images\gb.png" />
     <Content Include="Images\gb.svg" />
     <Content Include="Images\gbrond.png" />
+    <Content Include="Images\gfgimg.png" />
+    <Content Include="Images\gfgimg2.png" />
     <Content Include="Images\icone information svg transparent.svg" />
     <Content Include="Images\icone information transparent.png" />
     <Content Include="Images\icone information.png" />
@@ -261,6 +267,7 @@
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
+    <Content Include="WebForm6.aspx" />
     <Content Include="WebForm7.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
@@ -393,6 +400,13 @@
     </Compile>
     <Compile Include="WebForm5.aspx.designer.cs">
       <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm6.aspx.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm6.aspx.designer.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm7.aspx.cs">
       <DependentUpon>WebForm7.aspx</DependentUpon>

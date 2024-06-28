@@ -1,0 +1,38 @@
+﻿<html lang="en"> 
+
+<head> 
+	<meta charset="utf-8"> 
+	<link rel="stylesheet" href= 
+	"//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+	<script src="https://code.jquery.com/jquery-1.12.4.js"> 
+	</script> 
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"> 
+	</script> 
+	<style> 
+		.GFG { 
+			color: white; 
+			background: green; 
+			padding: 5px 10px; 
+		} 
+	</style> 
+	<script> 
+		$(document).ready(function () { 
+			$("#p1").tooltip({ 
+				tooltipClass: "GFG" 
+			}); 
+		}); 
+	</script> 
+</head> 
+
+<body> 
+	<h1 style="color: green;">GeeksforGeeks</h1> 
+	<h2>jQuery UI Tooltip tooltipClass option</h2> 
+
+	<p id="p1"> 
+		<a href="#" title="This is a tooltip">Tooltips</a> 
+		GeeksforGeeks is a computer science portal 
+	</p> 
+
+</body> 
+
+</html>

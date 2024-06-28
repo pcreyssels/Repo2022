@@ -18,7 +18,7 @@ namespace WebApplication5
         {
             // Code qui s’exécute au démarrage de l’application
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
 
