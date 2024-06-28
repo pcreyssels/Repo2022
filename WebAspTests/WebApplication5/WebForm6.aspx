@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+   
     <!-- Trigger the modal with a button -->
     <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
@@ -34,6 +35,34 @@
     <div id="tooltip6" data-toggle="tooltip" data-placement="top" title="SER <b>FG</b>" data-html="true">tooltip6</div>
     <br />
 
+    NOUVELLEL LIGNE
+    <br />
+    <div class="bloctt">
+        ELEMENT1
+        <img src="Images/icone information transparent.png"
+            alt="GeeksforGeeks Image"
+            style="width: 50px; height: auto;">
+        <div class="tooltip">
+            Hover over me (Left)
+                    
+                    <span class="tooltiptext left">
+                        <img src="Images/gfgimg.png"
+                            alt="GeeksforGeeks Image"
+                            style="width: 100px; height: auto;">
+                    </span>
+        </div>
+        <%--<div class="tooltip">
+            Hover over me (Right)
+                    <span class="tooltiptext right">
+                        <img src="Images/gfgimg2.png"
+                            alt="GeeksforGeeks Image"
+                            style="width: 100px; height: auto;">
+                    </span>
+        </div>--%>
+         ELEMENT2
+    </div>
+
+
 
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -47,24 +76,31 @@
                 </div>
                 <div class="modal-body">
                     <p>Some text in the modal.</p>
-                    <%-- <span class="tooltiptext left">
-                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240327032356/gfgimg.png"
+
+                    <div class="bloctt">
+                        <img src="Images/icone information transparent.png"
                             alt="GeeksforGeeks Image"
-                            style="width: 100px; height: auto;">
-                    </span>--%>
-                    <%-- <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240327032356/gfgimg.png"
-                        alt="GeeksforGeeks Image"
-                        style="width: 100px; height: auto;">
-                    <img src="Images/gfgimg.png"
-                        alt="GeeksforGeeks Image"
-                        style="width: 100px; height: auto;">--%>
-                    <br />
+                            style="width: 50px; height: auto;">
+                        <div class="tooltip">
+                            Hover over me (Left)
+                            
+                            <span class="tooltiptext left">
+                                <img src="Images/gfgimg.png"
+                                    alt="GeeksforGeeks Image"
+                                    style="width: 100px; height: auto;">
+                            </span>
+                        </div>
+                        <div class="tooltip">
+                            Hover over me (Right)
+                            <span class="tooltiptext right">
+                                <img src="Images/gfgimg2.png"
+                                    alt="GeeksforGeeks Image"
+                                    style="width: 100px; height: auto;">
+                            </span>
+                        </div>
 
-                    <span id="tooltip4" title="">tooltip4</span>
+                    </div>
 
-
-                    <br />
-                    <span id="customtt1">tooltip JQuery</span>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

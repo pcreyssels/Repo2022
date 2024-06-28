@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        body {
+            background-color: powderblue;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: red;
+        }
+
+        a.tooltip {
+            outline: none;
+        }
+
+            a.tooltip strong {
+                line-height: 30px;
+            }
+
+            a.tooltip:hover {
+                text-decoration: none;
+            }
+
+            a.tooltip span {
+                z-index: 10;
+                display: none;
+                padding: 14px 20px;
+                margin-top: 60px;
+                margin-left: -160px;
+                width: 300px;
+                line-height: 16px;
+            }
+
+            a.tooltip:hover span {
+                display: inline;
+                position: absolute;
+                border: 2px solid #FFF;
+                color: #EEE;
+                background: #333 url(http://www.menucool.com/tooltip/cssttp/css-tooltip-gradient-bg.png) repeat-x 0 0;
+            }
+
+        .callout {
+            z-index: 20;
+            position: absolute;
+            border: 0;
+            top: -14px;
+            left: 120px;
+        }
+
+        /*CSS3 extras*/
+        a.tooltip span {
+            border-radius: 2px;
+            box-shadow: 0px 0px 8px 4px #666;
+            /*opacity: 0.8;*/
+        }
+    </style>
+
+</head>
+<body>
+
+    <a href="https://codepen.io/anon/pen/rgPKvy" class="tooltip">
+        Link
+        <span>
+            <img class="callout" src="https://freefrontend.com/assets/img/css-tooltips/pure-css-tooltips.png" />
+            <img src="https://freefrontend.com/assets/img/css-tooltips/pure-css-tooltips.png" style="float:right;" />
+            <strong>CSS only Tooltip</strong><br />
+            Pure CSS popup tooltips with clean semantic XHTML.
+        </span>
+    </a>
+
+</body>
+</html>

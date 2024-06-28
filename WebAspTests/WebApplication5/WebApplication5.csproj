@@ -185,6 +185,8 @@
     <Content Include="HtmlPage4.html" />
     <Content Include="HtmlPage5.html" />
     <Content Include="HtmlPage6.html" />
+    <Content Include="HtmlPage7.html" />
+    <Content Include="HtmlPage8.html" />
     <Content Include="Images\accueil.svg" />
     <Content Include="Images\accueil1024x1024px.png" />
     <Content Include="Images\accueil1664x1664px.png" />
@@ -269,6 +271,8 @@
     <Content Include="WebForm5.aspx" />
     <Content Include="WebForm6.aspx" />
     <Content Include="WebForm7.aspx" />
+    <Content Include="WebForm8.aspx" />
+    <Content Include="WebForm9.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -414,6 +418,20 @@
     </Compile>
     <Compile Include="WebForm7.aspx.designer.cs">
       <DependentUpon>WebForm7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm8.aspx.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm8.aspx.designer.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm9.aspx.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm9.aspx.designer.cs">
+      <DependentUpon>WebForm9.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -67,7 +67,17 @@ body {
     }
 
 #custom {
-    color: blue;
+    color: hotpink;
+}
+
+
+/* https://www.geeksforgeeks.org/how-to-make-a-tooltip-with-an-image/ */
+.bloctt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
 }
 
 .tooltip {
