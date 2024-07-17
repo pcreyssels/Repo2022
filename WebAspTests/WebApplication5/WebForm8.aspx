@@ -3,82 +3,129 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.css" />
-    <link rel="stylesheet" href="Content/Site.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
+
+    <!-- ********************* -->
+
+    <!--<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+          rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js">
+
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+
+    </script>-->
+
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
 
 
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+    MODAL
+    <br />
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
-            <br />
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-            <div id="custom">
-                BONJOUR
-            </div>
-            *
-            <div data-toggle="tooltip" title="voici le tooltip">
-                tooltip
-            </div>
-            <br />
-            <span data-toggle="tooltip" title="voici le <b>tooltip 2</b>" data-html="true">tooltip 2</span>
-
-            *
-            <div class="container">
-                <h3>Tooltip Example</h3>
-                <a href="#" data-toggle="tooltip" title="Hooray! <b>over me</b>" data-html="true">Hover <b>over me</b></a>
-            </div>
-            <br />
-            <span id="customtt2">tooltip JQuery</span>
-            <br />
-
-            <br />
-            <span id="tooltip5" title="">tooltip5</span>
-            <br />
-
-            <br />
-            <div id="tooltip6" data-toggle="tooltip" data-placement="top" title="SER <b>FG</b>" data-html="true">tooltip6</div>
-            <br />
-
-
-            NOUVELLEL LIGNE
-            <br />
-            <div class="bloctt">
-                ELEMENT1
-                <img src="Images/icone information transparent.png"
-                    alt="GeeksforGeeks Image"
-                    style="width: 50px; height: auto;">
-                <div class="tooltip">
-                    Hover over me (Left)
-                
-                <span class="tooltiptext left">
-                    <img src="Images/gfgimg.png"
-                        alt="GeeksforGeeks Image"
-                        style="width: 100px; height: auto;">
-                </span>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
                 </div>
-                <div class="tooltip">
-                    Hover over me (Right)
-                <span class="tooltiptext right">
-                    <img src="Images/gfgimg2.png"
-                        alt="GeeksforGeeks Image"
-                        style="width: 100px; height: auto;">
-                </span>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
                 </div>
-                ELEMENT2
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
+
         </div>
-    </form>
+    </div>
+    FIN MODAL
+    <br />
+
+    <div id="content">
+    </div>
+
+    <br />
+    <span id="customtt2">tooltip JQuery</span>
+
+    <br />
+    <span id="tooltip-1" title="tooltip 1">tooltip JQuery</span>
+    <br />
+    <br />
+    <span id="tooltip-2" title="tooltip 2">tooltip JQuery 2</span>
+    <br />
+    <br />
+    <span id="tooltip3" title="">tooltip JQuery 3</span>
+    <br />
+
+    <span id="gfg1" title=""> TOTO</span>
+
+    <br />
+    <span id="tooltip4" title="">tooltip JQuery 4</span>
+    <br />
+
+    <br />
+    <div id="dialog" title="Basic dialog">
+        <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.
+
+            <br/> bonjour <br/> 
+            <img id="img1" src="Images/infoiconred.png" title="" alt="GeeksforGeeks Image" style="width: 100px; height: auto;"/> 
+            <br/> aurevoir <br/>
+
+        </p>
+    </div>
+    <br />
+
+    <script>
+        $(document).ready(function () {
+            //$("#content").html('<a id="magilla" href="#" title="" >Magilla Gorilla</a>');
+            //$("#content #magilla").tooltip({ content: '<img src="https://i.etsystatic.com/18461744/r/il/8cc961/1660161853/il_794xN.1660161853_sohi.jpg" />' });
+            //$("#customtt2").tooltip("option","content", "Awesome title!");
+            // $("#customtt2").tooltip({ content: 'Awesome title!' });
+            //$("#customtt2").tooltip({ content: '<img src="Images/gfgimg.png" alt="GeeksforGeeks Image" style="width: 100px; height: auto;" />' });
+            //$("#tooltip-1").tooltip();
+            //$("#tooltip-2").tooltip({ content: '<img src="https://i.etsystatic.com/18461744/r/il/8cc961/1660161853/il_794xN.1660161853_sohi.jpg" />' });
+
+            $("#dialog").dialog();
+
+            $("#tooltip3").tooltip({
+                content: " HTML <b>Hi!</b>"
+            });
+
+            $("#gfg1").tooltip({
+                content: "G eeksforG eeks!"
+            });
+
+            $("#tooltip4").tooltip({
+                content: ' <br/> bonjour <br/> <img src="Images/gfgimg.png" alt="GeeksforGeeks Image" style="width: 100px; height: auto;"> <br/> aurevoir <br/>'
+            });
+
+            $("#img1").tooltip({
+                content: ' <br/> bonjour <br/> <img src="Images/gfgimg.png" alt="GeeksforGeeks Image" style="width: 100px; height: auto;"> <br/> aurevoir <br/>'
+            });
+            //$("#tooltip4").tooltip("option", "content", "Awesome title!");
+        });
+    </script>
+
 </body>
+
 </html>

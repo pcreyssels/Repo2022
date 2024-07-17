@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -21,6 +22,17 @@ namespace WebApplication5
                 throw;
             }
             fu0.Attributes.Add("onchange", "upload0" + "()");
+
+            //Debug.WriteLine("---- debut bloc redirect ");
+            //if (TB1.Text == "RF")
+            //    Response.Redirect("~/WebForm4.aspx", false);
+            //if (TB1.Text == "RT")
+            //    Response.Redirect("~/WebForm4.aspx", true);
+
+            //if (TB1.Text == "RU")
+            //    Response.RedirectUser("~/WebForm4.aspx");
+
+            //Debug.WriteLine("---- fin bloc redirect page load continue ");
         }
 
         protected void UploadButton_Click(object sender, EventArgs e)
@@ -76,6 +88,38 @@ namespace WebApplication5
                 throw;
             }
             
+        }
+
+        protected void Button_Redirect_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine("---- Button_Redirect_Click debut bloc redirect ");
+            Debug.WriteLine($"----  ordre redirect : {TB1.Text} ");
+            if (TB1.Text == "RF")
+                Response.Redirect("~/WebForm4.aspx", false);
+            if (TB1.Text == "RT")
+                Response.Redirect("~/WebForm4.aspx", true);
+
+            if (TB1.Text == "RU")
+            {
+                //Debug.WriteLine("appel session.abandon avant RedirectUser");
+                //Session.Abandon();
+                //Debug.WriteLine("retour session.abandon aavant RedirectUser");
+
+                //Debug.WriteLine("appel session.clear");
+                //Session.Clear();
+                //Debug.WriteLine("retour session.clear");
+
+                Response.RedirectUser("~/WebForm4.aspx");
+
+                Debug.WriteLine("appel session.abandon apres RedirectUser");
+                Session.Abandon();
+                Debug.WriteLine("retour session.abandon apres RedirectUser");
+            }
+                
+
+            Debug.WriteLine("---- Button_Redirect_Click fin bloc redirect page load continue ");
+
+
         }
     }
 }

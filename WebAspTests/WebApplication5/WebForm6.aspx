@@ -32,7 +32,7 @@
     <br />
 
     <br />
-    <div id="tooltip6" data-toggle="tooltip" data-placement="top" title="SER <b>FG</b>" data-html="true">tooltip6</div>
+    <div id="tooltip6" data-toggle="tooltip" data-placement="bottom" title="SER <b>FG</b>" data-html="true">tooltip6</div>
     <br />
 
     NOUVELLEL LIGNE

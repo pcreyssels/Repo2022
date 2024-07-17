@@ -32,6 +32,21 @@
     <br />
 
     <input type="button" onclick="test()" value="coco"/>
+
+
+     <br />
+    <asp:Button ID="Button_Redirect" runat ="server" Text="Redirect wf4" OnClick="Button_Redirect_Click" />
+
+
+     <br />
+
+    <asp:TextBox ID="TB1" runat ="server" Text="RU"/>
+
+     <br />
+     <br />
+
+    <asp:TextBox ID="TB2" runat ="server" Text="texte "/>*
+
     <script>
 
 
