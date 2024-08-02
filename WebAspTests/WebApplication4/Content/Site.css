@@ -66,3 +66,8 @@ span.CGVIcon {
     margin: 0px;
 }
 
+.tintedroundedbackgroundpanel {
+    background-color: lightcyan;
+    border-radius: 20px;
+}
+
