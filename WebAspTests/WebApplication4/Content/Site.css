@@ -71,3 +71,11 @@ span.CGVIcon {
     border-radius: 20px;
 }
 
+.testclass::before {
+    content: ' contenu avant ';
+}
+
+.testclass2::before {
+    content: ' contenu ECRASE ';
+}
+
