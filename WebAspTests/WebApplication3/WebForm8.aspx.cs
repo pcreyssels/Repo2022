@@ -82,7 +82,7 @@ namespace WebApplication3
                 "di",
                 "diPath");
             documentTable.Rows.Add(
-                 GetLocalResourceObject("grille_ligne3col1").ToString(),
+                 GetLocalResourceObject("grille_ligne3col1"),
                 "DUREE_ETUDES",
                 GetLocalResourceObject("grille_ligne3col3").ToString(),
                 GetLocalResourceObject("grille_ligne3col4").ToString(),
@@ -118,7 +118,7 @@ namespace WebApplication3
             //ph1.Controls.Add(img1);
             //ph1.Controls.Add(new LiteralControl("</span>"));
 
-            GridView1.DataSource= documentTable;
+            GridView1.DataSource = documentTable;
             GridView1.DataBind();
 
             object o = GridView1.Rows[0].Cells[0];
@@ -128,9 +128,9 @@ namespace WebApplication3
 
             string res = "<span>\r\n    Copie lisible d'une pièce d'identité (carte d'identité, passeport, titre de séjour, récépissé ou <b>justificatif de réfugié ou assimilé).</b>  _ICONE_ Visa, permis de conduire ou carte vitale <b>ne sont pas acceptés. Merci de fournir un justificatif de changement de nom, si nécessaire</b>.\r\n</span>";
             res.IndexOf("_ICON_");
-            string[] rest = res.Split(new string[] { "_ICONE_" },StringSplitOptions.RemoveEmptyEntries);
+            string[] rest = res.Split(new string[] { "_ICONE_" }, StringSplitOptions.RemoveEmptyEntries);
 
-            
+
 
             //HtmlElement hel1 = new HtmlElement()
             //TextBox box = new TextBox();
@@ -216,6 +216,13 @@ namespace WebApplication3
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
+            if (e.Row.RowType == DataControlRowType.Header) 
+            {
+                int i = e.Row.RowIndex;
+                int j = 0;
+                e.Row.Cells[2].Text = GetLocalResourceObject("gridcolumn_Obligatoire.HeaderText").ToString();
+            }
+
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 if (e.Row.RowIndex == 1)
@@ -248,7 +255,7 @@ namespace WebApplication3
                     ph1.Controls.Add(li);
 
                     // <label onclick="modalshow2()">Do you like cheese?</label>
-                    Label la  =new Label();
+                    Label la = new Label();
                     la.Attributes.Add("onclick", "modalshow2()");
                     la.Text = " * ";
                     ph1.Controls.Add(la);
@@ -256,7 +263,7 @@ namespace WebApplication3
                     e.Row.Cells[0].Controls.Add(ph1);
 
 
-                    
+
 
                 }
 
@@ -264,16 +271,25 @@ namespace WebApplication3
                 {
                     object o = GridView1.Rows[0].Cells[0];
                     e.Row.Cells[1].Text = "bonjour <b>gras</b>";
-                    
+
                 }
-                    
+
+                if (e.Row.RowIndex == 2)
+                {
+                    object o = GridView1.Rows[0].Cells[0];
+
+                    string s = GetLocalResourceObject("grille_ligne3col1").ToString();
+
+                    e.Row.Cells[0].Text = s;//"bonjour <b>gras</b>";
+                }
+
                 // Display the company name in italics.
                 //e.Row.Cells[1].Text = "<i>" + e.Row.Cells[1].Text + "</i>";
 
             }
         }
 
-        
+
 
         protected void hiddenButtonOkforModalWarning_Click(object sender, EventArgs e)
         {
@@ -287,7 +303,7 @@ namespace WebApplication3
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            if (hf0.Value == "CX") 
+            if (hf0.Value == "CX")
             {
                 hf0.Value = "CY";
             }
@@ -307,5 +323,5 @@ namespace WebApplication3
         }
     }
 
-    
+
 }

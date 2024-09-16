@@ -484,4 +484,44 @@ span.CGVIcon {
     }
 }
 
+#sp1 {
+    color: blue;
+}
+
+#sp2 {
+    color:red;
+}
+
+@media (min-width: 768px) {
+    #sp1 {
+        display: none;
+    }
+    #sp2 {
+        display: inline-block;
+    }
+    .fulldesc {
+        display: inline-block;
+    }
+    .abredesc {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #sp1 {
+        display: inline-block;
+    }
+
+    #sp2 {
+        display: none;
+    }
+
+    .fulldesc {
+        display: none;
+    }
+
+    .abredesc {
+        display: inline-block;
+    }
+}
 

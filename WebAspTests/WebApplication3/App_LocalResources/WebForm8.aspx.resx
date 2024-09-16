@@ -141,7 +141,8 @@ Mode d’emploi et règles d’usage :
     -	Les documents rédigés en allemand, anglais, arabe, espagnol, français, italien et portugais ne nécessitent pas de traduction.</value>
   </data>
   <data name="gridcolumn_Obligatoire.HeaderText" xml:space="preserve">
-    <value>Obligatoire</value>
+    <value>&lt;span class='fulldesc'&gt; Obligatoire &lt;/span&gt; &lt;span class='abredesc'&gt; &lt;b&gt;Obg&lt;/b&gt;&lt;/span&gt;</value>
+    <comment>Obligatoire</comment>
   </data>
   <data name="gridcolumn_Pieceaj.HeaderText" xml:space="preserve">
     <value>Pièce à joindre</value>
@@ -171,7 +172,7 @@ Mode d’emploi et règles d’usage :
     <value>oui</value>
   </data>
   <data name="grille_ligne3col1" xml:space="preserve">
-    <value>Justificatif de &lt;b&gt;durée&lt;/b&gt; d'études</value>
+    <value>&lt;span class='fulldesc'&gt; texte 1&lt;/span&gt; &lt;span class='abredesc'&gt; texte 2&lt;/span&gt;</value>
   </data>
   <data name="grille_ligne3col3" xml:space="preserve">
     <value>Copie lisible d'un justificatif de la durée officielle des études délivré par l'établissement</value>
