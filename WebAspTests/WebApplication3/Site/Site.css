@@ -516,12 +516,16 @@ span.CGVIcon {
         display: none;
     }
 
+    
+
     .fulldesc {
         display: none;
     }
 
     .abredesc {
         display: inline-block;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
     }
 }
 
