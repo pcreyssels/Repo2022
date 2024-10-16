@@ -384,6 +384,7 @@
     <Content Include="Images\vignette mail.PNG" />
     <Content Include="JQuery-1.12.4\jquery-1.12.4.js" />
     <Content Include="JQuery-1.12.4\jquery-1.12.4.min.js" />
+    <Content Include="ProgressBar.ascx" />
     <Content Include="Site\Site.css" />
     <Content Include="StyleSheet1.css">
       <DependentUpon>StyleSheet1.scss</DependentUpon>
@@ -394,6 +395,7 @@
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm10.aspx" />
+    <Content Include="WebForm11.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="WebForm4.aspx" />
@@ -409,6 +411,13 @@
     </Compile>
     <Compile Include="Handler1.ashx.cs">
       <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressBar.ascx.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProgressBar.ascx.designer.cs">
+      <DependentUpon>ProgressBar.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
@@ -431,6 +440,13 @@
     </Compile>
     <Compile Include="WebForm10.aspx.designer.cs">
       <DependentUpon>WebForm10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm11.aspx.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm11.aspx.designer.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>

@@ -4,6 +4,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <br />
+    <hr />
+    htmlinput button
+    <input id="Button"
+             type="button"
+             value="Button"
+             onclick="alert('Hello from the client side.');"
+                
+             runat="server" />
+    <br />
+
     <%-- GRIDVIEW --%>
     <asp:GridView ID="GridView1" runat="server"
         Font-Size="Small"
