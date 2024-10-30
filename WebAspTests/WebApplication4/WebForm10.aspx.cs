@@ -17,14 +17,20 @@ namespace WebApplication4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // web.config lue par la machine
+            //C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
 
             string applicationName = Environment.GetCommandLineArgs()[0] ;
             string exePath = System.IO.Path.Combine(Environment.CurrentDirectory, applicationName);
             
             Configuration config = ConfigurationManager.OpenExeConfiguration(exePath);
 
-            // config = ConfigurationManager.OpenMachineConfiguration();
+            
+            
+            ContextInformation cinf = config.EvaluationContext;
+
+
+            //Configuration config = ConfigurationManager.OpenMachineConfiguration();
 
             ConnectionStringsSection cs_sec =   config.ConnectionStrings;
 
@@ -74,6 +80,7 @@ namespace WebApplication4
             Debug.WriteLine($"");
             Debug.WriteLine(" ProviderSettingsCollection : ");
             ProviderSettingsCollection prsc = _hms.Providers;
+
             foreach (ProviderSettings prs in prsc)
             {
                 Debug.WriteLine($" ->  provider name : {prs.Name}");
@@ -159,6 +166,10 @@ namespace WebApplication4
             ConfigurationSection cs2 = csg0.Sections.Get("httpRuntime"); 
             HttpRuntimeSection hrts = (HttpRuntimeSection)csg0.Sections.Get("httpRuntime");
 
+
+
+
+            /*
             Debug.WriteLine("");
             Debug.WriteLine("**** CONFIGURATION SECTIONS ****");
             Debug.WriteLine("");
@@ -210,6 +221,7 @@ namespace WebApplication4
 
             ConfigurationSection cs_2 = config.SectionGroups.Get("system.web").Sections["healthMonitoring"];
 
+            */
 
             int fin = 1;
 
