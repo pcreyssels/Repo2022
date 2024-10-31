@@ -1,22 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Web.Configuration;
 using System.Net.Configuration;
-using System.Web.Management;
+using System.Web;
 
 namespace WebApplication4
 {
     public partial class WebForm10 : System.Web.UI.Page
     {
+        void OnTraceFinished(object sender, TraceContextEventArgs e)
+        {
+            TraceContextRecord r = null;
+
+            // Iterate through the collection of trace records and write 
+            // them to the response stream.
+            //Response.Write("<table>");
+            //foreach (object o in e.TraceRecords)
+            //{
+            //    r = (TraceContextRecord)o;
+            //    Response.Write(String.Format("<tr><td>{0}</td><td>{1}</td></tr>", r.Message, r.Category));
+            //}
+            //Response.Write("</table>");
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
+            Trace.TraceFinished += new TraceContextEventHandler(this.OnTraceFinished);
+
+            // Write a trace message.
+            Trace.Write("Web Forms Infrastructure Methods", "USERMESSAGE: Page_Load complete.");
+
+
+
             // web.config lue par la machine
             //C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
 
@@ -25,8 +42,26 @@ namespace WebApplication4
             
             Configuration config = ConfigurationManager.OpenExeConfiguration(exePath);
 
+           
+
+            // https://learn.microsoft.com/en-us/dotnet/api/system.web.configuration.systemwebsectiongroup?view=netframework-4.8.1
+            System.Configuration.Configuration configWeb =  WebConfigurationManager.OpenWebConfiguration(null);
+
+            SystemWebSectionGroup systemWeb = (SystemWebSectionGroup)configWeb.GetSectionGroup("system.web");
+
+            HealthMonitoringSection healthMonitoring = systemWeb.HealthMonitoring;
+
+            SectionInformation info = healthMonitoring.SectionInformation;
+
+            string name = info.SectionName;
+            string type = info.Type;
+            string declared = info.IsDeclared.ToString();
+            string msg = String.Format(
+                "Name:     {0}\nDeclared: {1}\nType:     {2}\n",
+                name, declared, type);
+
             
-            
+
             ContextInformation cinf = config.EvaluationContext;
 
 

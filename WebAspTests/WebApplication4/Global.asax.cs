@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
@@ -16,6 +17,22 @@ namespace WebApplication4
             // Code qui s’exécute au démarrage de l’application
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
+            int n = Debug.Listeners.Count;
+            int m = Trace.Listeners.Count;
+
+            DefaultTraceListener dtl = (DefaultTraceListener)Trace.Listeners[0];
+            dtl.LogFileName = @"C:\AppLogs\TraceListener\DefaultTraceListenerLog.txt";
+
+            // dtl.Fail("erreur message", "detail erreur message");
+            dtl.Write("texte écrit avec .Write");
+            dtl.WriteLine("texte écrit avec .WriteLine");
+
+            
+
+
+            int fin = 0;
         }
     }
 }
