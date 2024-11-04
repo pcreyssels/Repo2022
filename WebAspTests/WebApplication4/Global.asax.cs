@@ -29,10 +29,17 @@ namespace WebApplication4
             dtl.Write("texte écrit avec .Write");
             dtl.WriteLine("texte écrit avec .WriteLine");
 
-            
+            //TraceContext tc = 
 
 
             int fin = 0;
+        }
+
+        protected void Application_Error(object sender, EventArgs e)
+        {
+            string info = $"------- Application_Error -------> path {HttpContext.Current.Request.Path}";
+
+
         }
     }
 }

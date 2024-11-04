@@ -25,14 +25,13 @@ namespace WebApplication4
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            
 
             Trace.TraceFinished += new TraceContextEventHandler(this.OnTraceFinished);
-
+            
             // Write a trace message.
             Trace.Write("Web Forms Infrastructure Methods", "USERMESSAGE: Page_Load complete.");
 
-
+            TraceContext tc = new TraceContext(HttpContext.Current);
 
             // web.config lue par la machine
             //C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
@@ -41,8 +40,6 @@ namespace WebApplication4
             string exePath = System.IO.Path.Combine(Environment.CurrentDirectory, applicationName);
             
             Configuration config = ConfigurationManager.OpenExeConfiguration(exePath);
-
-           
 
             // https://learn.microsoft.com/en-us/dotnet/api/system.web.configuration.systemwebsectiongroup?view=netframework-4.8.1
             System.Configuration.Configuration configWeb =  WebConfigurationManager.OpenWebConfiguration(null);
@@ -60,10 +57,7 @@ namespace WebApplication4
                 "Name:     {0}\nDeclared: {1}\nType:     {2}\n",
                 name, declared, type);
 
-            
-
             ContextInformation cinf = config.EvaluationContext;
-
 
             //Configuration config = ConfigurationManager.OpenMachineConfiguration();
 
@@ -85,74 +79,74 @@ namespace WebApplication4
 
             HealthMonitoringSection _hms = (HealthMonitoringSection)ConfigurationManager.GetSection("system.web/healthMonitoring");
             BufferModesCollection bmc = _hms.BufferModes;
-            Debug.WriteLine(" BufferModesCollection : ");
-            foreach (BufferModeSettings bfs in bmc)
-            {
-                Debug.WriteLine($" ->       BufferModes name     : {bfs.Name}");
-                Debug.WriteLine($" ->       MaxBufferSize        : {bfs.MaxBufferSize}");
-                Debug.WriteLine($" ->       MaxFlushSize         : {bfs.MaxFlushSize}");
-                Debug.WriteLine($" ->       MaxBufferThreads     : {bfs.MaxBufferThreads}");
-                Debug.WriteLine($" ->       RegularFlushInterval : {bfs.RegularFlushInterval}");
-                Debug.WriteLine($" ->       UrgentFlushInterval  : {bfs.UrgentFlushInterval}");
-                Debug.WriteLine($" ->       UrgentFlushThreshold : {bfs.UrgentFlushThreshold}");
-                Debug.WriteLine($"*");
-            }
+            //Debug.WriteLine(" BufferModesCollection : ");
+            //foreach (BufferModeSettings bfs in bmc)
+            //{
+            //    Debug.WriteLine($" ->       BufferModes name     : {bfs.Name}");
+            //    Debug.WriteLine($" ->       MaxBufferSize        : {bfs.MaxBufferSize}");
+            //    Debug.WriteLine($" ->       MaxFlushSize         : {bfs.MaxFlushSize}");
+            //    Debug.WriteLine($" ->       MaxBufferThreads     : {bfs.MaxBufferThreads}");
+            //    Debug.WriteLine($" ->       RegularFlushInterval : {bfs.RegularFlushInterval}");
+            //    Debug.WriteLine($" ->       UrgentFlushInterval  : {bfs.UrgentFlushInterval}");
+            //    Debug.WriteLine($" ->       UrgentFlushThreshold : {bfs.UrgentFlushThreshold}");
+            //    Debug.WriteLine($"*");
+            //}
 
-            Debug.WriteLine($"");
-            Debug.WriteLine(" ProfileSettingsCollection : ");
-            ProfileSettingsCollection psc= _hms.Profiles;
-            foreach (ProfileSettings ps in psc)
-            {
-                Debug.WriteLine($" ->  {ps.Name}");
-                Debug.WriteLine($" ->       Profile name     : {ps.Name}");
-                Debug.WriteLine($" ->       Custom           : {ps.Custom}");
-                Debug.WriteLine($" ->       ps.MaxLimit      : {ps.MaxLimit}");
-                Debug.WriteLine($" ->       MinInstance      : {ps.MinInstances}");
-                Debug.WriteLine($" ->       MinInterval      : {ps.MinInterval}");
-                Debug.WriteLine($"*");
-            }
+            //Debug.WriteLine($"");
+            //Debug.WriteLine(" ProfileSettingsCollection : ");
+            //ProfileSettingsCollection psc= _hms.Profiles;
+            //foreach (ProfileSettings ps in psc)
+            //{
+            //    Debug.WriteLine($" ->  {ps.Name}");
+            //    Debug.WriteLine($" ->       Profile name     : {ps.Name}");
+            //    Debug.WriteLine($" ->       Custom           : {ps.Custom}");
+            //    Debug.WriteLine($" ->       ps.MaxLimit      : {ps.MaxLimit}");
+            //    Debug.WriteLine($" ->       MinInstance      : {ps.MinInstances}");
+            //    Debug.WriteLine($" ->       MinInterval      : {ps.MinInterval}");
+            //    Debug.WriteLine($"*");
+            //}
 
-            Debug.WriteLine($"");
-            Debug.WriteLine(" ProviderSettingsCollection : ");
-            ProviderSettingsCollection prsc = _hms.Providers;
+            //Debug.WriteLine($"");
+            //Debug.WriteLine(" ProviderSettingsCollection : ");
+            //ProviderSettingsCollection prsc = _hms.Providers;
 
-            foreach (ProviderSettings prs in prsc)
-            {
-                Debug.WriteLine($" ->  provider name : {prs.Name}");
-                Debug.WriteLine($" ->  provider parameters count : {prs.Parameters.Count}");
-                foreach (string key in prs.Parameters.Keys)
-                {
-                    Debug.WriteLine($"         ->  parametre {key}, valeur :{prs.Parameters[key]}");
-                }
-                Debug.WriteLine($"*");
-            }
+            //foreach (ProviderSettings prs in prsc)
+            //{
+            //    Debug.WriteLine($" ->  provider name : {prs.Name}");
+            //    Debug.WriteLine($" ->  provider parameters count : {prs.Parameters.Count}");
+            //    foreach (string key in prs.Parameters.Keys)
+            //    {
+            //        Debug.WriteLine($"         ->  parametre {key}, valeur :{prs.Parameters[key]}");
+            //    }
+            //    Debug.WriteLine($"*");
+            //}
 
-            Debug.WriteLine($"");
-            Debug.WriteLine(" RuleSettingsCollection : ");
-            RuleSettingsCollection rsc = _hms.Rules;
-            foreach (RuleSettings rs in rsc)
-            {
-                Debug.WriteLine($" -> rule name         : {rs.Name}");
-                Debug.WriteLine($" -> rule EventName    : {rs.EventName}");
-                Debug.WriteLine($" -> rule Provider     : {rs.Provider}");
-                Debug.WriteLine($" -> rule Custom       : {rs.Custom}");
-                Debug.WriteLine($" -> rule MaxLimit     : {rs.MaxLimit}");
-                Debug.WriteLine($" -> rule MinInstances : {rs.MinInstances}");
-                Debug.WriteLine($" -> rule MinInterval  : {rs.MinInterval}");
-                Debug.WriteLine($"*");
-            }
+            //Debug.WriteLine($"");
+            //Debug.WriteLine(" RuleSettingsCollection : ");
+            //RuleSettingsCollection rsc = _hms.Rules;
+            //foreach (RuleSettings rs in rsc)
+            //{
+            //    Debug.WriteLine($" -> rule name         : {rs.Name}");
+            //    Debug.WriteLine($" -> rule EventName    : {rs.EventName}");
+            //    Debug.WriteLine($" -> rule Provider     : {rs.Provider}");
+            //    Debug.WriteLine($" -> rule Custom       : {rs.Custom}");
+            //    Debug.WriteLine($" -> rule MaxLimit     : {rs.MaxLimit}");
+            //    Debug.WriteLine($" -> rule MinInstances : {rs.MinInstances}");
+            //    Debug.WriteLine($" -> rule MinInterval  : {rs.MinInterval}");
+            //    Debug.WriteLine($"*");
+            //}
 
-            Debug.WriteLine($"");
-            Debug.WriteLine(" EventMappingCollection : ");
-            EventMappingSettingsCollection emsc = _hms.EventMappings;
-            foreach (EventMappingSettings em in emsc)
-            {
-                Debug.WriteLine($" ->       EventMapping name : {em.Name}");
-                Debug.WriteLine($" ->       StartEventCode    : {em.StartEventCode}");
-                Debug.WriteLine($" ->       EndEventCode      : {em.EndEventCode}");
-                Debug.WriteLine($" ->       Type              : {em.Type}");
-                Debug.WriteLine($"*");
-            }
+            //Debug.WriteLine($"");
+            //Debug.WriteLine(" EventMappingCollection : ");
+            //EventMappingSettingsCollection emsc = _hms.EventMappings;
+            //foreach (EventMappingSettings em in emsc)
+            //{
+            //    Debug.WriteLine($" ->       EventMapping name : {em.Name}");
+            //    Debug.WriteLine($" ->       StartEventCode    : {em.StartEventCode}");
+            //    Debug.WriteLine($" ->       EndEventCode      : {em.EndEventCode}");
+            //    Debug.WriteLine($" ->       Type              : {em.Type}");
+            //    Debug.WriteLine($"*");
+            //}
 
 
 
@@ -170,7 +164,7 @@ namespace WebApplication4
 
             ConfigurationSectionGroup csg0 = config.SectionGroups.Get("system.web");
 
-            detailsSectionGroup(csg0);
+            // detailsSectionGroup(csg0);
 
             ConfigurationSectionGroup csg11 = csg0.SectionGroups.Get("system.web/healthMonitoring");
 
@@ -191,8 +185,9 @@ namespace WebApplication4
             string directory = sde.PickupDirectoryLocation;
 
             ConfigurationSectionGroup mailsettings_sg = systemnet_cg.SectionGroups.Get("mailSettings");
-            
-            detailsSectionGroup(systemnet_cg);
+
+
+            // detailsSectionGroup(systemnet_cg);
 
             cs0=systemnet_cg.Sections.Get("mailSettings");
 
