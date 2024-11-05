@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -18,6 +19,10 @@ namespace WebApplication4
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            //https://stackoverflow.com/questions/658446/how-do-i-find-the-fully-qualified-name-of-an-assembly
+            AssemblyName an = AssemblyName.GetAssemblyName(@"I:\DEV\source\Workspaces\GitHub\Repo2022\WebAspTests\WebApplication4\bin\WebApplication4.dll");
+            string fn = an.FullName;
+            
 
             int n = Debug.Listeners.Count;
             int m = Trace.Listeners.Count;

@@ -41,6 +41,9 @@ namespace WebApplication4
             
             Configuration config = ConfigurationManager.OpenExeConfiguration(exePath);
 
+            // https://learn.microsoft.com/en-us/previous-versions/ms227545(v=vs.140)?redirectedfrom=MSDN
+            // https://learn.microsoft.com/en-us/previous-versions/ms227980(v=vs.140)
+
             // https://learn.microsoft.com/en-us/dotnet/api/system.web.configuration.systemwebsectiongroup?view=netframework-4.8.1
             System.Configuration.Configuration configWeb =  WebConfigurationManager.OpenWebConfiguration(null);
 
