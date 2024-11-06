@@ -292,6 +292,7 @@
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="WebForm3.aspx" />
+    <None Include="Web1.config_copy" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -327,6 +328,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MyModule1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadableConfigurationElement.cs" />
     <Compile Include="SampleWebRequestEvent.cs" />
