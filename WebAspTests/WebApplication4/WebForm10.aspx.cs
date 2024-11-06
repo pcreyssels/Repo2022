@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Web.Configuration;
 using System.Net.Configuration;
 using System.Web;
+using System.Web.Management;
 
 namespace WebApplication4
 {
@@ -23,11 +24,39 @@ namespace WebApplication4
             //}
             //Response.Write("</table>");
         }
+
+        public void OnBeginRequest(Object sender, EventArgs e)
+        {
+        }
+
+        public void OnEndRequest(Object sender, EventArgs e)
+        {
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            HttpApplication httpApp = sender as HttpApplication;
+
+            try
+            {
+                // Make sure to be outside the forbidden range.
+                System.Int32 myCode = WebEventCodes.WebExtendedBase + 30;
+                SampleWebRequestEvent swre =
+                  new SampleWebRequestEvent(
+                  "* SampleWebRequestEvent Start", this, myCode);
+                // Raise the event.
+                swre.Raise();
+            }
+            catch (Exception ex)
+            {
+                httpApp.Context.Response.Output.WriteLine(
+                    ex.ToString());
+            }
+
+
+
             Trace.TraceFinished += new TraceContextEventHandler(this.OnTraceFinished);
-            
+
             // Write a trace message.
             Trace.Write("Web Forms Infrastructure Methods", "USERMESSAGE: Page_Load complete.");
 
@@ -36,16 +65,16 @@ namespace WebApplication4
             // web.config lue par la machine
             //C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
 
-            string applicationName = Environment.GetCommandLineArgs()[0] ;
+            string applicationName = Environment.GetCommandLineArgs()[0];
             string exePath = System.IO.Path.Combine(Environment.CurrentDirectory, applicationName);
-            
+
             Configuration config = ConfigurationManager.OpenExeConfiguration(exePath);
 
             // https://learn.microsoft.com/en-us/previous-versions/ms227545(v=vs.140)?redirectedfrom=MSDN
             // https://learn.microsoft.com/en-us/previous-versions/ms227980(v=vs.140)
 
             // https://learn.microsoft.com/en-us/dotnet/api/system.web.configuration.systemwebsectiongroup?view=netframework-4.8.1
-            System.Configuration.Configuration configWeb =  WebConfigurationManager.OpenWebConfiguration(null);
+            System.Configuration.Configuration configWeb = WebConfigurationManager.OpenWebConfiguration(null);
 
             SystemWebSectionGroup systemWeb = (SystemWebSectionGroup)configWeb.GetSectionGroup("system.web");
 
@@ -64,17 +93,17 @@ namespace WebApplication4
 
             //Configuration config = ConfigurationManager.OpenMachineConfiguration();
 
-            ConnectionStringsSection cs_sec =   config.ConnectionStrings;
+            ConnectionStringsSection cs_sec = config.ConnectionStrings;
 
             AppSettingsSection as_sec = config.AppSettings;
 
             var cs_settings = cs_sec.ConnectionStrings;
 
-            var as_settings =  as_sec.Settings;
+            var as_settings = as_sec.Settings;
 
             object un = ConfigurationManager.AppSettings["userName"];
 
-            object  oas = ConfigurationManager.GetSection("appSettings");
+            object oas = ConfigurationManager.GetSection("appSettings");
             string oas_name = oas.GetType().Name;
 
             object hms0 = ConfigurationManager.GetSection("healthMonitoring");
@@ -171,19 +200,19 @@ namespace WebApplication4
 
             ConfigurationSectionGroup csg11 = csg0.SectionGroups.Get("system.web/healthMonitoring");
 
-            ConfigurationSection cs0= csg0.Sections.Get("healthMonitoring");
+            ConfigurationSection cs0 = csg0.Sections.Get("healthMonitoring");
 
-            
+
 
 
             ConfigurationSectionGroup systemnet_cg = config.SectionGroups.Get("system.net");
 
-            NetSectionGroup nsg = (NetSectionGroup) config.SectionGroups.Get("system.net");
+            NetSectionGroup nsg = (NetSectionGroup)config.SectionGroups.Get("system.net");
 
             MailSettingsSectionGroup mssg = nsg.MailSettings;
 
             SmtpSection smtps = mssg.Smtp;
-            SmtpSpecifiedPickupDirectoryElement sde =  smtps.SpecifiedPickupDirectory;
+            SmtpSpecifiedPickupDirectoryElement sde = smtps.SpecifiedPickupDirectory;
 
             string directory = sde.PickupDirectoryLocation;
 
@@ -192,11 +221,11 @@ namespace WebApplication4
 
             // detailsSectionGroup(systemnet_cg);
 
-            cs0=systemnet_cg.Sections.Get("mailSettings");
+            cs0 = systemnet_cg.Sections.Get("mailSettings");
 
 
             HealthMonitoringSection hms = (HealthMonitoringSection)csg0.Sections.Get("healthMonitoring");
-            ConfigurationSection cs2 = csg0.Sections.Get("httpRuntime"); 
+            ConfigurationSection cs2 = csg0.Sections.Get("httpRuntime");
             HttpRuntimeSection hrts = (HttpRuntimeSection)csg0.Sections.Get("httpRuntime");
 
 
@@ -261,14 +290,14 @@ namespace WebApplication4
         }
 
 
-        protected void detailsSectionGroup(ConfigurationSectionGroup csg )
+        protected void detailsSectionGroup(ConfigurationSectionGroup csg)
         {
 
             Debug.WriteLine("");
             Debug.WriteLine("**** section group ****");
             Debug.WriteLine("");
 
-            if (csg ==null)
+            if (csg == null)
             {
                 Debug.WriteLine("    ->  section group is null ! ");
             }
@@ -277,10 +306,10 @@ namespace WebApplication4
                 string nom_sectiongroup = csg.SectionGroupName;
                 Debug.WriteLine($" -> nom section group : {nom_sectiongroup}");
                 var sg = csg.SectionGroups;
-                Debug.WriteLine($"    -> {csg.SectionGroups.Count} SectionGroups du SectionGroup {nom_sectiongroup }: ");
+                Debug.WriteLine($"    -> {csg.SectionGroups.Count} SectionGroups du SectionGroup {nom_sectiongroup}: ");
                 foreach (string kc in sg.Keys)
                 {
-                    Debug.WriteLine($"      -> cle du sous SectionGroup :{ kc }");
+                    Debug.WriteLine($"      -> cle du sous SectionGroup :{kc}");
                     ConfigurationSectionGroup csg_sg = csg.SectionGroups.Get(kc);
                     if (csg_sg != null)
                     {
@@ -312,9 +341,9 @@ namespace WebApplication4
                         Debug.WriteLine($" --- nom groupe null");
                 }
             }
-            
-            
-            
+
+
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
