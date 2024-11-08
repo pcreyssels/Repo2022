@@ -18,7 +18,17 @@ namespace WebApplication4
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["cookieok"] == null)
+                Session["ccokieok"] = "off";
+            if (Session["cookieok"] is string s)
+            {
+                if (s=="off")
+                {
+                    panel1.Visible = true;
+                }
+                else if (s == "on")
+                    panel1.Visible = false;
+            }
         }
 
         protected void ScriptManager1_AsyncPostBackError(object sender, AsyncPostBackErrorEventArgs e)
@@ -34,6 +44,13 @@ namespace WebApplication4
         protected void ScriptManager1_DataBinding(object sender, EventArgs e)
         {
 
+        }
+
+        protected void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            if (Session["cookieok"] == null || (Session["cookieok"] is string && ((string)Session["cookieok"]) == "off"))
+                Session["cookieok"] = "on";
         }
     }
 }
