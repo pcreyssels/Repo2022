@@ -24,7 +24,7 @@ namespace WebApplication4
             {
                 if (s=="off")
                 {
-                    panel1.Visible = true;
+                    Visible = true;
                 }
                 else if (s == "on")
                     panel1.Visible = false;

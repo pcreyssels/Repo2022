@@ -67,7 +67,7 @@
 
                 <asp:UpdatePanel runat="server">
                     <ContentTemplate>
-                        <asp:Panel BorderStyle="Double" runat="server" ID="panel1">
+                        <asp:Panel  CssClass="cookie_consent" runat="server" ID="panel1">
                             <asp:TextBox Text="TEXTE BANNER" runat="server"/>
                             <asp:Button runat="server" Text="click" ID="button1" OnClick="button1_Click"></asp:Button>
                         </asp:Panel>

@@ -20,6 +20,14 @@ textarea {
     }
 }
 
+/* texte cookie consent */
+.cookie_consent {
+    border: 2px solid;
+    padding: 5px;
+    border-color: red;
+    border-radius: 1.5em;
+}
+
 /* texte conditions generales*/
 
 .CGV {
