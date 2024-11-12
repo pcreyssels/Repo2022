@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Pour plus d'informations sur la configuration de votre application ASP.NET, visitez
+  https://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+
+	<appSettings>
+		<!-- Config ServicePhoenix (lié au service WCF de l'appli WPF de gestion (from XALA)) -->
+		<add key="userName" value="userservicegestionphoenix"/>
+	</appSettings>
+
+
+	<connectionStrings>
+		<clear/>
+		<add name="LocalSqlServer" connectionString="Data Source=PR-PACR-1721\SQLEXPRESS;User ID=sa;Password=adminSQL2019;Initial Catalog=aspnetdb" />
+	</connectionStrings>
+	<system.webServer>
+
+	</system.webServer>
+	<system.web>
+		<compilation debug="true" targetFramework="4.8" />
+		<httpRuntime targetFramework="4.8" />
+		<pages>
+			<namespaces>
+				<add namespace="System.Web.Optimization" />
+			</namespaces>
+			<controls>
+				<add assembly="Microsoft.AspNet.Web.Optimization.WebForms" namespace="Microsoft.AspNet.Web.Optimization.WebForms" tagPrefix="webopt" />
+				<add tagPrefix="ajaxToolkit" assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" />
+
+			</controls>
+		</pages>
+
+		<!-- https://www.c-sharpcorner.com/article/introduction-to-Asp-Net-http-module/ -->
+		<!--<httpModules>
+			<add name="SampleModule" type="WebApplication4.MyModule1,WebApplication4 "/>
+		</httpModules>-->
+
+		<healthMonitoring enabled="true" heartbeatInterval="0">
+
+			<eventMappings>
+				<!--<add
+					name="MyEvent"
+					type="System.Web.Management.WebBaseEvent"
+					startEventCode="0"
+					endEventCode="10000"/>
+				<add name="ReqProcEvents" 
+					 type="System.Web.Management.WebRequestEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" 
+					 startEventCode="0" endEventCode="2147483647"/>
+
+				<add  name="SampleWebRequestEvent"
+					  type="WebApplication4.SampleWebRequestEvent, WebApplication4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+					  startEventCode="0" endEventCode="2147483647"/>-->
+
+				<remove name="Request Processing Events"/>
+				<add name="RP Events" type="System.Web.Management.WebRequestEvent,System.Web,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a" startEventCode="0" endEventCode="2147483647"/>
+
+
+			</eventMappings>
+
+			<bufferModes>
+				<add
+                name="MyBuffer"
+                maxBufferSize="100"
+                maxBufferThreads="1"
+                maxFlushSize="50"
+                regularFlushInterval="00:10:00"
+                urgentFlushInterval="00:01:00"
+                urgentFlushThreshold="10" />
+				<add name="Analysis"
+				maxBufferSize="1000"
+				maxFlushSize="100"
+				urgentFlushThreshold="100"
+				regularFlushInterval="00:05:00"
+				urgentFlushInterval="00:01:00"
+				maxBufferThreads="1"/>
+			</bufferModes>
+
+			<providers>
+				<!--<clear/>-->
+				<add name="EmailProvider"
+					 type="System.Web.Management.SimpleMailWebEventProvider,System.Web,Version=2.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a"
+					  from="noreply@france-education-international.fr"
+					  to="pacr@ciep.fr"
+					  buffer="false"/>
+				<!--<remove name="SqlWebEventProvider"/>
+				<add name="SqlWebEventProvider"
+					type="System.Web.Management.SqlWebEventProvider,System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+					connectionStringName="LocalSqlServer"
+					maxEventDetailsLength="1073741823"
+					buffer="false"
+					bufferMode="Analysis"
+					/>-->
+				<!--<add
+					name="MyProvider"
+					type="System.Web.Management.SqlWebEventProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+					connectionStringName="LocalSqlServer"
+					buffer="false"
+					bufferMode="MyBuffer"/>-->
+				<add name="TraceEventProvider"
+						type="System.Web.Management.TraceWebEventProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+						/>
+			</providers>
+
+			<!-- https://learn.microsoft.com/en-us/dotnet/api/system.web.management.webeventcodes?view=netframework-4.8.1 -->
+			<rules>
+				<!--<add name="TheRule" eventName="Heartbeats" provider="SqlWebEventProvider"/>-->
+				<!--<add name="TheRule" eventName="All Errors" provider="MyProvider"/>-->
+				<!--<add name="TheSecondRule" eventName="All Errors" provider="SqlWebEventProvider"/>-->
+				<!--<add name="TheEmailRule" eventName="All Errors" provider="EmailProvider"/>-->
+				<add name="Heart Beat Events"
+						eventName="Heartbeats"
+						provider="EventLogProvider"
+						profile="Default"
+						minInterval="00:00:20" />
+				<add name="HeartBeat TraceLog"
+						eventName="Heartbeats"
+						provider="TraceEventProvider"
+						profile="Trace"	/>
+				<!--<add name="RPE TraceLog"
+						eventName="SampleWebRequestEvent"
+						provider="TraceEventProvider"
+						profile="Trace"	/>
+				<add name="RPE EventLog"
+						eventName="SampleWebRequestEvent"
+						provider="EventLogProvider"
+						profile="Trace"	/>-->
+				<!--<add name="RPE EventLog"
+						eventName="Request Processing Events"
+						provider="EventLogProvider"/>-->
+				<!--<add name="All EventLog"
+						eventName="All Events"
+						provider="EventLogProvider"/>-->
+				<add name="WRE TraceLog"
+						eventName="RP Events"
+						provider="TraceEventProvider"/>
+				<add name="WRE EventLog"
+						eventName="RP Events"
+						provider="EventLogProvider"/>
+				<add name="ALT EventLog"
+						eventName="Application Lifetime Events"
+						provider="EventLogProvider"/>
+				<add name="ALT TraceLog"
+						eventName="Application Lifetime Events"
+						provider="TraceEventProvider"/>
+				<!--<add name="InfrastructErr TraceLog"
+						eventName="Infrastructure Errors"
+						provider="TraceEventProvider"
+						profile="Trace"	/>-->
+				<!--<add name="ReqProcErr TraceLog"
+						eventName="Request Processing Errors"
+						provider="TraceEventProvider"
+						profile="Trace2"	/>-->
+				<!--<add name="ReqProcErr MailLog"
+						eventName="Request Processing Errors"
+						provider="EmailProvider"
+						profile="Email"	/>-->
+			</rules>
+
+			<profiles>
+				<add name="Trace"
+					minInstances="1"
+					maxLimit="Infinite"
+					minInterval="00:00:00"
+				/>
+				<add name="Trace2"
+					minInstances="1"
+					maxLimit="Infinite"
+					minInterval="00:00:05"
+				/>
+				<add name="Email"
+					minInstances="1"
+					maxLimit="Infinite"
+					minInterval="00:00:05"
+				/>
+			</profiles>
+
+		</healthMonitoring>
+
+	</system.web>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="Antlr3.Runtime" publicKeyToken="eb42632606e9261f" />
+				<bindingRedirect oldVersion="0.0.0.0-3.5.0.2" newVersion="3.5.0.2" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.Web.Infrastructure" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="0.0.0.0-2.0.1.0" newVersion="2.0.1.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" />
+				<bindingRedirect oldVersion="0.0.0.0-12.0.0.0" newVersion="12.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="0.0.0.0-1.6.5135.21930" newVersion="1.6.5135.21930" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Microsoft.Extensions.DependencyInjection.Abstractions" publicKeyToken="adb9793829ddae60" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-2.1.1.0" newVersion="2.1.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+	<system.codedom>
+		<compilers>
+			<compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:default /nowarn:1659;1699;1701" />
+			<compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:default /nowarn:41008 /define:_MYTYPE=\&quot;Web\&quot; /optionInfer+" />
+		</compilers>
+	</system.codedom>
+</configuration>

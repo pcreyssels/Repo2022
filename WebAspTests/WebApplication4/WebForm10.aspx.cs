@@ -25,13 +25,7 @@ namespace WebApplication4
             //Response.Write("</table>");
         }
 
-        public void OnBeginRequest(Object sender, EventArgs e)
-        {
-        }
 
-        public void OnEndRequest(Object sender, EventArgs e)
-        {
-        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
