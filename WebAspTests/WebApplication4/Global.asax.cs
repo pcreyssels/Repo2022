@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -34,12 +35,20 @@ namespace WebApplication4
             int n = Debug.Listeners.Count;
             int m = Trace.Listeners.Count;
 
+           
             DefaultTraceListener dtl = (DefaultTraceListener)Trace.Listeners[0];
-            dtl.LogFileName = @"C:\AppLogs\TraceListener\DefaultTraceListenerLog.txt";
+
+            string fichierDtll = ConfigurationManager.AppSettings["fichierDtll"];
+            if (fichierDtll != null && String.IsNullOrWhiteSpace(dtl.LogFileName))
+            {
+                dtl.LogFileName = fichierDtll;
+                dtl.Write($"   --> DefaultTraceListener LogFileName set to  : {dtl.LogFileName} ");
+            }
+            dtl.LogFileName = fichierDtll;//@"C:\AppLogs\TraceListener\DefaultTraceListenerLog.txt";
 
             // dtl.Fail("erreur message", "detail erreur message");
-            dtl.Write("texte écrit avec .Write");
-            dtl.WriteLine("texte écrit avec .WriteLine");
+            //dtl.Write("texte écrit avec .Write");
+            //dtl.WriteLine("texte écrit avec .WriteLine");
 
             //TraceContext tc = 
 

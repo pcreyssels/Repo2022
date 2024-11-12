@@ -256,6 +256,8 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <None Include="Properties\PublishProfiles\IISLocalServer.pubxml" />
+    <None Include="Properties\PublishProfiles\s-test2.ciep.fr WebAspTest.pubxml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
