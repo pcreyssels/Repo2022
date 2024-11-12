@@ -210,5 +210,19 @@ namespace WebApplication4
         protected void Application_PreSendRequestContent(object sender, EventArgs e)
         {
         }
+
+        public void Session_Start()
+        {
+            int i = 0;
+            if (Session["cookieok"] == null || (Session["cookieok"] is string && ((string)Session["cookieok"])!="off"))
+                Session["cookieok"] = "off";
+        }
+
+        public void Session_End()
+        {
+            int i = 0;
+            Session["cookieok"] = "off";
+        }
+
     }
 }
