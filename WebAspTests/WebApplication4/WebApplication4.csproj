@@ -130,6 +130,7 @@
     <Content Include="ConditionsGenerales.html" />
     <Content Include="ConditionsGeneralesDec23.html" />
     <Content Include="ConditionsGeneralesMaj181024.html" />
+    <Content Include="ConditionsGeneralesMaj181024_En.html" />
     <Content Include="ConditionsGeneralesMaj260424.html" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
