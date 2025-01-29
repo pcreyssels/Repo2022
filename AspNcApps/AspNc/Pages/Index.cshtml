@@ -7,4 +7,23 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <div class="row">
+        <div class="col-lg-1">
+            <form asp-page-handler="edit" method="post">
+                <button class="btn btn-default">Edit</button>
+            </form>
+        </div>
+        <div class="col-lg-1">
+            <form asp-page-handler="delete" method="post">
+                <button class="btn btn-default">Delete</button>
+            </form>
+        </div>
+        <div class="col-lg-1">
+            <form asp-page-handler="view" method="post">
+                <button class="btn btn-default">View</button>
+            </form>
+        </div>
+    </div>
+
 </div>

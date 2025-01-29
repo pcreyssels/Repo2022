@@ -39,33 +39,34 @@ textarea {
     font-size: 1em;
 }
 
-progress {
-    border-radius: 7px;
-    width: 80%;
-    height: 22px;
-    /*margin-left: -11.5%;*/
-    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+progress[value] {
+    --color: blue; /* the progress color */
+    --color2: green; /* the progress color */
+    --background: lightgrey; /* the background color */
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 200px;
+    margin: 0 10px;
+    border-radius: 10em;
+    background: var(--background);
 }
 
-    progress::-webkit-progress-bar {
-        background-color: yellow;
-        border-radius: 7px;
+    progress[value]::-webkit-progress-bar {
+        border-radius: 10em;
+        background: var(--background);
     }
-
-    /*progress::-webkit-progress-value {
-        background-color: blue;
-        border-radius: 7px;
-        box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 );
-    }*/
 
     progress[value]::-webkit-progress-value {
-        background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), -webkit-linear-gradient(left, #09c, #f44);
-        border-radius: 2px;
-        background-size: 35px 20px, 100% 100%, 100% 100%;
+        border-radius: 10em;
+        background: var(--color);
     }
 
-    progress::-moz-progress-bar {
-        /* style rules */
+    progress[value]::-moz-progress-bar {
+        border-radius: 10em;
+        background: var(--color2);
     }
 
 
@@ -77,7 +78,7 @@ progress {
 }
 
 .CGVTitreN1 {
-    font-family : 'Times New Roman';
+    font-family: 'Times New Roman';
     font-size: 2em;
     font-weight: bolder;
     color: steelblue;
@@ -87,7 +88,7 @@ progress {
     font-size: 1.5em;
     font-weight: bolder;
     color: royalblue;
-    background-color :lightgray;
+    background-color: lightgray;
 }
 
 .CGVTitreN3 {
@@ -138,9 +139,9 @@ span.CGVIcon {
     border-radius: 15px;
 }
 
-.progressbar[title="downloading"] {
-    background-color: var(--progress);
-}
+    .progressbar[title="downloading"] {
+        background-color: var(--progress);
+    }
 
 .mp4 {
     width: 100%;
@@ -168,3 +169,7 @@ span.CGVIcon {
         margin: 0;
     }
 
+.w3-light-gray {
+    color: #000 !important; /* !important */
+    background-color: #f1f1f1 /* !important */
+}

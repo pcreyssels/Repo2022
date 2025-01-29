@@ -28,3 +28,4 @@ app.Run();
 //https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/directory-structure?view=aspnetcore-8.0
 //https://learn.microsoft.com/en-us/answers/questions/1321605/host-name-in-iis-site-bindings-purpose-and-usage
 //https://www.learnrazorpages.com/advanced/areas
+//https://github.com/dotnet/AspNetCore.Docs.git

@@ -7,7 +7,9 @@ namespace AspNc.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
+        public string Message { get; set; }
 
+        private int i { get; set; }
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -15,7 +17,25 @@ namespace AspNc.Pages
 
         public void OnGet()
         {
+            i = 5;
+        }
 
+        public void OnPost()
+        {
+            Message = "Post used";
+        }
+
+        public void OnPostDelete()
+        {
+            Message = "Delete handler fired";
+        }
+        public void OnPostEdit(int id)
+        {
+            Message = "Edit handler fired";
+        }
+        public void OnPostView(int id)
+        {
+            Message = "View handler fired";
         }
     }
 }
