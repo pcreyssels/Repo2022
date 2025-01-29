@@ -160,6 +160,7 @@
     <Content Include="HtmlPage4.html" />
     <Content Include="HtmlPage5.html" />
     <Content Include="HtmlPage6.html" />
+    <Content Include="HtmlPage7.html" />
     <Content Include="Images\accueil.svg" />
     <Content Include="Images\accueil1024x1024px.png" />
     <Content Include="Images\accueil1664x1664px.png" />
@@ -248,6 +249,8 @@
       <DependentUpon>StyleSheet1.css</DependentUpon>
     </Content>
     <Content Include="WebForm10.aspx" />
+    <Content Include="WebForm11.aspx" />
+    <Content Include="WebForm12.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="WebForm6.aspx" />
@@ -373,6 +376,20 @@
     <Compile Include="WebForm10.aspx.designer.cs">
       <DependentUpon>WebForm10.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm11.aspx.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm11.aspx.designer.cs">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm12.aspx.cs">
+      <DependentUpon>WebForm12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm12.aspx.designer.cs">
+      <DependentUpon>WebForm12.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -460,6 +477,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\WebForm8.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\WebForm11.aspx.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

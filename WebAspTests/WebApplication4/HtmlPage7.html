@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BONJOUR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/Site.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+    TEST CHATBOX
+    <!--<script src="https://storage.googleapis.com/ideta-prod.appspot.com/bots/-O-0V_bJ2w-AZ7xQ8ln5/scripts/integration-web.js?GoogleAccessId=firebase-adminsdk-4b3yf%40ideta-prod.iam.gserviceaccount.com&Expires=16447017600&Signature=mo2bAJSDBICIqylq%2FoeUuxo8tRNCLbYRDyEb4ECSJ7XkpenlgYjJJ5YfjLjfbrV9V0Okaov1u7SqNBTMTuwqG8zFkbBFHxh5Zdna8tDp4QhvkgEHaGN0UhQavqlGCRFN71zw8H%2BHdxlS%2F6YobgJsmK5362wC1jPQ%2FNQYPECImVefbEWF5r3FWPuZWpJTG8OjqVP9LyDSBUYIViksoIZW51UImkuDuZCYVjz55AAwDxDuqX7P5pQZOiTqJmo2qvjVF6lR6Adsrb%2FDeJQ3kdzs0W5duFaiCfAF%2BzHnkHataHeY4MLCgGoq3p7WZX2pIraijPFV%2BY40Py4t8mYJ9dynQQ%3D%3D" type="text/javascript" async></script>-->
+
+    <br />
+    <span aria-labelledby="labelbr" class="glyphicon glyphicon-music"></span>
+    <br />
+    <span aria-labelledby="labelbr" class="glyphicon glyphicon-search"></span>
+    <br />
+    <span aria-labelledby="labelbr" class="glyphicon glyphicon-heart"></span>
+    <br />
+
+    ACCESSKEY
+    <br />
+    <input type="text" id="NAME1" accesskey="n">
+    <br />
+
+    <br />
+
+    SCRIPT
+    <br />
+
+    <input placeholder="Click here, then press and release a key." size="40" />
+    <p id="log"></p>
+
+    <br />
+    <input id="input2" placeholder="Click here, then press and release a key." size="40" />
+
+
+    <br />
+    popopver
+    <br />
+
+    <span runat="server"
+          id="iconinfonom"
+          tabindex="0"
+          style="font-size: larger"
+          class="glyphicon glyphicon-info-sign color-info"
+          data-toggle="popover"
+          data-content="__les documents attendus sont..."
+          data-placement="bottom"
+          data-trigger="focus"
+          data-html="true" />
+    <br />
+
+    <br />
+    progress
+    <br />
+    <label for="pb1"> progression2 </label>
+    <progress id="file" max="100" value="70">70%</progress>
+
+    <script>
+        //alert("Hello World!");
+
+
+        $(function () {
+            // pour les popover tooltip
+            $('[data-toggle="popover"]').popover();
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+
+
+        const iin = document.getElementById("iconinfonom");
+        iin.addEventListener("keyup", logKeyii);
+        iin.addEventListener("keydown", logKeyii2);
+
+        const dbo = document.getElementById("input2");
+        dbo.addEventListener("keyup", logKey);
+
+        //dbo.addEventListener("keyup", (event) => {
+        //    Page_ClientValidate('vDates');
+        //});
+
+        //const input = document.querySelector("input");
+        //input.addEventListener("keyup", logKey);
+
+        function logKey(e) {
+            console.log(e.code);
+            log.textContent += ` ${e.code}`;
+        }
+
+        function logKeyii(e) {
+            console.log(`tootip event ${e.code}`);
+        }
+
+        function logKeyii2(e) {
+            console.log(`keydown event ${e.code}`);
+        }
+
+    </script>
+
+</body>
+
+
+
+
+</html>
