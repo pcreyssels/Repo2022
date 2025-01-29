@@ -152,13 +152,16 @@
             <span>40% Complete (success)</span>
         </div>
     </div>
+    <span id="lpb2">progression : </span>
     <div class="progress">
-        <div class="progress-bar active progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+        <div class="progress-bar active progress-bar-info progress-bar-striped" role="progressbar"  
+             aria-labelledby="lpb2" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
             <span>20% Complete</span>
         </div>
     </div>
     <div class="progress">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" 
+             aria-valuemin="0" aria-valuemax="100" style="width: 60%">
             <span>60% Complete (warning)</span>
         </div>
     </div>
