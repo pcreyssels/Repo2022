@@ -9,7 +9,7 @@
 
     <br />
 
-    <input type="text" id="name" name="nom attribut name" required minlength="4" maxlength="8" size="10" />
+    <%--<input type="text" id="name" name="nom attribut name" required minlength="4" maxlength="8" size="10" />--%>
 
     <br />
 
@@ -170,6 +170,10 @@
             <span>80% Complete (danger)</span>
         </div>
     </div>
+
+    <div>Disabled Button</div>
+
+    <asp:Button ID="bo1" runat="server" Text="Disabled Button" Enabled="true"  OnClick="bo1_Click"/>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScript" runat="server">

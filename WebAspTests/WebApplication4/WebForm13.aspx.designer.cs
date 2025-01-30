@@ -11,17 +11,17 @@ namespace WebApplication4
 {
 
 
-    public partial class WebForm11
+    public partial class WebForm13
     {
 
         /// <summary>
-        /// Contrôle button_refresh.
+        /// Contrôle form1.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton button_refresh;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// Contrôle bo1.

@@ -9,6 +9,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Web.UI.WebControls;
 
 namespace WebApplication4
 {
@@ -35,7 +36,8 @@ namespace WebApplication4
             int n = Debug.Listeners.Count;
             int m = Trace.Listeners.Count;
 
-           
+            WebControl.DisabledCssClass = "disabledCssClass";
+
             DefaultTraceListener dtl = (DefaultTraceListener)Trace.Listeners[0];
 
             string fichierDtll = ConfigurationManager.AppSettings["fichierDtll"];

@@ -11,7 +11,23 @@ namespace WebApplication4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            CssStyleCollection csc = bo1.Style;
 
+
+            TemplateControl tc = bo1.TemplateControl;
+
+            int fin = 1;
+
+            
+        }
+
+        protected void bo1_Click(object sender, EventArgs e)
+        {
+            CssStyleCollection csc = bo1.Style;
+
+            TemplateControl tc = bo1.TemplateControl;
+            
+            int fin = 1;
         }
     }
 }

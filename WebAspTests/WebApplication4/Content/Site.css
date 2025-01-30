@@ -20,6 +20,13 @@ textarea {
     }
 }
 
+
+.disabledCssClass {
+    background-color: #BF382B;
+    opacity: 1; 
+    color: #ECF0F1;
+}
+
 /* texte cookie consent */
 .cookie_consent {
     border: 2px solid;
