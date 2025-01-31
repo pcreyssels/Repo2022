@@ -156,12 +156,15 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="HtmlPage10.html" />
     <Content Include="HtmlPage2.html" />
     <Content Include="HtmlPage3.html" />
     <Content Include="HtmlPage4.html" />
     <Content Include="HtmlPage5.html" />
     <Content Include="HtmlPage6.html" />
     <Content Include="HtmlPage7.html" />
+    <Content Include="HtmlPage8.html" />
+    <Content Include="HtmlPage9.html" />
     <Content Include="Images\accueil.svg" />
     <Content Include="Images\accueil1024x1024px.png" />
     <Content Include="Images\accueil1664x1664px.png" />

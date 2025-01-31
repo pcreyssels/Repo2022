@@ -1,7 +1,14 @@
-﻿/* Wrapping element */
+﻿
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    margin-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -10,72 +17,758 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    /*max-width: 280px;*/
 }
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
     .body-content {
         padding: 0;
     }
 }
 
 
+.formulaire {
+    /*max-width: 1200px;*/
+    overflow: hidden;
+}
+
+.formulaire-zone-label {
+    font-weight: bold;
+}
+
+.zone-label {
+    font-weight: bold;
+    /*font-family: Calibri;*/
+}
+
+.zone-label-small {
+    font-weight: normal;
+    font-size: x-small;
+}
+
+.zone-label-mentionbleu {
+    font-weight: normal;
+    /* dodgerblue (#1E90FF) -> #0073E6 ratio contraste WCAG-AA */
+    color: #0073E6;
+}
+
+.zone-label-mentionbleugras {
+    font-weight: bolder;
+    /* dodgerblue (#1E90FF) -> #0073E6 ratio contraste WCAG-AA */
+    color: #0073E6;
+}
+
+.etoile-rouge {
+    /* #EB0000 rouge rapport de contraste 4.63:1 (>4.5:1) */
+    color: #EB0000;
+    font-weight: bold;
+    font-family: Calibri;
+}
+
+.checkbox label label {
+    padding-left: 0px;
+    padding-top: 2px;
+}
+
+/*controles login asp séparation des labels et des input collés*/
+.aspcontrolpaddinginputform {
+    padding-right: 10px;
+}
+/*controles login asp*/
+.aspcontrolpaddingbuttonform {
+    text-align: center;
+    margin: 5px;
+}
+
+
+/* perso header du site */
+.site-header {
+    /*font-size: large;*/
+    color: blue;
+    /*background-color:powderblue;*/
+    /*margin: 20px 20px;*/
+    /*border-style: double;*/
+}
+
+.container {
+    display: grid;
+}
+
+.container-fluid {
+    display: flex;
+}
+
+.container, container-fluid {
+    /*max-width: 1200px;*/
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: 0px;
+    grid-auto-columns: auto;
+    grid-template-columns: auto;
+    /*grid-template-columns: 1fr 8fr 1fr;*/
+    grid-template-rows: auto;
+    /*grid-auto-rows: 1fr;*/
+    grid-auto-rows: auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.formulaire-control {
+    max-width: 400px;
+}
+
+.formulaire-radiostyle {
+    height: auto;
+}
+
+    .formulaire-radiostyle label {
+        margin-left: 3px !important;
+        margin-right: 10px !important;
+        display: inline;
+    }
+
+.formulaire-erreur {
+    font-weight: bold;
+    display: inline-block;
+    color: #990000;
+    background-color: #F5DEB3;
+    border-color: #FFA500;
+    border-width: 1px;
+    border-style: Dotted;
+    margin-top: 2px;
+    padding: 4px;
+}
+
+    .formulaire-erreur[style*="inline"] {
+        display: inline-block !Important;
+    }
+
+span {
+}
+
+.inlinetextbox {
+    display: inline
+}
+
+.obligatoire {
+    /* #EB0000 rouge rapport de contraste 4.63:1 (>4.5:1) */
+    color: #EB0000;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.error {
+    display: inline-block;
+    color: #990000;
+    background-color: #F5DEB3;
+    border-color: #FFA500;
+    border-width: 1px;
+    border-style: Dotted;
+}
+
+.information {
+    /*max-width: 1200px;*/
+    display: block;
+    padding: 10px;
+    font-style: italic;
+    background-color: #ddddcc;
+    border-radius: .25rem;
+    border: 1px solid #a0a076;
+}
+
+.information-justify {
+    /*max-width: 1200px;*/
+    display: block;
+    padding: 10px;
+    font-style: italic;
+    text-align: center;
+    background-color: #ddddcc;
+    border-radius: .25rem;
+    border: 1px solid #a0a076;
+}
+
+.information-alerte {
+    /*max-width: 1200px;*/
+    display: block;
+    padding: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-style: italic;
+    text-align: justify;
+    border-radius: .25rem;
+    color: #ff0000;
+    background-color: #ddddcc;
+    border-radius: .25rem;
+    border: 1px solid #a0a076;
+}
+
+.information-error {
+    /*max-width: 1200px;*/
+    display: block;
+    padding: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-style: italic;
+    text-align: justify;
+    font-weight: bold;
+    border-radius: .25rem;
+    color: #ff0000;
+    background-color: #ddddcc;
+    border-radius: .25rem;
+    border: 1px solid #a0a076;
+}
+
+.bandeaulegal {
+    background-color: rgba(251,216,171,255);
+}
+
+.information-justify-center {
+    display: block;
+    padding: 10px;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: smaller;
+    text-align: center;
+}
+
+.information-justify-left {
+    display: block;
+    padding: 10px;
+    font-style: normal;
+    font-size: smaller;
+    text-align: left;
+}
+
+
+.notice {
+    display: block;
+    background-color: #FFFFAA;
+    padding: 10px;
+}
+
+input[disabled=disabled][type=submit] {
+    border: 1px solid #7f9db9;
+    background-color: #ebebe4;
+    color: #a9a9a9;
+}
+
+    input[disabled=disabled][type=submit].btn-sitpho {
+        border: 1px solid #7f9db9;
+        /*background-color: #ebebe4;*/
+        /*color: #a9a9a9;*/
+        background-color: #D4D4D4;
+        opacity: 1;
+        color: #575757;
+    }
+
+input[disabled=disabled][type=text] {
+    border: 1px solid #7f9db9;
+    background-color: #ebebe4;
+}
+
+input[readonly=readonly][type=text] {
+    border: 1px solid #7f9db9;
+    background-color: #ebebe4;
+}
+
+select[disabled=disabled] {
+    border: 1px solid #7f9db9;
+    background-color: #ebebe4;
+}
+
+select[readonly=readonly] {
+    border: 1px solid #7f9db9;
+    background-color: #ebebe4;
+}
+
+/*fin Vincent exemple dpuis BELC*/
+
+.infomini { /* texte infos légales petite police italique*/
+    white-space: pre-wrap;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.popover {
+    white-space: pre-wrap; /*permet l'ajout de saut de lignes en tapant le texte tel quel (pre);*/
+}
+/* Popover Header */
+.popover-title {
+    font-size: 14px;
+    text-align: center;
+}
+/* Popover Body */
+.popover-content {
+    color: tomato;
+    /*font-size: 10px;*/
+    /*text-align: center;*/
+}
+
+/* permet le mode row-wrap en remplissant en mode ligne (mode principal) (et en égalisant la hauteur du mode secondaire (vertical) en  uniformisant la hauteur des licolonnes d'un même ligne*/
+.aligned-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* applique des marges autour d'une box (ligne)*/
+.margined-row {
+    /*margin: 10px;*/
+    margin: 0.7em;
+}
+
+.color-info {
+    color: #5bc0de;
+}
+
+
+/* permet de centrer les elements verticalement*/
+.display-flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.aspradiobutton {
+    color: blue;
+    background-color: lightgreen;
+    /*vertical-align: middle;*/
+}
+
+.button-general {
+}
+
+inoy:required {
+    background-color: lightgoldenrodyellow;
+}
+
+/**:invalid {
+    background-color: lightgoldenrodyellow;
+}*/
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+    background-color: lightyellow;
+}
+
+.libellePanel {
+    font-size: 1.5em;
+    color: #008285; /*contraste rgaa sur fond blanc*/
+}
+
+.tintedroundedbackgroundpanel {
+    background-color: lightcyan;
+    border-radius: 20px;
+}
+
+.panel-footer {
+    font-size: 0.8em;
+    color: maroon;
+    font-style: italic;
+}
+
+.page-footer {
+    font-size: 0.8em;
+    color: maroon;
+    font-style: italic;
+}
+
+/* aere le texte à droite et gausche du bord des cellules des tables*/
+table.spacebefaft > tbody > tr > td,
+table.spacebefaft > tbody > tr > th {
+    padding: 0 1em 0
+}
+/* en mode smartphone reduit l atbale des documents*/
+@media (max-width: 768px) {
+    table.spacebefaft > tbody > tr > th,
+    table.spacebefaft > tbody > tr > td {
+        padding: 0 0.1em 0;
+        font-size: 0.8em;
+    }
+}
+
+/* intitulé de table */
+caption {
+    caption-side: bottom;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: darkslategrey;
+}
+
+/* le padding de 'well' initialement à 19px dans bootstrap*/
+.well {
+    padding: 0.5em
+}
+
+.col {
+    /*padding: 7px;*/
+    margin: 7px
+}
+
+/* bootstrap label = 75% */
+.label {
+    font-size: 100%;
+}
+
+
+/* non utilisé */
 .disabledCssClass {
     background-color: #BF382B;
-    opacity: 1; 
+    opacity: 1;
     color: #ECF0F1;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* bouton du site */
+.btn-sitpho {
+    background-color: lightblue;
+    border-color: lightskyblue;
+    width: max-content;
+    min-width: 100px;
+}
+
+    .btn-sitpho:hover {
+        background-color: lightskyblue;
+        border-color: lightskyblue;
+    }
+
+    .btn-sitpho:disabled, btn-sitpho[disabled] {
+        /* valeurs background-color / color pour contraste > 4.5:1; RGAA WGAG*/
+        background-color: #BF382B;
+        opacity: 1; /* ecrase valeur de btn dans selecteur multiple btn btn-sitpho2 */
+        color: #ECF0F1;
+    }
+
+/* bouton 2 du site vert */
+.btn-sitpho2 {
+    /* design initial AYA background-color: rgba(22,155,98,255);*/
+    /* #128754 pour contraste > 4.5:1;*/
+    background-color: #128754;
+    color: white;
+    font-weight: bolder;
+    border-color: lightgreen;
+    width: max-content;
+    border-radius: 30px;
+    min-width: 100px;
+    padding: 1em;
+}
+
+    .btn-sitpho2:hover {
+        background-color: green;
+        color: white;
+    }
+
+
+    .btn-sitpho2:disabled, btn-sitpho2[disabled] {
+        /* valeurs background-color / color pour contraste > 4.5:1; RGAA WGAG*/
+        background-color: #BF382B;
+        opacity: 1; /* ecrase valeur de btn dans selecteur multiple btn btn-sitpho2 */
+        color: #ECF0F1;
+    }
+
+/* bouton 2 du site rouge */
+.btn-sitpho2-red {
+    background-color: rgba(227,17,55,255);
+    border-color: lightcoral;
+}
+
+    .btn-sitpho2-red:hover {
+        background-color: rgba(227,17,55,255);
+    }
+
+/* bouton 2 du site bleu ciel */
+.btn-sitpho2-blue {
+    /* LightSkyBlue (#87cefa) -> #0979BE pour rapport de contraste*/
+    background-color: #0979BE;
+    border-color: lightblue;
+}
+
+    .btn-sitpho2-blue:hover {
+        background-color: DeepSkyBlue;
+    }
+
+/* bouton 2 du site gris */
+/* LightGray D3D3D3-> 757575 pour rapport de contraste >4.5:1 */
+.btn-sitpho2-gray {
+    background-color: #757575;
+    border-color: gray;
+}
+
+    .btn-sitpho2-gray:hover {
+        background-color: lightgray;
+    }
+
+.bolder-larger {
+    font-weight: bolder;
+    font-size: larger
+}
+
+/* tooltips*/
+.tooltip > .tooltip-inner {
+    background-color: lightyellow;
+    text-align: center;
+    color: blue
+}
+
+.custooltip .tooltip > .tooltip-inner {
+    background-color: lightyellow;
+    text-align: start;
+    color: blue
+}
+
+.modal-content-custom, .lightbluebordered {
+    background-color: rgba(221,239,255,255); /* bleu ciel */
+    border-radius: 25px;
+    border: 3px solid black;
+}
+
+.modal-valuelabelbackground {
+    background-color: white;
+    text-align: left;
+}
+
+.text-align-right-bold {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* ecrase valeurs de bootstrap.css { display: table; content: " ";}*/
+.panel-body:after {
+    content: none
+}
+
+/* ecrase valeurs de bootstrap.css  .row::after {content: " ";}*/
+/* la valeur content: " " crée un étirement de la hauteur de la première ligne du bloc form-horizontal de la page Notification */
+.special1 .row:after {
+    content: none
+}
+
+
+/* apparence bouton sans bords comme un lien*/
+.buttonlikelink {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0px;
+}
+
+.panel_infovalidation {
+    background-color: azure;
+}
+
+.fatbutton {
+    background-color: dodgerblue;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 1em;
+    aspect-ratio: 4 / 3;
+    white-space: pre;
+}
+
+.fatlinkbutton {
+    background-color: rgba(0,87,163,255);
+    display: flex;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bolder;
+    border-radius: 20px;
+    padding: 1em;
+    aspect-ratio: 4 / 3;
+    white-space: pre-line;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-block-size: 150px;
+}
+
+.fatlinkbutton2 {
+    background-color: rgba(0,87,163,255);
+    display: flex;
+    color: white;
+    font-size: 1.1em;
+    font-weight: unset;
+    border-radius: 20px;
+    padding: 1em;
+    /*aspect-ratio: 4 / 3;*/
+    white-space: pre-line;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-block-size: 100px;
+}
+
+/* diminue la taille des boutons sur smartphone */
+@media (max-width: 768px) {
+
+    .fatlinkbutton {
+        margin: 0.5em;
+        padding: 1em;
+        max-height: 5em;
+        max-width: fit-content;
+    }
+}
+
+.ahrefcustom {
+    color: white;
+}
+
+    .ahrefcustom:hover,
+    .ahrefcustom:focus {
+        color: yellow;
+    }
+
+.smallrightleftpaddingcell {
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.warningmailyahoo {
+    border: 2px solid;
+    border-color: blue;
+    background-color: lightyellow;
+    color: rgba(190, 69, 0, 1); /*orangered -> rgba(190, 69, 0, 1) contraste WCAG  */
+    white-space: normal;
+    font-size: 0.5em;
+    display: inline-block;
+    width: 50%;
+    border-radius: 10px;
+    padding: 0.2em;
+}
+
+.warningfauxsites {
+    border: 2px solid;
+    border-color: blue;
+    background-color: lightyellow;
+    color: rgba(190, 69, 0, 1); /*orangered -> rgba(190, 69, 0, 1) contraste WCAG  */
+    white-space: normal;
+    font-size: 1.2em;
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.2em;
+}
+
+.BlueRoundedBorderedText {
+    border: 2px solid;
+    padding: 5px;
+    border-color: blue;
+    border-radius: 1.5em;
+}
+
+.warninginfossite {
+    font-size: 1.1em;
+    display: inline-block;
+    width: 100%;
+    color: #000;
+}
+
+
+/*  **** fond d'écran **** */
+.watermark {
+    display: block;
+    position: relative;
+    background: rgba(255,255,255, 0.1);
+}
+
+    .watermark::before, .watermark::after {
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .watermark::before {
+        background: rgba(255,255,255, 0.5);
+    }
+
+    .watermark::after {
+        background: url("/Images/FEIBackground.jpg") no-repeat;
+        opacity: 0.3;
+    }
+/*  **** fin fond d'écran **** */
+
+/* #panelJs1 fond d'écran*/
+#cadreaccueil {
+    /*display: block !important;
+    position: relative !important;*/
+    /*background: url("/Images/accueil1024x1024px.png") repeat;*/
+    background: rgba(255,255,255, 0.1);
+    /*background-image: url("/Images/accueil1024x1024px.png") repeat*/
+}
+
+    #cadreaccueil::before, #cadreaccueil::after {
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    #cadreaccueil::before {
+        background: rgba(255,255,255, 0.5);
+    }
+
+    #cadreaccueil::after {
+        background: url("/Images/accueil1024x1024px.png") repeat;
+        opacity: 0.3;
+    }
+
+.accueilfiligrane {
+    opacity: 0.4;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* texte procedure clin d'oeil */
+.PCOtitreN1 {
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: royalblue;
 }
 
 /* texte cookie consent */
 .cookie_consent {
+    background-color: lightcyan;
+    text-align: center;
     border: 2px solid;
     padding: 5px;
-    border-color: red;
+    border-color: lightgoldenrodyellow;
     border-radius: 1.5em;
+}
+
+/* progress bar */
+.progress-bar-phoenix {
+    background-color: #2754DD;
 }
 
 /* texte conditions generales*/
 
 .CGV {
-    /*font-size: 14px;*/
+    font-size: 14px;
 }
 
 .CGVText {
     font-family: Calibri;
     font-size: 1em;
 }
-
-progress[value] {
-    --color: blue; /* the progress color */
-    --color2: green; /* the progress color */
-    --background: lightgrey; /* the background color */
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    width: 200px;
-    margin: 0 10px;
-    border-radius: 10em;
-    background: var(--background);
-}
-
-    progress[value]::-webkit-progress-bar {
-        border-radius: 10em;
-        background: var(--background);
-    }
-
-    progress[value]::-webkit-progress-value {
-        border-radius: 10em;
-        background: var(--color);
-    }
-
-    progress[value]::-moz-progress-bar {
-        border-radius: 10em;
-        background: var(--color2);
-    }
-
 
 .CGVBordered, .RedRoundedBorderedText {
     border: 2px solid;
@@ -85,17 +778,15 @@ progress[value] {
 }
 
 .CGVTitreN1 {
-    font-family: 'Times New Roman';
     font-size: 2em;
     font-weight: bolder;
-    color: steelblue;
+    color: royalblue;
 }
 
 .CGVTitreN2 {
     font-size: 1.5em;
     font-weight: bolder;
     color: royalblue;
-    background-color: lightgray;
 }
 
 .CGVTitreN3 {
@@ -112,71 +803,141 @@ span.CGVIcon {
     margin: 0px;
 }
 
-.tintedroundedbackgroundpanel {
-    background-color: lightcyan;
-    border-radius: 20px;
+/* ******* apparence liens ******* */
+/* https://www.w3schools.com/css/css_link.asp */
+/* vérificateur de contraste https://webaim-org.translate.goog/resources/contrastchecker/?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=rq*/
+a:link {
+    /* royalblue -> rgba(65, 90, 175, 1) contraste RGAA WCAG 1.4.3 G18  */
+    color: rgba(65, 90, 175, 1)
 }
 
-.testclass::before {
-    content: ' contenu avant ';
+/* visited link */
+a:visited {
+    color: darkblue;
 }
 
-.testclass2::before {
-    content: ' contenu ECRASE ';
+/* mouse over link */
+
+
+a:hover {
+    /* royalblue -> rgba(65, 90, 175, 1) contraste RGAA WCAG 1.4.3 G18  */
+    color: rgba(65, 90, 175, 1)
 }
 
-:root {
-    --success: #00b894;
-    --progress: #e17055;
+/* selected link */
+a:active {
+    /* royalblue -> rgba(65, 90, 225, 1) contraste RGAA WCAG 1.4.3 G18  */
+    color: rgba(65, 90, 225, 1)
 }
 
-.progressbar-wrapper {
-    background-color: #dfe6e9;
-    color: white;
-    border-radius: 15px;
-    width: 100%;
+/* liens text-decoration */
+a:link {
+    text-decoration: underline;
 }
 
-.progressbar {
-    background-color: var(--progress);
-    color: white;
-    padding: 1rem;
-    text-align: right;
-    font-size: 20px;
-    border-radius: 15px;
+a:visited {
+    text-decoration: underline;
 }
 
-    .progressbar[title="downloading"] {
-        background-color: var(--progress);
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+/* *****  écrase valeur width:100% définie dans les WebResource.axd cette valeur crée des débordements lorsque l'on réduit la taille de la fenêtre */
+#main-container {
+    /*width:unset;*/
+}
+/* ne marche pas pour main-container mis sur #form */
+/*#form {
+    width:fit-content;
+}*/
+
+/* mis sur <body  de Site.Master */
+#bodymaster {
+    width: fit-content;
+}
+/* ***** */
+
+.lowerfont {
+    font-size: 0.7em;
+}
+
+.row-null-rightleftmargin {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/* ******************* overwrite bottstrap 3.4.1 contraste couleur label-default #777777 -> #757575 ******************* */
+.label-default {
+    background-color: #757575;
+}
+/* #5bc0de -> #20809D */
+.label-info {
+    background-color: #20809D;
+}
+
+.label-warning {
+    background-color: cyan;
+    color: red;
+    font-size: 1.5em;
+}
+
+/* ******************* FIN PERSONNALISATION ******************* */
+/*web control login*/
+.loginControl {
+    background-color: aquamarine;
+    margin: 4px;
+}
+
+/* centrage vertical contenu de lignes*/
+.display-flex-center {
+    display: flex;
+    align-items: center;
+}
+
+
+/* commute l'affichage tableau de doc pour smartphone */
+@media (min-width: 768px) {
+    .fulldesc {
+        display: inline-block;
     }
 
-.mp4 {
-    width: 100%;
-}
-
-.mp3 {
-    width: 60%;
-}
-
-#cookie-law {
-    max-width: 940px;
-    background: #EEEADD;
-    margin: 10px auto 0;
-    border-radius: 17px;
-    -webkit-border-radius: 17px;
-    -moz-border-radius: 17px;
-}
-
-    #cookie-law p {
-        padding: 10px;
-        font-size: 1.2em;
-        font-weight: bold;
-        text-align: center;
-        color: #682008;
-        margin: 0;
+    .abredescvert {
+        display: none;
     }
 
-.w3-light-gray {
-    color: #000 !important; /* !important */
-    background-color: #f1f1f1 /* !important */
+    .abredesc {
+        display: none;
+    }
+
+    .vertlink {
+        writing-mode: initial;
+        text-orientation: initial;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .fulldesc {
+        display: none;
+    }
+
+    .abredescvert {
+        display: inline-block;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+
+    .abredesc {
+        display: inline-block;
+    }
+
+    .vertlink {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
 }
