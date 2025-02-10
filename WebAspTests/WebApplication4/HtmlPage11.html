@@ -15,9 +15,45 @@
 
     </div>
 
+
+
+    <p id="desc1">ceci est la description numéro 1</p>
+    <p hidden id="desc2">ceci est la description numéro 2 détaillée</p>
+    <details hidden id="desc3">ceci est la description numéro 3 cachée</details>
+
+    <h3 aria-describedby="desc3" tabindex="0"> TITRE NIVEAU 3</h3>
+    <br />
+    <br />
+    <p aria-describedby="desc1 desc2 desc3" tabindex="0" aria-label="pelt1" name="pelt">element p</p>
+    <br />
+    <div aria-describedby="desc1 desc2 desc3" tabindex="0" aria-label="divelt1" name="divelt">element div</div>
+    <br />
+    <span aria-details="desc3" role="none" tabindex="0" name="spanelt" aria-label="spanelt1">element span</span>
+    <br />
+    <span aria-description="span aria description détaillée" tabindex="0" name="spanelt">span note ariadescription</span>
+    <br />
+    <span aria-description="span aria description détaillée" tabindex="0" name="spanelt2">span note ariadescribedby</span>
+    <br />
+    <div aria-describedby="desc3" tabindex="0" role="img">image</div>
+    <br />
+    <button aria-describedby="desc1 desc2 desc3">BOUTON descibedby</button>
+    <br />
+    <button aria-details="desc1 desc2 desc3">BOUTON aria-details</button>
+    <br /><hr />
+    <button aria-description="aria description du bouton">BOUTON aria-description</button>
+    <br /><hr />
+
+    <button aria-describedby="trash-desc">Move to trash</button>
+    …
+    <p id="trash-desc">
+        Items in the trash will be permanently removed after 30 days.
+    </p>
+
+    <br /><hr />
+
     <h3>TITRE </h3>
 
-    <br/>
+    <br />
 
     <table>
         <caption>
