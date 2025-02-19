@@ -11,18 +11,49 @@
 </head>
 <body>
 
-    <p>
-        <span>Joindre toutes les pièces demandées, valider avec le bouton en fin de formulaire.<b>Mode d’emploi et règles d’usage :</b> </span>
-        
+    <input value="toto" />
+
+    <p> ceci est un texte de paragraphe avec <b>mise en forme basique</b></p>
+
+    <p> ceci est un 2e texte de paragraphe avec <i>mise en forme basique</i></p>
+
+    <p> ceci est un 3e texte de paragraphe avec <strong>mise en forme basique</strong></p>
+
+    <div role="heading" aria-level="1">texte avec role heading 1 </div>
+
+    <div role="heading" aria-level="1">texte avec role heading 2 </div>
+
+    <div role="heading" aria-level="1">
+        <div>Joindre s toutes les pièces demandées, valider avec le bouton en fin de formulaire.<b>Mode d’emploi et règles d’usage :</b> </div>
+
         <ul>
             <li>Tous les documents doivent être au <b>format pdf, jpg, png </b>en cliquant sur « Télécharger ».</li>
             <li>Vous pouvez enregistrer au maximum 2 documents en pièces complémentaires.</li>
             <li>Les documents rédigés en <b>allemand, anglais, arabe, espagnol, français, italien et portugais ne nécessitent pas de traduction.</b></li>
         </ul>
-    </p>
+    </div>
+
     <br />
 
-    <p>
+    <div role="paragraph">
+        section main
+    </div>
+
+    <br />
+
+    <div role="row">
+        <div role="cell"> cellule 1 France</div>
+        <div role="cell">
+            celulle 2 67 million
+        </div>
+        <div role="cell">
+            celulle 3 67 million <b>gras</b>
+        </div>
+    </div>
+
+    <br />
+
+    <!--<p>
         <div>Joindre toutes les pièces demandées, valider avec le bouton en fin de formulaire.</div>
         <div>
             <b>Mode d’emploi et règles d’usage :</b>
@@ -33,7 +64,7 @@
             </ul>
         </div>
     </p>
-    <br />
+    <br />-->
 
     <ul>
         <li>Milk</li>
@@ -52,20 +83,20 @@
 
 
     <br />
-    19
+    20
     <hr />
 
     <input value="aria-labelledby" /><img src="Images/gb.png" alt="Cats" aria-labelledby="_arialabel">
     <br />
-    <input value="aria-describedby" /><img src="Images/gb.png" alt="Cats" aria-labelledby="_arialabel" aria-describedby="_ariadesc">
+    <input value="aria-describedby" /><img src="Images/gb.png" alt="Cats" aria-describedby="_ariadesc">
     <br />
-    <input value="aria-details" /><img src="Images/gb.png" alt="Cats" aria-labelledby="_arialabel" aria-details="_ariadeta">
+    <input value="aria-details" /><img src="Images/gb.png" alt="Cats" aria-details="_ariadeta">
     <br />
-    <input /><span role="group" aria-labelledby="_arialabel"> ceci est du texte span avec role region et aria-labelledby</span>
+    <input /><div role="term" aria-labelledby="_arialabel"> ceci est du texte span avec role region et aria-labelledby</div>
     <br />
-    <input /><div role="group" aria-describedby="_ariadesc"> ceci est du texte span avec role region et aria-describedby</div>
+    <input /><div role="term" aria-describedby="_ariadesc"> ceci est du texte span avec role region et aria-describedby</div>
     <br />
-    <input /><div role="main" aria-details="_ariadeta"> ceci est du texte span avec role region et aria-details</div>
+    <input /><div role="suggestion" aria-details="_ariadeta"> ceci est du texte span avec role region et aria-details</div>
     <br />
     <span id="_arialabel">ce texte aria labelise le texte ci dessus</span>
     <br />
@@ -75,6 +106,18 @@
     <br />
 
     <br />
+    <p>
+        Freida's pet is a
+        <span role="suggestion" aria-details="comment-source">
+            <span role="deletion">black Cat called Luna</span>
+            <span role="insertion">purple T. Rex called Tiny</span>
+        </span>.
+    </p>
+
+    <div id="comment-source">
+        Suggested by Chris,
+        <time datetime="2019-03-30T19:29">March 30 2019, 19:29</time>
+    </div>
 
     <!--<p>
         The <strong>
