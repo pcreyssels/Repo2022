@@ -19,6 +19,7 @@
 
     <h3>heading h3</h3>
 
+    <input type="button" value="click" />
 
     <span hidden id="is3">intitulé section 3</span>
     <div id="section3" role="region" aria-labelledby="is2">
@@ -55,7 +56,7 @@
     <hr style="border: 1px solid red;" />
 
     <span hidden id="is1">intitulé section 1</span>
-    <section aria-labelledby="is1" tabindex="0">
+    <section aria-labelledby="is1" tabindex="0" id="s1">
         ceci est une section 1 element html section
         <i>italique</i>
         <div>texte div dans une section </div>
@@ -81,6 +82,55 @@
         //    console.log('charge page');
 
         //})
+
+        const sec1 = document.getElementById("s1");
+
+        sec1.addEventListener("keydown", logKey);
+        //sec1.addEventListener("keyup", logKey2);
+        //sec1.addEventListener("click", (event) => {
+        //    console.log(`Click count: ${event.detail}`);
+        //});
+
+        const myFunctionReference = function () {
+            console.log('CLICK S1');
+            const r2 = document.createRange();
+            const referenceNode = document.querySelector("#s1");
+            r2.selectNodeContents(referenceNode);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(r2);
+        }
+        sec1.addEventListener('click', myFunctionReference, false);
+        
+
+        
+        //sec1.addEventListener("click", logclick);
+        function logclick(e) {
+            console.log(` ${e.d}`);
+            if (e.code == 'Space') {
+                console.log('touche space');
+                const r = document.createRange();
+                const referenceNode = document.querySelector("#s1");
+                r.selectNodeContents(referenceNode);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(r);
+            }
+        }
+
+        function logKey(e) {
+            console.log(` ${e.code}`);
+            if (e.code == 'Space') {
+                console.log('touche space');
+                const r = document.createRange();
+                const referenceNode = document.querySelector("#s1");
+                r.selectNodeContents(referenceNode);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(r);
+            }
+        }
+        function logKey2(e) {
+            console.log(` ${e.code}`);
+        }
+
 
         window.onload = function () {
             console.log('bonjour');
