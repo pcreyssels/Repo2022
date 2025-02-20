@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!-- https://disic.github.io/guide-developpeur/9-utiliser-aria.html -->
+    <!-- https://w3c.github.io/using-aria/ -->
+    <!-- https://www.w3.org/WAI/ARIA/apg/ -->
+    <!-- https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/ -->
+    <!-- https://validator.w3.org/nu/ -->
+
+    <h3>heading h3</h3>
+
+    <input type="text" readonly value="bonjour">
+
+    <section>
+        ceci est une section 1
+        <b>texte en gras</b>
+        <div>texte div dans une section </div>
+
+    </section>
+
+    <hr style="border: 1px solid red;" />
+
+    <span hidden id="is1">intitulé section 1</span>
+    <section aria-labelledby="is1" tabindex="0">
+        ceci est une section 1 element html section
+        <i>italique</i>
+        <div>texte div dans une section </div>
+    </section>
+
+    <hr style="border: 1px solid aquamarine;" />
+
+    <span hidden id="is2">intitulé section 2</span>
+    <section aria-labelledby="is2">
+        ceci est une section 2 element html section
+        <i>italique</i>
+        <div>texte div dans une section </div>
+    </section>
+
+    <hr style="border: 1px solid yellow;" />
+
+    <span hidden id="is3">intitulé section 3</span>
+    <div role="region" aria-labelledby="is2">
+        ceci est une section 3 avec attribut role region
+        <i>italique</i>
+        <div>texte div dans une section </div>
+    </div>
+
+</body>
+</html>
