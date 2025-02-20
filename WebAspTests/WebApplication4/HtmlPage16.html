@@ -15,11 +15,23 @@
 
     <input type="text" readonly value="bonjour">
 
+    <br />
+
+    <textarea readonly id="story" name="story" rows="5" cols="33">
+        It was a dark and stormy night...
+    </textarea>
+
+    <br />
+
     <section>
         ceci est une section 1
         <b>texte en gras</b>
         <div>texte div dans une section </div>
-
+        <div>texte div dans une section
+            <div>
+                <b>sous div </b> dans un div
+            </div>
+        </div>
     </section>
 
     <hr style="border: 1px solid red;" />
@@ -43,10 +55,12 @@
     <hr style="border: 1px solid yellow;" />
 
     <span hidden id="is3">intitulé section 3</span>
-    <div role="region" aria-labelledby="is2">
+    <div id="section3" role="region" aria-labelledby="is2">
         ceci est une section 3 avec attribut role region
         <i>italique</i>
-        <div>texte div dans une section </div>
+        <div>texte div dans une section 
+            <div>texte div <b>dans une div</b> </div>
+        </div>
     </div>
 
 </body>

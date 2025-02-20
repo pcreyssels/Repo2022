@@ -13,7 +13,7 @@
 
             <div>Disabled Button</div>
 
-            <asp:Button ID="bo1" runat="server" Text="Disabled Button" Enabled="true"  />
+            <asp:Button ID="bo1" runat="server" Text="Disabled Button" Enabled="true" />
 
 
         </div>
