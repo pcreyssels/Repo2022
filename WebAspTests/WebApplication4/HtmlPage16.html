@@ -2,7 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>BONJOUR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/Site.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
 </head>
 <body>
     <!-- https://disic.github.io/guide-developpeur/9-utiliser-aria.html -->
@@ -10,8 +15,20 @@
     <!-- https://www.w3.org/WAI/ARIA/apg/ -->
     <!-- https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/ -->
     <!-- https://validator.w3.org/nu/ -->
+    <!-- https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/ -->
 
     <h3>heading h3</h3>
+
+
+    <span hidden id="is3">intitulé section 3</span>
+    <div id="section3" role="region" aria-labelledby="is2">
+        ceci est une section 3 avec attribut role region
+        <i>italique</i>
+        <div>
+            texte div dans une section
+            <div>texte div <b>dans une div</b> </div>
+        </div>
+    </div>
 
     <input type="text" readonly value="bonjour">
 
@@ -27,7 +44,8 @@
         ceci est une section 1
         <b>texte en gras</b>
         <div>texte div dans une section </div>
-        <div>texte div dans une section
+        <div>
+            texte div dans une section
             <div>
                 <b>sous div </b> dans un div
             </div>
@@ -54,14 +72,56 @@
 
     <hr style="border: 1px solid yellow;" />
 
-    <span hidden id="is3">intitulé section 3</span>
-    <div id="section3" role="region" aria-labelledby="is2">
-        ceci est une section 3 avec attribut role region
-        <i>italique</i>
-        <div>texte div dans une section 
-            <div>texte div <b>dans une div</b> </div>
-        </div>
-    </div>
+
+
+    <div id="b1">BONJOUR SELECTION</div>
+
+    <script>
+        //$(function () {
+        //    console.log('charge page');
+
+        //})
+
+        window.onload = function () {
+            console.log('bonjour');
+            const elem = document.getElementById("section3");
+            //elem.ariaSelected = "true";
+            //elem.select();
+
+            // ********** SELECTION EX 1 **********
+            //let range = new Range();
+            //const elem2 = document.getElementById("b1");
+            //range.setStart(elem2.firstChild,8);
+            //range.setEnd(elem2.firstChild, 17);
+
+            //window.getSelection().removeAllRanges();
+            //window.getSelection().addRange(range);
+
+            // ********** SELECTION EX 2 **********
+
+            const range = document.createRange();
+            const referenceNode = document.querySelector("#section3");
+            range.selectNodeContents(referenceNode);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+        };
+
+        window.addEventListener("load", () => {
+            console.log("This function is executed once the page is fully loaded");
+        });
+
+        function modalshow() {
+            $('#modal_warning_nophone').modal('show');
+        }
+
+        const button = document.querySelector("input");
+
+        button.addEventListener("click", modalshow);
+
+    </script>
 
 </body>
+
+
 </html>
