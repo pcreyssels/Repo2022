@@ -17,7 +17,24 @@
     <!-- https://validator.w3.org/nu/ -->
     <!-- https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/ -->
 
-    <h3>heading h3</h3>
+    <h3>heading Ad h3</h3>
+
+    <span id="blabel" hidden>aria label </span>
+    <span id="bdescr" hidden>aria description </span>
+    <span role="definition" id="bdetails" >aria les détails role definition</span>
+    <span role="comment" id="bdetails2" >aria les détails role comment </span>
+
+    <span id="bdescr1" hidden>aria description </span>
+
+    <div role="button" aria-labelledby="blabel">ALA</div>
+
+    <div role="button" aria-describedby="bdescr">ADE</div>
+
+    <div role="button" aria-labelledby="blabel" aria-describedby="bdescr">ALAADE</div>
+
+    <div role="term" aria-details="bdetails">DETAILS</div>
+
+    <input type="button" value="click 3" aria-describedby="bdescr1" />
 
     <input type="button" value="click" />
 
@@ -77,6 +94,11 @@
 
     <div id="b1">BONJOUR SELECTION</div>
 
+    <hr style="border: 1px solid orange;" />
+    
+
+
+
     <script>
         //$(function () {
         //    console.log('charge page');
@@ -100,9 +122,9 @@
             window.getSelection().addRange(r2);
         }
         sec1.addEventListener('click', myFunctionReference, false);
-        
 
-        
+
+
         //sec1.addEventListener("click", logclick);
         function logclick(e) {
             console.log(` ${e.d}`);
@@ -160,14 +182,7 @@
         window.addEventListener("load", () => {
             console.log("This function is executed once the page is fully loaded");
         });
-
-        function modalshow() {
-            $('#modal_warning_nophone').modal('show');
-        }
-
-        const button = document.querySelector("input");
-
-        button.addEventListener("click", modalshow);
+   
 
     </script>
 
