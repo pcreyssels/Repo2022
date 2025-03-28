@@ -276,30 +276,54 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="Fonts\Marianne\Marianne-Bold.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Bold.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-Bold_Italic.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Bold_Italic.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-ExtraBold.woff" />
-    <Content Include="Fonts\Marianne\Marianne-ExtraBold.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-ExtraBold_Italic.woff" />
-    <Content Include="Fonts\Marianne\Marianne-ExtraBold_Italic.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-Light.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Light.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-Light_Italic.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Light_Italic.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-Medium.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Medium.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-Medium_Italic.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Medium_Italic.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-Regular.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Regular.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-Regular_Italic.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Regular_Italic.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-Thin.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Thin.woff2" />
-    <Content Include="Fonts\Marianne\Marianne-Thin_Italic.woff" />
-    <Content Include="Fonts\Marianne\Marianne-Thin_Italic.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Bold.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Bold.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Bold_Italic.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Bold_Italic.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-ExtraBold.woff" />
+    <Content Include="Oonts\Marianne\Marianne-ExtraBold.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-ExtraBold_Italic.woff" />
+    <Content Include="Oonts\Marianne\Marianne-ExtraBold_Italic.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Light.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Light.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Light_Italic.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Light_Italic.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Medium.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Medium.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Medium_Italic.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Medium_Italic.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Regular.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Regular.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Regular_Italic.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Regular_Italic.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Thin.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Thin.woff2" />
+    <Content Include="Oonts\Marianne\Marianne-Thin_Italic.woff" />
+    <Content Include="Oonts\Marianne\Marianne-Thin_Italic.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Bold.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Bold.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Bold_Italic.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Bold_Italic.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-ExtraBold.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-ExtraBold.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-ExtraBold_Italic.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-ExtraBold_Italic.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Light.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Light.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Light_Italic.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Light_Italic.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Medium.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Medium.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Medium_Italic.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Medium_Italic.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Regular.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Regular.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Regular_Italic.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Regular_Italic.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Thin.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Thin.woff2" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Thin_Italic.woff" />
+    <Content Include="Content\Fonts\Marianne\Marianne-Thin_Italic.woff2" />
     <None Include="Properties\PublishProfiles\IISLocalServer.pubxml" />
     <None Include="Properties\PublishProfiles\s-test2.ciep.fr WebAspTest.pubxml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
@@ -516,6 +540,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
