@@ -920,6 +920,9 @@ a:active {
     }
 }
 
+
+
+
 @media (max-width: 768px) {
 
     .fulldesc {
@@ -941,3 +944,23 @@ a:active {
         text-orientation: upright;
     }
 }
+
+/* fond bleu ciel modif ticket 10561 */
+.panelheadingfrombs341 {
+    background-color: #d9edf7;
+}
+
+
+@font-face {
+    font-family: "Marianne-Regular";
+    src: url('./Fonts/Marianne/Marianne-Regular.woff2') format('woff2');
+}
+
+
+.polices10541 {
+    font-size: 1.2em;
+    font-family: "Marianne-Regular";
+}
+
+
+

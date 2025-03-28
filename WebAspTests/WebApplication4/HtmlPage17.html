@@ -10,6 +10,34 @@
 </head>
 <body>
 
+    <div>autocomplete3</div>
+    <div>
+        <input name="entrez valeur" type="text" autocomplete="name" aria-autocomplete="both" />
+    </div>
+
+    <label for="pet-select">Choose a pet:</label>
+    <div>
+        <select name="pets" id="pet-select" autocomplete="name" aria-autocomplete="list">
+            <option value="">--choisir un animal--</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+        </select>
+    </div>
+
+    <label for="civi-select">Choisir une civilité:</label>
+    <div>
+        <select name="civi" id="civi-select" autocomplete="honorific-prefix" aria-autocomplete="list">
+            <option value="">--civilité--</option>
+            <option value="Mr">Mr</option>
+            <option value="Mme">Mme</option>
+            <option value="Mlle">Mlle</option>
+        </select>
+    </div>
+
     <p tabindex="0">
         Seuls les caractéres  À, Á, Â, Ã, Ä, Å, Ç, É, È, ÊËÌÍÎÏÑ, Ò, Ó, Ô, Ö, Õ, Ù, dans nationalité !
     </p>

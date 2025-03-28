@@ -265,6 +265,7 @@
     <Content Include="WebForm13.aspx" />
     <Content Include="WebForm14.aspx" />
     <Content Include="WebForm15.aspx" />
+    <Content Include="WebForm16.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="WebForm6.aspx" />
@@ -275,6 +276,30 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="Fonts\Marianne\Marianne-Bold.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Bold.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-Bold_Italic.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Bold_Italic.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-ExtraBold.woff" />
+    <Content Include="Fonts\Marianne\Marianne-ExtraBold.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-ExtraBold_Italic.woff" />
+    <Content Include="Fonts\Marianne\Marianne-ExtraBold_Italic.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-Light.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Light.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-Light_Italic.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Light_Italic.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-Medium.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Medium.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-Medium_Italic.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Medium_Italic.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-Regular.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Regular.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-Regular_Italic.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Regular_Italic.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-Thin.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Thin.woff2" />
+    <Content Include="Fonts\Marianne\Marianne-Thin_Italic.woff" />
+    <Content Include="Fonts\Marianne\Marianne-Thin_Italic.woff2" />
     <None Include="Properties\PublishProfiles\IISLocalServer.pubxml" />
     <None Include="Properties\PublishProfiles\s-test2.ciep.fr WebAspTest.pubxml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
@@ -425,6 +450,13 @@
     <Compile Include="WebForm15.aspx.designer.cs">
       <DependentUpon>WebForm15.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm16.aspx.cs">
+      <DependentUpon>WebForm16.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm16.aspx.designer.cs">
+      <DependentUpon>WebForm16.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -518,6 +550,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\WebForm15.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\WebForm16.aspx.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
