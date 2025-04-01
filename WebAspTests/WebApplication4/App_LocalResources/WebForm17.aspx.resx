@@ -117,14 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Button_statut_souspanel_dossacomp_recev.Text" xml:space="preserve">
+    <value>Compléter votre dossier</value>
+  </data>
   <data name="Button_statut_souspanel_enatpa_prefac.Text" xml:space="preserve">
     <value>Payer</value>
   </data>
   <data name="Button_statut_souspanel_inscription_phase2.Text" xml:space="preserve">
     <value>Poursuivre l'inscription</value>
   </data>
+  <data name="iconeattention.Alt" xml:space="preserve">
+    <value>icône attention</value>
+  </data>
   <data name="iconecb.Alt" xml:space="preserve">
     <value>icône carte bleue</value>
+  </data>
+  <data name="iconecochevertevalide.Alt" xml:space="preserve">
+    <value>icône coche verte validé</value>
+  </data>
+  <data name="iconemail.Alt" xml:space="preserve">
+    <value>icône email</value>
   </data>
   <data name="labelinfo_statut_inscription_phase2.Text" xml:space="preserve">
     <value>&lt;div&gt;
@@ -138,6 +150,9 @@
 &lt;/div&gt;
 </value>
   </data>
+  <data name="loupe.Alt" xml:space="preserve">
+    <value>icône loupe</value>
+  </data>
   <data name="messageurldirect" xml:space="preserve">
     <value>&lt;br/&gt;
 Vous pouvez accéder à la page en cliquant sur ce lien  : &lt;a href="BASE_URL/PAGE_ASPX.aspx"&gt;PAGE_ASPX  &lt;/a&gt;</value>
@@ -147,5 +162,71 @@ Vous pouvez accéder à la page en cliquant sur ce lien  : &lt;a href="BASE_URL/
     <value>&lt;br/&gt;
 Vous pouvez accéder à votre dossier en cliquant sur ce lien  : &lt;a href="BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"&gt; BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee &lt;/a&gt;</value>
     <comment>brouillon</comment>
+  </data>
+  <data name="texteinfo_statut_dossacomp_recev_text1.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"Dossier à compléter (recevabilité)".&lt;/span&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dossacomp_recev_text2.Text" xml:space="preserve">
+    <value>&lt;div&gt;Votre dossier est &lt;u&gt;incomplet&lt;/u&gt; et vous a été retourné.&lt;/div&gt;
+&lt;br/&gt;
+&lt;div&gt;Cliquez sur le lien ci-dessous pour ajouter les pièces demandées.&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dossacomp_recev_text3.Text" xml:space="preserve">
+    <value>Ce lien est valable pendant 30 jours. Passé ce délai, vous devrez soumettre une nouvelle demande via le lien suivant : &lt;a href="BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"&gt; BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee &lt;/a&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dossacomp_recev_text4.Text" xml:space="preserve">
+    <value>Merci de noter que &lt;b&gt;nous ne recevons aucun document par e-mail ou courrier postal&lt;/b&gt;.</value>
+  </data>
+  <data name="texteinfo_statut_dosscomplete_recev_text1.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"Recevabilité (complété)".&lt;/span&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dosscomplete_recev_text2.Text" xml:space="preserve">
+    <value>&lt;div&gt;Vous avez complété votre dossier avec les pièces demandées. &lt;b&gt;Votre dossier va être réexaminé.&lt;/b&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dosscomplete_recev_text3.Text" xml:space="preserve">
+    <value>&lt;div&gt;
+&lt;div&gt;Vous recevrez un e-mail vous indiquant la prochaine étape :&lt;/div&gt;
+ &lt;div&gt;
+     &lt;ul&gt;
+         &lt;li&gt;Si votre dossier est complet, vous recevrez une facture à régler pour poursuivre la demande. (Les réfugiés, demandeurs d’asile et bénéficiaires de la protection subsidiaire sont exonérés de frais, la procédure étant entièrement gratuite).&lt;/li&gt;
+         &lt;li&gt;Si des pièces complémentaires sont nécessaires, vous pouvez ajouter les documents demandés depuis le lien reçu par email ou depuis le suivi de votre dossier.&lt;/li&gt;
+     &lt;/ul&gt;
+ &lt;/div&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dosscomplete_recev_text4.Text" xml:space="preserve">
+    <value>&lt;div&gt;Merci de bien vouloir vérifier votre dossier de &lt;b&gt;courriers indésirables (spam) &lt;/b&gt; et de rester attentif à sa réception.&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dossier_recevabilite_text1.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"Dossier en recevabilité".&lt;/span&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dossier_recevabilite_text2.Text" xml:space="preserve">
+    <value>Nous avons bien reçu les pièces de votre dossier.</value>
+  </data>
+  <data name="texteinfo_statut_dossier_recevabilite_text3.Text" xml:space="preserve">
+    <value>&lt;div&gt;
+    &lt;div&gt;Après un premier examen, vous recevrez un e-mail vous indiquant la prochaine étape :&lt;/div&gt;
+    &lt;div&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Si votre dossier est &lt;b&gt;complet&lt;/b&gt;, vous recevrez une facture à régler pour poursuivre la demande. (Les réfugiés, demandeurs d’asile et bénéficiaires de la protection subsidiaire sont exonérés de frais, la procédure étant entièrement gratuite).&lt;/li&gt;
+            &lt;li&gt;Si des &lt;b&gt;pièces complémentaires&lt;/b&gt; sont nécessaires, vous pouvez ajouter les documents demandés depuis le lien reçu par e-mail ou depuis le suivi de votre dossier.&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_enatpa_deufac_text1.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"En attente de paiement – 2ère facture".&lt;/span&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_enatpa_deufac_text2.Text" xml:space="preserve">
+    <value>Vous avez reçu un e-mail confirmant la recevabilité de votre dossier. Vous devez &lt;b&gt;régler votre facture &lt;/b&gt; pour que votre dossier puisse passer à l’étape suivante.</value>
+  </data>
+  <data name="texteinfo_statut_enatpa_deufac_text3.Text" xml:space="preserve">
+    <value>Veuillez régler la deuxième facture de 100 euros en accédant directement au paiement via le lien suivant : &lt;a href="BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"&gt; BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee &lt;/a&gt;. Merci de privilégier le paiement par carte bancaire.</value>
+  </data>
+  <data name="texteinfo_statut_enatpa_prefac_text1.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"En attente de paiement – 1ère facture".&lt;/span&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_enatpa_prefac_text2.Text" xml:space="preserve">
+    <value>Veuillez régler la première facture de 20 euros en accédant directement au paiement via le lien suivant : &lt;a href="BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"&gt; BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee &lt;/a&gt;. Merci de privilégier le paiement par carte bancaire.</value>
   </data>
 </root>

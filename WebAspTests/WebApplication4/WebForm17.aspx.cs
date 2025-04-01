@@ -18,7 +18,7 @@ namespace WebApplication4
         {
             subpanel_inscphase2.Visible = true;
             subpanel_enatpa_prefac.Visible = false;
-            subpanel3.Visible = false;
+            subpanel_enatpa_deufac.Visible = false;
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -26,14 +26,14 @@ namespace WebApplication4
 
             subpanel_inscphase2.Visible = false;
             subpanel_enatpa_prefac.Visible = true;
-            subpanel3.Visible = false;
+            subpanel_enatpa_deufac.Visible = false;
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
             subpanel_inscphase2.Visible = false;
             subpanel_enatpa_prefac.Visible = false;
-            subpanel3.Visible = true;
+            subpanel_enatpa_deufac.Visible = true;
         }
 
         protected void Button_statut_souspanel_inscription_phase2_Click(object sender, EventArgs e)
@@ -42,6 +42,16 @@ namespace WebApplication4
         }
 
         protected void Button_statut_souspanel_enatpa_prefac_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button_statut_souspanel_enatpa_deufac_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button_statut_souspanel_dossacomp_recev_Click(object sender, EventArgs e)
         {
 
         }
