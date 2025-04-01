@@ -117,34 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button_poursuivre_inscription.Text" xml:space="preserve">
+  <data name="Button_statut_souspanel_enatpa_prefac.Text" xml:space="preserve">
+    <value>Payer</value>
+  </data>
+  <data name="Button_statut_souspanel_inscription_phase2.Text" xml:space="preserve">
     <value>Poursuivre l'inscription</value>
   </data>
-  <data name="texteStatutDemande" xml:space="preserve">
-    <value>le statut de votre demande est : </value>
+  <data name="iconecb.Alt" xml:space="preserve">
+    <value>icône carte bleue</value>
   </data>
-  <data name="texteStatutDemandeInfosComp" xml:space="preserve">
-    <value>informations complémentaires : </value>
-  </data>
-  <data name="texte_erreur_saisie" xml:space="preserve">
-    <value>&lt;div&gt;Merci de nous transmettre votre demande, en précisant les informations suivantes :&lt;/div&gt;
-    &lt;br aria-hidden="true" /&gt;
-    &lt;ul&gt;
-        &lt;li&gt;Votre numéro de dossier,&lt;/li&gt;
-        &lt;li&gt;Vos informations d'état civil,&lt;/li&gt;
-        &lt;li&gt;Les coordonnées que vous souhaitez modifier.&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div&gt;
-        &lt;span class="glyphicon glyphicon-pushpin" style="color: red" aria-hidden="true"&gt;&lt;/span&gt;
-        À noter : Aucun document ne sera envoyé par courrier postal. Une erreur d’adresse postale n’a donc pas d’incidence sur la
-réception de votre attestation.
+  <data name="labelinfo_statut_inscription_phase2.Text" xml:space="preserve">
+    <value>&lt;div&gt;
+    &lt;div class="polices10561_enlarged"&gt;
+        &lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"Inscription - Phase 2".&lt;/span&gt;
     &lt;/div&gt;
-    &lt;br aria-hidden="true" /&gt;
-    &lt;div&gt;&lt;span style="color: #55acee" aria-hidden="true"&gt;&amp;#x2BC1;&lt;/span&gt; Cas spécifiques :&lt;/div&gt;
-    &lt;br aria-hidden="true" /&gt;
-    &lt;ul&gt;
-        &lt;li&gt;Si votre dossier est en cours de traitement, veuillez contacter directement l'adresse &lt;a href="mailto:ENIC-NARICFrance@france-education-international.fr"&gt;contact ENIC-NARIC&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;Si vous avez déjà reçu votre attestation et qu’elle comporte une erreur, vous pouvez adresser votre demande à la boîte &lt;a href="mailto:ENIC-NARICFrance@france-education-international.fr"&gt;contact RECOURS.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;</value>
+    &lt;br /&gt;
+    &lt;div&gt;Veuillez &lt;b&gt;compléter votre inscription et ajouter les pièces demandées.&lt;/b&gt; Une fois ces documents ajoutés en ligne, vous pourrez procéder au paiement de la première facture.&lt;/div&gt;
+    &lt;br /&gt;
+    &lt;div&gt;Poursuivez votre inscription en cliquant sur ce lien : &lt;a href="BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"&gt; BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee &lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</value>
+  </data>
+  <data name="messageurldirect" xml:space="preserve">
+    <value>&lt;br/&gt;
+Vous pouvez accéder à la page en cliquant sur ce lien  : &lt;a href="BASE_URL/PAGE_ASPX.aspx"&gt;PAGE_ASPX  &lt;/a&gt;</value>
+    <comment>brouillon</comment>
+  </data>
+  <data name="messageurlguid" xml:space="preserve">
+    <value>&lt;br/&gt;
+Vous pouvez accéder à votre dossier en cliquant sur ce lien  : &lt;a href="BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"&gt; BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee &lt;/a&gt;</value>
+    <comment>brouillon</comment>
   </data>
 </root>

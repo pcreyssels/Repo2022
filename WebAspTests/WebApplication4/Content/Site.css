@@ -953,14 +953,34 @@ a:active {
 
 @font-face {
     font-family: "Marianne-Regular";
-    src: url('./Fonts/Marianne/Marianne-Regular.woff2') format('woff2');
+    src: url('../fonts/Marianne/Marianne-Regular.woff') format('woff');
 }
 
 
-.polices10541 {
+.polices10561 {
     font-size: 1.2em;
     font-family: "Marianne-Regular";
 }
 
+.polices10561_enlarged {
+    font-size: 1.5em;
+    font-family: "Marianne-Regular";
+}
+
+.style10561_color_lightskyblue {
+    color: #55acee;
+}
+
+.style10561_color_red {
+    color: red;
+}
+
+.style10561_button_bluewhite {
+    background-color: rgba(0,87,163,255);
+    color: white;
+    font-weight: bolder;
+    border-radius: 30px;
+    padding: 1em;
+}
 
 

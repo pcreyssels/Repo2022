@@ -183,15 +183,47 @@
     <Content Include="Images\Attention svg.svg" />
     <Content Include="Images\Attention.png" />
     <Content Include="Images\Attention.svg" />
+    <Content Include="Images\attention2.png" />
+    <Content Include="Images\attention2.svg" />
+    <Content Include="Images\attention2_ft.png" />
+    <Content Include="Images\attention2_ft.svg" />
+    <Content Include="Images\attestation.png" />
+    <Content Include="Images\attestation.svg" />
+    <Content Include="Images\attestation_ft.png" />
+    <Content Include="Images\attestation_ft.svg" />
+    <Content Include="Images\CB.png" />
+    <Content Include="Images\CB.svg" />
+    <Content Include="Images\CB_ft.png" />
+    <Content Include="Images\CB_ft.svg" />
     <Content Include="Images\clic 1024x1024px.png" />
     <Content Include="Images\clic 512x512px.png" />
     <Content Include="Images\clic svg.svg" />
+    <Content Include="Images\conservation_usb_cloud.png" />
+    <Content Include="Images\conservation_usb_cloud.svg" />
+    <Content Include="Images\conservation_usb_cloud_ft.png" />
+    <Content Include="Images\conservation_usb_cloud_ft.svg" />
+    <Content Include="Images\contestation.png" />
+    <Content Include="Images\contestation.svg" />
+    <Content Include="Images\contestation_ft.png" />
+    <Content Include="Images\contestation_ft.svg" />
+    <Content Include="Images\document_officiel.png" />
+    <Content Include="Images\document_officiel.svg" />
+    <Content Include="Images\document_officiel_ft.png" />
+    <Content Include="Images\document_officiel_ft.svg" />
     <Content Include="Images\Drapeau anglais 1024x1024px.png" />
     <Content Include="Images\Drapeau anglais 512x512px svg.svg" />
     <Content Include="Images\Drapeau anglais 512x512px.png" />
     <Content Include="Images\Drapeau français 1024x1024px.png" />
     <Content Include="Images\drapeau français 512x512px.png" />
     <Content Include="Images\Drapeau français svg.svg" />
+    <Content Include="Images\duree.png" />
+    <Content Include="Images\duree.svg" />
+    <Content Include="Images\duree_ft.png" />
+    <Content Include="Images\duree_ft.svg" />
+    <Content Include="Images\en_cours_de_traitement.png" />
+    <Content Include="Images\en_cours_de_traitement.svg" />
+    <Content Include="Images\en_cours_de_traitement_ft.png" />
+    <Content Include="Images\en_cours_de_traitement_ft.svg" />
     <Content Include="Images\Exclamation 1024x1024 px.png" />
     <Content Include="Images\Exclamation 500x500 px.png" />
     <Content Include="Images\Exclamation 512x512px.png" />
@@ -204,11 +236,32 @@
     <Content Include="Images\gb.png" />
     <Content Include="Images\gb.svg" />
     <Content Include="Images\gbrond.png" />
+    <Content Include="Images\horloge.png" />
+    <Content Include="Images\horloge.svg" />
+    <Content Include="Images\horloge_ft.png" />
+    <Content Include="Images\horloge_ft.svg" />
     <Content Include="Images\icone information svg transparent.svg" />
     <Content Include="Images\icone information transparent.png" />
     <Content Include="Images\icone information.png" />
     <Content Include="Images\icone information.svg" />
     <Content Include="Images\infoiconred.png" />
+    <Content Include="Images\mail.png" />
+    <Content Include="Images\mail.svg" />
+    <Content Include="Images\mail_ft.png" />
+    <Content Include="Images\mail_ft.svg" />
+    <Content Include="Images\mention_sur_attestation.png" />
+    <Content Include="Images\mention_sur_attestation.svg" />
+    <Content Include="Images\mention_sur_attestation_ft.png" />
+    <Content Include="Images\mention_sur_attestation_ft.svg" />
+    <Content Include="Images\nophone800x800.png" />
+    <Content Include="Images\valide.png" />
+    <Content Include="Images\valide.svg" />
+    <Content Include="Images\valide_ft.png" />
+    <Content Include="Images\valide_ft.svg" />
+    <Content Include="Images\validite_illimitee.png" />
+    <Content Include="Images\validite_illimitee.svg" />
+    <Content Include="Images\validite_illimitee_ft.png" />
+    <Content Include="Images\validite_illimitee_ft.svg" />
     <Content Include="Images\vignette mail.PNG" />
     <Content Include="ProcClinDoeil.html" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -266,6 +319,7 @@
     <Content Include="WebForm14.aspx" />
     <Content Include="WebForm15.aspx" />
     <Content Include="WebForm16.aspx" />
+    <Content Include="WebForm17.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="WebForm6.aspx" />
@@ -276,54 +330,30 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="Oonts\Marianne\Marianne-Bold.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Bold.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-Bold_Italic.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Bold_Italic.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-ExtraBold.woff" />
-    <Content Include="Oonts\Marianne\Marianne-ExtraBold.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-ExtraBold_Italic.woff" />
-    <Content Include="Oonts\Marianne\Marianne-ExtraBold_Italic.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-Light.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Light.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-Light_Italic.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Light_Italic.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-Medium.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Medium.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-Medium_Italic.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Medium_Italic.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-Regular.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Regular.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-Regular_Italic.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Regular_Italic.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-Thin.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Thin.woff2" />
-    <Content Include="Oonts\Marianne\Marianne-Thin_Italic.woff" />
-    <Content Include="Oonts\Marianne\Marianne-Thin_Italic.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Bold.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Bold.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Bold_Italic.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Bold_Italic.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-ExtraBold.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-ExtraBold.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-ExtraBold_Italic.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-ExtraBold_Italic.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Light.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Light.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Light_Italic.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Light_Italic.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Medium.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Medium.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Medium_Italic.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Medium_Italic.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Regular.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Regular.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Regular_Italic.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Regular_Italic.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Thin.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Thin.woff2" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Thin_Italic.woff" />
-    <Content Include="Content\Fonts\Marianne\Marianne-Thin_Italic.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Bold.woff" />
+    <Content Include="fonts\Marianne\Marianne-Bold.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Bold_Italic.woff" />
+    <Content Include="fonts\Marianne\Marianne-Bold_Italic.woff2" />
+    <Content Include="fonts\Marianne\Marianne-ExtraBold.woff" />
+    <Content Include="fonts\Marianne\Marianne-ExtraBold.woff2" />
+    <Content Include="fonts\Marianne\Marianne-ExtraBold_Italic.woff" />
+    <Content Include="fonts\Marianne\Marianne-ExtraBold_Italic.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Light.woff" />
+    <Content Include="fonts\Marianne\Marianne-Light.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Light_Italic.woff" />
+    <Content Include="fonts\Marianne\Marianne-Light_Italic.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Medium.woff" />
+    <Content Include="fonts\Marianne\Marianne-Medium.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Medium_Italic.woff" />
+    <Content Include="fonts\Marianne\Marianne-Medium_Italic.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Regular.woff" />
+    <Content Include="fonts\Marianne\Marianne-Regular.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Regular_Italic.woff" />
+    <Content Include="fonts\Marianne\Marianne-Regular_Italic.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Thin.woff" />
+    <Content Include="fonts\Marianne\Marianne-Thin.woff2" />
+    <Content Include="fonts\Marianne\Marianne-Thin_Italic.woff" />
+    <Content Include="fonts\Marianne\Marianne-Thin_Italic.woff2" />
     <None Include="Properties\PublishProfiles\IISLocalServer.pubxml" />
     <None Include="Properties\PublishProfiles\s-test2.ciep.fr WebAspTest.pubxml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
@@ -481,6 +511,13 @@
     <Compile Include="WebForm16.aspx.designer.cs">
       <DependentUpon>WebForm16.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm17.aspx.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm17.aspx.designer.cs">
+      <DependentUpon>WebForm17.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm2.aspx.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -578,6 +615,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_LocalResources\WebForm16.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\WebForm17.aspx.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -12,6 +12,8 @@ namespace WebApplication4
         protected void Page_Load(object sender, EventArgs e)
         {
             labelinfo_erreur.Text = GetLocalResourceObject("texte_erreur_saisie").ToString();
+
+            labelinfo_statut.Text = GetLocalResourceObject("texteStatutDemande").ToString();
         }
     }
 }
