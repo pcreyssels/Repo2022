@@ -55,5 +55,10 @@ namespace WebApplication4
         {
 
         }
+
+        protected void Button_statut_souspanel_attestation_delivree_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

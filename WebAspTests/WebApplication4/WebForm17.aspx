@@ -222,8 +222,6 @@
                     <asp:Label meta:resourcekey="texteinfo_statut_dosscomplete_recev_text4" runat="server" Text=""></asp:Label>
                 </div>
             </div>
-
-
             <br aria-hidden="true" />
             <div style="display: flex; align-items: center; justify-content: center;">
                 <asp:Button CssClass="style10561_button_bluewhite"
@@ -235,7 +233,90 @@
             </div>
         </section>
     </asp:Panel>
+    <%-- PANEL DOSSIER INSTRUCTION --%>
+    <asp:Panel runat="server" ID="subpanel_dossier_instruction">
+        <section class="well panelheadingfrombs341 polices10561">
+            <div>
+                <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text1" runat="server" Text=""></asp:Label>
+            </div>
+            <br aria-hidden="true" />
+            <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
+                <%-- 1e ligne --%>
+                <div>&nbsp</div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text2" runat="server" Text=""></asp:Label>
+                </div>
+                <%-- 2e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img11" meta:resourcekey="iconemail"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/mail_ft.png"
+                        alt="_mail" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text3" runat="server" Text=""></asp:Label>
+                </div>
 
+                <%-- 3e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img12" meta:resourcekey="iconehorloge"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/horloge_ft.png"
+                        alt="_horloge" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text4" runat="server" Text=""></asp:Label>
+                </div>
+            </div>
+            <br aria-hidden="true" />
+        </section>
+    </asp:Panel>
+    <%-- PANEL DOSSIER ATTESTATION DELIVREE --%>
+    <asp:Panel runat="server" ID="subpanel_attestation_delivree">
+        <section class="well panelheadingfrombs341 polices10561">
+            <div>
+                <asp:Label meta:resourcekey="texteinfo_statut_attestation_delivree_text1" runat="server" Text=""></asp:Label>
+            </div>
+            <br aria-hidden="true" />
+            <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
+                <%-- 1e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img10" meta:resourcekey="iconeattestation"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/attestation_ft.png"
+                        alt="_attestation" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_attestation_delivree_text2" runat="server" Text=""></asp:Label>
+                </div>
+                <%-- 2e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img13" meta:resourcekey="iconesablier"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/duree_ft.png"
+                        alt="_duree" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_attestation_delivree_text3" runat="server" Text=""></asp:Label>
+                </div>
+
+            </div>
+            <br aria-hidden="true" />
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <asp:Button CssClass="style10561_button_bluewhite"
+                    ID="Button_statut_souspanel_attestation_delivree"
+                    OnClick="Button_statut_souspanel_attestation_delivree_Click"
+                    runat="server"
+                    Text="_TELECHARGER LE RESULTAT"
+                    meta:resourcekey="Button_statut_souspanel_attestation_delivree" />
+            </div>
+        </section>
+    </asp:Panel>
     <br />
     <asp:Button Text="SubPanel1" runat="server" ID="Button1" OnClick="Button1_Click" />
     <asp:Button Text="SubPanel2" runat="server" ID="Button2" OnClick="Button2_Click" />

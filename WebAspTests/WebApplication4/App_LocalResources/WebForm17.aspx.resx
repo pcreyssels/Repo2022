@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Button_statut_souspanel_attestation_delivree.Text" xml:space="preserve">
+    <value>Télécharger le résultat</value>
+  </data>
   <data name="Button_statut_souspanel_dossacomp_recev.Text" xml:space="preserve">
     <value>Compléter votre dossier</value>
   </data>
@@ -126,8 +129,14 @@
   <data name="Button_statut_souspanel_inscription_phase2.Text" xml:space="preserve">
     <value>Poursuivre l'inscription</value>
   </data>
+  <data name="horloge.Alt" xml:space="preserve">
+    <value>icône horloge</value>
+  </data>
   <data name="iconeattention.Alt" xml:space="preserve">
     <value>icône attention</value>
+  </data>
+  <data name="iconeattestation.Alt" xml:space="preserve">
+    <value>icône attestation</value>
   </data>
   <data name="iconecb.Alt" xml:space="preserve">
     <value>icône carte bleue</value>
@@ -137,6 +146,9 @@
   </data>
   <data name="iconemail.Alt" xml:space="preserve">
     <value>icône email</value>
+  </data>
+  <data name="iconesablier.Alt" xml:space="preserve">
+    <value>icône sablier</value>
   </data>
   <data name="labelinfo_statut_inscription_phase2.Text" xml:space="preserve">
     <value>&lt;div&gt;
@@ -162,6 +174,16 @@ Vous pouvez accéder à la page en cliquant sur ce lien  : &lt;a href="BASE_URL/
     <value>&lt;br/&gt;
 Vous pouvez accéder à votre dossier en cliquant sur ce lien  : &lt;a href="BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"&gt; BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee &lt;/a&gt;</value>
     <comment>brouillon</comment>
+  </data>
+  <data name="texteinfo_statut_attestation_delivree_text1.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"Attestation délivrée".&lt;/span&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_attestation_delivree_text2.Text" xml:space="preserve">
+    <value>Votre dossier a été traité. Un e-mail vous a été envoyé avec le résultat de l’expertise. Vous pouvez également cliquer ici
+&lt;a href="BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"&gt; BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee &lt;/a&gt; pour télécharger le résultat. &lt;span class="style10561_color_red"&gt;Connectez-vous en utilisant votre numéro de dossier et votre date de naissance.&lt;/span&gt;</value>
+  </data>
+  <data name="texteinfo_statut_attestation_delivree_text3.Text" xml:space="preserve">
+    <value>Le résultat reste disponible en téléchargement pendant un an. Nous vous recommandons de &lt;b&gt;sauvegarder votre attestation&lt;/b&gt; sur plusieurs supports (ordinateur, clé USB, cloud, etc.) afin d’en assurer la conservation.</value>
   </data>
   <data name="texteinfo_statut_dossacomp_recev_text1.Text" xml:space="preserve">
     <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"Dossier à compléter (recevabilité)".&lt;/span&gt;&lt;/div&gt;</value>
@@ -196,6 +218,20 @@ Vous pouvez accéder à votre dossier en cliquant sur ce lien  : &lt;a href="BAS
   </data>
   <data name="texteinfo_statut_dosscomplete_recev_text4.Text" xml:space="preserve">
     <value>&lt;div&gt;Merci de bien vouloir vérifier votre dossier de &lt;b&gt;courriers indésirables (spam) &lt;/b&gt; et de rester attentif à sa réception.&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dossier_instruction_text1.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"Dossier en instruction".&lt;/span&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_statut_dossier_instruction_text2.Text" xml:space="preserve">
+    <value>Nous avons reçu votre paiement le JJ/MM/AAAA, votre dossier est en cours d’instruction depuis cette date.</value>
+  </data>
+  <data name="texteinfo_statut_dossier_instruction_text3.Text" xml:space="preserve">
+    <value>Dès que votre dossier sera traité, vous en serez informé(e) par e-mail.</value>
+  </data>
+  <data name="texteinfo_statut_dossier_instruction_text4.Text" xml:space="preserve">
+    <value>&lt;div&gt; Le délai moyen de traitement d'un dossier est actuellement de 4 mois. Cependant, ce délai peut aller jusqu'à 6 mois en fonction de la complexité de certains dossiers, de la zone géographique, ainsi que des flux des demandes. Les dossiers sont traités dans l'ordre chronologique.&lt;/div&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;b&gt;Pour information nous traitons actuellement les demandes du mois de MOIS / ANNEE.&lt;/b&gt;&lt;/div&gt;</value>
   </data>
   <data name="texteinfo_statut_dossier_recevabilite_text1.Text" xml:space="preserve">
     <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"Dossier en recevabilité".&lt;/span&gt;&lt;/div&gt;</value>

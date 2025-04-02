@@ -204,6 +204,69 @@ namespace WebApplication4
         protected global::System.Web.UI.WebControls.Button Button6;
 
         /// <summary>
+        /// Contrôle subpanel_dossier_instruction.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel subpanel_dossier_instruction;
+
+        /// <summary>
+        /// Contrôle Img11.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img11;
+
+        /// <summary>
+        /// Contrôle Img12.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img12;
+
+        /// <summary>
+        /// Contrôle subpanel_attestation_delivree.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel subpanel_attestation_delivree;
+
+        /// <summary>
+        /// Contrôle Img10.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img10;
+
+        /// <summary>
+        /// Contrôle Img13.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img13;
+
+        /// <summary>
+        /// Contrôle Button_statut_souspanel_attestation_delivree.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_statut_souspanel_attestation_delivree;
+
+        /// <summary>
         /// Contrôle Button1.
         /// </summary>
         /// <remarks>
