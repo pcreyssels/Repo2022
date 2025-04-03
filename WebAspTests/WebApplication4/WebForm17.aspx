@@ -2,11 +2,78 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:Panel runat="server">
-        <div>
-            <asp:Label runat="server"> MAIN PANEL </asp:Label>
-        </div>
 
+    <br />
+    <hr style="border: 1px solid blue;" />
+    <h3>PANNEAUX RESULTAT DE L EXPERTISE  </h3>
+
+    <%-- PANEL INFO ATTESTATION COMPARABILITE --%>
+    <asp:Panel runat="server" ID="Panel_ire_attestationcomparabilite">
+        <section class="well panelheadingfrombs341 polices10561">
+            <%-- en tête --%>
+            <div>
+                <asp:Label meta:resourcekey="texteinfo_ire_attestationcomparabilite_text1" runat="server" Text=""></asp:Label>
+            </div>
+            <br aria-hidden="true" />
+            <div role="img" style="display: grid; grid-template-columns: auto 5% auto; align-items: center">
+                <%-- 1e ligne --%>
+                <div>&nbsp</div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_attestationcomparabilite_text2" runat="server" Text=""></asp:Label>
+                </div>
+                <%-- 2e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img15" meta:resourcekey="iconedocumentofficiel"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/document_officiel_ft.png"
+                        alt="_doc officiel" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_attestationcomparabilite_text3" runat="server" Text=""></asp:Label>
+                </div>
+
+                <%-- 3e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img16" meta:resourcekey="icone_validite_illimitee"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/validite_illimitee_ft.png"
+                        alt="_valid ilim" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_attestationcomparabilite_text4" runat="server" Text=""></asp:Label>
+                </div>
+            </div>
+            <br aria-hidden="true" />
+        </section>
+    </asp:Panel>
+
+
+    <%-- ************************ PANNEAUX TEST ************************ --%>
+    <br />
+    <hr style="border: 1px solid orange;" />
+    <h3>PANNEAU TEST  </h3>
+
+
+    <div class="polices10561">
+        <div>Si vous avez reçu une attestation de comparabilité, vous pouvez la présenter aux <b>employeurs, établissements de formation et organismes en charge des concours</b>. Ce document permet d’établir une <u>correspondance entre votre diplôme étranger et le cadre français des certifications</u>, facilitant ainsi votre reconnaissance académique et/ou professionnelle en France.</div>
+        <br />
+        <div class="style10561_color_red">Informations importantes sur l’attestation : </div>
+    </div>
+    <div class="polices10561">
+        <b>Document officiel : </b>L’attestation électronique reçue constitue l’original officiel. <b>Aucun envoi papier ne sera effectué.</b>
+    </div>
+    <div class="polices10561">
+        <b>Validité illimitée : </b>Ce document n’a pas de date d’expiration ; vous pouvez l’utiliser tout au long de votre parcours professionnel et académique.
+    </div>
+
+    <br />
+    <hr style="border: 1px solid green;" />
+
+
+    <asp:Panel runat="server">
         <asp:Panel runat="server" ID="subpanel_inscphase2">
             <section class="well panelheadingfrombs341 polices10561">
                 <div>
@@ -96,236 +163,229 @@
                 </div>
             </section>
         </asp:Panel>
+        <%-- PANEL DOSSIER RECEVABILITE --%>
+        <asp:Panel runat="server" ID="subpanel_dossier_recevabilite">
+            <section class="well panelheadingfrombs341 polices10561">
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_recevabilite_text1" runat="server" Text=""></asp:Label>
+                </div>
+
+                <div role="img" style="display: grid; grid-template-columns: auto auto 1fr; align-items: center">
+                    <div style="height: 4em">
+                        <img runat="server" id="Img4" meta:resourcekey="iconecochevertevalide"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/valide_ft.png"
+                            alt="_iconecochevertevalide" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dossier_recevabilite_text2" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>
+                <div role="img" style="display: grid; grid-template-columns: auto auto 1fr; align-items: center">
+                    <div style="height: 4em">
+                        <img runat="server" id="Img5" meta:resourcekey="iconemail"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/mail_ft.png"
+                            alt="_mail" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dossier_recevabilite_text3" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>
+                <br aria-hidden="true" />
+            </section>
+        </asp:Panel>
+        <%-- PANEL DOSSIER A COMPLETER RECEVABLITE --%>
+        <asp:Panel runat="server" ID="subpanel_dossacomp_recev">
+            <section class="well panelheadingfrombs341 polices10561">
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_dossacomp_recev_text1" runat="server" Text=""></asp:Label>
+                </div>
+                <br aria-hidden="true" />
+                <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
+                    <%-- 1e ligne --%>
+                    <div>&nbsp</div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dossacomp_recev_text2" runat="server" Text=""></asp:Label>
+                    </div>
+                    <%-- 2e ligne --%>
+                    <div style="height: 4em">
+                        <img runat="server" id="Img6" meta:resourcekey="iconeattention"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/attention2_ft.png"
+                            alt="_attention" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dossacomp_recev_text3" runat="server" Text=""></asp:Label>
+                    </div>
+
+                    <%-- 3e ligne --%>
+                    <div>&nbsp</div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dossacomp_recev_text4" runat="server" Text=""></asp:Label>
+                    </div>
+
+                </div>
+
+
+                <br aria-hidden="true" />
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <asp:Button CssClass="style10561_button_bluewhite"
+                        ID="Button_statut_souspanel_dossacomp_recev"
+                        OnClick="Button_statut_souspanel_dossacomp_recev_Click"
+                        runat="server"
+                        Text="_COMPLETER VOTRE DOSSIER"
+                        meta:resourcekey="Button_statut_souspanel_dossacomp_recev" />
+                </div>
+            </section>
+        </asp:Panel>
+
+        <%-- PANEL DOSSIER COMPLETE RECEVABLITE --%>
+        <asp:Panel runat="server" ID="subpanel_dosscomplete_recev">
+            <section class="well panelheadingfrombs341 polices10561">
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_dosscomplete_recev_text1" runat="server" Text=""></asp:Label>
+                </div>
+                <br aria-hidden="true" />
+                <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
+                    <%-- 1e ligne --%>
+                    <div style="height: 4em">
+                        <img runat="server" id="Img8" meta:resourcekey="loupe"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/en_cours_de_traitement_ft.png"
+                            alt="_loupe" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dosscomplete_recev_text2" runat="server" Text=""></asp:Label>
+                    </div>
+                    <%-- 2e ligne --%>
+                    <div style="height: 4em">
+                        <img runat="server" id="Img7" meta:resourcekey="iconemail"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/mail_ft.png"
+                            alt="_attention" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dosscomplete_recev_text3" runat="server" Text=""></asp:Label>
+                    </div>
+
+                    <%-- 3e ligne --%>
+                    <div style="height: 4em">
+                        <img runat="server" id="Img9" meta:resourcekey="iconeattention"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/attention2_ft.png"
+                            alt="_attention" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dosscomplete_recev_text4" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>
+                <br aria-hidden="true" />
+            </section>
+        </asp:Panel>
+        <%-- PANEL DOSSIER INSTRUCTION --%>
+        <asp:Panel runat="server" ID="subpanel_dossier_instruction">
+            <section class="well panelheadingfrombs341 polices10561">
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text1" runat="server" Text=""></asp:Label>
+                </div>
+                <br aria-hidden="true" />
+                <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
+                    <%-- 1e ligne --%>
+                    <div>&nbsp</div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text2" runat="server" Text=""></asp:Label>
+                    </div>
+                    <%-- 2e ligne --%>
+                    <div style="height: 4em">
+                        <img runat="server" id="Img11" meta:resourcekey="iconemail"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/mail_ft.png"
+                            alt="_mail" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text3" runat="server" Text=""></asp:Label>
+                    </div>
+
+                    <%-- 3e ligne --%>
+                    <div style="height: 4em">
+                        <img runat="server" id="Img12" meta:resourcekey="iconehorloge"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/horloge_ft.png"
+                            alt="_horloge" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text4" runat="server" Text=""></asp:Label>
+                    </div>
+                </div>
+                <br aria-hidden="true" />
+            </section>
+        </asp:Panel>
+        <%-- PANEL DOSSIER ATTESTATION DELIVREE --%>
+        <asp:Panel runat="server" ID="subpanel_attestation_delivree">
+            <section class="well panelheadingfrombs341 polices10561">
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_statut_attestation_delivree_text1" runat="server" Text=""></asp:Label>
+                </div>
+                <br aria-hidden="true" />
+                <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
+                    <%-- 1e ligne --%>
+                    <div style="height: 4em">
+                        <img runat="server" id="Img10" meta:resourcekey="iconeattestation"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/attestation_ft.png"
+                            alt="_attestation" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_attestation_delivree_text2" runat="server" Text=""></asp:Label>
+                    </div>
+                    <%-- 2e ligne --%>
+                    <div style="height: 4em">
+                        <img runat="server" id="Img13" meta:resourcekey="iconesablier"
+                            style="width: 100%; height: 100%"
+                            src="~/Images/duree_ft.png"
+                            alt="_duree" />
+                    </div>
+                    <div>&nbsp</div>
+                    <div>
+                        <asp:Label meta:resourcekey="texteinfo_statut_attestation_delivree_text3" runat="server" Text=""></asp:Label>
+                    </div>
+
+                </div>
+                <br aria-hidden="true" />
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <asp:Button CssClass="style10561_button_bluewhite"
+                        ID="Button_statut_souspanel_attestation_delivree"
+                        OnClick="Button_statut_souspanel_attestation_delivree_Click"
+                        runat="server"
+                        Text="_TELECHARGER LE RESULTAT"
+                        meta:resourcekey="Button_statut_souspanel_attestation_delivree" />
+                </div>
+            </section>
+        </asp:Panel>
     </asp:Panel>
-    <%-- PANEL DOSSIER RECEVABILITE --%>
-    <asp:Panel runat="server" ID="subpanel_dossier_recevabilite">
-        <section class="well panelheadingfrombs341 polices10561">
-            <div>
-                <asp:Label meta:resourcekey="texteinfo_statut_dossier_recevabilite_text1" runat="server" Text=""></asp:Label>
-            </div>
 
-            <div role="img" style="display: grid; grid-template-columns: auto auto 1fr; align-items: center">
-                <div style="height: 4em">
-                    <img runat="server" id="Img4" meta:resourcekey="iconecochevertevalide"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/valide_ft.png"
-                        alt="_iconecochevertevalide" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_recevabilite_text2" runat="server" Text=""></asp:Label>
-                </div>
-            </div>
-            <div role="img" style="display: grid; grid-template-columns: auto auto 1fr; align-items: center">
-                <div style="height: 4em">
-                    <img runat="server" id="Img5" meta:resourcekey="iconemail"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/mail_ft.png"
-                        alt="_mail" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_recevabilite_text3" runat="server" Text=""></asp:Label>
-                </div>
-            </div>
-            <br aria-hidden="true" />
-        </section>
-    </asp:Panel>
-    <%-- PANEL DOSSIER A COMPLETER RECEVABLITE --%>
-    <asp:Panel runat="server" ID="subpanel_dossacomp_recev">
-        <section class="well panelheadingfrombs341 polices10561">
-            <div>
-                <asp:Label meta:resourcekey="texteinfo_statut_dossacomp_recev_text1" runat="server" Text=""></asp:Label>
-            </div>
-            <br aria-hidden="true" />
-            <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
-                <%-- 1e ligne --%>
-                <div>&nbsp</div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dossacomp_recev_text2" runat="server" Text=""></asp:Label>
-                </div>
-                <%-- 2e ligne --%>
-                <div style="height: 4em">
-                    <img runat="server" id="Img6" meta:resourcekey="iconeattention"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/attention2_ft.png"
-                        alt="_attention" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dossacomp_recev_text3" runat="server" Text=""></asp:Label>
-                </div>
-
-                <%-- 3e ligne --%>
-                <div>&nbsp</div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dossacomp_recev_text4" runat="server" Text=""></asp:Label>
-                </div>
-
-            </div>
-
-
-            <br aria-hidden="true" />
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <asp:Button CssClass="style10561_button_bluewhite"
-                    ID="Button_statut_souspanel_dossacomp_recev"
-                    OnClick="Button_statut_souspanel_dossacomp_recev_Click"
-                    runat="server"
-                    Text="_COMPLETER VOTRE DOSSIER"
-                    meta:resourcekey="Button_statut_souspanel_dossacomp_recev" />
-            </div>
-        </section>
-    </asp:Panel>
-
-    <%-- PANEL DOSSIER COMPLETE RECEVABLITE --%>
-    <asp:Panel runat="server" ID="subpanel_dosscomplete_recev">
-        <section class="well panelheadingfrombs341 polices10561">
-            <div>
-                <asp:Label meta:resourcekey="texteinfo_statut_dosscomplete_recev_text1" runat="server" Text=""></asp:Label>
-            </div>
-            <br aria-hidden="true" />
-            <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
-                <%-- 1e ligne --%>
-                <div style="height: 4em">
-                    <img runat="server" id="Img8" meta:resourcekey="loupe"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/en_cours_de_traitement_ft.png"
-                        alt="_loupe" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dosscomplete_recev_text2" runat="server" Text=""></asp:Label>
-                </div>
-                <%-- 2e ligne --%>
-                <div style="height: 4em">
-                    <img runat="server" id="Img7" meta:resourcekey="iconemail"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/mail_ft.png"
-                        alt="_attention" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dosscomplete_recev_text3" runat="server" Text=""></asp:Label>
-                </div>
-
-                <%-- 3e ligne --%>
-                <div style="height: 4em">
-                    <img runat="server" id="Img9" meta:resourcekey="iconeattention"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/attention2_ft.png"
-                        alt="_attention" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dosscomplete_recev_text4" runat="server" Text=""></asp:Label>
-                </div>
-            </div>
-            <br aria-hidden="true" />
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <asp:Button CssClass="style10561_button_bluewhite"
-                    ID="Button6"
-                    OnClick="Button_statut_souspanel_dossacomp_recev_Click"
-                    runat="server"
-                    Text="_COMPLETER VOTRE DOSSIER"
-                    meta:resourcekey="Button_statut_souspanel_dossacomp_recev" />
-            </div>
-        </section>
-    </asp:Panel>
-    <%-- PANEL DOSSIER INSTRUCTION --%>
-    <asp:Panel runat="server" ID="subpanel_dossier_instruction">
-        <section class="well panelheadingfrombs341 polices10561">
-            <div>
-                <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text1" runat="server" Text=""></asp:Label>
-            </div>
-            <br aria-hidden="true" />
-            <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
-                <%-- 1e ligne --%>
-                <div>&nbsp</div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text2" runat="server" Text=""></asp:Label>
-                </div>
-                <%-- 2e ligne --%>
-                <div style="height: 4em">
-                    <img runat="server" id="Img11" meta:resourcekey="iconemail"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/mail_ft.png"
-                        alt="_mail" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text3" runat="server" Text=""></asp:Label>
-                </div>
-
-                <%-- 3e ligne --%>
-                <div style="height: 4em">
-                    <img runat="server" id="Img12" meta:resourcekey="iconehorloge"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/horloge_ft.png"
-                        alt="_horloge" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_dossier_instruction_text4" runat="server" Text=""></asp:Label>
-                </div>
-            </div>
-            <br aria-hidden="true" />
-        </section>
-    </asp:Panel>
-    <%-- PANEL DOSSIER ATTESTATION DELIVREE --%>
-    <asp:Panel runat="server" ID="subpanel_attestation_delivree">
-        <section class="well panelheadingfrombs341 polices10561">
-            <div>
-                <asp:Label meta:resourcekey="texteinfo_statut_attestation_delivree_text1" runat="server" Text=""></asp:Label>
-            </div>
-            <br aria-hidden="true" />
-            <div role="img" style="display: grid; grid-template-columns: auto auto auto; align-items: center">
-                <%-- 1e ligne --%>
-                <div style="height: 4em">
-                    <img runat="server" id="Img10" meta:resourcekey="iconeattestation"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/attestation_ft.png"
-                        alt="_attestation" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_attestation_delivree_text2" runat="server" Text=""></asp:Label>
-                </div>
-                <%-- 2e ligne --%>
-                <div style="height: 4em">
-                    <img runat="server" id="Img13" meta:resourcekey="iconesablier"
-                        style="width: 100%; height: 100%"
-                        src="~/Images/duree_ft.png"
-                        alt="_duree" />
-                </div>
-                <div>&nbsp</div>
-                <div>
-                    <asp:Label meta:resourcekey="texteinfo_statut_attestation_delivree_text3" runat="server" Text=""></asp:Label>
-                </div>
-
-            </div>
-            <br aria-hidden="true" />
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <asp:Button CssClass="style10561_button_bluewhite"
-                    ID="Button_statut_souspanel_attestation_delivree"
-                    OnClick="Button_statut_souspanel_attestation_delivree_Click"
-                    runat="server"
-                    Text="_TELECHARGER LE RESULTAT"
-                    meta:resourcekey="Button_statut_souspanel_attestation_delivree" />
-            </div>
-        </section>
-    </asp:Panel>
     <br />
     <asp:Button Text="SubPanel1" runat="server" ID="Button1" OnClick="Button1_Click" />
     <asp:Button Text="SubPanel2" runat="server" ID="Button2" OnClick="Button2_Click" />
     <asp:Button Text="SubPanel3" runat="server" ID="Button3" OnClick="Button3_Click" />
 
-    <%-- ************************ PANNEAUX TEST ************************ --%>
-    <br />
-    <hr style="border: 1px solid red;" />
-    <h3>PANNEAU TEST  </h3>
+
+
+
+
 
     <section class="well panelheadingfrombs341 polices10561" aria-labelledby="ariadesc_paneldemande_erreursaisie labelinfo_erreur">
         <div>
@@ -410,6 +470,11 @@
             </ul>
         </div>
     </div>
+
+
+
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScript" runat="server">
 </asp:Content>

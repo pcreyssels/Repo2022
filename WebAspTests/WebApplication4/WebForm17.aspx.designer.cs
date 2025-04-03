@@ -15,6 +15,33 @@ namespace WebApplication4
     {
 
         /// <summary>
+        /// Contrôle Panel_ire_attestationcomparabilite.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel_ire_attestationcomparabilite;
+
+        /// <summary>
+        /// Contrôle Img15.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img15;
+
+        /// <summary>
+        /// Contrôle Img16.
+        /// </summary>
+        /// <remarks>
+        /// Champ généré automatiquement.
+        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage Img16;
+
+        /// <summary>
         /// Contrôle subpanel_inscphase2.
         /// </summary>
         /// <remarks>
@@ -193,15 +220,6 @@ namespace WebApplication4
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlImage Img9;
-
-        /// <summary>
-        /// Contrôle Button6.
-        /// </summary>
-        /// <remarks>
-        /// Champ généré automatiquement.
-        /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
 
         /// <summary>
         /// Contrôle subpanel_dossier_instruction.

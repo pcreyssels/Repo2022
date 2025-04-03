@@ -144,11 +144,17 @@
   <data name="iconecochevertevalide.Alt" xml:space="preserve">
     <value>icône coche verte validé</value>
   </data>
+  <data name="iconedocumentofficiel.Alt" xml:space="preserve">
+    <value>icône document</value>
+  </data>
   <data name="iconemail.Alt" xml:space="preserve">
     <value>icône email</value>
   </data>
   <data name="iconesablier.Alt" xml:space="preserve">
     <value>icône sablier</value>
+  </data>
+  <data name="icone_validite_illimitee.Alt" xml:space="preserve">
+    <value>icône validité illimitée</value>
   </data>
   <data name="labelinfo_statut_inscription_phase2.Text" xml:space="preserve">
     <value>&lt;div&gt;
@@ -165,15 +171,25 @@
   <data name="loupe.Alt" xml:space="preserve">
     <value>icône loupe</value>
   </data>
-  <data name="messageurldirect" xml:space="preserve">
-    <value>&lt;br/&gt;
-Vous pouvez accéder à la page en cliquant sur ce lien  : &lt;a href="BASE_URL/PAGE_ASPX.aspx"&gt;PAGE_ASPX  &lt;/a&gt;</value>
-    <comment>brouillon</comment>
+  <data name="texteinfo_ire_attestationcomparabilite_text1.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;b&gt;Attestation de comparabilité&lt;/b&gt;&lt;/div&gt;</value>
   </data>
-  <data name="messageurlguid" xml:space="preserve">
-    <value>&lt;br/&gt;
-Vous pouvez accéder à votre dossier en cliquant sur ce lien  : &lt;a href="BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"&gt; BASE_URL/notification.aspx?id=aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee &lt;/a&gt;</value>
-    <comment>brouillon</comment>
+  <data name="texteinfo_ire_attestationcomparabilite_text2.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561"&gt;
+    &lt;div&gt; Si vous avez reçu une attestation de comparabilité, vous pouvez la présenter aux &lt;b&gt;employeurs, établissements de formation et organismes en charge des concours&lt;/b&gt;. Ce document permet d’établir une &lt;u&gt;correspondance entre votre diplôme étranger et le cadre français des certifications&lt;/u&gt;, facilitant ainsi votre reconnaissance académique et/ou professionnelle en France.&lt;/div&gt;
+    &lt;br /&gt;
+    &lt;div class="style10561_color_red"&gt;&lt;b&gt;Informations importantes sur l’attestation : &lt;/b&gt;&lt;/div&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_attestationcomparabilite_text3.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561"&gt;
+    &lt;b&gt;Document officiel : &lt;/b&gt;L’attestation électronique reçue constitue l’original officiel. &lt;b&gt;Aucun envoi papier ne sera effectué.&lt;/b&gt;
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_attestationcomparabilite_text4.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561"&gt;
+    &lt;b&gt;Validité illimitée : &lt;/b&gt;Ce document n’a pas de date d’expiration ; vous pouvez l’utiliser tout au long de votre parcours professionnel et académique.
+&lt;/div&gt;</value>
   </data>
   <data name="texteinfo_statut_attestation_delivree_text1.Text" xml:space="preserve">
     <value>&lt;div class="polices10561_enlarged"&gt;&lt;span&gt;&lt;b&gt;Le statut de votre demande est : &lt;/b&gt;&lt;/span&gt;&lt;span class="style10561_color_red"&gt;"Attestation délivrée".&lt;/span&gt;&lt;/div&gt;</value>
