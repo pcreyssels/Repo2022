@@ -147,14 +147,23 @@
   <data name="iconedocumentofficiel.Alt" xml:space="preserve">
     <value>icône document</value>
   </data>
+  <data name="iconegrosguillement.Alt" xml:space="preserve">
+    <value>icône gros guillemet</value>
+  </data>
   <data name="iconemail.Alt" xml:space="preserve">
     <value>icône email</value>
   </data>
   <data name="iconesablier.Alt" xml:space="preserve">
     <value>icône sablier</value>
   </data>
+  <data name="icone_conservation_usb_cloud.Alt" xml:space="preserve">
+    <value>icone conservation usb cloud</value>
+  </data>
   <data name="icone_validite_illimitee.Alt" xml:space="preserve">
     <value>icône validité illimitée</value>
+  </data>
+  <data name="information.Alt" xml:space="preserve">
+    <value>icône information rouge</value>
   </data>
   <data name="labelinfo_statut_inscription_phase2.Text" xml:space="preserve">
     <value>&lt;div&gt;
@@ -175,20 +184,110 @@
     <value>&lt;div class="polices10561_enlarged"&gt;&lt;b&gt;Attestation de comparabilité&lt;/b&gt;&lt;/div&gt;</value>
   </data>
   <data name="texteinfo_ire_attestationcomparabilite_text2.Text" xml:space="preserve">
-    <value>&lt;div class="polices10561"&gt;
+    <value>&lt;div&gt;
     &lt;div&gt; Si vous avez reçu une attestation de comparabilité, vous pouvez la présenter aux &lt;b&gt;employeurs, établissements de formation et organismes en charge des concours&lt;/b&gt;. Ce document permet d’établir une &lt;u&gt;correspondance entre votre diplôme étranger et le cadre français des certifications&lt;/u&gt;, facilitant ainsi votre reconnaissance académique et/ou professionnelle en France.&lt;/div&gt;
     &lt;br /&gt;
     &lt;div class="style10561_color_red"&gt;&lt;b&gt;Informations importantes sur l’attestation : &lt;/b&gt;&lt;/div&gt;
 &lt;/div&gt;</value>
   </data>
   <data name="texteinfo_ire_attestationcomparabilite_text3.Text" xml:space="preserve">
-    <value>&lt;div class="polices10561"&gt;
+    <value>&lt;div&gt;
     &lt;b&gt;Document officiel : &lt;/b&gt;L’attestation électronique reçue constitue l’original officiel. &lt;b&gt;Aucun envoi papier ne sera effectué.&lt;/b&gt;
 &lt;/div&gt;</value>
   </data>
   <data name="texteinfo_ire_attestationcomparabilite_text4.Text" xml:space="preserve">
-    <value>&lt;div class="polices10561"&gt;
+    <value>&lt;div&gt;
     &lt;b&gt;Validité illimitée : &lt;/b&gt;Ce document n’a pas de date d’expiration ; vous pouvez l’utiliser tout au long de votre parcours professionnel et académique.
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_attestationcomparabilite_text5.Text" xml:space="preserve">
+    <value>&lt;div&gt;
+&lt;b&gt;Conservation et utilisation : &lt;/b&gt;Il est recommandé d’enregistrer et sauvegarder le fichier PDF sur le bureau de votre ordinateur,
+ainsi que sur une clé USB ou un espace de stockage en ligne (cloud). Vous pourrez ainsi le retrouver facilement et l’imprimer en
+cas de besoin.
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_attestationcomparabilite_text6.Text" xml:space="preserve">
+    <value>&lt;div&gt;&lt;span class="style10561_color_red"&gt;&lt;b&gt; À noter : &lt;/b&gt;&lt;/span&gt; En France, &lt;b&gt;les employeurs et établissements de formation sont autonomes &lt;/b&gt; dans leur processus de recrutement et d’admission. L’attestation de comparabilité &lt;u&gt;constitue un avis&lt;/u&gt; sur la reconnaissance académique du diplôme, mais la décision finale quant à son acceptation revient entièrement à l’institution concernée. Nous vous recommandons donc de vérifier directement auprès d’eux leurs critères et exigences spécifiques.&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_comprendreatterecoperetu_entete.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;b&gt;Comprendre l’attestation de reconnaissance de période d’études&lt;/b&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_comprendreatterecoperetu_ligne1.Text" xml:space="preserve">
+    <value>&lt;div&gt;
+    &lt;div&gt;Une attestation de reconnaissance de période d’études ou de formation à l’étranger peut être délivrée &lt;b&gt;si vous n’avez pas achevé votre cursus&lt;/b&gt;, par exemple en cas de dernière année non validée, mémoire non soutenu, ou stage de fin d’études non effectué.&lt;/div&gt;
+    &lt;br /&gt;
+    &lt;div&gt; Ce document &lt;b&gt;précise le nombre d’années d’études secondaires ou supérieures validées&lt;/b&gt;. Son évaluation repose sur les mêmes critères que ceux utilisés pour une attestation de comparabilité, notamment :&lt;/div&gt;
+    &lt;br /&gt;
+    &lt;ul&gt;
+        &lt;li&gt;La reconnaissance du cursus et de l’établissement par les autorités du pays d’origine,&lt;/li&gt;
+        &lt;li&gt;Les prérequis d’accès à la formation,&lt;/li&gt;
+        &lt;li&gt;Les débouchés académiques associés.&lt;/li&gt;
+    &lt;/ul&gt;
+    Cependant, elle ne mentionne &lt;b&gt;pas de niveau&lt;/b&gt;, car le diplôme concerné est &lt;b&gt;inachevé&lt;/b&gt;.
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_comprendrenivattestcomp_entete.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;b&gt;Comprendre le niveau de l’attestation de comparabilité&lt;/b&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_comprendrenivattestcomp_ligne1.Text" xml:space="preserve">
+    <value>&lt;div&gt;
+L’attestation de comparabilité reprend les principales informations de votre diplôme (intitulé, spécialité, établissement, date et pays d’obtention, durée officielle des études, débouchés), et précise le résultat de l’expertise, à savoir son positionnement dans le &lt;b&gt;Cadre Français des Certifications (CFC) &lt;/b&gt; et/ou dans le &lt;b&gt;Cadre Européen des Certifications (CEC)&lt;/b&gt;. Pour plus de détails, nous vous invitons à consulter l’encadré figurant en deuxième page de votre attestation.
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_contestation_entete.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;b&gt;Contestation&lt;/b&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_contestation_ligne1.Text" xml:space="preserve">
+    <value>&lt;div&gt;Les attestations sont établies sur la base des documents transmis, en reprenant fidèlement :&lt;/div&gt;
+&lt;br /&gt;
+&lt;ul&gt;
+    &lt;li&gt;L’intitulé du diplôme,&lt;/li&gt;
+    &lt;li&gt;Le nom de l’établissement,&lt;/li&gt;
+    &lt;li&gt;Éventuellement la spécialité, dans la langue d’origine.&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="texteinfo_ire_contestation_ligne2.Text" xml:space="preserve">
+    <value>&lt;div&gt;Il est important de noter qu’&lt;b&gt;il n’existe pas de correspondance exacte entre les cursus suivis à l’étranger et les diplômes français&lt;/b&gt;.&lt;/div&gt;
+&lt;div&gt;L’évaluation repose sur des critères spécifiques propres au centre ENIC-NARIC France.&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;
+    Si vous souhaitez contester le résultat de l’expertise, nous vous recommandons de consulter la liste des critères d’évaluation appliqués par le centre ENIC-NARIC France :
+&lt;/div&gt;
+&lt;div&gt;&lt;span class="style10561_color_lightskyblue"  aria-hidden="true"&gt;&amp;#x1F4CE;&lt;/span&gt; Les procédures d’évaluation des diplômes : &lt;a href="https://www.france-education-international.fr/article/les-procedures-devaluation-des-diplomes-au-centre-enic-naric-france" target="_blank"&gt; https://www.france-education-international.fr/article/les-procedures-devaluation-des-diplomes-au-centre-enic-naric-france &lt;/a&gt; &lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;Pour toute demande complémentaire, vous pouvez également nous contacter via le service dédié : "contact RECOURS"&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_mentionfigattestation_entete.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;b&gt;Mention figurant sur l’attestation&lt;/b&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_mentionfigattestation_ligne1.Text" xml:space="preserve">
+    <value>&lt;div&gt;
+La mention « &lt;b&gt; Cette attestation ne constitue pas une autorisation d’exercer une profession réglementée &lt;/b&gt; » est une mention légale. Elle s’applique aux professions pour lesquelles, la reprise d’études ou une autorisation de l’autorité compétente est nécessaire dans le but d’exercer à son compte ou de créer sa propre entreprise.
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_mentionfigattestation_ligne2.Text" xml:space="preserve">
+    <value>&lt;div class="style10561_color_red"&gt;
+La mention « &lt;b&gt; Les documents délivrés par l’établissement indiquent que le cursus a été suivi en français &lt;/b&gt; » est destinée aux demandeurs de naturalisation, à condition qu’ils soient ressortissants de l’un des pays éligibles mentionnés dans l’&lt;b&gt;arrêté du XXXX (lien)&lt;/b&gt;. Cette mention ne peut être délivrée que si l’ensemble du cursus a été suivi intégralement en langue française. Les cursus bilingues ne sont donc pas éligibles à cette mention.
+&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_pertedocument_entete.Text" xml:space="preserve">
+    <value>&lt;div class="polices10561_enlarged"&gt;&lt;b&gt;Perte du document&lt;/b&gt;&lt;/div&gt;</value>
+  </data>
+  <data name="texteinfo_ire_pertedocument_ligne1.Text" xml:space="preserve">
+    <value>&lt;div&gt;Si vous avez perdu le document indiquant le résultat de l’expertise, plusieurs options s’offrent à vous :&lt;/div&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;b&gt;Téléchargement en ligne&lt;/b&gt; : Votre attestation reste &lt;b&gt;disponible pendant un an via le suivi de votre dossier sur notre site&lt;/b&gt;.&lt;/li&gt;
+    &lt;li&gt;&lt;b&gt;Demande de réenvoi&lt;/b&gt; : Si plus d’un an s’est écoulé, vous pouvez contacter le centre ENIC-NARIC France via "contact ENICNARIC" pour obtenir un nouvel envoi par courriel.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+    &lt;span class="glyphicon glyphicon-pushpin style10561_color_red" aria-hidden="true"&gt;&lt;/span&gt;&lt;b&gt; Important&lt;/b&gt; : Lors de votre demande, veillez à indiquer votre numéro de dossier, ainsi que votre nom et prénom afin de faciliter le traitement.
+&lt;/div&gt;
+&lt;br /&gt;
+&lt;div&gt;
+    &lt;span class="style10561_color_lightskyblue" aria-hidden="true"&gt;&amp;#x2BC1;&lt;/span&gt;&lt;b&gt; Conseil&lt;/b&gt; : Une fois votre attestation récupérée, pensez à l’enregistrer sur plusieurs supports (ordinateur, clé USB, disque dur externe, cloud) afin d’éviter toute perte future et de toujours pouvoir y accéder en cas de besoin.
 &lt;/div&gt;</value>
   </data>
   <data name="texteinfo_statut_attestation_delivree_text1.Text" xml:space="preserve">

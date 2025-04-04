@@ -22,6 +22,12 @@
                 <div>
                     <asp:Label meta:resourcekey="texteinfo_ire_attestationcomparabilite_text2" runat="server" Text=""></asp:Label>
                 </div>
+
+                <%-- ligne vide --%>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+
                 <%-- 2e ligne --%>
                 <div style="height: 4em">
                     <img runat="server" id="Img15" meta:resourcekey="iconedocumentofficiel"
@@ -34,6 +40,11 @@
                     <asp:Label meta:resourcekey="texteinfo_ire_attestationcomparabilite_text3" runat="server" Text=""></asp:Label>
                 </div>
 
+                <%-- ligne vide --%>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+
                 <%-- 3e ligne --%>
                 <div style="height: 4em">
                     <img runat="server" id="Img16" meta:resourcekey="icone_validite_illimitee"
@@ -45,16 +56,245 @@
                 <div>
                     <asp:Label meta:resourcekey="texteinfo_ire_attestationcomparabilite_text4" runat="server" Text=""></asp:Label>
                 </div>
+
+                <%-- ligne vide --%>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+
+                <%-- 4e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img14" meta:resourcekey="icone_conservation_usb_cloud"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/conservation_usb_cloud_ft.png"
+                        alt="_conservatino usb cloud" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_attestationcomparabilite_text5" runat="server" Text=""></asp:Label>
+                </div>
+
+                <%-- ligne vide --%>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+
+                <%-- 5e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img17" meta:resourcekey="information"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/information_ft.png"
+                        alt="_information" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_attestationcomparabilite_text6" runat="server" Text=""></asp:Label>
+                </div>
+
+            </div>
+            <br aria-hidden="true" />
+        </section>
+    </asp:Panel>
+
+    <%-- PANEL INFO MENTION FIGURANT SUR L ATTESTATION --%>
+    <asp:Panel runat="server" ID="Panel_ire_mentionfigattestation">
+        <section class="well panelheadingfrombs341 polices10561">
+            <%-- en tête --%>
+            <div>
+                <asp:Label meta:resourcekey="texteinfo_ire_mentionfigattestation_entete" runat="server" Text=""></asp:Label>
+            </div>
+            <br aria-hidden="true" />
+            <div role="img" style="display: grid; grid-template-columns: auto 5% auto; align-items: center">
+                <%-- 1e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img19" meta:resourcekey="iconegrosguillement"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/mention_sur_attestation_ft.png"
+                        alt="_mention_sur_attestation" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_mentionfigattestation_ligne1" runat="server" Text=""></asp:Label>
+                </div>
+
+                <%-- ligne vide --%>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+
+                <%-- 2e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img18" meta:resourcekey="iconegrosguillement"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/mention_sur_attestation_ft.png"
+                        alt="_mention_sur_attestation" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_mentionfigattestation_ligne2" runat="server" Text=""></asp:Label>
+                </div>
+
             </div>
             <br aria-hidden="true" />
         </section>
     </asp:Panel>
 
 
+    <%-- PANEL INFO COMPRENDRE LE NIVEAU DE L’ATTESTATION DE COMPARABILITÉ --%>
+    <asp:Panel runat="server" ID="Panel_ire_comprendrenivattestcomp">
+        <section class="well panelheadingfrombs341 polices10561">
+            <%-- en tête --%>
+            <div>
+                <asp:Label meta:resourcekey="texteinfo_ire_comprendrenivattestcomp_entete" runat="server" Text=""></asp:Label>
+            </div>
+            <br aria-hidden="true" />
+            <div role="img" style="display: grid; grid-template-columns: auto 5% auto; align-items: center">
+                <%-- 1e ligne --%>
+                <div>&nbsp</div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_comprendrenivattestcomp_ligne1" runat="server" Text=""></asp:Label>
+                </div>
+            </div>
+            <br aria-hidden="true" />
+        </section>
+    </asp:Panel>
+
+
+    <%-- PANEL INFO COMPRENDRE L’ATTESTATION DE RECONNAISSANCE DE PÉRIODE D’ÉTUDES --%>
+    <asp:Panel runat="server" ID="Panel_ire_comprendreatterecoperetu">
+        <section class="well panelheadingfrombs341 polices10561">
+            <%-- en tête --%>
+            <div>
+                <asp:Label meta:resourcekey="texteinfo_ire_comprendreatterecoperetu_entete" runat="server" Text=""></asp:Label>
+            </div>
+            <br aria-hidden="true" />
+            <div role="img" style="display: grid; grid-template-columns: auto 5% auto; align-items: center">
+                <%-- 1e ligne --%>
+                <div>&nbsp</div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_comprendreatterecoperetu_ligne1" runat="server" Text=""></asp:Label>
+                </div>
+            </div>
+            <br aria-hidden="true" />
+        </section>
+    </asp:Panel>
+
+    <%-- PANEL INFO CONTESTATION --%>
+    <asp:Panel runat="server" ID="Panel_ire_contestation">
+        <section class="well panelheadingfrombs341 polices10561">
+            <%-- en tête --%>
+            <div>
+                <asp:Label meta:resourcekey="texteinfo_ire_contestation_entete" runat="server" Text=""></asp:Label>
+            </div>
+            <br aria-hidden="true" />
+            <div role="img" style="display: grid; grid-template-columns: auto 5% auto; align-items: center">
+                <%-- 1e ligne --%>
+                <div style="height: 4em">
+                    <img runat="server" id="Img22" meta:resourcekey="iconegrosguillement"
+                        style="width: 100%; height: 100%"
+                        src="~/Images/contestation_ft.png"
+                        alt="_mention_sur_attestation" />
+                </div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_contestation_ligne1" runat="server" Text=""></asp:Label>
+                </div>
+
+                <%-- ligne vide --%>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+                <div aria-hidden="true">&nbsp</div>
+
+                <%-- 2e ligne --%>
+                <div>&nbsp</div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_contestation_ligne2" runat="server" Text=""></asp:Label>
+                </div>
+
+            </div>
+            <br aria-hidden="true" />
+        </section>
+    </asp:Panel>
+
+    <%-- PANEL PERTE DU DOCUMENT --%>
+    <asp:Panel runat="server" ID="Panel_ire_pertedocument">
+        <section class="well panelheadingfrombs341 polices10561">
+            <%-- en tête --%>
+            <div>
+                <asp:Label meta:resourcekey="texteinfo_ire_pertedocument_entete" runat="server" Text=""></asp:Label>
+            </div>
+            <br aria-hidden="true" />
+            <div role="img" style="display: grid; grid-template-columns: auto 5% auto; align-items: center">
+                <%-- 1e ligne --%>
+                <div>&nbsp</div>
+                <div>&nbsp</div>
+                <div>
+                    <asp:Label meta:resourcekey="texteinfo_ire_pertedocument_ligne1" runat="server" Text=""></asp:Label>
+                </div>
+            </div>
+            <br aria-hidden="true" />
+        </section>
+    </asp:Panel>
+
     <%-- ************************ PANNEAUX TEST ************************ --%>
     <br />
     <hr style="border: 1px solid orange;" />
     <h3>PANNEAU TEST  </h3>
+
+    <div>Si vous avez perdu le document indiquant le résultat de l’expertise, plusieurs options s’offrent à vous :</div>
+
+    <ul>
+        <li><b>Téléchargement en ligne</b> : Votre attestation reste <b>disponible pendant un an via le suivi de votre dossier sur notre site</b>.</li>
+        <li><b>Demande de réenvoi</b> : Si plus d’un an s’est écoulé, vous pouvez contacter le centre ENIC-NARIC France via "contact ENICNARIC" pour obtenir un nouvel envoi par courriel.</li>
+    </ul>
+
+    <div>
+        <span class="glyphicon glyphicon-pushpin style10561_color_red" aria-hidden="true"></span><b> Important</b> : Lors de votre demande, veillez à indiquer votre numéro de dossier, ainsi que votre nom et prénom afin de faciliter le traitement.
+    </div>
+    <br />
+    <div>
+        <span class="style10561_color_lightskyblue" aria-hidden="true">&#x2BC1;</span><b> Conseil</b> : Une fois votre attestation récupérée, pensez à l’enregistrer sur plusieurs supports (ordinateur, clé USB, disque dur externe, cloud) afin d’éviter toute perte future et de toujours pouvoir y accéder en cas de besoin.
+    </div>
+ 
+    <br />
+
+
+    <div>Les attestations sont établies sur la base des documents transmis, en reprenant fidèlement :</div>
+    <br />
+    <ul>
+        <li>L’intitulé du diplôme,</li>
+        <li>Le nom de l’établissement,</li>
+        <li>Éventuellement la spécialité, dans la langue d’origine.</li>
+    </ul>
+
+    <%-- *** --%>
+
+    <div>Il est important de noter qu’<b>il n’existe pas de correspondance exacte entre les cursus suivis à l’étranger et les diplômes français</b>.</div>
+    <div>L’évaluation repose sur des critères spécifiques propres au centre ENIC-NARIC France.</div>
+    <br />
+    <div>
+        Si vous souhaitez contester le résultat de l’expertise, nous vous recommandons de consulter la liste des critères d’évaluation appliqués par le centre ENIC-NARIC France :
+    </div>
+    <%-- 1F4CE trombonne --%>
+    <div><span class="style10561_color_lightskyblue" aria-hidden="true">&#x1F4CE;</span>Les procédures d’évaluation des diplômes : <a href="https://www.france-education-international.fr/article/les-procedures-devaluation-des-diplomes-au-centre-enic-naric-france" target="_blank">https://www.france-education-international.fr/article/les-procedures-devaluation-des-diplomes-au-centre-enic-naric-france </a></div>
+    <br />
+    <div>Pour toute demande complémentaire, vous pouvez également nous contacter via le service dédié : "contact RECOURS"</div>
+    <br />
+    <div>
+        <div>Une attestation de reconnaissance de période d’études ou de formation à l’étranger peut être délivrée <b>si vous n’avez pas achevé votre cursus</b>, par exemple en cas de dernière année non validée, mémoire non soutenu, ou stage de fin d’études non effectué.</div>
+        <br />
+        <div>Ce document <b>précise le nombre d’années d’études secondaires ou supérieures validées</b>. Son évaluation repose sur les mêmes critères que ceux utilisés pour une attestation de comparabilité, notamment :</div>
+        <br />
+        <ul>
+            <li>La reconnaissance du cursus et de l’établissement par les autorités du pays d’origine,</li>
+            <li>Les prérequis d’accès à la formation,</li>
+            <li>Les débouchés académiques associés.</li>
+        </ul>
+        Cependant, elle ne mentionne <b>pas de niveau</b>, car le diplôme concerné est <b>inachevé</b>.
+    </div>
 
 
     <div class="polices10561">
